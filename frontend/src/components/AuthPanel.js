@@ -1,0 +1,12 @@
+'use client';
+import {useEffect,useState} from 'react';
+import Link from 'next/link';
+import {apiRequest,getSession} from '../../../shared/api-client.mjs';
+
+export default function AuthPanel(){
+ const[session,setSession]=useState(null),[username,setUsername]=useState('admin'),[password,setPassword]=useState(''),[busy,setBusy]=useState(true),[error,setError]=useState('');
+ useEffect(()=>{let active=true;getSession().then(s=>{if(active)setSession(s);}).catch(e=>{if(active)setError(e.message);}).finally(()=>{if(active)setBusy(false);});return()=>{active=false;};},[]);
+ async function login(e){e.preventDefault();setBusy(true);setError('');try{const data=await apiRequest('/api/auth/login',{method:'POST',body:JSON.stringify({username,password})});setSession(data);setPassword('');}catch(e){setError(e.message);}finally{setBusy(false);}}
+ async function logout(){setBusy(true);setError('');try{await apiRequest('/api/auth/logout',{method:'POST',headers:{'X-CSRF-Token':session.csrfToken},body:'{}'});setSession(null);}catch(e){setError(e.message);}finally{setBusy(false);}}
+ return <div className="auth-card"><span className="tool-icon">⌁</span><p className="eyebrow">LOCAL DEMO ACCOUNT</p><h1>{session?'You’re signed in.':'Welcome back.'}</h1><p className="auth-intro">All public tools work without an account. This local demo uses no database.</p>{error&&<p role="alert" className="error-message">{error}</p>}{session?<><dl className="account-details"><div><dt>Username</dt><dd>{session.user.username}</dd></div><div><dt>Email</dt><dd>{session.user.email}</dd></div><div><dt>Role</dt><dd>{session.user.role}</dd></div><div><dt>Session</dt><dd>Local memory · resets on backend restart</dd></div></dl><div className="form-actions"><Link className="button primary" href="/tools">Explore tools →</Link><a className="button secondary" href="http://localhost:3001">Open admin ↗</a><button className="text-button" onClick={logout} disabled={busy}>Sign out</button></div></>:<form onSubmit={login}><label className="field"><span>Username or email</span><input autoComplete="username" value={username} onChange={e=>setUsername(e.target.value)} required/></label><label className="field"><span>Password</span><input type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required/></label><button className="button primary" disabled={busy}>{busy?'Connecting…':'Sign in →'}</button></form>}<p className="hint">Demo sessions stay in backend memory. Your tool inputs and files are never saved in this account.</p></div>;
+}

@@ -1,0 +1,3 @@
+'use client';
+import {useEffect,useState} from 'react';
+export default function ThemeToggle(){const[dark,setDark]=useState(false);useEffect(()=>{try{const saved=localStorage.getItem('alltoolnexa-theme');const value=saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=value?'dark':'light';setDark(value);}catch{}},[]);return <button className="theme-toggle" aria-label={dark?'Use light theme':'Use dark theme'} onClick={()=>{const next=!dark;setDark(next);document.documentElement.dataset.theme=next?'dark':'light';try{localStorage.setItem('alltoolnexa-theme',next?'dark':'light');}catch{}}}>{dark?'☀':'◐'}</button>;}

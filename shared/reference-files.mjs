@@ -1,0 +1,18 @@
+export function extendReferenceFiles({register,field,aliases}){
+ const password=()=>field('password','PDF opening password (if needed)','','password');
+ const pages=()=>field('pages','Pages (e.g. 1-3,5; blank = all)','','text');
+ const add=(name,mode,fields,description,extra={})=>register('pdf',name,fields,description,null,{kind:'reference-file',mode,description,accept:'application/pdf',...extra});
+ add('PDF to JPG','jpg',[pages(),field('scale','Render scale (1 = 72 DPI)',1.5),password()],'Render PDF pages as JPG images on your device. Multiple pages download together in a ZIP. Up to 40 pages per run.');
+ add('PDF to PNG','png',[pages(),field('scale','Render scale (1 = 72 DPI)',1.5),password()],'Render PDF pages as lossless PNG images. Multiple pages download in a ZIP; up to 40 pages per run.');
+ add('PDF to TXT','txt',[pages(),password()],'Extract selectable text from PDF pages. Scanned images need OCR; reading order and columns may require correction.');
+ add('PDF to HTML','html',[pages(),password()],'Export selectable PDF text as a simple escaped HTML document. Images, fonts and page layout are not reconstructed.');
+ add('PDF to DOCX','docx',[pages(),password()],'Convert selectable PDF text into an editable Word document with page breaks. Layout, tables and images are not preserved; scanned pages need OCR.');
+ add('PDF to Excel','xlsx',[pages(),password()],'Extract PDF text rows and their positions into an XLSX workbook, one sheet per page. This is a starting point for cleanup, not automatic table or formula recognition.');
+ add('PDF to PPTX','pptx',[pages(),field('scale','Render scale',1.5),password()],'Create one PowerPoint slide per PDF page. Page appearance is preserved as an image; slide text is not editable. Up to 40 pages per run.');
+ add('PDF Compressor','compress',[field('scale','Render scale (lower = smaller)',1),field('quality','JPG quality (0.2 to 1)',0.7),password()],'Create a smaller image-based PDF at your chosen resolution and quality. This loses selectable text, links, forms and vector detail. Some files become larger; the actual size change is shown.');
+ add('Protect PDF','protect',[field('password','New opening password','','password')],'Protect a PDF with AES-256 password encryption on your device. Keep the password; it is required to open the result. Existing encrypted PDFs should be unlocked first.');
+ add('Unlock PDF','unlock',[password()],'Remove PDF opening encryption using the password you provide. A fresh document is created from the decrypted pages; document-level forms, attachments and signatures are not preserved.');
+ add('Word to PDF','word-pdf',[],'Convert text from a DOCX file into a readable PDF with line wrapping. Original Word layout, images and tables are not reproduced. Legacy .doc files are not supported.',{accept:'.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+ add('HTML to PDF','html-pdf',[field('text','HTML','<h1>Hello from AllToolNexa</h1><p>Your document, ready to share.</p>','textarea')],'Create a PDF from the visible text of pasted HTML. Scripts and remote resources are ignored. Original HTML styling and images are not reproduced.',{noFile:true});
+ Object.assign(aliases,{'pdf-to-word':'pdf-to-docx','pdf-to-text':'pdf-to-txt','pdf-to-powerpoint':'pdf-to-pptx','compress-pdf':'pdf-compressor','pdf-compress':'pdf-compressor','pdf-protect':'protect-pdf','pdf-unlock':'unlock-pdf','docx-to-pdf':'word-to-pdf','jpg-to-pdf':'images-to-pdf','jpg_to_pdf':'images-to-pdf','pdf_to_jpg':'pdf-to-jpg','merge-pdf':'pdf-merge','merge_pdf':'pdf-merge','split-pdf':'pdf-split','split_pdf':'pdf-split','rotate-pdf':'pdf-rotate','rotate_pdf':'pdf-rotate'});
+}

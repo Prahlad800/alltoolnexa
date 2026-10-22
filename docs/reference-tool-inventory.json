@@ -1,0 +1,743 @@
+{
+  "auditedAt": "2026-10-22",
+  "referenceOrigin": "https://all-free-tool.com",
+  "localBaseline": {
+    "canonicalTools": 464,
+    "aliases": 101,
+    "categories": 18
+  },
+  "method": "Read-only web search/open of indexed primary reference pages, anchor resolution, and direct import of local shared/catalog.mjs. Linked presence is observed; implementation equivalence and priority are analyst inferences. Live functionality was not tested.",
+  "sources": [
+    {
+      "category": "directory",
+      "url": "https://all-free-tool.com/tools/"
+    },
+    {
+      "category": "seo",
+      "url": "https://all-free-tool.com/seo-tools/"
+    },
+    {
+      "category": "developer",
+      "url": "https://all-free-tool.com/developer-tools/"
+    },
+    {
+      "category": "pdf",
+      "url": "https://all-free-tool.com/pdf-tools/"
+    },
+    {
+      "category": "calculators",
+      "url": "https://all-free-tool.com/calculator-tools/"
+    },
+    {
+      "category": "popular",
+      "url": "https://all-free-tool.com/popular-tools/"
+    }
+  ],
+  "observedCounts": {
+    "directoryDisplayedCards": 56,
+    "directoryUniqueNames": 54,
+    "calculatorDisplayedCards": 45,
+    "calculatorUniqueDestinations": 44
+  },
+  "countCaveat": "Reference marketing totals conflict (20+, 100+, 500+); these are not inventory counts. Sitemap requests were inaccessible. This records the explicitly observed missing/partial capabilities, not a claim of a complete reference-site crawl.",
+  "missingOrPartial": [
+    {
+      "name": "Invoice Generator",
+      "sourceURL": "https://all-free-tool.com/tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/invoice-generator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Text Diff Checker",
+      "sourceURL": "https://all-free-tool.com/tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/text-diff-checker/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Random Text Generator",
+      "sourceURL": "https://all-free-tool.com/tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "On Page SEO Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/on-page-seo-checker/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Robots.txt Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/robots-txt-generator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Open Graph Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/open-graph-generator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "partial existing capability",
+      "priority": 1,
+      "existing": [
+        "meta-tag-generator"
+      ],
+      "implementationNote": "Existing generator produces title/description/url OG tags; dedicated image/type/site fields are absent."
+    },
+    {
+      "name": "Twitter Card Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/twitter-card-generator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Website Speed Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Requires public URL/data access or service integration; directory wording is not proof of working data."
+    },
+    {
+      "name": "SERP Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/free-serp-preview-tool/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1,
+      "implementationNote": "Directory calls this SERP Checker; anchor resolves to Google SERP Preview. Implement preview, not live rank claims."
+    },
+    {
+      "name": "Domain Age Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Requires public URL/data access or service integration; directory wording is not proof of working data."
+    },
+    {
+      "name": "Keywords Suggestion Tool",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/keyword-suggestion-tool/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Long Tail Keyword Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Keyword Competition Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Requires public URL/data access or service integration; directory wording is not proof of working data."
+    },
+    {
+      "name": "Sitemap Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Schema Markup Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/schema-markup-generator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Hreflang Generator",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Page Size Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Core Web Vitals Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Requires public URL/data access or service integration; directory wording is not proof of working data."
+    },
+    {
+      "name": "Redirect Checker",
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Requires public URL/data access or service integration; directory wording is not proof of working data."
+    },
+    {
+      "name": "SQL Formatter",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/sql-formatter",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "XML Formatter",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/xml-formatter",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Dummy Image Placeholder Generator",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/dummy-image-placeholder/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Text to Binary",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Code Difference Comparison Tool",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1,
+      "implementationNote": "Same broad capability as Text Diff Checker; use one canonical implementation and alias."
+    },
+    {
+      "name": "HTML Editor Online",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/online-compiler/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "What is my Browser",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Open All URLs",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Password Strength Checker",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Password Encryption Utility",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Name is ambiguous; inspect actual input/output before choosing encryption or password hashing."
+    },
+    {
+      "name": "Online MD5 Generator",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "HTML Minifier",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/html-minifier",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "CSS Minifier",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/css-minifier",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "JavaScript Minifier",
+      "sourceURL": "https://all-free-tool.com/developer-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "PDF to DOCX",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-docx",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "PDF to JPG",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/pdf_to_jpg/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "PDF to PNG",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-png",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "PDF to PPTX",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-pptx",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "PDF to EXCEL",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-excel",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "PDF to TXT",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-txt",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "PDF to HTML",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-html",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "PDF to OCR",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/pdf-to-ocr",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "Word to PDF",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/word-to-pdf",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "HTML to PDF",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/html-to-pdf/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Compress PDF",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Protect PDF",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "Unlock PDF",
+      "sourceURL": "https://all-free-tool.com/pdf-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "FD & RD Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/fd-rd-calculator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Budget Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/budget-calculator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Retirement Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/retirement-calculator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 1
+    },
+    {
+      "name": "Tax Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://all-free-tool.com/tools/tax-calculator/",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Etsy Fee Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": "https://zingcalc.com/tools/calculators/etsy-fee-calculator",
+      "targetEvidence": "observed search result or resolved anchor; functionality not verified",
+      "comparison": "missing distinct capability",
+      "priority": 2,
+      "implementationNote": "Actual reference card points to external zingcalc.com; do not imply this is hosted by the reference."
+    },
+    {
+      "name": "BMI Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "BMR Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Calorie Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Ideal Weight Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Body Fat Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Weather Heat Index Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    },
+    {
+      "name": "Algebra Solver",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "Graphing Calculator",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 3
+    },
+    {
+      "name": "Scientific Unit Converter",
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "evidence": "observed linked card on indexed primary page",
+      "targetURL": null,
+      "targetEvidence": "not resolved in this audit",
+      "comparison": "missing distinct capability",
+      "priority": 2
+    }
+  ],
+  "coveredVariants": [
+    {
+      "reference": [
+        "Merge PDF",
+        "Split PDF",
+        "Rotate PDF",
+        "JPG to PDF",
+        "PNG to PDF",
+        "Add PDF page number"
+      ],
+      "existing": [
+        "pdf-merge",
+        "pdf-split",
+        "pdf-rotate",
+        "images-to-pdf",
+        "add-page-numbers"
+      ],
+      "sourceURL": "https://all-free-tool.com/pdf-tools/"
+    },
+    {
+      "reference": [
+        "Image Resizer",
+        "Image Cropper",
+        "Watermark Image",
+        "WebP Converter",
+        "EXIF Data Viewer",
+        "EXIF Data Remover"
+      ],
+      "existing": [
+        "image-resize",
+        "image-crop",
+        "add-watermark-to-image",
+        "png-to-webp",
+        "jpg-to-webp",
+        "exif-viewer",
+        "exif-remover"
+      ],
+      "sourceURL": "https://all-free-tool.com/tools/"
+    },
+    {
+      "reference": [
+        "QR Code Generator",
+        "Google Review QR Generator"
+      ],
+      "existing": [
+        "url-qr",
+        "text-qr",
+        "contact-vcard-qr"
+      ],
+      "sourceURL": "https://all-free-tool.com/tools/",
+      "note": "Google review links can use URL QR. Dedicated branding or form presets are UI variants."
+    },
+    {
+      "reference": [
+        "Case Converter",
+        "Change Text Case"
+      ],
+      "existing": [
+        "uppercase-converter",
+        "lowercase-converter",
+        "title-case-converter",
+        "sentence-case-converter"
+      ],
+      "sourceURL": "https://all-free-tool.com/tools/"
+    },
+    {
+      "reference": [
+        "Code Beautifier",
+        "Base64 Converter",
+        "Hex to RGB Color Converter",
+        "SHA-256 Generator"
+      ],
+      "existing": [
+        "html-formatter",
+        "css-formatter",
+        "javascript-formatter",
+        "base64-encoder",
+        "base64-decoder",
+        "hex-to-rgb",
+        "sha256-generator"
+      ],
+      "sourceURL": "https://all-free-tool.com/developer-tools/"
+    },
+    {
+      "reference": [
+        "Loan EMI Calculator",
+        "SIP Calculator",
+        "Mortgage Calculator",
+        "Loan Amortization Calculator",
+        "College GPA Calculator",
+        "Study Time Calculator"
+      ],
+      "existing": [
+        "emi-calculator",
+        "sip-mathematical-calculator",
+        "loan-repayment-schedule",
+        "gpa-calculator",
+        "study-hours-calculator",
+        "study-timetable-generator"
+      ],
+      "sourceURL": "https://all-free-tool.com/calculator-tools/"
+    }
+  ],
+  "additionalPartialGaps": [
+    {
+      "reference": "Text Sorter",
+      "existing": [
+        "alphabetical-sorter"
+      ],
+      "sourceURL": "https://all-free-tool.com/tools/",
+      "note": "Alphabetical sorting exists; reference advertises numeric and random ordering too."
+    },
+    {
+      "reference": "Keyword CPC Calculator",
+      "existing": [
+        "cpc-calculator"
+      ],
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "note": "Existing computes spend/clicks. Inspect reference inputs before declaring a distinct keyword estimate implementation."
+    },
+    {
+      "reference": "Canonical URL Generator",
+      "existing": [
+        "meta-tag-generator"
+      ],
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "note": "Canonical tag generation already included; dedicated URL normalization UI may differ."
+    },
+    {
+      "reference": "Image Size Analyzer",
+      "existing": [
+        "image-dimensions-checker"
+      ],
+      "sourceURL": "https://all-free-tool.com/seo-tools/",
+      "note": "Local image dimensions exist; reference wording may intend remote-page analysis."
+    },
+    {
+      "reference": "Countdown Calculator",
+      "existing": [
+        "countdown-timer"
+      ],
+      "sourceURL": "https://all-free-tool.com/calculator-tools/",
+      "note": "Duration countdown exists; calendar target/date countdown is a separate gap."
+    }
+  ]
+}
