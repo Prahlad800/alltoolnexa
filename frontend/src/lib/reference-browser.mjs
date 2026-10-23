@@ -1,4 +1,4 @@
-import { date, integer } from '../../../shared/core.mjs';
+import { date, integer } from '../../shared/core.mjs';
 
 const MAX_INVOICE_CENTS = 1_000_000_000_000n;
 const limitedText = (value, label, max, required = false) => {
@@ -256,8 +256,8 @@ export async function processReferenceBrowser(tool, values, files = []) {
     }
     case 'html-editor': {
       const text = inputText(values.text, 'HTML');
-      const module = await import('dompurify');
-      const htmlPreview = module.default.sanitize(text, {
+      const importedModule = await import('dompurify');
+      const htmlPreview = importedModule.default.sanitize(text, {
         USE_PROFILES: { html: true }, ADD_TAGS: ['style'], FORCE_BODY: true,
         FORBID_TAGS: ['script', 'iframe', 'frame', 'object', 'embed', 'form', 'input', 'button', 'meta', 'link', 'base', 'img', 'video', 'audio', 'source'],
         FORBID_ATTR: ['href', 'src', 'srcset', 'action', 'formaction', 'poster', 'xlink:href'],

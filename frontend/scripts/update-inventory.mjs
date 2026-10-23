@@ -12,3 +12,7 @@ const stats={canonicalTools:tools.length,aliases:Object.keys(aliases).length,inv
 fs.writeFileSync(path.join(root,'shared','implementation-status.json'),JSON.stringify(stats,null,2)+'\n');
 fs.writeFileSync(path.join(root,'shared','published-tools.json'),JSON.stringify(tools,null,2)+'\n');
 console.log(JSON.stringify(stats,null,2));
+
+// Publish API-owned snapshots when developing the complete three-app checkout.
+const backend=path.resolve(root,'../backend');
+if(fs.existsSync(backend)){const data=path.join(backend,'data');fs.mkdirSync(data,{recursive:true});for(const name of ['inventory.json','implementation-status.json','published-tools.json'])fs.copyFileSync(path.join(root,'shared',name),path.join(data,name));}

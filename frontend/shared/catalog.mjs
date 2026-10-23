@@ -533,9 +533,9 @@ calc(
 calc(
   "student",
   "CGPA to Percentage",
-  [a("CGPA", 8.5), b("Institution multiplier", 9.5)],
+  [{...a("CGPA", 8.5),min:0}, b("Institution multiplier", 9.5), {...f("scale","Maximum CGPA scale",10),min:1,max:100}],
   "CGPA × your institution’s multiplier. Institutions use different conversion rules.",
-  (v) => number(v.a, "CGPA", 0) * p(v, "b"),
+  (v) => {const scale=number(v.scale??10,"Maximum CGPA scale",1,100);const result=number(v.a,"CGPA",0,scale)*p(v,"b");if(result>100)throw Error("Converted percentage exceeds 100. Check your grading scale and institution multiplier.");return result;},
 );
 calc(
   "student",
@@ -2744,6 +2744,23 @@ getTool('ascii-to-text').fields[0].value='72 101 108 108 111';
 
 import {extendBatchTwo} from './batch-two.mjs';
 extendBatchTwo({register,field,aliases});
+
+import {extendReferenceTools} from './reference-tools.mjs';
+import {extendReferenceFiles} from './reference-files.mjs';
+import {extendReferenceBrowser} from './reference-browser.mjs';
+import {extendReferenceExtras} from './reference-extras.mjs';
+for (const extend of [extendReferenceTools,extendReferenceFiles,extendReferenceBrowser,extendReferenceExtras]) extend({register,field,aliases});
+// Keep the existing URL and aliases while making the single-output behavior explicit.
+Object.assign(getTool('pdf-split'),{name:'Extract PDF Pages',description:'Extract selected pages into one PDF. Selected pages become one file, not separate PDFs.'});
+getTool('pdf-reorder').fields.find(f=>f.key==='pages').value='';
+getTool('pdf-rotate').description='Rotate all PDF pages clockwise by the selected angle.';
+getTool('image-resize').fields.find(f=>f.key==='b').label='Height (px)';
+getTool('base64-to-image').fields[0].value='';
+getTool('images-to-pdf').fields.push(field('orientation','Page orientation','portrait','select',['portrait','landscape']),field('fit','Image fit','contain','select',['contain','cover']));
+for (const [alias,target] of Object.entries(aliases)) {
+  if (!getTool(target)) throw Error(`Unknown alias target ${alias}: ${target}`);
+  if (getTool(alias) && alias!==target) throw Error(`Alias shadows tool ${alias}`);
+}
 
 for (const [alias, target] of Object.entries(aliases)) {
   const tool = getTool(target);

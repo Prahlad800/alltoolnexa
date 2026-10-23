@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "npm --prefix frontend run dev",
-    "prebuild": "node scripts/update-inventory.mjs",
     "build": "npm --prefix frontend run build",
     "start": "npm --prefix frontend run start",
-    "test": "node --test shared/tools.test.mjs frontend/tests/files.test.mjs",
-    "inventory": "node scripts/update-inventory.mjs",
-    "test:http": "node scripts/verify-http.mjs"
+    "test": "npm --prefix frontend test",
+    "inventory": "npm --prefix frontend run inventory",
+    "test:http": "npm --prefix frontend run test:http"
   }
 }

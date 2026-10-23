@@ -2,7 +2,8 @@ export const slugify = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').
 export function number(value, label = 'Value', min = -Infinity, max = Infinity) {
   if (String(value).trim() === '') throw Error(`${label} is required.`);
   const n = Number(value);
-  if (!Number.isFinite(n) || n < min || n > max) throw Error(`${label} must be between ${min} and ${max}.`);
+  if (!Number.isFinite(n)) throw Error(`${label} must be a finite number.`);
+  if(n<min||n>max) throw Error(Number.isFinite(min)&&Number.isFinite(max)?`${label} must be between ${min} and ${max}.`:Number.isFinite(min)?`${label} must be at least ${min}.`:`${label} must be at most ${max}.`);
   return n;
 }
 export function positive(v, label = 'Value') { const n = number(v, label, 0); if (!n) throw Error(`${label} must be greater than zero.`); return n; }

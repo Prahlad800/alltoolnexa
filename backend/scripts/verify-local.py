@@ -6,7 +6,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(root / 'backend'))
 from dotenv import dotenv_values
 

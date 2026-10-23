@@ -1,4 +1,4 @@
-import {httpURL,number} from '../../../shared/core.mjs';
+import {httpURL,number} from '../../shared/core.mjs';
 const phone=v=>{if(!/^\+?[1-9]\d{6,14}$/.test(v))throw Error('Use a valid international phone number.');return v;};
 const email=v=>{if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))throw Error('Enter a valid email format.');return v;};
 const wifiEscape=s=>s.replace(/[\\;,:"']/g,c=>'\\'+c);

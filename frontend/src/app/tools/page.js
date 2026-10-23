@@ -1,4 +1,4 @@
-import {tools,categories} from '../../../../shared/catalog.mjs';
+import {tools,categories} from '../../../shared/catalog.mjs';
 import Directory from '@/components/Directory';
 import {pageMetadata} from '@/lib/site';
 export const metadata=pageMetadata('All free tools','Search our free browser-local calculators, converters, image, PDF and developer tools. No account required.','/tools');

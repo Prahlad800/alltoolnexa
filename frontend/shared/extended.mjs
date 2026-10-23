@@ -44,10 +44,10 @@ export function extendCatalog({register,field:f}) {
   ['PDF Reorder','reorder',[f('pages','New page order (every page once)','1','text')],false],
   ['PDF Page Counter','inspect',[],false],['PDF Metadata Viewer','metadata',[],false],['PDF Metadata Remover','clean',[],false],
   ['PDF Page Size Checker','sizes',[],false],['Add Page Numbers','numbers',[],false],
-  ['Add Watermark to PDF','watermark',[f('text','Watermark (Latin text)','DRAFT','text')],false],
+  ['Add Watermark to PDF','watermark',[f('text','Watermark text','DRAFT','text')],false],
   ['Remove Selected Pages','remove',[f('pages','Pages to remove','1','text')],false],['Images to PDF','images',[],true],
  ])browser('pdf',name,fields,'Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.','pdf',{mode,multiple,accept:mode==='images'?'image/jpeg,image/png':'.pdf,application/pdf'});
- browser('pdf','Text to PDF',[text('Create a document from your text.')],'Create A4 pages with automatic wrapping. Standard Latin PDF fonts are used; unsupported characters display an error.','text-pdf');
+ browser('pdf','Text to PDF',[text('Create a document from your text.')],'Create A4 pages with automatic wrapping. Latin text stays selectable. Hindi and other Unicode text is rendered as images using device fonts; text in that output is not selectable.','text-pdf');
  browser('random','File Hash Generator',[f('algorithm','Algorithm','SHA-256','select',['SHA-256','SHA-384','SHA-512'])],'Hash a local file with Web Crypto; files stay on your device.','file-hash',{accept:'*/*'});
  browser('developer','File Extension Finder',[],'Inspect the file name, extension, byte size and browser-reported MIME type. MIME type is advisory.','file-info',{accept:'*/*'});
  for(const[name,mode,fields]of[

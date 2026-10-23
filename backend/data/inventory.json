@@ -2603,7 +2603,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "html-minifier"
   },
   {
     "id": "css-formatter",
@@ -2622,7 +2623,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "css-minifier"
   },
   {
     "id": "javascript-formatter",
@@ -2641,7 +2643,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "javascript-minifier"
   },
   {
     "id": "sql-formatter",
@@ -2650,7 +2653,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "sql-formatter"
   },
   {
     "id": "sql-minifier",
@@ -2773,7 +2777,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "md5-generator"
   },
   {
     "id": "sha256-generator",
@@ -2897,7 +2902,8 @@
       "Developer Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "text-diff-checker"
   },
   {
     "id": "http-header-checker",
@@ -3134,7 +3140,8 @@
       "SEO Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "serp-preview"
   },
   {
     "id": "keyword-density-checker",
@@ -3182,7 +3189,8 @@
       "SEO Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "robots-txt-generator"
   },
   {
     "id": "sitemap-generator",
@@ -3191,7 +3199,8 @@
       "SEO Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "sitemap-generator"
   },
   {
     "id": "schema-generator",
@@ -3263,7 +3272,8 @@
       "SEO Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "open-graph-generator"
   },
   {
     "id": "twitter-card-generator",
@@ -3272,7 +3282,8 @@
       "SEO Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "twitter-card-generator"
   },
   {
     "id": "slug-generator",
@@ -3521,7 +3532,8 @@
       "Text Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "random-text-generator"
   },
   {
     "id": "lorem-ipsum-generator",
@@ -3976,7 +3988,8 @@
       "PDF Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "html-to-pdf"
   },
   {
     "id": "pdf-metadata-viewer",
@@ -4054,7 +4067,8 @@
       "PDF Tools"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "pdf-compressor"
   },
   {
     "id": "pdf-to-images",
@@ -5964,7 +5978,8 @@
       "Basic Security Utilities"
     ],
     "occurrences": 1,
-    "status": "planned"
+    "status": "implemented",
+    "canonical": "password-strength-checker"
   },
   {
     "id": "html-escape-tool",

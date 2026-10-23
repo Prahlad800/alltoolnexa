@@ -64,7 +64,7 @@ test('exact conversions and color contrast',()=>{
  assert.equal(evaluate('hex-to-rgb',{color:'#ffffff'}),'rgb(255, 255, 255)');
  assert.equal(evaluate('color-contrast-calculator',{foreground:'#000000',background:'#ffffff'}).ratio,21);
  assert.equal(evaluate('aspect-ratio-calculator',{a:1920,b:1080}),'16:9');
- assert.throws(()=>evaluate('celsius-to-kelvin',{a:-274}),/between/);
+ assert.throws(()=>evaluate('celsius-to-kelvin',{a:-274}),/at least/);
 });
 test('Unicode, data round trips, hostile text and preserved CSV quoting',()=>{
  const message='नमस्ते 🌿 café';

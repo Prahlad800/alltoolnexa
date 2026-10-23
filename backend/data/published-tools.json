@@ -812,13 +812,22 @@
         "key": "a",
         "label": "CGPA",
         "value": 8.5,
-        "type": "number"
+        "type": "number",
+        "min": 0
       },
       {
         "key": "b",
         "label": "Institution multiplier",
         "value": 9.5,
         "type": "number"
+      },
+      {
+        "key": "scale",
+        "label": "Maximum CGPA scale",
+        "value": 10,
+        "type": "number",
+        "min": 1,
+        "max": 100
       }
     ],
     "formula": "CGPA × your institution’s multiplier. Institutions use different conversion rules.",
@@ -4022,7 +4031,8 @@
     ],
     "formula": "Convert text to uppercase.",
     "description": "Uppercase Converter with an instant result. Convert text to uppercase.",
-    "kind": "standard"
+    "kind": "standard",
+    "searchTerms": "case converter"
   },
   {
     "id": "lowercase-converter",
@@ -4204,7 +4214,7 @@
     "formula": "Sort one entry per line using English collation and numeric ordering.",
     "description": "Alphabetical Sorter with an instant result. Sort one entry per line using English collation and numeric ordering.",
     "kind": "standard",
-    "searchTerms": "sort lines"
+    "searchTerms": "sort lines text sorter"
   },
   {
     "id": "line-counter",
@@ -6570,7 +6580,7 @@
       },
       {
         "key": "b",
-        "label": "Height (px, 0 = preserve aspect ratio)",
+        "label": "Height (px)",
         "value": 0,
         "type": "number"
       },
@@ -6596,7 +6606,8 @@
     "description": "Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.",
     "kind": "image",
     "mode": "resize",
-    "accept": "image/jpeg,image/png,image/webp"
+    "accept": "image/jpeg,image/png,image/webp",
+    "searchTerms": "image resizer"
   },
   {
     "id": "image-crop",
@@ -6649,7 +6660,8 @@
     "description": "Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.",
     "kind": "image",
     "mode": "crop",
-    "accept": "image/jpeg,image/png,image/webp"
+    "accept": "image/jpeg,image/png,image/webp",
+    "searchTerms": "image cropper"
   },
   {
     "id": "image-rotate",
@@ -6824,7 +6836,8 @@
     "description": "Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.",
     "kind": "image",
     "mode": "convert",
-    "accept": "image/jpeg,image/png,image/webp"
+    "accept": "image/jpeg,image/png,image/webp",
+    "searchTerms": "webp converter"
   },
   {
     "id": "jpg-to-webp",
@@ -7100,7 +7113,7 @@
       {
         "key": "text",
         "label": "Your text",
-        "value": "data:image/png;base64,",
+        "value": "",
         "type": "textarea"
       }
     ],
@@ -7118,11 +7131,12 @@
     "kind": "pdf",
     "mode": "merge",
     "multiple": true,
-    "accept": ".pdf,application/pdf"
+    "accept": ".pdf,application/pdf",
+    "searchTerms": "merge pdf merge_pdf"
   },
   {
     "id": "pdf-split",
-    "name": "PDF Split",
+    "name": "Extract PDF Pages",
     "category": "pdf",
     "fields": [
       {
@@ -7133,12 +7147,12 @@
       }
     ],
     "formula": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
-    "description": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
+    "description": "Extract selected pages into one PDF. Selected pages become one file, not separate PDFs.",
     "kind": "pdf",
     "mode": "extract",
     "multiple": false,
     "accept": ".pdf,application/pdf",
-    "searchTerms": "extract pdf pages"
+    "searchTerms": "extract pdf pages split pdf split_pdf"
   },
   {
     "id": "pdf-rotate",
@@ -7158,11 +7172,12 @@
       }
     ],
     "formula": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
-    "description": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
+    "description": "Rotate all PDF pages clockwise by the selected angle.",
     "kind": "pdf",
     "mode": "rotate",
     "multiple": false,
-    "accept": ".pdf,application/pdf"
+    "accept": ".pdf,application/pdf",
+    "searchTerms": "rotate pdf rotate_pdf"
   },
   {
     "id": "pdf-reorder",
@@ -7172,7 +7187,7 @@
       {
         "key": "pages",
         "label": "New page order (every page once)",
-        "value": "1",
+        "value": "",
         "type": "text"
       }
     ],
@@ -7250,7 +7265,7 @@
     "fields": [
       {
         "key": "text",
-        "label": "Watermark (Latin text)",
+        "label": "Watermark text",
         "value": "DRAFT",
         "type": "text"
       }
@@ -7285,14 +7300,35 @@
     "id": "images-to-pdf",
     "name": "Images to PDF",
     "category": "pdf",
-    "fields": [],
+    "fields": [
+      {
+        "key": "orientation",
+        "label": "Page orientation",
+        "value": "portrait",
+        "type": "select",
+        "options": [
+          "portrait",
+          "landscape"
+        ]
+      },
+      {
+        "key": "fit",
+        "label": "Image fit",
+        "value": "contain",
+        "type": "select",
+        "options": [
+          "contain",
+          "cover"
+        ]
+      }
+    ],
     "formula": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
     "description": "Process files on your device. Encrypted PDFs are unsupported. Re-saving does not preserve digital signatures. Original files are never modified.",
     "kind": "pdf",
     "mode": "images",
     "multiple": true,
     "accept": "image/jpeg,image/png",
-    "searchTerms": "jpg to pdf png to pdf"
+    "searchTerms": "jpg to pdf png to pdf jpg_to_pdf"
   },
   {
     "id": "text-to-pdf",
@@ -7306,8 +7342,8 @@
         "type": "textarea"
       }
     ],
-    "formula": "Create A4 pages with automatic wrapping. Standard Latin PDF fonts are used; unsupported characters display an error.",
-    "description": "Create A4 pages with automatic wrapping. Standard Latin PDF fonts are used; unsupported characters display an error.",
+    "formula": "Create A4 pages with automatic wrapping. Latin text stays selectable. Hindi and other Unicode text is rendered as images using device fonts; text in that output is not selectable.",
+    "description": "Create A4 pages with automatic wrapping. Latin text stays selectable. Hindi and other Unicode text is rendered as images using device fonts; text in that output is not selectable.",
     "kind": "text-pdf"
   },
   {
@@ -7357,7 +7393,8 @@
     "formula": "Generate and download a QR code locally. Test it with your intended scanner before sharing.",
     "description": "Generate and download a QR code locally. Test it with your intended scanner before sharing.",
     "kind": "qr",
-    "mode": "url"
+    "mode": "url",
+    "searchTerms": "google review qr code generator google review qr qr code generator"
   },
   {
     "id": "text-qr",
@@ -10282,7 +10319,8 @@
     "formula": "Format source code locally with Prettier. Formatting does not execute or validate the safety of the code.",
     "description": "JavaScript Formatter with an instant result. Format source code locally with Prettier. Formatting does not execute or validate the safety of the code.",
     "kind": "code-format",
-    "parser": "babel"
+    "parser": "babel",
+    "searchTerms": "code beautifier"
   },
   {
     "id": "regex-tester",
@@ -10537,5 +10575,1029 @@
     "description": "CSS Grid Generator with an instant result. Generate an equal-column CSS grid, with an optional responsive auto-fit alternative shown in a comment.",
     "kind": "standard",
     "extension": "css"
+  },
+  {
+    "id": "text-diff-checker",
+    "name": "Text Diff Checker",
+    "category": "text",
+    "fields": [
+      {
+        "key": "original",
+        "label": "Original text",
+        "value": "First line\nOriginal line\nLast line",
+        "type": "textarea"
+      },
+      {
+        "key": "revised",
+        "label": "Revised text",
+        "value": "First line\nUpdated line\nLast line",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Compare exact lines using a bounded longest-common-subsequence algorithm: at most 400 lines and 100,000 characters on each side. Minus marks removals and plus marks additions; line endings are normalized.",
+    "description": "Text Diff Checker with an instant result. Compare exact lines using a bounded longest-common-subsequence algorithm: at most 400 lines and 100,000 characters on each side. Minus marks removals and plus marks additions; line endings are normalized.",
+    "kind": "standard",
+    "searchTerms": "code difference comparison tool code difference tool diff checker"
+  },
+  {
+    "id": "password-strength-checker",
+    "name": "Password Strength Checker",
+    "category": "random",
+    "fields": [
+      {
+        "key": "password",
+        "label": "Password to inspect",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Local heuristic based on length, character groups and a small set of obvious patterns. It does not query breaches, estimate cracking time or prove security; the password is not included in the result.",
+    "description": "Password Strength Checker with an instant result. Local heuristic based on length, character groups and a small set of obvious patterns. It does not query breaches, estimate cracking time or prove security; the password is not included in the result.",
+    "kind": "standard"
+  },
+  {
+    "id": "text-to-binary",
+    "name": "Text to Binary",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "UTF-8 text",
+        "value": "Hello 🌿",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Encode Unicode text as UTF-8 and show each byte as eight binary digits. Supports up to 65,536 bytes; unpaired surrogates are rejected to preserve round trips.",
+    "description": "Text to Binary with an instant result. Encode Unicode text as UTF-8 and show each byte as eight binary digits. Supports up to 65,536 bytes; unpaired surrogates are rejected to preserve round trips.",
+    "kind": "standard",
+    "searchTerms": "utf8 text to binary"
+  },
+  {
+    "id": "binary-to-text",
+    "name": "Binary to Text",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "UTF-8 binary bytes",
+        "value": "01001000 01100101 01101100 01101100 01101111",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Decode complete binary bytes using strict UTF-8. Enter whitespace-separated 8-bit groups or one continuous bit string. Invalid UTF-8 is rejected rather than silently replaced.",
+    "description": "Binary to Text with an instant result. Decode complete binary bytes using strict UTF-8. Enter whitespace-separated 8-bit groups or one continuous bit string. Invalid UTF-8 is rejected rather than silently replaced.",
+    "kind": "standard",
+    "searchTerms": "binary to utf8 text"
+  },
+  {
+    "id": "robots-txt-generator",
+    "name": "Robots.txt Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "agents",
+        "label": "User agents, one per line",
+        "value": "*",
+        "type": "textarea"
+      },
+      {
+        "key": "disallow",
+        "label": "Disallowed paths, one per line",
+        "value": "/admin/\n/private/",
+        "type": "textarea"
+      },
+      {
+        "key": "allow",
+        "label": "Allowed paths, one per line",
+        "value": "",
+        "type": "textarea"
+      },
+      {
+        "key": "sitemaps",
+        "label": "Absolute sitemap URLs, one per line",
+        "value": "https://example.com/sitemap.xml",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Generate one robots.txt user-agent group with Allow/Disallow rules and optional Sitemap entries. This guides cooperating crawlers; it does not protect private content or guarantee indexing behavior.",
+    "description": "Robots.txt Generator with an instant result. Generate one robots.txt user-agent group with Allow/Disallow rules and optional Sitemap entries. This guides cooperating crawlers; it does not protect private content or guarantee indexing behavior.",
+    "kind": "standard",
+    "extension": "txt"
+  },
+  {
+    "id": "sitemap-generator",
+    "name": "Sitemap Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "urls",
+        "label": "Absolute page URLs, one per line",
+        "value": "https://example.com/\nhttps://example.com/about",
+        "type": "textarea"
+      },
+      {
+        "key": "lastmod",
+        "label": "Actual last modification date (optional)",
+        "value": "",
+        "type": "date"
+      },
+      {
+        "key": "frequency",
+        "label": "Change frequency hint",
+        "value": "not set",
+        "type": "select",
+        "options": [
+          "not set",
+          "always",
+          "hourly",
+          "daily",
+          "weekly",
+          "monthly",
+          "yearly",
+          "never"
+        ]
+      },
+      {
+        "key": "priority",
+        "label": "Priority hint (0–1)",
+        "value": 0.5,
+        "type": "number"
+      }
+    ],
+    "formula": "Create escaped sitemap XML from up to 500 supplied URLs; duplicate normalized URLs are removed. Enter an actual modification date when known. Frequency and priority are optional crawler hints, not ranking controls.",
+    "description": "Sitemap Generator with an instant result. Create escaped sitemap XML from up to 500 supplied URLs; duplicate normalized URLs are removed. Enter an actual modification date when known. Frequency and priority are optional crawler hints, not ranking controls.",
+    "kind": "standard",
+    "extension": "xml"
+  },
+  {
+    "id": "schema-markup-generator",
+    "name": "Schema Markup Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "type",
+        "label": "Schema type",
+        "value": "Organization",
+        "type": "select",
+        "options": [
+          "Organization",
+          "Person",
+          "Article",
+          "WebSite"
+        ]
+      },
+      {
+        "key": "name",
+        "label": "Name / article headline",
+        "value": "Example Studio",
+        "type": "text"
+      },
+      {
+        "key": "url",
+        "label": "Canonical URL",
+        "value": "https://example.com/",
+        "type": "text"
+      },
+      {
+        "key": "description",
+        "label": "Description",
+        "value": "Helpful resources from Example Studio.",
+        "type": "textarea"
+      },
+      {
+        "key": "image",
+        "label": "Absolute image URL (optional)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "author",
+        "label": "Article author name (optional)",
+        "value": "",
+        "type": "text"
+      }
+    ],
+    "formula": "Generate a small typed JSON-LD object using only supplied facts. Article author is optional. The output is JSON, not an automatic rich-result eligibility check; review the schema against your actual page.",
+    "description": "Schema Markup Generator with an instant result. Generate a small typed JSON-LD object using only supplied facts. Article author is optional. The output is JSON, not an automatic rich-result eligibility check; review the schema against your actual page.",
+    "kind": "standard",
+    "extension": "json"
+  },
+  {
+    "id": "hreflang-generator",
+    "name": "Hreflang Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "translations",
+        "label": "Language | absolute URL, one per line",
+        "value": "en | https://example.com/en/\nhi-IN | https://example.com/hi/\nx-default | https://example.com/",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Generate escaped alternate-language link tags for up to 100 language/URL pairs. Include self-references and matching reciprocal tags on each alternate page; this output does not check your live pages.",
+    "description": "Hreflang Generator with an instant result. Generate escaped alternate-language link tags for up to 100 language/URL pairs. Include self-references and matching reciprocal tags on each alternate page; this output does not check your live pages.",
+    "kind": "standard",
+    "extension": "html"
+  },
+  {
+    "id": "open-graph-generator",
+    "name": "Open Graph Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "A useful page",
+        "type": "text"
+      },
+      {
+        "key": "description",
+        "label": "Description",
+        "value": "A concise description of this page.",
+        "type": "textarea"
+      },
+      {
+        "key": "url",
+        "label": "Canonical URL",
+        "value": "https://example.com/page",
+        "type": "text"
+      },
+      {
+        "key": "image",
+        "label": "Absolute image URL (optional)",
+        "value": "https://example.com/cover.jpg",
+        "type": "text"
+      },
+      {
+        "key": "site",
+        "label": "Site name (optional)",
+        "value": "Example",
+        "type": "text"
+      },
+      {
+        "key": "type",
+        "label": "Content type",
+        "value": "website",
+        "type": "select",
+        "options": [
+          "website",
+          "article"
+        ]
+      }
+    ],
+    "formula": "Generate escaped Open Graph title, type, URL, description, image and site-name tags from your supplied values. Check image access and test previews on the social platform; no live page is fetched.",
+    "description": "Open Graph Generator with an instant result. Generate escaped Open Graph title, type, URL, description, image and site-name tags from your supplied values. Check image access and test previews on the social platform; no live page is fetched.",
+    "kind": "standard",
+    "extension": "html"
+  },
+  {
+    "id": "twitter-card-generator",
+    "name": "Twitter Card Generator",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "A useful page",
+        "type": "text"
+      },
+      {
+        "key": "description",
+        "label": "Description",
+        "value": "A concise description of this page.",
+        "type": "textarea"
+      },
+      {
+        "key": "image",
+        "label": "Absolute image URL (optional)",
+        "value": "https://example.com/cover.jpg",
+        "type": "text"
+      },
+      {
+        "key": "site",
+        "label": "Site handle (optional)",
+        "value": "@example",
+        "type": "text"
+      },
+      {
+        "key": "card",
+        "label": "Card type",
+        "value": "summary_large_image",
+        "type": "select",
+        "options": [
+          "summary",
+          "summary_large_image"
+        ]
+      }
+    ],
+    "formula": "Generate escaped Twitter/X summary card metadata. Supply a real public image URL and valid site handle when available. The platform decides how a shared link is displayed; previews are not fetched here.",
+    "description": "Twitter Card Generator with an instant result. Generate escaped Twitter/X summary card metadata. Supply a real public image URL and valid site handle when available. The platform decides how a shared link is displayed; previews are not fetched here.",
+    "kind": "standard",
+    "extension": "html",
+    "searchTerms": "x card generator"
+  },
+  {
+    "id": "serp-preview",
+    "name": "SERP Preview",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Page title",
+        "value": "Helpful online tools | Example",
+        "type": "text"
+      },
+      {
+        "key": "description",
+        "label": "Meta description",
+        "value": "Explore practical online tools for everyday tasks.",
+        "type": "textarea"
+      },
+      {
+        "key": "url",
+        "label": "Page URL",
+        "value": "https://example.com/tools",
+        "type": "text"
+      }
+    ],
+    "formula": "Prepare a text-only search-result preview and Unicode character counts from supplied metadata. Search engines may rewrite or truncate results; this does not query rankings, search engines or live page content.",
+    "description": "SERP Preview with an instant result. Prepare a text-only search-result preview and Unicode character counts from supplied metadata. Search engines may rewrite or truncate results; this does not query rankings, search engines or live page content.",
+    "kind": "standard",
+    "searchTerms": "serp checker google serp preview tool free serp preview tool"
+  },
+  {
+    "id": "on-page-seo-checker",
+    "name": "On-Page SEO Checker",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "html",
+        "label": "Paste static HTML source",
+        "value": "<!doctype html>\n<html lang=\"en\"><head><title>Example page</title><meta name=\"description\" content=\"A helpful example page.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"canonical\" href=\"https://example.com/\"></head><body><h1>Welcome</h1><img src=\"cover.jpg\" alt=\"A green landscape\"></body></html>",
+        "type": "textarea"
+      },
+      {
+        "key": "url",
+        "label": "Page URL for relative canonical links (optional)",
+        "value": "https://example.com/",
+        "type": "text"
+      }
+    ],
+    "formula": "Inspect up to 200,000 characters and 5,000 tags of pasted static HTML for titles, descriptions, headings, image alt attributes, canonical links and robots metadata. No network requests or JavaScript rendering; malformed HTML and full SEO/accessibility conformance require other checks.",
+    "description": "On-Page SEO Checker with an instant result. Inspect up to 200,000 characters and 5,000 tags of pasted static HTML for titles, descriptions, headings, image alt attributes, canonical links and robots metadata. No network requests or JavaScript rendering; malformed HTML and full SEO/accessibility conformance require other checks.",
+    "kind": "standard"
+  },
+  {
+    "id": "pdf-to-jpg",
+    "name": "PDF to JPG",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "scale",
+        "label": "Render scale (1 = 72 DPI)",
+        "value": 1.5,
+        "type": "number"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Render PDF pages as JPG images on your device. Multiple pages download together in a ZIP. Up to 40 pages per run.",
+    "description": "Render PDF pages as JPG images on your device. Multiple pages download together in a ZIP. Up to 40 pages per run.",
+    "kind": "reference-file",
+    "mode": "jpg",
+    "accept": "application/pdf",
+    "searchTerms": "pdf_to_jpg"
+  },
+  {
+    "id": "pdf-to-png",
+    "name": "PDF to PNG",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "scale",
+        "label": "Render scale (1 = 72 DPI)",
+        "value": 1.5,
+        "type": "number"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Render PDF pages as lossless PNG images. Multiple pages download in a ZIP; up to 40 pages per run.",
+    "description": "Render PDF pages as lossless PNG images. Multiple pages download in a ZIP; up to 40 pages per run.",
+    "kind": "reference-file",
+    "mode": "png",
+    "accept": "application/pdf"
+  },
+  {
+    "id": "pdf-to-txt",
+    "name": "PDF to TXT",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Extract selectable text from PDF pages. Scanned images need OCR; reading order and columns may require correction.",
+    "description": "Extract selectable text from PDF pages. Scanned images need OCR; reading order and columns may require correction.",
+    "kind": "reference-file",
+    "mode": "txt",
+    "accept": "application/pdf",
+    "searchTerms": "pdf to text"
+  },
+  {
+    "id": "pdf-to-html",
+    "name": "PDF to HTML",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Export selectable PDF text as a simple escaped HTML document. Images, fonts and page layout are not reconstructed.",
+    "description": "Export selectable PDF text as a simple escaped HTML document. Images, fonts and page layout are not reconstructed.",
+    "kind": "reference-file",
+    "mode": "html",
+    "accept": "application/pdf"
+  },
+  {
+    "id": "pdf-to-docx",
+    "name": "PDF to DOCX",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Convert selectable PDF text into an editable Word document with page breaks. Layout, tables and images are not preserved; scanned pages need OCR.",
+    "description": "Convert selectable PDF text into an editable Word document with page breaks. Layout, tables and images are not preserved; scanned pages need OCR.",
+    "kind": "reference-file",
+    "mode": "docx",
+    "accept": "application/pdf",
+    "searchTerms": "pdf to word"
+  },
+  {
+    "id": "pdf-to-excel",
+    "name": "PDF to Excel",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Extract PDF text rows and their positions into an XLSX workbook, one sheet per page. This is a starting point for cleanup, not automatic table or formula recognition.",
+    "description": "Extract PDF text rows and their positions into an XLSX workbook, one sheet per page. This is a starting point for cleanup, not automatic table or formula recognition.",
+    "kind": "reference-file",
+    "mode": "xlsx",
+    "accept": "application/pdf"
+  },
+  {
+    "id": "pdf-to-pptx",
+    "name": "PDF to PPTX",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (e.g. 1-3,5; blank = all)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "scale",
+        "label": "Render scale",
+        "value": 1.5,
+        "type": "number"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Create one PowerPoint slide per PDF page. Page appearance is preserved as an image; slide text is not editable. Up to 40 pages per run.",
+    "description": "Create one PowerPoint slide per PDF page. Page appearance is preserved as an image; slide text is not editable. Up to 40 pages per run.",
+    "kind": "reference-file",
+    "mode": "pptx",
+    "accept": "application/pdf",
+    "searchTerms": "pdf to powerpoint"
+  },
+  {
+    "id": "pdf-compressor",
+    "name": "PDF Compressor",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "strategy",
+        "label": "Compression mode",
+        "value": "preserve",
+        "type": "select",
+        "options": [
+          "preserve",
+          "rasterize"
+        ]
+      },
+      {
+        "key": "consent",
+        "label": "Rasterize removes text selection, links, forms, attachments and signatures. Accept this loss?",
+        "value": "no",
+        "type": "select",
+        "options": [
+          "no",
+          "yes"
+        ]
+      },
+      {
+        "key": "scale",
+        "label": "Render scale (rasterize only)",
+        "value": 1,
+        "type": "number"
+      },
+      {
+        "key": "quality",
+        "label": "JPG quality (rasterize only)",
+        "value": 0.7,
+        "type": "number"
+      },
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Try lossless PDF repacking first; text, links and forms stay in the document. Optional rasterization replaces every page with an image and requires explicit acceptance of lost features. Keep your original; savings are not guaranteed.",
+    "description": "Try lossless PDF repacking first; text, links and forms stay in the document. Optional rasterization replaces every page with an image and requires explicit acceptance of lost features. Keep your original; savings are not guaranteed.",
+    "kind": "reference-file",
+    "mode": "compress",
+    "accept": "application/pdf",
+    "searchTerms": "compress pdf pdf compress"
+  },
+  {
+    "id": "protect-pdf",
+    "name": "Protect PDF",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "password",
+        "label": "New opening password",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Protect a PDF with AES-256 password encryption on your device. Keep the password; it is required to open the result. Existing encrypted PDFs should be unlocked first.",
+    "description": "Protect a PDF with AES-256 password encryption on your device. Keep the password; it is required to open the result. Existing encrypted PDFs should be unlocked first.",
+    "kind": "reference-file",
+    "mode": "protect",
+    "accept": "application/pdf",
+    "searchTerms": "pdf protect"
+  },
+  {
+    "id": "unlock-pdf",
+    "name": "Unlock PDF",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "password",
+        "label": "PDF opening password (if needed)",
+        "value": "",
+        "type": "password"
+      }
+    ],
+    "formula": "Remove PDF opening encryption using the password you provide. A fresh document is created from the decrypted pages; document-level forms, attachments and signatures are not preserved.",
+    "description": "Remove PDF opening encryption using the password you provide. A fresh document is created from the decrypted pages; document-level forms, attachments and signatures are not preserved.",
+    "kind": "reference-file",
+    "mode": "unlock",
+    "accept": "application/pdf",
+    "searchTerms": "pdf unlock"
+  },
+  {
+    "id": "word-to-pdf",
+    "name": "Word to PDF",
+    "category": "pdf",
+    "fields": [],
+    "formula": "Convert text from a DOCX file into a readable PDF with line wrapping. Original Word layout, images and tables are not reproduced. Legacy .doc files are not supported.",
+    "description": "Convert text from a DOCX file into a readable PDF with line wrapping. Original Word layout, images and tables are not reproduced. Legacy .doc files are not supported.",
+    "kind": "reference-file",
+    "mode": "word-pdf",
+    "accept": ".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "searchTerms": "docx to pdf"
+  },
+  {
+    "id": "html-to-pdf",
+    "name": "HTML to PDF",
+    "category": "pdf",
+    "fields": [
+      {
+        "key": "text",
+        "label": "HTML",
+        "value": "<h1>Hello from AllToolNexa</h1><p>Your document, ready to share.</p>",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Create a PDF from the visible text of pasted HTML. Scripts and remote resources are ignored. Original HTML styling and images are not reproduced.",
+    "description": "Create a PDF from the visible text of pasted HTML. Scripts and remote resources are ignored. Original HTML styling and images are not reproduced.",
+    "kind": "reference-file",
+    "mode": "html-pdf",
+    "accept": "application/pdf",
+    "noFile": true
+  },
+  {
+    "id": "invoice-generator",
+    "name": "Invoice Generator",
+    "category": "templates",
+    "fields": [
+      {
+        "key": "invoiceNumber",
+        "label": "Invoice number",
+        "value": "INV-001",
+        "type": "text"
+      },
+      {
+        "key": "business",
+        "label": "Your business and address",
+        "value": "Example Studio\n123 Market Street",
+        "type": "textarea"
+      },
+      {
+        "key": "customer",
+        "label": "Bill to: customer and address",
+        "value": "Client Company\n456 Park Road",
+        "type": "textarea"
+      },
+      {
+        "key": "issueDate",
+        "label": "Invoice date",
+        "value": "2026-01-01",
+        "type": "date"
+      },
+      {
+        "key": "dueDate",
+        "label": "Due date",
+        "value": "2026-01-31",
+        "type": "date"
+      },
+      {
+        "key": "currency",
+        "label": "Currency label (two decimal places)",
+        "value": "USD",
+        "type": "text"
+      },
+      {
+        "key": "items",
+        "label": "Line items CSV: description,quantity,rate",
+        "value": "description,quantity,rate\nDesign services,2,125.00\nProject consultation,1.5,80.00",
+        "type": "textarea"
+      },
+      {
+        "key": "discount",
+        "label": "Discount amount before tax",
+        "value": 0,
+        "type": "number"
+      },
+      {
+        "key": "tax",
+        "label": "Tax on discounted subtotal (%)",
+        "value": 10,
+        "type": "number"
+      },
+      {
+        "key": "notes",
+        "label": "Notes or payment details",
+        "value": "Thank you for your business.",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Each line is rounded to two decimals, half up. Discount is subtracted from the subtotal before tax; tax is rounded half up. Total = subtotal - discount + tax. Rates and discount allow two decimal places; quantities allow six; tax allows four. PDF text uses basic Latin replacements for unsupported characters.",
+    "description": "Create a printable, downloadable PDF invoice with itemized charges, a discount and tax. Amounts use two decimal places for your chosen currency label; no currency conversion or tax policy is inferred.",
+    "kind": "reference-browser",
+    "mode": "invoice",
+    "nofile": true
+  },
+  {
+    "id": "xml-formatter",
+    "name": "XML Formatter",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "XML",
+        "value": "<catalog><tool id=\"one\"><name>Useful tool</name><free>true</free></tool></catalog>",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Parse XML with the browser XML parser and indent element-only content. Mixed content, CDATA and xml:space=\"preserve\" are preserved. Malformed XML and DTD declarations are rejected.",
+    "description": "Format well-formed XML locally while preserving mixed text and inline elements. DTDs and external entities are not supported.",
+    "kind": "reference-browser",
+    "mode": "xml",
+    "nofile": true
+  },
+  {
+    "id": "sql-formatter",
+    "name": "SQL Formatter",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "SQL",
+        "value": "select id, email from users where active = true order by id;",
+        "type": "textarea"
+      },
+      {
+        "key": "language",
+        "label": "SQL dialect",
+        "value": "sql",
+        "type": "select",
+        "options": [
+          "sql",
+          "postgresql",
+          "mysql",
+          "sqlite"
+        ]
+      }
+    ],
+    "formula": "Format SQL locally with sql-formatter and your selected dialect. Parser errors are reported. Formatting does not execute SQL or validate every database syntax or semantic rule.",
+    "description": "Indent SQL statements and standardize keyword casing with a dialect-aware formatter. No database connection is used.",
+    "kind": "reference-browser",
+    "mode": "sql",
+    "nofile": true
+  },
+  {
+    "id": "what-is-my-browser",
+    "name": "What Is My Browser",
+    "category": "developer",
+    "fields": [],
+    "formula": "Report only navigator values exposed by this browser. User-agent and client-hint data can be reduced, spoofed or restricted; no definitive browser version or operating system is inferred.",
+    "description": "Inspect this browser’s reported user agent, languages, platform and supported local device facts without an external lookup.",
+    "kind": "reference-browser",
+    "mode": "browser-info",
+    "nofile": true,
+    "searchTerms": "browser info"
+  },
+  {
+    "id": "dummy-image-placeholder-generator",
+    "name": "Dummy Image Placeholder Generator",
+    "category": "image",
+    "fields": [
+      {
+        "key": "width",
+        "label": "Width (px)",
+        "value": 1200,
+        "type": "number"
+      },
+      {
+        "key": "height",
+        "label": "Height (px)",
+        "value": 630,
+        "type": "number"
+      },
+      {
+        "key": "background",
+        "label": "Background color",
+        "value": "#e7ede9",
+        "type": "color"
+      },
+      {
+        "key": "color",
+        "label": "Text color",
+        "value": "#245c46",
+        "type": "color"
+      },
+      {
+        "key": "text",
+        "label": "Label (blank uses dimensions)",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "key": "fontSize",
+        "label": "Font size (px)",
+        "value": 48,
+        "type": "number"
+      }
+    ],
+    "formula": "Draw a solid-color placeholder and centered label on a local canvas, then export a PNG. Use whole-number dimensions up to 8,192 px and no more than 16 million pixels total.",
+    "description": "Generate a downloadable PNG placeholder in your own dimensions, colors and label.",
+    "kind": "reference-browser",
+    "mode": "placeholder",
+    "nofile": true,
+    "searchTerms": "dummy image generator placeholder image generator"
+  },
+  {
+    "id": "html-editor",
+    "name": "HTML Editor",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "HTML and CSS",
+        "value": "<style>.card { padding: 24px; border-radius: 12px; background: #e7ede9; color: #245c46; font-family: Arial; }</style>\n<section class=\"card\"><h1>Hello, useful tools.</h1><p>Edit this HTML and CSS to see your layout.</p></section>",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Preview sanitized HTML and CSS in an isolated iframe. Scripts, forms, navigation, embedded pages and network resources are disabled. Download preserves your original source; preview sanitation can change its appearance.",
+    "description": "Edit HTML and inline CSS locally with an isolated preview. JavaScript and network resources are disabled in the preview.",
+    "kind": "reference-browser",
+    "mode": "html-editor",
+    "nofile": true
+  },
+  {
+    "id": "html-minifier",
+    "name": "HTML Minifier",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Source code",
+        "value": "<section>\n  <h1>Hello world</h1>\n  <p>Keep it simple.</p>\n</section>",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Minify pasted HTML locally. Review and test the output before replacing production code.",
+    "description": "Minify pasted HTML locally. Review and test the output before replacing production code.",
+    "kind": "reference-extra",
+    "mode": "html",
+    "extension": "html"
+  },
+  {
+    "id": "css-minifier",
+    "name": "CSS Minifier",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Source code",
+        "value": "body { color: red; margin: 0px; }",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Minify pasted CSS locally. Review and test the output before replacing production code.",
+    "description": "Minify pasted CSS locally. Review and test the output before replacing production code.",
+    "kind": "reference-extra",
+    "mode": "css",
+    "extension": "css"
+  },
+  {
+    "id": "javascript-minifier",
+    "name": "JavaScript Minifier",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Source code",
+        "value": "function add(a, b) { return a + b; } console.log(add(2, 3));",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Minify pasted JavaScript locally. Review and test the output before replacing production code.",
+    "description": "Minify pasted JavaScript locally. Review and test the output before replacing production code.",
+    "kind": "reference-extra",
+    "mode": "js",
+    "extension": "js"
+  },
+  {
+    "id": "random-text-generator",
+    "name": "Random Text Generator",
+    "category": "text",
+    "fields": [
+      {
+        "key": "count",
+        "label": "Number of words",
+        "value": 50,
+        "type": "number"
+      }
+    ],
+    "formula": "Generate a random selection of words for placeholder content. This is sample text, not meaningful prose.",
+    "description": "Generate a random selection of words for placeholder content. This is sample text, not meaningful prose.",
+    "kind": "standard"
+  },
+  {
+    "id": "keyword-suggestion-tool",
+    "name": "Keyword Suggestion Tool",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Topic",
+        "value": "image tools",
+        "type": "text"
+      },
+      {
+        "key": "place",
+        "label": "Optional location",
+        "value": "",
+        "type": "text"
+      }
+    ],
+    "formula": "Generate rule-based keyword ideas from your topic. No search-volume, rankings or competition data is fetched or estimated.",
+    "description": "Generate rule-based keyword ideas from your topic. No search-volume, rankings or competition data is fetched or estimated.",
+    "kind": "standard",
+    "searchTerms": "long tail keyword generator keywords suggestion tool"
+  },
+  {
+    "id": "page-size-checker",
+    "name": "Page Size Checker",
+    "category": "seo",
+    "fields": [
+      {
+        "key": "text",
+        "label": "HTML source",
+        "value": "<h1>Hello world</h1>",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Measure the UTF-8 byte size of pasted source. External images, scripts, styles and network transfer compression are not included.",
+    "description": "Measure the UTF-8 byte size of pasted source. External images, scripts, styles and network transfer compression are not included.",
+    "kind": "standard"
+  },
+  {
+    "id": "open-all-urls",
+    "name": "Open All URLs",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "URLs (one per line)",
+        "value": "https://example.com\nhttps://example.org",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Validate up to 25 HTTP/HTTPS links and create a clickable list. Open each link yourself; your browser stays in control of new tabs.",
+    "description": "Validate up to 25 HTTP/HTTPS links and create a clickable list. Open each link yourself; your browser stays in control of new tabs.",
+    "kind": "reference-extra",
+    "mode": "urls"
+  },
+  {
+    "id": "md5-generator",
+    "name": "MD5 Generator",
+    "category": "developer",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Text",
+        "value": "Hello world",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Compute an MD5 checksum of UTF-8 text locally. MD5 is a legacy checksum and is unsuitable for password storage or collision-resistant security.",
+    "description": "Compute an MD5 checksum of UTF-8 text locally. MD5 is a legacy checksum and is unsuitable for password storage or collision-resistant security.",
+    "kind": "reference-extra",
+    "mode": "md5",
+    "searchTerms": "online md5 generator"
   }
 ]

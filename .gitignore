@@ -5,5 +5,9 @@
 **/__pycache__/
 *.py[cod]
 .pytest_cache/
-/node_modules/
+**/node_modules/
 **/.install-backup/
+
+# Generated local audit artifacts
+/frontend/logs/
+/frontend/runtime-results/

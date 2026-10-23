@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import {tools,categories} from '../../../../../shared/catalog.mjs';
+import {tools,categories} from '../../../../shared/catalog.mjs';
 import ToolCard from '@/components/ToolCard';
 import {pageMetadata} from '@/lib/site';
 export function generateStaticParams(){return categories.map(c=>({slug:c.id}));}

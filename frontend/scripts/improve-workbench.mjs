@@ -1,0 +1,13 @@
+﻿import fs from 'node:fs';
+const p=new URL('../src/components/Workbench.js',import.meta.url);let s=fs.readFileSync(p,'utf8');
+s=s.replace("[canCancel,setCanCancel]=useState(false);","[canCancel,setCanCancel]=useState(false),[selecting,setSelecting]=useState(false);");
+s=s.replace("if(!incoming.length)return;","if(!incoming.length)return;setSelecting(true);setNotice('Checking your files…');");
+s=s.replace("finally{if(fileRef.current)fileRef.current.value='';}","finally{if(id===selectId.current){setSelecting(false);setNotice('');}if(fileRef.current)fileRef.current.value='';}");
+s=s.replace("if(busy)return;const runId", "if(busy||selecting)return;const runId");
+s=s.replaceAll('disabled={busy}', 'disabled={busy||selecting}');
+s=s.replace("{busy?'Processing…':action+' →'}","{selecting?'Checking files…':busy?'Processing…':action+' →'}");
+s=s.replace("'Process';","tool.kind==='image'?`Create ${values.format==='image/jpeg'?'JPG':values.format==='image/webp'?'WebP':'image'}`:tool.name;");
+s=s.replace("{tool.fields.map(f=>{if(f.key", "{tool.fields.map(f=>{if(tool.mode==='compress'&&values.strategy!=='rasterize'&&['consent','scale','quality'].includes(f.key))return null;if(f.key");
+s=s.replace("{option}</option>","{{'image/png':'PNG · lossless','image/jpeg':'JPG · white background','image/webp':'WebP · smaller files',preserve:'Keep text, links and forms',rasterize:'Smaller images · removes text, links and forms',contain:'Fit whole image',cover:'Fill page · crop edges'}[option]||option}</option>");
+s=s.replace("return await processBrowserTool(tool,values,files,{signal:controller.signal});", "const next=await processBrowserTool(tool,values,files,{signal:controller.signal});controller.signal.throwIfAborted();return next;");
+fs.writeFileSync(p,s);

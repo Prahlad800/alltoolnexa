@@ -1,4 +1,4 @@
-import {tools,categories} from '../../../../shared/catalog.mjs';
+import {tools,categories} from '../../../shared/catalog.mjs';
 import ToolCard from '@/components/ToolCard';
 import RecentTools from '@/components/RecentTools';
 import Link from 'next/link';

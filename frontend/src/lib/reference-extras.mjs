@@ -1,5 +1,5 @@
-import {urlList} from '../../../shared/reference-extras.mjs';
-import {escapeHTML} from '../../../shared/core.mjs';
+import {urlList} from '../../shared/reference-extras.mjs';
+import {escapeHTML} from '../../shared/core.mjs';
 
 // MD5 is kept only for compatibility with legacy checksums (RFC 1321).
 export function md5(text){
@@ -10,7 +10,8 @@ export function md5(text){
  for(let offset=0;offset<length;offset+=64){let a=a0,b=b0,c=c0,d=d0;for(let i=0;i<64;i++){let f,g;if(i<16){f=(b&c)|(~b&d);g=i;}else if(i<32){f=(d&b)|(~d&c);g=(5*i+1)%16;}else if(i<48){f=b^c^d;g=(3*i+5)%16;}else{f=c^(b|~d);g=(7*i)%16;}const x=(a+f+K[i]+view.getUint32(offset+g*4,true))>>>0,s=shifts[Math.floor(i/16)*4+i%4];a=d;d=c;c=b;b=(b+((x<<s)|(x>>>(32-s))))>>>0;}a0=(a0+a)>>>0;b0=(b0+b)>>>0;c0=(c0+c)>>>0;d0=(d0+d)>>>0;}
  return [a0,b0,c0,d0].map(n=>[0,8,16,24].map(shift=>((n>>>shift)&255).toString(16).padStart(2,'0')).join('')).join('');
 }
-export async function processReferenceExtra(tool,v){
+export async function processReferenceExtra(tool,v,{signal}={}){
+ signal?.throwIfAborted();
  if(String(v.text||'').length>500000)throw Error('Use input below 500,000 characters.');
  if(tool.mode==='md5')return {text:md5(v.text),filename:'checksum.md5'};
  if(tool.mode==='urls'){const urls=urlList(v.text);return {text:urls.join('\n'),htmlPreview:'<h2>Your links</h2>'+urls.map(url=>'<p><a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(url)+'">'+escapeHTML(url)+'</a></p>').join(''),previewLinks:urls,filename:'urls.txt'};}
@@ -18,7 +19,8 @@ export async function processReferenceExtra(tool,v){
  if(tool.mode==='css'){const {minify}=await import('csso');return {text:minify(v.text,{restructure:false}).css,filename:'minified.css'};}
  if(tool.mode==='html'){
   const worker=new Worker('/vendor/html-minifier.worker.js');
-  try{return await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('Minification timed out. Try a smaller document.')),10000);worker.onmessage=event=>{clearTimeout(timeout);event.data.error?reject(Error(event.data.error)):resolve({text:event.data.text,filename:'minified.html'});};worker.onerror=()=>{clearTimeout(timeout);reject(Error('Could not load the local HTML minifier.'));};worker.postMessage({text:v.text});});}finally{worker.terminate();}
+  let timeout,abort;
+  try{return await new Promise((resolve,reject)=>{abort=()=>{worker.terminate();reject(new DOMException('Processing cancelled.','AbortError'));};signal?.addEventListener('abort',abort,{once:true});timeout=setTimeout(()=>reject(Error('Minification timed out. Try a smaller document.')),10000);worker.onmessage=event=>event.data.error?reject(Error(event.data.error)):resolve({text:event.data.text,filename:'minified.html'});worker.onerror=()=>reject(Error('Could not load the local HTML minifier. Reload the page and retry.'));worker.postMessage({text:v.text});});}finally{clearTimeout(timeout);signal?.removeEventListener('abort',abort);worker.terminate();}
  }
  throw Error('Unsupported reference utility.');
 }

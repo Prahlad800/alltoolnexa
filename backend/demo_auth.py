@@ -137,13 +137,13 @@ def init_demo_auth(app):
     @app.get('/api/admin/catalog')
     @authenticated
     def admin_catalog(digest, record):
-        root = Path(__file__).resolve().parents[1] / 'shared'
+        root = Path(__file__).resolve().parent / 'data'
         try:
             def read(name):
                 return json.loads((root / name).read_text(encoding='utf-8-sig'))
             return jsonify(success=True, tools=read('published-tools.json'), inventory=read('inventory.json'), stats=read('implementation-status.json'))
         except (OSError, ValueError):
-            return jsonify(success=False, message='Run npm run inventory in the project folder first.'), 503
+            return jsonify(success=False, message='Run npm --prefix frontend run inventory in the project folder first.'), 503
 
     @app.get('/api/admin/health')
     @authenticated

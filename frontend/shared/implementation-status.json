@@ -1,0 +1,28 @@
+{
+  "canonicalTools": 502,
+  "aliases": 141,
+  "inventoryIdeas": 1286,
+  "coveredInventoryIdeas": 557,
+  "planned": 706,
+  "needsServiceOrVerifiedData": 23,
+  "categories": {
+    "math": 44,
+    "student": 19,
+    "office": 25,
+    "finance": 32,
+    "marketing": 37,
+    "converters": 42,
+    "date-time": 19,
+    "text": 37,
+    "developer": 57,
+    "seo": 24,
+    "india": 9,
+    "home": 22,
+    "design": 17,
+    "random": 16,
+    "image": 23,
+    "pdf": 25,
+    "qr": 13,
+    "templates": 41
+  }
+}
