@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createWorkbook} from '../src/lib/sheet-model.mjs';
+import {fillSelection,pasteSelection,restructureSheet,sortSelection,mergeSelection} from '../src/lib/sheet-actions.mjs';
+test('fill translates relative formulas, keeps absolute references and styles',()=>{const s=createWorkbook().sheets[0];s.cells.A1={v:'=B1+$C$1',s:{bold:true}};fillSelection(s,'A1','A3','down');assert.equal(s.cells.A3.v,'=B3+$C$1');assert.equal(s.cells.A3.s.bold,true);});
+test('paste validates bounds before mutating and retains empty fields',()=>{const s=createWorkbook().sheets[0];assert.equal(pasteSelection(s,'B2','a\t\n3\t4'),'C3');assert.equal(s.cells.C2.v,'');assert.throws(()=>pasteSelection(s,'IV10000','a\tb'));assert.equal(s.cells.IV10000,undefined);});
+test('row edits update cross-sheet and absolute formulas',()=>{const w=createWorkbook(),s=w.sheets[0];s.cells.A1={v:'4',s:{}};s.cells.A2={v:'=$A$1*2',s:{}};w.sheets.push({id:'s2',name:'Other',cells:{A1:{v:'=Sheet1!A2'}},merges:[],columnWidths:{},rowHeights:{}});restructureSheet(w,s.id,'row',0,1);assert.equal(s.cells.A3.v,'=$A$2*2');assert.equal(w.sheets[1].cells.A1.v,'=Sheet1!A3');});
+test('sort moves complete selected rows without altering outside data',()=>{const w=createWorkbook(),s=w.sheets[0];pasteSelection(s,'A1','2\tb\n1\ta');s.cells.C1={v:'stay'};sortSelection(s,'A1','B2',w);assert.equal(s.cells.B1.v,'a');assert.equal(s.cells.C1.v,'stay');});
+test('merge refuses to discard values',()=>{const s=createWorkbook().sheets[0];pasteSelection(s,'A1','one\ttwo');assert.throws(()=>mergeSelection(s,'A1','B1'));delete s.cells.B1;mergeSelection(s,'A1','B1');assert.deepEqual(s.merges,['A1:B1']);});

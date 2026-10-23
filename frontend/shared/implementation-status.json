@@ -1,6 +1,6 @@
 {
-  "canonicalTools": 502,
-  "aliases": 141,
+  "canonicalTools": 505,
+  "aliases": 145,
   "inventoryIdeas": 1286,
   "coveredInventoryIdeas": 557,
   "planned": 706,
@@ -8,8 +8,8 @@
   "categories": {
     "math": 44,
     "student": 19,
-    "office": 25,
-    "finance": 32,
+    "office": 26,
+    "finance": 33,
     "marketing": 37,
     "converters": 42,
     "date-time": 19,
@@ -21,7 +21,7 @@
     "design": 17,
     "random": 16,
     "image": 23,
-    "pdf": 25,
+    "pdf": 26,
     "qr": 13,
     "templates": 41
   }

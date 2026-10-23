@@ -15,8 +15,9 @@ export function extendReferenceBrowser({ register, field, aliases }) {
     field('discount', 'Discount amount before tax', 0),
     field('tax', 'Tax on discounted subtotal (%)', 10),
     field('notes', 'Notes or payment details', 'Thank you for your business.', 'textarea'),
+    field('exportFormat', 'Download format', 'PDF', 'select', ['PDF', 'HTML', 'Excel (XLSX)', 'CSV', 'PNG photo', 'JPEG photo', 'JSON', 'All formats (ZIP)']),
   ], 'Each line is rounded to two decimals, half up. Discount is subtracted from the subtotal before tax; tax is rounded half up. Total = subtotal - discount + tax. Rates and discount allow two decimal places; quantities allow six; tax allows four. PDF text uses basic Latin replacements for unsupported characters.',
-  'Create a printable, downloadable PDF invoice with itemized charges, a discount and tax. Amounts use two decimal places for your chosen currency label; no currency conversion or tax policy is inferred.');
+  'Create an invoice and export PDF, printable HTML, styled Excel XLSX, CSV, PNG/JPEG photos, JSON or a ZIP with all formats. Multi-page photos download as a ZIP. Amounts use two decimal places for your chosen currency label; no currency conversion or tax policy is inferred.');
   add('developer', 'XML Formatter', 'xml', [
     field('text', 'XML', '<catalog><tool id="one"><name>Useful tool</name><free>true</free></tool></catalog>', 'textarea'),
   ], 'Parse XML with the browser XML parser and indent element-only content. Mixed content, CDATA and xml:space="preserve" are preserved. Malformed XML and DTD declarations are rejected.',

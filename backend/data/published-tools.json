@@ -11321,10 +11321,26 @@
         "label": "Notes or payment details",
         "value": "Thank you for your business.",
         "type": "textarea"
+      },
+      {
+        "key": "exportFormat",
+        "label": "Download format",
+        "value": "PDF",
+        "type": "select",
+        "options": [
+          "PDF",
+          "HTML",
+          "Excel (XLSX)",
+          "CSV",
+          "PNG photo",
+          "JPEG photo",
+          "JSON",
+          "All formats (ZIP)"
+        ]
       }
     ],
     "formula": "Each line is rounded to two decimals, half up. Discount is subtracted from the subtotal before tax; tax is rounded half up. Total = subtotal - discount + tax. Rates and discount allow two decimal places; quantities allow six; tax allows four. PDF text uses basic Latin replacements for unsupported characters.",
-    "description": "Create a printable, downloadable PDF invoice with itemized charges, a discount and tax. Amounts use two decimal places for your chosen currency label; no currency conversion or tax policy is inferred.",
+    "description": "Create an invoice and export PDF, printable HTML, styled Excel XLSX, CSV, PNG/JPEG photos, JSON or a ZIP with all formats. Multi-page photos download as a ZIP. Amounts use two decimal places for your chosen currency label; no currency conversion or tax policy is inferred.",
     "kind": "reference-browser",
     "mode": "invoice",
     "nofile": true
@@ -11599,5 +11615,38 @@
     "kind": "reference-extra",
     "mode": "md5",
     "searchTerms": "online md5 generator"
+  },
+  {
+    "id": "pdf-editor",
+    "name": "PDF Editor",
+    "category": "pdf",
+    "fields": [],
+    "formula": "Add text, highlights, drawings and visual whiteouts; reorder, rotate or remove pages. Original page text is retained. A whiteout only covers content visually and is not secure redaction.",
+    "description": "Edit a PDF in your browser: add text, highlight, draw, reorder, rotate and download.",
+    "kind": "pdf-editor",
+    "accept": "application/pdf,.pdf",
+    "searchTerms": "edit pdf"
+  },
+  {
+    "id": "spreadsheet-editor",
+    "name": "Spreadsheet Editor",
+    "category": "office",
+    "fields": [],
+    "formula": "A local workbook with supported formulas, cell styles, multiple sheets, sorting, filtering and keyboard shortcuts. Import XLSX, CSV, TSV or workspace JSON. Export XLSX, CSV, TSV, HTML or JSON. Supports 10,000 rows, 256 columns per sheet and 100,000 populated/styled cells; advanced Excel features are not retained.",
+    "description": "Create and edit spreadsheets with formulas, formatting, sheet tabs and familiar keyboard shortcuts. Import and export supported XLSX workbooks.",
+    "kind": "spreadsheet-editor",
+    "accept": ".xlsx,.csv,.tsv,.json",
+    "searchTerms": "excel editor"
+  },
+  {
+    "id": "invoice-converter",
+    "name": "Invoice Converter",
+    "category": "finance",
+    "fields": [],
+    "formula": "Extract selectable PDF text or use local English/Hindi OCR for photos and scanned pages. Review and edit extracted text, then export HTML, Excel, CSV, TXT, JSON, PDF or photos. Outputs contain reviewed text lines; original invoice layout and financial columns are not reconstructed. OCR models download on first use.",
+    "description": "Convert an existing invoice PDF or photo into editable text and export HTML, Excel, CSV, PDF, photos and ZIP.",
+    "kind": "invoice-importer",
+    "accept": "application/pdf,image/png,image/jpeg,image/webp,.pdf,.png,.jpg,.jpeg,.webp",
+    "searchTerms": "invoice to excel invoice to html"
   }
 ]

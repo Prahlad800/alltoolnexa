@@ -1,4 +1,5 @@
 import { date, integer } from '../../shared/core.mjs';
+import { exportInvoice } from './invoice-exports.mjs';
 
 const MAX_INVOICE_CENTS = 1_000_000_000_000n;
 const limitedText = (value, label, max, required = false) => {
@@ -244,7 +245,7 @@ async function placeholder(values) {
 export async function processReferenceBrowser(tool, values, files = []) {
   void files;
   switch (tool.mode) {
-    case 'invoice': return invoicePDF(values);
+    case 'invoice': return exportInvoice(calculateInvoice(values), values.exportFormat || 'PDF', () => invoicePDF(values));
     case 'xml': return { text: formatXML(values.text), filename: 'formatted.xml' };
     case 'browser-info': return { text: JSON.stringify(browserFacts(globalThis.navigator), null, 2), filename: 'browser-info.json' };
     case 'placeholder': return placeholder(values);

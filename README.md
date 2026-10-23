@@ -29,6 +29,8 @@ cd backend
 
 Website: http://127.0.0.1:3000. Admin: http://127.0.0.1:3001. API: http://127.0.0.1:5000/api/health.
 
+Document workspaces: `/tools/pdf-editor`, `/tools/spreadsheet-editor`, `/tools/invoice-generator` and `/tools/invoice-converter`. See [features, supported file formats and limits](frontend/docs/DOCUMENT-WORKSPACES.md). Existing invoices can be extracted/reviewed separately from creating a new structured invoice.
+
 Install Node dependencies separately in frontend and admin with npm install. Backend Python dependencies are in backend/requirements.txt. Existing local environment files remain within their service folders.
 
 ## Checks and data

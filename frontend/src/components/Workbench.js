@@ -7,6 +7,9 @@ import ImageSettings from './ImageSettings';
 import Timer from './Timer';
 import {actionLabel,fieldErrors,resultMetrics} from '../lib/workbench-ux.mjs';
 const PDFSettings=dynamic(()=>import('./PDFSettings'),{ssr:false,loading:()=> <p>Loading page controls…</p>});
+const PDFEditor=dynamic(()=>import('./PDFEditor'),{ssr:false,loading:()=> <p>Loading PDF editor…</p>});
+const SpreadsheetEditor=dynamic(()=>import('./SpreadsheetEditor'),{ssr:false,loading:()=> <p>Loading spreadsheet workspace…</p>});
+const InvoiceImporter=dynamic(()=>import('./InvoiceImporter'),{ssr:false,loading:()=> <p>Loading invoice converter…</p>});
 export function display(value){return typeof value==='object'?JSON.stringify(value,null,2):String(value);}
 export default function Workbench({tool}){
  const[values,setValues]=useState(()=>defaults(tool)),[files,setFiles]=useState([]),[result,setResult]=useState(null),[error,setError]=useState(''),[busy,setBusy]=useState(false),[notice,setNotice]=useState(''),[stale,setStale]=useState(false),[info,setInfo]=useState(null),[locked,setLocked]=useState(true),[fileCounts,setFileCounts]=useState([]),[canCancel,setCanCancel]=useState(false),[selecting,setSelecting]=useState(false),[invalid,setInvalid]=useState({}),[dirty,setDirty]=useState(false);
@@ -46,6 +49,9 @@ export default function Workbench({tool}){
  async function copy(){try{await navigator.clipboard.writeText(result.text||'');setNotice('Copied to clipboard.');}catch{setNotice('Clipboard unavailable. Select and copy the result manually.');}}
  function download(){const blob=new Blob([result.text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),anchor=document.createElement('a');anchor.href=url;anchor.download=result.filename;document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  if(tool.kind==='timer')return <Timer tool={tool}/>;
+ if(tool.kind==='pdf-editor')return <PDFEditor/>;
+ if(tool.kind==='spreadsheet-editor')return <SpreadsheetEditor/>;
+ if(tool.kind==='invoice-importer')return <InvoiceImporter/>;
  const action=actionLabel(tool);
  return <section className="workbench" aria-label={`${tool.name} workbench`}><form onSubmit={run} className="tool-form" aria-describedby={error?'tool-error':undefined}>
  <div className="panel-label"><span className="step-number">01</span><h2>Your input</h2><span className="local-badge">On your device</span></div>
