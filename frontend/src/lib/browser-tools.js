@@ -1,6 +1,7 @@
 import {integer,number,positive} from '../../shared/core.mjs';
 import {qrPayload} from './qr-payload.mjs';
 import {validateFiles,checkImage,formatBytes} from './file-input.mjs';
+import {encodeTargetImage} from './target-image.mjs';
 
 export function imageDataBlob(data){const m=/^data:(image\/(?:png|jpeg|webp));base64,([A-Za-z0-9+/=\s]+)$/.exec(data.trim());if(!m)throw Error('Enter a complete PNG, JPEG or WebP Base64 data URL.');const raw=atob(m[2].replace(/\s/g,''));return new Blob([Uint8Array.from(raw,c=>c.charCodeAt(0))],{type:m[1]});}
 const dataURL=file=>new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('Could not read file.'));reader.readAsDataURL(file);});
@@ -30,8 +31,9 @@ async function processImage(tool,v,file){
  else if(tool.mode==='flip'){ctx.translate(v.direction==='horizontal'?w:0,v.direction==='vertical'?h:0);ctx.scale(v.direction==='horizontal'?-1:1,v.direction==='vertical'?-1:1);ctx.drawImage(image,0,0);}
  else if(tool.mode==='pixelate'){const block=integer(v.a,'Block size',1,1000),small=surface(Math.max(1,Math.ceil(w/block)),Math.max(1,Math.ceil(h/block)));small.getContext('2d').drawImage(image,0,0,small.width,small.height);ctx.imageSmoothingEnabled=false;ctx.drawImage(small,0,0,small.width,small.height,0,0,w,h);}
  else {if(tool.mode==='blur'){ctx.filter=`blur(${number(v.a,'Blur',0,100)}px)`;}ctx.drawImage(image,0,0,out.width,out.height);ctx.filter='none';if(tool.mode==='watermark'){const size=number(v.a,'Font size',8,500);ctx.font=`${size}px sans-serif`;ctx.fillStyle='rgba(255,255,255,.85)';ctx.strokeStyle='rgba(0,0,0,.6)';ctx.lineWidth=2;ctx.textAlign='right';ctx.strokeText(v.text,w-15,h-20,w-30);ctx.fillText(v.text,w-15,h-20,w-30);}}
- const quality=number(v.quality||'.9','Quality',.1,1),blob=await new Promise(resolve=>out.toBlob(resolve,format,quality));if(!blob)throw Error('The browser could not encode the image.');if(blob.type!==format)throw Error('Your browser does not support this output format. Try PNG.');
- return {blob,preview:true,filename:`${tool.id}.${format.split('/')[1].replace('jpeg','jpg')}`,warning:blob.size>=file.size?'Size did not reduce. Try WebP or lower quality, or keep your original.':'',text:`${out.width} × ${out.height} px\nOriginal: ${formatBytes(file.size)}\nOutput: ${formatBytes(blob.size)}\nOutput is ${Math.abs((1-blob.size/file.size)*100).toFixed(1)}% ${blob.size>file.size?'larger':'smaller'}.`};
+ const quality=number(v.quality||'.9','Quality',.1,1);
+ const encoded=await encodeTargetImage(q=>new Promise(resolve=>out.toBlob(resolve,format,q)),format,quality,tool.id==='image-compressor'?v.targetKB||0:0),blob=encoded.blob;
+ return {blob,preview:true,filename:`${tool.id}.${format.split('/')[1].replace('jpeg','jpg')}`,warning:blob.size>=file.size?'Size did not reduce. Try WebP or lower quality, or keep your original.':'',text:`${out.width} × ${out.height} px\nOriginal: ${formatBytes(file.size)} (${file.size.toLocaleString('en-US')} bytes)\nOutput: ${formatBytes(blob.size)} (${blob.size.toLocaleString('en-US')} bytes)\nOutput is ${Math.abs((1-blob.size/file.size)*100).toFixed(1)}% ${blob.size>file.size?'larger':'smaller'}.${encoded.targetBytes?`\nTarget met: at most ${encoded.targetBytes.toLocaleString('en-US')} bytes. Encoded quality: ${Math.round(encoded.quality*100)}%.`:''}`};
  }finally{image.close();for(const c of surfaces){c.width=1;c.height=1;}}
 }
 

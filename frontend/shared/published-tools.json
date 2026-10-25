@@ -6883,13 +6883,19 @@
       },
       {
         "key": "quality",
-        "label": "Quality",
+        "label": "Maximum quality",
         "value": 0.7,
+        "type": "number"
+      },
+      {
+        "key": "targetKB",
+        "label": "Maximum output size (KB; 0 = quality only)",
+        "value": 0,
         "type": "number"
       }
     ],
-    "formula": "Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.",
-    "description": "Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.",
+    "formula": "Compress a still JPG, PNG or WebP locally. Choose a maximum KB size or quality only. Target mode lowers quality without changing dimensions and reports if the cap cannot be reached. JPEG uses a white background; re-encoding removes metadata.",
+    "description": "Compress a still JPG, PNG or WebP locally. Choose a maximum KB size or quality only. Target mode lowers quality without changing dimensions and reports if the cap cannot be reached. JPEG uses a white background; re-encoding removes metadata.",
     "kind": "image",
     "mode": "convert",
     "accept": "image/jpeg,image/png,image/webp",

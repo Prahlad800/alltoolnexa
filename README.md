@@ -50,3 +50,9 @@ Tool implementations and inventory source live in frontend/shared. The inventory
 Frontend build requires NEXT_PUBLIC_SITE_URL set to the real HTTPS origin. Configure public API/admin origins separately for each service when deploying. No database credentials belong in browser environment variables.
 
 Audit reports and screenshots: frontend/docs. Runtime audit artifacts: frontend/runtime-results. Previous run logs: frontend/logs. Historical project notes: frontend/docs/PROJECT-NOTES.md.
+
+Competitor research (24 October 2026): [32-site evidence audit and completion ledger](research/competitors/REPORT.md), [architecture decisions and remaining production gaps](research/competitors/ARCHITECTURE-AND-GAPS.md). The audit distinguishes observed interfaces, partial captures, documented claims and pending end-to-end checks. The image compressor includes optional byte-verified target-KB presets; run `node scripts/verify-target-image.mjs` from frontend against the local preview on port 3100 to reproduce its browser check.
+
+## User and admin accounts
+
+Public signup: `/signup`; user login: `/login`; account: `/account`. Admin login remains in the separate application on port 3001. JWT cookies and role checks separate the two sessions. `AUTH_MODE=database` stores users, password hashes and revocable sessions in the configured private PostgreSQL tables. `AUTH_MODE=demo` keeps local accounts in memory. See [backend authentication setup](backend/README.md).

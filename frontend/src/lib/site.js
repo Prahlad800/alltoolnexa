@@ -1,4 +1,5 @@
 import {publicSiteURL} from '../../shared/origins.mjs';
 export const siteURL=publicSiteURL;
-export function pageMetadata(title,description,path){return {title,description,alternates:{canonical:path},openGraph:{title:`${title} | AllToolNexa`,description,url:siteURL+path,type:'website',siteName:'AllToolNexa'}};}
+export function pageMetadata(title,description,path){return {title,description,alternates:{canonical:path},openGraph:{title:`${title} | AllToolNexa`,description,url:siteURL+path,type:'website',siteName:'AllToolNexa',locale:'en_IN',images:[{url:'/social-card.png',width:1200,height:630,alt:'AllToolNexa - free online tools'}]},twitter:{card:'summary_large_image',title:`${title} | AllToolNexa`,description,images:['/social-card.png']}};}
 export const jsonLD = value => JSON.stringify(value).replaceAll('<','\\u003c');
+export function collectionSchema(name,path,items){return {'@context':'https://schema.org','@graph':[{'@type':'CollectionPage',name,url:siteURL+path,mainEntity:{'@type':'ItemList',numberOfItems:items.length,itemListElement:items.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.name,url:siteURL+item.path}))}},{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:siteURL},{'@type':'ListItem',position:2,name,item:siteURL+path}]}]};}

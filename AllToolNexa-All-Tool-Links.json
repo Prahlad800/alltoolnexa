@@ -1,0 +1,3559 @@
+{
+  "siteName": "AllToolNexa",
+  "baseUrl": "http://127.0.0.1:3000",
+  "generatedDate": "2026-10-25",
+  "catalogToolCount": 505,
+  "officeWorkspaceCount": 2,
+  "totalLinks": 507,
+  "tools": [
+    {
+      "id": "percentage-calculator",
+      "name": "Percentage Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/percentage-calculator"
+    },
+    {
+      "id": "percentage-change",
+      "name": "Percentage Change",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/percentage-change"
+    },
+    {
+      "id": "percentage-error",
+      "name": "Percentage Error",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/percentage-error"
+    },
+    {
+      "id": "ratio-simplifier",
+      "name": "Ratio Simplifier",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/ratio-simplifier"
+    },
+    {
+      "id": "fraction-simplifier",
+      "name": "Fraction Simplifier",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/fraction-simplifier"
+    },
+    {
+      "id": "fraction-to-decimal",
+      "name": "Fraction to Decimal",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/fraction-to-decimal"
+    },
+    {
+      "id": "decimal-to-fraction",
+      "name": "Decimal to Fraction",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/decimal-to-fraction"
+    },
+    {
+      "id": "average-calculator",
+      "name": "Average Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/average-calculator"
+    },
+    {
+      "id": "median-calculator",
+      "name": "Median Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/median-calculator"
+    },
+    {
+      "id": "mode-calculator",
+      "name": "Mode Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/mode-calculator"
+    },
+    {
+      "id": "variance-calculator",
+      "name": "Variance Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/variance-calculator"
+    },
+    {
+      "id": "standard-deviation",
+      "name": "Standard Deviation",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/standard-deviation"
+    },
+    {
+      "id": "hcf-gcd-calculator",
+      "name": "HCF/GCD Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/hcf-gcd-calculator"
+    },
+    {
+      "id": "lcm-calculator",
+      "name": "LCM Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/lcm-calculator"
+    },
+    {
+      "id": "prime-number-checker",
+      "name": "Prime Number Checker",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/prime-number-checker"
+    },
+    {
+      "id": "prime-factorization",
+      "name": "Prime Factorization",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/prime-factorization"
+    },
+    {
+      "id": "square-root",
+      "name": "Square Root",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/square-root"
+    },
+    {
+      "id": "cube-root",
+      "name": "Cube Root",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/cube-root"
+    },
+    {
+      "id": "factorial-calculator",
+      "name": "Factorial Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/factorial-calculator"
+    },
+    {
+      "id": "power-calculator",
+      "name": "Power Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/power-calculator"
+    },
+    {
+      "id": "permutation-calculator",
+      "name": "Permutation Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/permutation-calculator"
+    },
+    {
+      "id": "combination-calculator",
+      "name": "Combination Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/combination-calculator"
+    },
+    {
+      "id": "probability-calculator",
+      "name": "Probability Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/probability-calculator"
+    },
+    {
+      "id": "quadratic-equation-solver",
+      "name": "Quadratic Equation Solver",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/quadratic-equation-solver"
+    },
+    {
+      "id": "number-sequence-generator",
+      "name": "Number Sequence Generator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/number-sequence-generator"
+    },
+    {
+      "id": "roman-numeral-converter",
+      "name": "Roman Numeral Converter",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/roman-numeral-converter"
+    },
+    {
+      "id": "circle-area",
+      "name": "Circle Area",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/circle-area"
+    },
+    {
+      "id": "circle-circumference",
+      "name": "Circle Circumference",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/circle-circumference"
+    },
+    {
+      "id": "rectangle-area",
+      "name": "Rectangle Area",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/rectangle-area"
+    },
+    {
+      "id": "square-area",
+      "name": "Square Area",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/square-area"
+    },
+    {
+      "id": "triangle-area",
+      "name": "Triangle Area",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/triangle-area"
+    },
+    {
+      "id": "triangle-perimeter",
+      "name": "Triangle Perimeter",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/triangle-perimeter"
+    },
+    {
+      "id": "pythagorean-calculator",
+      "name": "Pythagorean Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/pythagorean-calculator"
+    },
+    {
+      "id": "trapezoid-area",
+      "name": "Trapezoid Area",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/trapezoid-area"
+    },
+    {
+      "id": "cylinder-volume",
+      "name": "Cylinder Volume",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/cylinder-volume"
+    },
+    {
+      "id": "cube-volume",
+      "name": "Cube Volume",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/cube-volume"
+    },
+    {
+      "id": "sphere-volume",
+      "name": "Sphere Volume",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/sphere-volume"
+    },
+    {
+      "id": "cone-volume",
+      "name": "Cone Volume",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/cone-volume"
+    },
+    {
+      "id": "slope-calculator",
+      "name": "Slope Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/slope-calculator"
+    },
+    {
+      "id": "marks-percentage-calculator",
+      "name": "Marks Percentage Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/marks-percentage-calculator"
+    },
+    {
+      "id": "cgpa-to-percentage",
+      "name": "CGPA to Percentage",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/cgpa-to-percentage"
+    },
+    {
+      "id": "required-attendance-calculator",
+      "name": "Required Attendance Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/required-attendance-calculator"
+    },
+    {
+      "id": "bunk-calculator",
+      "name": "Bunk Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/bunk-calculator"
+    },
+    {
+      "id": "attendance-calculator",
+      "name": "Attendance Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/attendance-calculator"
+    },
+    {
+      "id": "weighted-marks-calculator",
+      "name": "Weighted Marks Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/weighted-marks-calculator"
+    },
+    {
+      "id": "correct-wrong-answer-score-calculator",
+      "name": "Correct/Wrong Answer Score Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/correct-wrong-answer-score-calculator"
+    },
+    {
+      "id": "passing-marks-calculator",
+      "name": "Passing Marks Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/passing-marks-calculator"
+    },
+    {
+      "id": "target-cgpa-calculator",
+      "name": "Target CGPA Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/target-cgpa-calculator"
+    },
+    {
+      "id": "study-hours-calculator",
+      "name": "Study Hours Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/study-hours-calculator"
+    },
+    {
+      "id": "accuracy-percentage-calculator",
+      "name": "Accuracy Percentage Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/accuracy-percentage-calculator"
+    },
+    {
+      "id": "attempt-rate-calculator",
+      "name": "Attempt Rate Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/attempt-rate-calculator"
+    },
+    {
+      "id": "chapter-completion-calculator",
+      "name": "Chapter Completion Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/chapter-completion-calculator"
+    },
+    {
+      "id": "goal-progress-calculator",
+      "name": "Goal Progress Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/goal-progress-calculator"
+    },
+    {
+      "id": "task-completion-percentage",
+      "name": "Task Completion Percentage",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/task-completion-percentage"
+    },
+    {
+      "id": "salary-per-day",
+      "name": "Salary Per Day",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/salary-per-day"
+    },
+    {
+      "id": "salary-per-hour",
+      "name": "Salary Per Hour",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/salary-per-hour"
+    },
+    {
+      "id": "salary-per-minute",
+      "name": "Salary Per Minute",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/salary-per-minute"
+    },
+    {
+      "id": "monthly-to-annual-salary",
+      "name": "Monthly-to-Annual Salary",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/monthly-to-annual-salary"
+    },
+    {
+      "id": "annual-to-monthly-salary",
+      "name": "Annual-to-Monthly Salary",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/annual-to-monthly-salary"
+    },
+    {
+      "id": "salary-hike-calculator",
+      "name": "Salary Hike Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/salary-hike-calculator"
+    },
+    {
+      "id": "increment-percentage-calculator",
+      "name": "Increment Percentage Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/increment-percentage-calculator"
+    },
+    {
+      "id": "overtime-calculator",
+      "name": "Overtime Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/overtime-calculator"
+    },
+    {
+      "id": "unpaid-leave-salary-deduction",
+      "name": "Unpaid Leave Salary Deduction",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/unpaid-leave-salary-deduction"
+    },
+    {
+      "id": "notice-period-buyout-calculator",
+      "name": "Notice Period Buyout Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/notice-period-buyout-calculator"
+    },
+    {
+      "id": "bonus-percentage",
+      "name": "Bonus Percentage",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/bonus-percentage"
+    },
+    {
+      "id": "leave-balance-calculator",
+      "name": "Leave Balance Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/leave-balance-calculator"
+    },
+    {
+      "id": "billable-hours-calculator",
+      "name": "Billable Hours Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/billable-hours-calculator"
+    },
+    {
+      "id": "hourly-rate-calculator",
+      "name": "Hourly Rate Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/hourly-rate-calculator"
+    },
+    {
+      "id": "project-rate-calculator",
+      "name": "Project Rate Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/project-rate-calculator"
+    },
+    {
+      "id": "meeting-cost-calculator",
+      "name": "Meeting Cost Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/meeting-cost-calculator"
+    },
+    {
+      "id": "simple-interest-calculator",
+      "name": "Simple Interest Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/simple-interest-calculator"
+    },
+    {
+      "id": "compound-interest-calculator",
+      "name": "Compound Interest Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/compound-interest-calculator"
+    },
+    {
+      "id": "discount-calculator",
+      "name": "Discount Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/discount-calculator"
+    },
+    {
+      "id": "profit-calculator",
+      "name": "Profit Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/profit-calculator"
+    },
+    {
+      "id": "loss-calculator",
+      "name": "Loss Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/loss-calculator"
+    },
+    {
+      "id": "profit-percentage",
+      "name": "Profit Percentage",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/profit-percentage"
+    },
+    {
+      "id": "margin-calculator",
+      "name": "Margin Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/margin-calculator"
+    },
+    {
+      "id": "markup-calculator",
+      "name": "Markup Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/markup-calculator"
+    },
+    {
+      "id": "selling-price-calculator",
+      "name": "Selling Price Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/selling-price-calculator"
+    },
+    {
+      "id": "cost-price-calculator",
+      "name": "Cost Price Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/cost-price-calculator"
+    },
+    {
+      "id": "break-even-calculator",
+      "name": "Break Even Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/break-even-calculator"
+    },
+    {
+      "id": "roi-calculator",
+      "name": "ROI Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/roi-calculator"
+    },
+    {
+      "id": "cagr-calculator",
+      "name": "CAGR Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/cagr-calculator"
+    },
+    {
+      "id": "future-value-calculator",
+      "name": "Future Value Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/future-value-calculator"
+    },
+    {
+      "id": "present-value-calculator",
+      "name": "Present Value Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/present-value-calculator"
+    },
+    {
+      "id": "inflation-calculator",
+      "name": "Inflation Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/inflation-calculator"
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "name": "Emergency Fund Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/emergency-fund-calculator"
+    },
+    {
+      "id": "savings-goal-calculator",
+      "name": "Savings Goal Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/savings-goal-calculator"
+    },
+    {
+      "id": "commission-calculator",
+      "name": "Commission Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/commission-calculator"
+    },
+    {
+      "id": "add-gst",
+      "name": "Add GST",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/add-gst"
+    },
+    {
+      "id": "remove-gst",
+      "name": "Remove GST",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/remove-gst"
+    },
+    {
+      "id": "discount-gst-calculator",
+      "name": "Discount + GST Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/discount-gst-calculator"
+    },
+    {
+      "id": "down-payment-calculator",
+      "name": "Down Payment Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/down-payment-calculator"
+    },
+    {
+      "id": "debt-to-income-calculator",
+      "name": "Debt-to-Income Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/debt-to-income-calculator"
+    },
+    {
+      "id": "emi-calculator",
+      "name": "EMI Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/emi-calculator"
+    },
+    {
+      "id": "loan-repayment-schedule",
+      "name": "Loan Repayment Schedule",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/loan-repayment-schedule"
+    },
+    {
+      "id": "sip-mathematical-calculator",
+      "name": "SIP Mathematical Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/sip-mathematical-calculator"
+    },
+    {
+      "id": "cpc-calculator",
+      "name": "CPC Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/cpc-calculator"
+    },
+    {
+      "id": "cpm-calculator",
+      "name": "CPM Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/cpm-calculator"
+    },
+    {
+      "id": "ctr-calculator",
+      "name": "CTR Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/ctr-calculator"
+    },
+    {
+      "id": "cpa-calculator",
+      "name": "CPA Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/cpa-calculator"
+    },
+    {
+      "id": "roas-calculator",
+      "name": "ROAS Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/roas-calculator"
+    },
+    {
+      "id": "conversion-rate",
+      "name": "Conversion Rate",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/conversion-rate"
+    },
+    {
+      "id": "customer-acquisition-cost",
+      "name": "Customer Acquisition Cost",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/customer-acquisition-cost"
+    },
+    {
+      "id": "average-order-value",
+      "name": "Average Order Value",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/average-order-value"
+    },
+    {
+      "id": "churn-rate",
+      "name": "Churn Rate",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/churn-rate"
+    },
+    {
+      "id": "email-open-rate",
+      "name": "Email Open Rate",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/email-open-rate"
+    },
+    {
+      "id": "email-ctr",
+      "name": "Email CTR",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/email-ctr"
+    },
+    {
+      "id": "return-rate-calculator",
+      "name": "Return Rate Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/return-rate-calculator"
+    },
+    {
+      "id": "employee-turnover-rate",
+      "name": "Employee Turnover Rate",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/employee-turnover-rate"
+    },
+    {
+      "id": "absenteeism-rate",
+      "name": "Absenteeism Rate",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/absenteeism-rate"
+    },
+    {
+      "id": "arpu-calculator",
+      "name": "ARPU Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/arpu-calculator"
+    },
+    {
+      "id": "trial-conversion-calculator",
+      "name": "Trial Conversion Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/trial-conversion-calculator"
+    },
+    {
+      "id": "freemium-conversion-calculator",
+      "name": "Freemium Conversion Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/freemium-conversion-calculator"
+    },
+    {
+      "id": "cost-per-user-calculator",
+      "name": "Cost Per User Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/cost-per-user-calculator"
+    },
+    {
+      "id": "food-cost-percentage-calculator",
+      "name": "Food Cost Percentage Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/food-cost-percentage-calculator"
+    },
+    {
+      "id": "cost-per-serving-calculator",
+      "name": "Cost Per Serving Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/cost-per-serving-calculator"
+    },
+    {
+      "id": "table-turnover-calculator",
+      "name": "Table Turnover Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/table-turnover-calculator"
+    },
+    {
+      "id": "event-cost-per-person-calculator",
+      "name": "Event Cost Per Person Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/event-cost-per-person-calculator"
+    },
+    {
+      "id": "csat-calculator",
+      "name": "CSAT Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/csat-calculator"
+    },
+    {
+      "id": "context-window-usage-calculator",
+      "name": "Context Window Usage Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/context-window-usage-calculator"
+    },
+    {
+      "id": "monthly-recurring-revenue",
+      "name": "Monthly Recurring Revenue",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/monthly-recurring-revenue"
+    },
+    {
+      "id": "arr-calculator",
+      "name": "ARR Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/arr-calculator"
+    },
+    {
+      "id": "saas-runway-calculator",
+      "name": "SaaS Runway Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/saas-runway-calculator"
+    },
+    {
+      "id": "burn-rate-calculator",
+      "name": "Burn Rate Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/burn-rate-calculator"
+    },
+    {
+      "id": "customer-lifetime-value",
+      "name": "Customer Lifetime Value",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/customer-lifetime-value"
+    },
+    {
+      "id": "nps-calculator",
+      "name": "NPS Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/nps-calculator"
+    },
+    {
+      "id": "rice-score-calculator",
+      "name": "RICE Score Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/rice-score-calculator"
+    },
+    {
+      "id": "ice-score-calculator",
+      "name": "ICE Score Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/ice-score-calculator"
+    },
+    {
+      "id": "net-revenue-retention-calculator",
+      "name": "Net Revenue Retention Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/net-revenue-retention-calculator"
+    },
+    {
+      "id": "gross-revenue-retention-calculator",
+      "name": "Gross Revenue Retention Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/gross-revenue-retention-calculator"
+    },
+    {
+      "id": "inventory-turnover",
+      "name": "Inventory Turnover",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/inventory-turnover"
+    },
+    {
+      "id": "reorder-point-calculator",
+      "name": "Reorder Point Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/reorder-point-calculator"
+    },
+    {
+      "id": "ai-api-cost-calculator",
+      "name": "AI API Cost Calculator",
+      "category": "marketing",
+      "categoryName": "Marketing & SaaS",
+      "url": "http://127.0.0.1:3000/tools/ai-api-cost-calculator"
+    },
+    {
+      "id": "km-to-miles",
+      "name": "KM to Miles",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/km-to-miles"
+    },
+    {
+      "id": "miles-to-km",
+      "name": "Miles to KM",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/miles-to-km"
+    },
+    {
+      "id": "meter-to-feet",
+      "name": "Meter to Feet",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/meter-to-feet"
+    },
+    {
+      "id": "feet-to-meter",
+      "name": "Feet to Meter",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/feet-to-meter"
+    },
+    {
+      "id": "inch-to-cm",
+      "name": "Inch to CM",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/inch-to-cm"
+    },
+    {
+      "id": "cm-to-inch",
+      "name": "CM to Inch",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/cm-to-inch"
+    },
+    {
+      "id": "kg-to-pounds",
+      "name": "KG to Pounds",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/kg-to-pounds"
+    },
+    {
+      "id": "pounds-to-kg",
+      "name": "Pounds to KG",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/pounds-to-kg"
+    },
+    {
+      "id": "gram-to-kg",
+      "name": "Gram to KG",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/gram-to-kg"
+    },
+    {
+      "id": "ounce-to-gram",
+      "name": "Ounce to Gram",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/ounce-to-gram"
+    },
+    {
+      "id": "sq-ft-to-sq-meter",
+      "name": "Sq Ft to Sq Meter",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/sq-ft-to-sq-meter"
+    },
+    {
+      "id": "sq-meter-to-sq-ft",
+      "name": "Sq Meter to Sq Ft",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/sq-meter-to-sq-ft"
+    },
+    {
+      "id": "acre-to-sq-ft",
+      "name": "Acre to Sq Ft",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/acre-to-sq-ft"
+    },
+    {
+      "id": "hectare-to-acre",
+      "name": "Hectare to Acre",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/hectare-to-acre"
+    },
+    {
+      "id": "liter-to-ml",
+      "name": "Liter to ML",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/liter-to-ml"
+    },
+    {
+      "id": "gallon-to-liter",
+      "name": "Gallon to Liter",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/gallon-to-liter"
+    },
+    {
+      "id": "cup-to-ml",
+      "name": "Cup to ML",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/cup-to-ml"
+    },
+    {
+      "id": "tablespoon-to-ml",
+      "name": "Tablespoon to ML",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/tablespoon-to-ml"
+    },
+    {
+      "id": "teaspoon-to-ml",
+      "name": "Teaspoon to ML",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/teaspoon-to-ml"
+    },
+    {
+      "id": "km-h-to-mph",
+      "name": "KM/H to MPH",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/km-h-to-mph"
+    },
+    {
+      "id": "mph-to-km-h",
+      "name": "MPH to KM/H",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/mph-to-km-h"
+    },
+    {
+      "id": "kb-to-mb",
+      "name": "KB to MB",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/kb-to-mb"
+    },
+    {
+      "id": "mb-to-gb",
+      "name": "MB to GB",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/mb-to-gb"
+    },
+    {
+      "id": "gb-to-tb",
+      "name": "GB to TB",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/gb-to-tb"
+    },
+    {
+      "id": "bytes-to-kb",
+      "name": "Bytes to KB",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/bytes-to-kb"
+    },
+    {
+      "id": "gaj-to-square-feet",
+      "name": "Gaj to Square Feet",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/gaj-to-square-feet"
+    },
+    {
+      "id": "square-feet-to-gaj",
+      "name": "Square Feet to Gaj",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/square-feet-to-gaj"
+    },
+    {
+      "id": "guntha-to-square-feet",
+      "name": "Guntha to Square Feet",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/guntha-to-square-feet"
+    },
+    {
+      "id": "square-feet-to-guntha",
+      "name": "Square Feet to Guntha",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/square-feet-to-guntha"
+    },
+    {
+      "id": "cent-to-square-feet",
+      "name": "Cent to Square Feet",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/cent-to-square-feet"
+    },
+    {
+      "id": "decimal-to-square-feet",
+      "name": "Decimal to Square Feet",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/decimal-to-square-feet"
+    },
+    {
+      "id": "acre-to-gaj",
+      "name": "Acre to Gaj",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/acre-to-gaj"
+    },
+    {
+      "id": "square-yard-to-gaj",
+      "name": "Square Yard to Gaj",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/square-yard-to-gaj"
+    },
+    {
+      "id": "crore-to-million",
+      "name": "Crore to Million",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/crore-to-million"
+    },
+    {
+      "id": "million-to-crore",
+      "name": "Million to Crore",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/million-to-crore"
+    },
+    {
+      "id": "lakh-to-crore",
+      "name": "Lakh to Crore",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/lakh-to-crore"
+    },
+    {
+      "id": "degrees-to-radians",
+      "name": "Degrees to Radians",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/degrees-to-radians"
+    },
+    {
+      "id": "radians-to-degrees",
+      "name": "Radians to Degrees",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/radians-to-degrees"
+    },
+    {
+      "id": "celsius-to-fahrenheit",
+      "name": "Celsius to Fahrenheit",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/celsius-to-fahrenheit"
+    },
+    {
+      "id": "fahrenheit-to-celsius",
+      "name": "Fahrenheit to Celsius",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/fahrenheit-to-celsius"
+    },
+    {
+      "id": "celsius-to-kelvin",
+      "name": "Celsius to Kelvin",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/celsius-to-kelvin"
+    },
+    {
+      "id": "kelvin-to-celsius",
+      "name": "Kelvin to Celsius",
+      "category": "converters",
+      "categoryName": "Unit converters",
+      "url": "http://127.0.0.1:3000/tools/kelvin-to-celsius"
+    },
+    {
+      "id": "date-difference-calculator",
+      "name": "Date Difference Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/date-difference-calculator"
+    },
+    {
+      "id": "age-calculator",
+      "name": "Age Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/age-calculator"
+    },
+    {
+      "id": "add-days-to-date",
+      "name": "Add Days to Date",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/add-days-to-date"
+    },
+    {
+      "id": "day-of-week-finder",
+      "name": "Day of Week Finder",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/day-of-week-finder"
+    },
+    {
+      "id": "week-number-calculator",
+      "name": "Week Number Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/week-number-calculator"
+    },
+    {
+      "id": "business-days-calculator",
+      "name": "Business Days Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/business-days-calculator"
+    },
+    {
+      "id": "unix-timestamp-converter",
+      "name": "Unix Timestamp Converter",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/unix-timestamp-converter"
+    },
+    {
+      "id": "iso-date-converter",
+      "name": "ISO Date Converter",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/iso-date-converter"
+    },
+    {
+      "id": "working-hours-calculator",
+      "name": "Working Hours Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/working-hours-calculator"
+    },
+    {
+      "id": "time-duration-calculator",
+      "name": "Time Duration Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/time-duration-calculator"
+    },
+    {
+      "id": "word-counter",
+      "name": "Word Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/word-counter"
+    },
+    {
+      "id": "character-counter",
+      "name": "Character Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/character-counter"
+    },
+    {
+      "id": "uppercase-converter",
+      "name": "Uppercase Converter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/uppercase-converter"
+    },
+    {
+      "id": "lowercase-converter",
+      "name": "Lowercase Converter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/lowercase-converter"
+    },
+    {
+      "id": "title-case-converter",
+      "name": "Title Case Converter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/title-case-converter"
+    },
+    {
+      "id": "sentence-case-converter",
+      "name": "Sentence Case Converter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/sentence-case-converter"
+    },
+    {
+      "id": "text-reverser",
+      "name": "Text Reverser",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/text-reverser"
+    },
+    {
+      "id": "word-reverser",
+      "name": "Word Reverser",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/word-reverser"
+    },
+    {
+      "id": "remove-extra-spaces",
+      "name": "Remove Extra Spaces",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/remove-extra-spaces"
+    },
+    {
+      "id": "remove-line-breaks",
+      "name": "Remove Line Breaks",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/remove-line-breaks"
+    },
+    {
+      "id": "remove-empty-lines",
+      "name": "Remove Empty Lines",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/remove-empty-lines"
+    },
+    {
+      "id": "duplicate-line-remover",
+      "name": "Duplicate Line Remover",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/duplicate-line-remover"
+    },
+    {
+      "id": "duplicate-word-remover",
+      "name": "Duplicate Word Remover",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/duplicate-word-remover"
+    },
+    {
+      "id": "alphabetical-sorter",
+      "name": "Alphabetical Sorter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/alphabetical-sorter"
+    },
+    {
+      "id": "line-counter",
+      "name": "Line Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/line-counter"
+    },
+    {
+      "id": "sentence-counter",
+      "name": "Sentence Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/sentence-counter"
+    },
+    {
+      "id": "paragraph-counter",
+      "name": "Paragraph Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/paragraph-counter"
+    },
+    {
+      "id": "slug-generator",
+      "name": "Slug Generator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/slug-generator"
+    },
+    {
+      "id": "text-to-html",
+      "name": "Text to HTML",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/text-to-html"
+    },
+    {
+      "id": "html-escape-tool",
+      "name": "HTML Escape Tool",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/html-escape-tool"
+    },
+    {
+      "id": "html-decoder",
+      "name": "HTML Decoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/html-decoder"
+    },
+    {
+      "id": "url-encoder",
+      "name": "URL Encoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/url-encoder"
+    },
+    {
+      "id": "url-decoder",
+      "name": "URL Decoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/url-decoder"
+    },
+    {
+      "id": "base64-encoder",
+      "name": "Base64 Encoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/base64-encoder"
+    },
+    {
+      "id": "base64-decoder",
+      "name": "Base64 Decoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/base64-decoder"
+    },
+    {
+      "id": "text-to-ascii",
+      "name": "Text to ASCII",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/text-to-ascii"
+    },
+    {
+      "id": "ascii-to-text",
+      "name": "ASCII to Text",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/ascii-to-text"
+    },
+    {
+      "id": "unicode-converter",
+      "name": "Unicode Converter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/unicode-converter"
+    },
+    {
+      "id": "hashtag-counter",
+      "name": "Hashtag Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/hashtag-counter"
+    },
+    {
+      "id": "hashtag-formatter",
+      "name": "Hashtag Formatter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/hashtag-formatter"
+    },
+    {
+      "id": "whatsapp-bold-text",
+      "name": "WhatsApp Bold Text",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/whatsapp-bold-text"
+    },
+    {
+      "id": "whatsapp-italic-text",
+      "name": "WhatsApp Italic Text",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/whatsapp-italic-text"
+    },
+    {
+      "id": "whatsapp-strikethrough",
+      "name": "WhatsApp Strikethrough",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/whatsapp-strikethrough"
+    },
+    {
+      "id": "name-initial-generator",
+      "name": "Name Initial Generator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/name-initial-generator"
+    },
+    {
+      "id": "file-name-cleaner",
+      "name": "File Name Cleaner",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/file-name-cleaner"
+    },
+    {
+      "id": "email-address-format-checker",
+      "name": "Email Address Format Checker",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/email-address-format-checker"
+    },
+    {
+      "id": "reading-time-calculator",
+      "name": "Reading Time Calculator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/reading-time-calculator"
+    },
+    {
+      "id": "speaking-time-calculator",
+      "name": "Speaking Time Calculator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/speaking-time-calculator"
+    },
+    {
+      "id": "word-frequency-counter",
+      "name": "Word Frequency Counter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/word-frequency-counter"
+    },
+    {
+      "id": "find-and-replace",
+      "name": "Find and Replace",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/find-and-replace"
+    },
+    {
+      "id": "morse-code-converter",
+      "name": "Morse Code Converter",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/morse-code-converter"
+    },
+    {
+      "id": "binary-to-decimal",
+      "name": "Binary to Decimal",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/binary-to-decimal"
+    },
+    {
+      "id": "decimal-to-binary",
+      "name": "Decimal to Binary",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/decimal-to-binary"
+    },
+    {
+      "id": "hex-to-decimal",
+      "name": "Hex to Decimal",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/hex-to-decimal"
+    },
+    {
+      "id": "decimal-to-hex",
+      "name": "Decimal to Hex",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/decimal-to-hex"
+    },
+    {
+      "id": "octal-to-decimal",
+      "name": "Octal to Decimal",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/octal-to-decimal"
+    },
+    {
+      "id": "decimal-to-octal",
+      "name": "Decimal to Octal",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/decimal-to-octal"
+    },
+    {
+      "id": "json-formatter",
+      "name": "JSON Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/json-formatter"
+    },
+    {
+      "id": "json-minifier",
+      "name": "JSON Minifier",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/json-minifier"
+    },
+    {
+      "id": "json-validator",
+      "name": "JSON Validator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/json-validator"
+    },
+    {
+      "id": "json-to-csv",
+      "name": "JSON to CSV",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/json-to-csv"
+    },
+    {
+      "id": "csv-to-json",
+      "name": "CSV to JSON",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/csv-to-json"
+    },
+    {
+      "id": "csv-formatter",
+      "name": "CSV Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/csv-formatter"
+    },
+    {
+      "id": "jwt-decoder",
+      "name": "JWT Decoder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/jwt-decoder"
+    },
+    {
+      "id": "query-string-parser",
+      "name": "Query String Parser",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/query-string-parser"
+    },
+    {
+      "id": "url-parser",
+      "name": "URL Parser",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/url-parser"
+    },
+    {
+      "id": "domain-extractor",
+      "name": "Domain Extractor",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/domain-extractor"
+    },
+    {
+      "id": "url-cleaner",
+      "name": "URL Cleaner",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/url-cleaner"
+    },
+    {
+      "id": "utm-url-generator",
+      "name": "UTM URL Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/utm-url-generator"
+    },
+    {
+      "id": "whatsapp-link-generator",
+      "name": "WhatsApp Link Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/whatsapp-link-generator"
+    },
+    {
+      "id": "mailto-generator",
+      "name": "mailto Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/mailto-generator"
+    },
+    {
+      "id": "title-length-checker",
+      "name": "Title Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/title-length-checker"
+    },
+    {
+      "id": "description-length-checker",
+      "name": "Description Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/description-length-checker"
+    },
+    {
+      "id": "instagram-character-counter",
+      "name": "Instagram Character Counter",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/instagram-character-counter"
+    },
+    {
+      "id": "youtube-title-length-checker",
+      "name": "YouTube Title Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/youtube-title-length-checker"
+    },
+    {
+      "id": "linkedin-character-counter",
+      "name": "LinkedIn Character Counter",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/linkedin-character-counter"
+    },
+    {
+      "id": "google-play-title-length-checker",
+      "name": "Google Play Title Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/google-play-title-length-checker"
+    },
+    {
+      "id": "short-description-length-checker",
+      "name": "Short Description Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/short-description-length-checker"
+    },
+    {
+      "id": "alt-text-length-checker",
+      "name": "Alt Text Length Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/alt-text-length-checker"
+    },
+    {
+      "id": "keyword-density-checker",
+      "name": "Keyword Density Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/keyword-density-checker"
+    },
+    {
+      "id": "meta-tag-generator",
+      "name": "Meta Tag Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/meta-tag-generator"
+    },
+    {
+      "id": "youtube-url-parser",
+      "name": "YouTube URL Parser",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/youtube-url-parser"
+    },
+    {
+      "id": "pan-format-checker",
+      "name": "PAN Format Checker",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/pan-format-checker"
+    },
+    {
+      "id": "gst-number-format-checker",
+      "name": "GST Number Format Checker",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/gst-number-format-checker"
+    },
+    {
+      "id": "ifsc-format-checker",
+      "name": "IFSC Format Checker",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/ifsc-format-checker"
+    },
+    {
+      "id": "pincode-formatter",
+      "name": "Pincode Formatter",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/pincode-formatter"
+    },
+    {
+      "id": "aadhaar-masking-tool",
+      "name": "Aadhaar Masking Tool",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/aadhaar-masking-tool"
+    },
+    {
+      "id": "indian-mobile-number-formatter",
+      "name": "Indian Mobile Number Formatter",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/indian-mobile-number-formatter"
+    },
+    {
+      "id": "indian-currency-formatter",
+      "name": "Indian Currency Formatter",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/indian-currency-formatter"
+    },
+    {
+      "id": "rupees-to-words",
+      "name": "Rupees to Words",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/rupees-to-words"
+    },
+    {
+      "id": "financial-year-calculator",
+      "name": "Financial Year Calculator",
+      "category": "india",
+      "categoryName": "India utilities",
+      "url": "http://127.0.0.1:3000/tools/financial-year-calculator"
+    },
+    {
+      "id": "fuel-cost-calculator",
+      "name": "Fuel Cost Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/fuel-cost-calculator"
+    },
+    {
+      "id": "mileage-calculator",
+      "name": "Mileage Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/mileage-calculator"
+    },
+    {
+      "id": "travel-time-calculator",
+      "name": "Travel Time Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/travel-time-calculator"
+    },
+    {
+      "id": "ev-charging-cost",
+      "name": "EV Charging Cost",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/ev-charging-cost"
+    },
+    {
+      "id": "ev-range-calculator",
+      "name": "EV Range Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/ev-range-calculator"
+    },
+    {
+      "id": "appliance-electricity-cost",
+      "name": "Appliance Electricity Cost",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/appliance-electricity-cost"
+    },
+    {
+      "id": "watt-to-unit-calculator",
+      "name": "Watt to Unit Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/watt-to-unit-calculator"
+    },
+    {
+      "id": "battery-backup-calculator",
+      "name": "Battery Backup Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/battery-backup-calculator"
+    },
+    {
+      "id": "water-tank-volume",
+      "name": "Water Tank Volume",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/water-tank-volume"
+    },
+    {
+      "id": "concrete-volume-calculator",
+      "name": "Concrete Volume Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/concrete-volume-calculator"
+    },
+    {
+      "id": "tile-calculator",
+      "name": "Tile Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/tile-calculator"
+    },
+    {
+      "id": "paint-calculator",
+      "name": "Paint Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/paint-calculator"
+    },
+    {
+      "id": "flooring-cost",
+      "name": "Flooring Cost",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/flooring-cost"
+    },
+    {
+      "id": "recipe-scaling-calculator",
+      "name": "Recipe Scaling Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/recipe-scaling-calculator"
+    },
+    {
+      "id": "restaurant-bill-splitter",
+      "name": "Restaurant Bill Splitter",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/restaurant-bill-splitter"
+    },
+    {
+      "id": "tip-calculator-india",
+      "name": "Tip Calculator India",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/tip-calculator-india"
+    },
+    {
+      "id": "event-seating-calculator",
+      "name": "Event Seating Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/event-seating-calculator"
+    },
+    {
+      "id": "trip-budget-calculator",
+      "name": "Trip Budget Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/trip-budget-calculator"
+    },
+    {
+      "id": "hosting-cost-calculator",
+      "name": "Hosting Cost Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/hosting-cost-calculator"
+    },
+    {
+      "id": "website-bandwidth-calculator",
+      "name": "Website Bandwidth Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/website-bandwidth-calculator"
+    },
+    {
+      "id": "image-compression-savings-calculator",
+      "name": "Image Compression Savings Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/image-compression-savings-calculator"
+    },
+    {
+      "id": "pace-calculator",
+      "name": "Pace Calculator",
+      "category": "home",
+      "categoryName": "Home & everyday",
+      "url": "http://127.0.0.1:3000/tools/pace-calculator"
+    },
+    {
+      "id": "hex-to-rgb",
+      "name": "HEX to RGB",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/hex-to-rgb"
+    },
+    {
+      "id": "rgb-to-hex",
+      "name": "RGB to HEX",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/rgb-to-hex"
+    },
+    {
+      "id": "hex-to-hsl",
+      "name": "HEX to HSL",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/hex-to-hsl"
+    },
+    {
+      "id": "hsl-to-hex",
+      "name": "HSL to HEX",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/hsl-to-hex"
+    },
+    {
+      "id": "color-contrast-calculator",
+      "name": "Color Contrast Calculator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/color-contrast-calculator"
+    },
+    {
+      "id": "css-gradient-generator",
+      "name": "CSS Gradient Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/css-gradient-generator"
+    },
+    {
+      "id": "border-radius-generator",
+      "name": "Border Radius Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/border-radius-generator"
+    },
+    {
+      "id": "box-shadow-generator",
+      "name": "Box Shadow Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/box-shadow-generator"
+    },
+    {
+      "id": "aspect-ratio-calculator",
+      "name": "Aspect Ratio Calculator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/aspect-ratio-calculator"
+    },
+    {
+      "id": "golden-ratio-calculator",
+      "name": "Golden Ratio Calculator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/golden-ratio-calculator"
+    },
+    {
+      "id": "css-clamp-generator",
+      "name": "CSS Clamp Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/css-clamp-generator"
+    },
+    {
+      "id": "random-number-generator",
+      "name": "Random Number Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-number-generator"
+    },
+    {
+      "id": "uuid-generator",
+      "name": "UUID Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/uuid-generator"
+    },
+    {
+      "id": "random-token-generator",
+      "name": "Random Token Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-token-generator"
+    },
+    {
+      "id": "password-generator",
+      "name": "Password Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/password-generator"
+    },
+    {
+      "id": "dice-roller",
+      "name": "Dice Roller",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/dice-roller"
+    },
+    {
+      "id": "coin-flip",
+      "name": "Coin Flip",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/coin-flip"
+    },
+    {
+      "id": "random-yes-no",
+      "name": "Random Yes/No",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-yes-no"
+    },
+    {
+      "id": "random-name-picker",
+      "name": "Random Name Picker",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-name-picker"
+    },
+    {
+      "id": "random-team-generator",
+      "name": "Random Team Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-team-generator"
+    },
+    {
+      "id": "random-date",
+      "name": "Random Date",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/random-date"
+    },
+    {
+      "id": "random-color-generator",
+      "name": "Random Color Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/random-color-generator"
+    },
+    {
+      "id": "sha256-generator",
+      "name": "SHA256 Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/sha256-generator"
+    },
+    {
+      "id": "sha384-generator",
+      "name": "SHA384 Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/sha384-generator"
+    },
+    {
+      "id": "sha512-generator",
+      "name": "SHA512 Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/sha512-generator"
+    },
+    {
+      "id": "sha1-generator",
+      "name": "SHA1 Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/sha1-generator"
+    },
+    {
+      "id": "image-resize",
+      "name": "Image Resize",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-resize"
+    },
+    {
+      "id": "image-crop",
+      "name": "Image Crop",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-crop"
+    },
+    {
+      "id": "image-rotate",
+      "name": "Image Rotate",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-rotate"
+    },
+    {
+      "id": "image-flip",
+      "name": "Image Flip",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-flip"
+    },
+    {
+      "id": "jpg-to-png",
+      "name": "JPG to PNG",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/jpg-to-png"
+    },
+    {
+      "id": "png-to-jpg",
+      "name": "PNG to JPG",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/png-to-jpg"
+    },
+    {
+      "id": "webp-to-png",
+      "name": "WebP to PNG",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/webp-to-png"
+    },
+    {
+      "id": "png-to-webp",
+      "name": "PNG to WebP",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/png-to-webp"
+    },
+    {
+      "id": "jpg-to-webp",
+      "name": "JPG to WebP",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/jpg-to-webp"
+    },
+    {
+      "id": "image-compressor",
+      "name": "Image Compressor",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-compressor"
+    },
+    {
+      "id": "image-dimensions-checker",
+      "name": "Image Dimensions Checker",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-dimensions-checker"
+    },
+    {
+      "id": "circle-image-cropper",
+      "name": "Circle Image Cropper",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/circle-image-cropper"
+    },
+    {
+      "id": "profile-picture-cropper",
+      "name": "Profile Picture Cropper",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/profile-picture-cropper"
+    },
+    {
+      "id": "blur-image",
+      "name": "Blur Image",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/blur-image"
+    },
+    {
+      "id": "pixelate-image",
+      "name": "Pixelate Image",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/pixelate-image"
+    },
+    {
+      "id": "add-watermark-to-image",
+      "name": "Add Watermark to Image",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/add-watermark-to-image"
+    },
+    {
+      "id": "exif-remover",
+      "name": "EXIF Remover",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/exif-remover"
+    },
+    {
+      "id": "image-to-base64",
+      "name": "Image to Base64",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/image-to-base64"
+    },
+    {
+      "id": "dominant-color-finder",
+      "name": "Dominant Color Finder",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/dominant-color-finder"
+    },
+    {
+      "id": "base64-to-image",
+      "name": "Base64 to Image",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/base64-to-image"
+    },
+    {
+      "id": "pdf-merge",
+      "name": "PDF Merge",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-merge"
+    },
+    {
+      "id": "pdf-split",
+      "name": "Extract PDF Pages",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-split"
+    },
+    {
+      "id": "pdf-rotate",
+      "name": "PDF Rotate",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-rotate"
+    },
+    {
+      "id": "pdf-reorder",
+      "name": "PDF Reorder",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-reorder"
+    },
+    {
+      "id": "pdf-page-counter",
+      "name": "PDF Page Counter",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-page-counter"
+    },
+    {
+      "id": "pdf-metadata-viewer",
+      "name": "PDF Metadata Viewer",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-metadata-viewer"
+    },
+    {
+      "id": "pdf-metadata-remover",
+      "name": "PDF Metadata Remover",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-metadata-remover"
+    },
+    {
+      "id": "pdf-page-size-checker",
+      "name": "PDF Page Size Checker",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-page-size-checker"
+    },
+    {
+      "id": "add-page-numbers",
+      "name": "Add Page Numbers",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/add-page-numbers"
+    },
+    {
+      "id": "add-watermark-to-pdf",
+      "name": "Add Watermark to PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/add-watermark-to-pdf"
+    },
+    {
+      "id": "remove-selected-pages",
+      "name": "Remove Selected Pages",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/remove-selected-pages"
+    },
+    {
+      "id": "images-to-pdf",
+      "name": "Images to PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/images-to-pdf"
+    },
+    {
+      "id": "text-to-pdf",
+      "name": "Text to PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/text-to-pdf"
+    },
+    {
+      "id": "file-hash-generator",
+      "name": "File Hash Generator",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/file-hash-generator"
+    },
+    {
+      "id": "file-extension-finder",
+      "name": "File Extension Finder",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/file-extension-finder"
+    },
+    {
+      "id": "url-qr",
+      "name": "URL QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/url-qr"
+    },
+    {
+      "id": "text-qr",
+      "name": "Text QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/text-qr"
+    },
+    {
+      "id": "wi-fi-qr",
+      "name": "Wi-Fi QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/wi-fi-qr"
+    },
+    {
+      "id": "phone-qr",
+      "name": "Phone QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/phone-qr"
+    },
+    {
+      "id": "email-qr",
+      "name": "Email QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/email-qr"
+    },
+    {
+      "id": "whatsapp-qr",
+      "name": "WhatsApp QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/whatsapp-qr"
+    },
+    {
+      "id": "sms-qr",
+      "name": "SMS QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/sms-qr"
+    },
+    {
+      "id": "location-qr",
+      "name": "Location QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/location-qr"
+    },
+    {
+      "id": "contact-vcard-qr",
+      "name": "Contact/VCard QR",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/contact-vcard-qr"
+    },
+    {
+      "id": "barcode-generator",
+      "name": "Barcode Generator",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/barcode-generator"
+    },
+    {
+      "id": "ean-generator",
+      "name": "EAN Generator",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/ean-generator"
+    },
+    {
+      "id": "upc-generator",
+      "name": "UPC Generator",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/upc-generator"
+    },
+    {
+      "id": "isbn-barcode-generator",
+      "name": "ISBN Barcode Generator",
+      "category": "qr",
+      "categoryName": "QR & barcodes",
+      "url": "http://127.0.0.1:3000/tools/isbn-barcode-generator"
+    },
+    {
+      "id": "conventional-commit-generator",
+      "name": "Conventional Commit Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/conventional-commit-generator"
+    },
+    {
+      "id": "git-branch-name-generator",
+      "name": "Git Branch Name Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/git-branch-name-generator"
+    },
+    {
+      "id": "semantic-version-calculator",
+      "name": "Semantic Version Calculator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/semantic-version-calculator"
+    },
+    {
+      "id": "leave-letter-generator",
+      "name": "Leave Letter Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/leave-letter-generator"
+    },
+    {
+      "id": "sick-leave-generator",
+      "name": "Sick Leave Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/sick-leave-generator"
+    },
+    {
+      "id": "half-day-leave-generator",
+      "name": "Half Day Leave Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/half-day-leave-generator"
+    },
+    {
+      "id": "wfh-request-generator",
+      "name": "WFH Request Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/wfh-request-generator"
+    },
+    {
+      "id": "resignation-letter-generator",
+      "name": "Resignation Letter Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/resignation-letter-generator"
+    },
+    {
+      "id": "salary-increment-request",
+      "name": "Salary Increment Request",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/salary-increment-request"
+    },
+    {
+      "id": "job-application-generator",
+      "name": "Job Application Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/job-application-generator"
+    },
+    {
+      "id": "cover-letter-generator",
+      "name": "Cover Letter Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/cover-letter-generator"
+    },
+    {
+      "id": "internship-request",
+      "name": "Internship Request",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/internship-request"
+    },
+    {
+      "id": "interview-follow-up-message-generator",
+      "name": "Interview Follow-up Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/interview-follow-up-message-generator"
+    },
+    {
+      "id": "recruiter-message-generator",
+      "name": "Recruiter Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/recruiter-message-generator"
+    },
+    {
+      "id": "salary-negotiation-message-generator",
+      "name": "Salary Negotiation Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/salary-negotiation-message-generator"
+    },
+    {
+      "id": "payment-reminder-generator",
+      "name": "Payment Reminder Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/payment-reminder-generator"
+    },
+    {
+      "id": "apology-message-generator",
+      "name": "Apology Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/apology-message-generator"
+    },
+    {
+      "id": "thank-you-message-generator",
+      "name": "Thank You Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/thank-you-message-generator"
+    },
+    {
+      "id": "follow-up-message-generator",
+      "name": "Follow-up Message Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/follow-up-message-generator"
+    },
+    {
+      "id": "meeting-agenda-generator",
+      "name": "Meeting Agenda Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/meeting-agenda-generator"
+    },
+    {
+      "id": "meeting-minutes-formatter",
+      "name": "Meeting Minutes Formatter",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/meeting-minutes-formatter"
+    },
+    {
+      "id": "daily-work-report-generator",
+      "name": "Daily Work Report Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/daily-work-report-generator"
+    },
+    {
+      "id": "weekly-work-report-generator",
+      "name": "Weekly Work Report Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/weekly-work-report-generator"
+    },
+    {
+      "id": "standup-update-generator",
+      "name": "Standup Update Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/standup-update-generator"
+    },
+    {
+      "id": "bug-report-generator",
+      "name": "Bug Report Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/bug-report-generator"
+    },
+    {
+      "id": "prd-outline-generator",
+      "name": "PRD Outline Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/prd-outline-generator"
+    },
+    {
+      "id": "feature-request-formatter",
+      "name": "Feature Request Formatter",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/feature-request-formatter"
+    },
+    {
+      "id": "pull-request-description-generator",
+      "name": "Pull Request Description Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/pull-request-description-generator"
+    },
+    {
+      "id": "github-issue-generator",
+      "name": "GitHub Issue Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/github-issue-generator"
+    },
+    {
+      "id": "release-note-generator",
+      "name": "Release Note Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/release-note-generator"
+    },
+    {
+      "id": "support-ticket-formatter",
+      "name": "Support Ticket Formatter",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/support-ticket-formatter"
+    },
+    {
+      "id": "client-brief-generator",
+      "name": "Client Brief Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/client-brief-generator"
+    },
+    {
+      "id": "freelance-proposal-generator",
+      "name": "Freelance Proposal Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/freelance-proposal-generator"
+    },
+    {
+      "id": "content-brief-generator",
+      "name": "Content Brief Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/content-brief-generator"
+    },
+    {
+      "id": "star-answer-generator",
+      "name": "STAR Answer Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/star-answer-generator"
+    },
+    {
+      "id": "user-story-formatter",
+      "name": "User Story Formatter",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/user-story-formatter"
+    },
+    {
+      "id": "meeting-invitation-generator",
+      "name": "Meeting Invitation Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/meeting-invitation-generator"
+    },
+    {
+      "id": "coding-prompt-generator",
+      "name": "Coding Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/coding-prompt-generator"
+    },
+    {
+      "id": "website-design-prompt-generator",
+      "name": "Website Design Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/website-design-prompt-generator"
+    },
+    {
+      "id": "image-generation-prompt-generator",
+      "name": "Image Generation Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/image-generation-prompt-generator"
+    },
+    {
+      "id": "seo-article-prompt-generator",
+      "name": "SEO Article Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/seo-article-prompt-generator"
+    },
+    {
+      "id": "research-prompt-generator",
+      "name": "Research Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/research-prompt-generator"
+    },
+    {
+      "id": "resume-prompt-generator",
+      "name": "Resume Prompt Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/resume-prompt-generator"
+    },
+    {
+      "id": "fetch-request-generator",
+      "name": "Fetch Request Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/fetch-request-generator"
+    },
+    {
+      "id": "axios-request-generator",
+      "name": "Axios Request Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/axios-request-generator"
+    },
+    {
+      "id": "python-requests-request-generator",
+      "name": "Python Requests Request Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/python-requests-request-generator"
+    },
+    {
+      "id": "curl-command-generator",
+      "name": "CURL Command Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/curl-command-generator"
+    },
+    {
+      "id": "environment-variable-formatter",
+      "name": "Environment Variable Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/environment-variable-formatter"
+    },
+    {
+      "id": "sql-select-generator",
+      "name": "SQL SELECT Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/sql-select-generator"
+    },
+    {
+      "id": "mongodb-objectid-validator",
+      "name": "MongoDB ObjectId Validator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/mongodb-objectid-validator"
+    },
+    {
+      "id": "css-media-query-generator",
+      "name": "CSS Media Query Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/css-media-query-generator"
+    },
+    {
+      "id": "basic-calculator",
+      "name": "Basic Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/basic-calculator"
+    },
+    {
+      "id": "scientific-calculator",
+      "name": "Scientific Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/scientific-calculator"
+    },
+    {
+      "id": "fraction-calculator",
+      "name": "Fraction Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/fraction-calculator"
+    },
+    {
+      "id": "ratio-calculator",
+      "name": "Ratio Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/ratio-calculator"
+    },
+    {
+      "id": "polygon-calculator",
+      "name": "Polygon Calculator",
+      "category": "math",
+      "categoryName": "Math & numbers",
+      "url": "http://127.0.0.1:3000/tools/polygon-calculator"
+    },
+    {
+      "id": "gpa-calculator",
+      "name": "GPA Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/gpa-calculator"
+    },
+    {
+      "id": "grade-calculator",
+      "name": "Grade Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/grade-calculator"
+    },
+    {
+      "id": "roll-number-generator",
+      "name": "Roll Number Generator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/roll-number-generator"
+    },
+    {
+      "id": "study-timetable-generator",
+      "name": "Study Timetable Generator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/study-timetable-generator"
+    },
+    {
+      "id": "rank-percentage-calculator",
+      "name": "Rank Percentage Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/rank-percentage-calculator"
+    },
+    {
+      "id": "study-break-calculator",
+      "name": "Study Break Calculator",
+      "category": "student",
+      "categoryName": "Student",
+      "url": "http://127.0.0.1:3000/tools/study-break-calculator"
+    },
+    {
+      "id": "monthly-working-hours",
+      "name": "Monthly Working Hours",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/monthly-working-hours"
+    },
+    {
+      "id": "weekly-working-hours",
+      "name": "Weekly Working Hours",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/weekly-working-hours"
+    },
+    {
+      "id": "timesheet-calculator",
+      "name": "Timesheet Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/timesheet-calculator"
+    },
+    {
+      "id": "old-vs-new-salary-calculator",
+      "name": "Old vs New Salary Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/old-vs-new-salary-calculator"
+    },
+    {
+      "id": "earned-leave-calculator",
+      "name": "Earned Leave Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/earned-leave-calculator"
+    },
+    {
+      "id": "half-day-calculator",
+      "name": "Half Day Calculator",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/half-day-calculator"
+    },
+    {
+      "id": "months-between-dates",
+      "name": "Months Between Dates",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/months-between-dates"
+    },
+    {
+      "id": "years-between-dates",
+      "name": "Years Between Dates",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/years-between-dates"
+    },
+    {
+      "id": "holiday-excluding-calculator",
+      "name": "Holiday Excluding Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/holiday-excluding-calculator"
+    },
+    {
+      "id": "timezone-converter",
+      "name": "Timezone Converter",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/timezone-converter"
+    },
+    {
+      "id": "timezone-offset-calculator",
+      "name": "Timezone Offset Calculator",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/timezone-offset-calculator"
+    },
+    {
+      "id": "minutes-between-times",
+      "name": "Minutes Between Times",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/minutes-between-times"
+    },
+    {
+      "id": "hours-between-times",
+      "name": "Hours Between Times",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/hours-between-times"
+    },
+    {
+      "id": "time-subtraction",
+      "name": "Time Subtraction",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/time-subtraction"
+    },
+    {
+      "id": "savings-calculator",
+      "name": "Savings Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/savings-calculator"
+    },
+    {
+      "id": "loan-amount-calculator",
+      "name": "Loan Amount Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/loan-amount-calculator"
+    },
+    {
+      "id": "loan-tenure-calculator",
+      "name": "Loan Tenure Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/loan-tenure-calculator"
+    },
+    {
+      "id": "flat-vs-reducing-interest",
+      "name": "Flat vs Reducing Interest",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/flat-vs-reducing-interest"
+    },
+    {
+      "id": "prepayment-calculator",
+      "name": "Prepayment Calculator",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/prepayment-calculator"
+    },
+    {
+      "id": "add-line-numbers",
+      "name": "Add Line Numbers",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/add-line-numbers"
+    },
+    {
+      "id": "duplicate-word-finder",
+      "name": "Duplicate Word Finder",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/duplicate-word-finder"
+    },
+    {
+      "id": "lorem-ipsum-generator",
+      "name": "Lorem Ipsum Generator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/lorem-ipsum-generator"
+    },
+    {
+      "id": "yaml-to-json",
+      "name": "YAML to JSON",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/yaml-to-json"
+    },
+    {
+      "id": "json-to-yaml",
+      "name": "JSON to YAML",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/json-to-yaml"
+    },
+    {
+      "id": "markdown-to-html",
+      "name": "Markdown to HTML",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/markdown-to-html"
+    },
+    {
+      "id": "markdown-preview",
+      "name": "Markdown Preview",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/markdown-preview"
+    },
+    {
+      "id": "html-formatter",
+      "name": "HTML Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/html-formatter"
+    },
+    {
+      "id": "css-formatter",
+      "name": "CSS Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/css-formatter"
+    },
+    {
+      "id": "javascript-formatter",
+      "name": "JavaScript Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/javascript-formatter"
+    },
+    {
+      "id": "regex-tester",
+      "name": "Regex Tester",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/regex-tester"
+    },
+    {
+      "id": "html-to-text",
+      "name": "HTML to Text",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/html-to-text"
+    },
+    {
+      "id": "exif-viewer",
+      "name": "EXIF Viewer",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/exif-viewer"
+    },
+    {
+      "id": "color-picker-from-image",
+      "name": "Color Picker From Image",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/color-picker-from-image"
+    },
+    {
+      "id": "pomodoro-timer",
+      "name": "Pomodoro Timer",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/pomodoro-timer"
+    },
+    {
+      "id": "countdown-timer",
+      "name": "Countdown Timer",
+      "category": "date-time",
+      "categoryName": "Date & time",
+      "url": "http://127.0.0.1:3000/tools/countdown-timer"
+    },
+    {
+      "id": "screen-resolution-checker",
+      "name": "Screen Resolution Checker",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/screen-resolution-checker"
+    },
+    {
+      "id": "text-shadow-generator",
+      "name": "Text Shadow Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/text-shadow-generator"
+    },
+    {
+      "id": "css-flexbox-generator",
+      "name": "CSS Flexbox Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/css-flexbox-generator"
+    },
+    {
+      "id": "css-grid-generator",
+      "name": "CSS Grid Generator",
+      "category": "design",
+      "categoryName": "Design & CSS",
+      "url": "http://127.0.0.1:3000/tools/css-grid-generator"
+    },
+    {
+      "id": "text-diff-checker",
+      "name": "Text Diff Checker",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/text-diff-checker"
+    },
+    {
+      "id": "password-strength-checker",
+      "name": "Password Strength Checker",
+      "category": "random",
+      "categoryName": "Random & security",
+      "url": "http://127.0.0.1:3000/tools/password-strength-checker"
+    },
+    {
+      "id": "text-to-binary",
+      "name": "Text to Binary",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/text-to-binary"
+    },
+    {
+      "id": "binary-to-text",
+      "name": "Binary to Text",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/binary-to-text"
+    },
+    {
+      "id": "robots-txt-generator",
+      "name": "Robots.txt Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/robots-txt-generator"
+    },
+    {
+      "id": "sitemap-generator",
+      "name": "Sitemap Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/sitemap-generator"
+    },
+    {
+      "id": "schema-markup-generator",
+      "name": "Schema Markup Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/schema-markup-generator"
+    },
+    {
+      "id": "hreflang-generator",
+      "name": "Hreflang Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/hreflang-generator"
+    },
+    {
+      "id": "open-graph-generator",
+      "name": "Open Graph Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/open-graph-generator"
+    },
+    {
+      "id": "twitter-card-generator",
+      "name": "Twitter Card Generator",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/twitter-card-generator"
+    },
+    {
+      "id": "serp-preview",
+      "name": "SERP Preview",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/serp-preview"
+    },
+    {
+      "id": "on-page-seo-checker",
+      "name": "On-Page SEO Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/on-page-seo-checker"
+    },
+    {
+      "id": "pdf-to-jpg",
+      "name": "PDF to JPG",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-jpg"
+    },
+    {
+      "id": "pdf-to-png",
+      "name": "PDF to PNG",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-png"
+    },
+    {
+      "id": "pdf-to-txt",
+      "name": "PDF to TXT",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-txt"
+    },
+    {
+      "id": "pdf-to-html",
+      "name": "PDF to HTML",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-html"
+    },
+    {
+      "id": "pdf-to-docx",
+      "name": "PDF to DOCX",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-docx"
+    },
+    {
+      "id": "pdf-to-excel",
+      "name": "PDF to Excel",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-excel"
+    },
+    {
+      "id": "pdf-to-pptx",
+      "name": "PDF to PPTX",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-to-pptx"
+    },
+    {
+      "id": "pdf-compressor",
+      "name": "PDF Compressor",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-compressor"
+    },
+    {
+      "id": "protect-pdf",
+      "name": "Protect PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/protect-pdf"
+    },
+    {
+      "id": "unlock-pdf",
+      "name": "Unlock PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/unlock-pdf"
+    },
+    {
+      "id": "word-to-pdf",
+      "name": "Word to PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/word-to-pdf"
+    },
+    {
+      "id": "html-to-pdf",
+      "name": "HTML to PDF",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/html-to-pdf"
+    },
+    {
+      "id": "invoice-generator",
+      "name": "Invoice Generator",
+      "category": "templates",
+      "categoryName": "Documents & templates",
+      "url": "http://127.0.0.1:3000/tools/invoice-generator"
+    },
+    {
+      "id": "xml-formatter",
+      "name": "XML Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/xml-formatter"
+    },
+    {
+      "id": "sql-formatter",
+      "name": "SQL Formatter",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/sql-formatter"
+    },
+    {
+      "id": "what-is-my-browser",
+      "name": "What Is My Browser",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/what-is-my-browser"
+    },
+    {
+      "id": "dummy-image-placeholder-generator",
+      "name": "Dummy Image Placeholder Generator",
+      "category": "image",
+      "categoryName": "Image tools",
+      "url": "http://127.0.0.1:3000/tools/dummy-image-placeholder-generator"
+    },
+    {
+      "id": "html-editor",
+      "name": "HTML Editor",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/html-editor"
+    },
+    {
+      "id": "html-minifier",
+      "name": "HTML Minifier",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/html-minifier"
+    },
+    {
+      "id": "css-minifier",
+      "name": "CSS Minifier",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/css-minifier"
+    },
+    {
+      "id": "javascript-minifier",
+      "name": "JavaScript Minifier",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/javascript-minifier"
+    },
+    {
+      "id": "random-text-generator",
+      "name": "Random Text Generator",
+      "category": "text",
+      "categoryName": "Text & writing",
+      "url": "http://127.0.0.1:3000/tools/random-text-generator"
+    },
+    {
+      "id": "keyword-suggestion-tool",
+      "name": "Keyword Suggestion Tool",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/keyword-suggestion-tool"
+    },
+    {
+      "id": "page-size-checker",
+      "name": "Page Size Checker",
+      "category": "seo",
+      "categoryName": "SEO & social",
+      "url": "http://127.0.0.1:3000/tools/page-size-checker"
+    },
+    {
+      "id": "open-all-urls",
+      "name": "Open All URLs",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/open-all-urls"
+    },
+    {
+      "id": "md5-generator",
+      "name": "MD5 Generator",
+      "category": "developer",
+      "categoryName": "Developer",
+      "url": "http://127.0.0.1:3000/tools/md5-generator"
+    },
+    {
+      "id": "pdf-editor",
+      "name": "PDF Editor",
+      "category": "pdf",
+      "categoryName": "PDF tools",
+      "url": "http://127.0.0.1:3000/tools/pdf-editor"
+    },
+    {
+      "id": "spreadsheet-editor",
+      "name": "Spreadsheet Editor",
+      "category": "office",
+      "categoryName": "Office & salary",
+      "url": "http://127.0.0.1:3000/tools/spreadsheet-editor"
+    },
+    {
+      "id": "invoice-converter",
+      "name": "Invoice Converter",
+      "category": "finance",
+      "categoryName": "Finance & business",
+      "url": "http://127.0.0.1:3000/tools/invoice-converter"
+    },
+    {
+      "id": "draftword",
+      "name": "DraftWord",
+      "category": "pk-office",
+      "categoryName": "Draft Office workspaces",
+      "url": "http://127.0.0.1:3000/draftword"
+    },
+    {
+      "id": "draftsheet",
+      "name": "DraftSheet",
+      "category": "pk-office",
+      "categoryName": "Draft Office workspaces",
+      "url": "http://127.0.0.1:3000/draftsheet"
+    }
+  ]
+}

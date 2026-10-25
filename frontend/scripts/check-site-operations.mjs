@@ -1,0 +1,58 @@
+import {chromium,expect} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+process.loadEnvFile('../backend/.env');
+const browser=await chromium.launch({channel:'msedge',headless:true}),context=await browser.newContext({viewport:{width:1440,height:1000}});
+const admin=await context.newPage(),errors=[],visitIds=[],fixture={email:`ops-browser-${Date.now()}@example.com`,visitIds};
+let csrf=null,original=null,changed=false;
+const api='http://127.0.0.1:5000';
+const call=async(path,body)=>{const response=await context.request[body?'post':'get'](api+path,body?{data:body,headers:{Origin:'http://127.0.0.1:3001','X-CSRF-Token':csrf||''}}:{});if(!response.ok())throw Error(path+' status '+response.status());return response.json();};
+try{
+ admin.on('pageerror',e=>errors.push(e.message));
+ await admin.goto('http://127.0.0.1:3001/',{waitUntil:'load',timeout:180000});
+ await expect(admin.getByRole('button',{name:'Sign in'})).toBeEnabled({timeout:60000});
+ await admin.getByLabel('Password',{exact:true}).fill(process.env.DEMO_ADMIN_PASSWORD);
+ await admin.getByRole('button',{name:'Sign in'}).click();await expect(admin.getByRole('navigation',{name:'Admin navigation'})).toBeVisible({timeout:60000});
+ csrf=(await call('/api/admin/session')).csrfToken;
+ original=await call('/api/admin/controls');await writeFile('logs/site-operations-original.json',JSON.stringify({disabledTools:original.disabledTools,disabledCategories:original.disabledCategories}));
+ const tool=original.tools.find(t=>t.id==='percentage-calculator'),category=original.categories.find(c=>c.id==='math');
+ await admin.getByRole('button',{name:'Tools & categories',exact:true}).click();
+ await expect(admin.getByRole('searchbox',{name:'Search availability controls'})).toBeVisible();
+ await admin.getByRole('searchbox',{name:'Search availability controls'}).fill(tool.name);
+ await expect(admin.getByRole('button',{name:'Deactivate '+tool.name,exact:true})).toBeEnabled({timeout:60000});
+ await admin.getByRole('button',{name:'Deactivate '+tool.name,exact:true}).click();changed=true;
+ await expect(admin.getByRole('button',{name:'Activate '+tool.name,exact:true})).toBeEnabled({timeout:60000});
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',async response=>{if(response.url().endsWith('/api/analytics/start')&&response.status()===201){const data=await response.json().catch(()=>null);if(data){visitIds.push(data.visitId);await writeFile('logs/site-operations-fixture.json',JSON.stringify(fixture));}}});
+ await page.goto('http://127.0.0.1:3000/categories/math',{waitUntil:'load',timeout:180000});
+ const card=page.locator('.tool-card').filter({has:page.getByRole('heading',{name:tool.name,exact:true})});
+ await expect(card).toHaveAttribute('aria-disabled','true');expect(await card.getAttribute('href')).toBeNull();
+ await page.goto('http://127.0.0.1:3000/tools/'+tool.id,{waitUntil:'load',timeout:180000});await expect(page.getByRole('heading',{name:'Temporarily unavailable',exact:true})).toBeVisible();
+ await admin.getByRole('button',{name:'Activate '+tool.name,exact:true}).click();
+ await expect(page.getByRole('heading',{name:tool.name,exact:true})).toBeVisible({timeout:15000});
+ await admin.getByRole('button',{name:/^Categories \(/}).click();await admin.getByRole('searchbox',{name:'Search availability controls'}).fill(category.name);
+ await admin.getByRole('button',{name:'Deactivate '+category.name,exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Temporarily unavailable',exact:true})).toBeVisible({timeout:15000});
+ await admin.getByRole('button',{name:'Activate '+category.name,exact:true}).click();
+ await expect(page.getByRole('heading',{name:tool.name,exact:true})).toBeVisible({timeout:15000});
+ await page.bringToFront();await page.mouse.move(100,200);await page.waitForTimeout(3200);
+ const signup=await context.request.post(api+'/api/auth/signup',{data:{email:fixture.email,password:'Browser-only-long-password!2026'},headers:{Origin:'http://127.0.0.1:3000'}});expect(signup.status()).toBe(201);
+ await writeFile('logs/site-operations-fixture.json',JSON.stringify(fixture));
+ await page.goto('http://127.0.0.1:3000/about',{waitUntil:'load',timeout:180000});
+ await expect(page.locator('.user-navigation').getByRole('link',{name:'My account',exact:true})).toBeVisible();
+ await page.mouse.move(120,250);await page.waitForTimeout(2200);await page.goto('http://127.0.0.1:3000/',{waitUntil:'load',timeout:180000});
+ await admin.getByRole('button',{name:'Visitor activity',exact:true}).click();
+ await expect(admin.getByRole('heading',{name:'Visitor activity',exact:true})).toBeVisible();
+ await expect.poll(async()=>{const report=await call('/api/admin/analytics');return report.visits.some(v=>v.email===fixture.email);},{timeout:30000}).toBe(true);
+ await admin.getByRole('button',{name:'Refresh activity',exact:true}).click();
+ await expect(admin.getByRole('button',{name:new RegExp(fixture.email.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}).first()).toBeVisible({timeout:30000});
+ const report=await call('/api/admin/analytics');expect(report.visits.some(v=>visitIds.includes(v.id)&&v.activeSeconds>0)).toBe(true);expect(report.visits.filter(v=>visitIds.includes(v.id)).every(v=>v.locationStatus==='local')).toBe(true);
+ await admin.screenshot({path:'logs/admin-visitor-analytics.png'});
+ await admin.setViewportSize({width:390,height:900});expect(await admin.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);await admin.screenshot({path:'logs/admin-visitor-mobile.png'});
+ await admin.getByRole('button',{name:'Tools & categories',exact:true}).click();await admin.screenshot({path:'logs/admin-controls-mobile.png'});expect(await admin.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+ const result={toolDisabledLinks:true,directURLBlocked:true,openWorkspaceBlocked:true,categoryCascade:true,reactivation:true,guestAndUserTracking:true,activeTime:true,localLocationHonest:true,mobile:true,errors};
+ await writeFile('logs/site-operations-report.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));if(errors.length)process.exitCode=1;
+}finally{
+ if(changed&&original&&csrf){await call('/api/admin/controls',{kind:'tool',id:'percentage-calculator',enabled:!original.disabledTools.includes('percentage-calculator')});await call('/api/admin/controls',{kind:'category',id:'math',enabled:!original.disabledCategories.includes('math')});}
+ if(csrf)await call('/api/admin/logout',{}).catch(()=>{});
+ await writeFile('logs/site-operations-fixture.json',JSON.stringify(fixture));
+ await context.close();await browser.close();
+}

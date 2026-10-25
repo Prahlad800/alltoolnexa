@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {tools,resolveTool,aliases} from '../shared/catalog.mjs';
+import {tools,resolveTool,aliases,categories} from '../shared/catalog.mjs';
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const file=path.join(root,'shared','inventory.json');
 const inventory=JSON.parse(fs.readFileSync(file,'utf8'));
@@ -15,4 +15,4 @@ console.log(JSON.stringify(stats,null,2));
 
 // Publish API-owned snapshots when developing the complete three-app checkout.
 const backend=path.resolve(root,'../backend');
-if(fs.existsSync(backend)){const data=path.join(backend,'data');fs.mkdirSync(data,{recursive:true});for(const name of ['inventory.json','implementation-status.json','published-tools.json'])fs.copyFileSync(path.join(root,'shared',name),path.join(data,name));}
+if(fs.existsSync(backend)){const data=path.join(backend,'data');fs.mkdirSync(data,{recursive:true});fs.writeFileSync(path.join(data,'categories.json'),JSON.stringify(categories.map(({id,name})=>({id,name})),null,2)+'\n');for(const name of ['inventory.json','implementation-status.json','published-tools.json'])fs.copyFileSync(path.join(root,'shared',name),path.join(data,name));}

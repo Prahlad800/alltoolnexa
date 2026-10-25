@@ -30,13 +30,13 @@ export function extendCatalog({register,field:f}) {
   ['WebP to PNG','convert',[f('format','Output format','image/png','select',['image/png'])]],
   ['PNG to WebP','convert',[f('format','Output format','image/webp','select',['image/webp']),f('quality','Quality',0.85)]],
   ['JPG to WebP','convert',[f('format','Output format','image/webp','select',['image/webp']),f('quality','Quality',0.85)]],
-  ['Image Compressor','convert',[f('format','Output format','image/webp','select',['image/webp','image/jpeg']),f('quality','Quality',0.7)]],
+  ['Image Compressor','convert',[f('format','Output format','image/webp','select',['image/webp','image/jpeg']),f('quality','Maximum quality',0.7),f('targetKB','Maximum output size (KB; 0 = quality only)',0)]],
   ['Image Dimensions Checker','inspect',[]],['Circle Image Cropper','circle',[a('Output diameter (px)',512)]],
   ['Profile Picture Cropper','square',[a('Square size (px)',512)]],['Blur Image','blur',[a('Blur radius (px)',8),...imageBase]],
   ['Pixelate Image','pixelate',[a('Block size',16),...imageBase]],
   ['Add Watermark to Image','watermark',[f('text','Watermark','AllToolNexa','text'),a('Font size (px)',32),...imageBase]],
   ['EXIF Remover','convert',imageBase],['Image to Base64','base64',[]],['Dominant Color Finder','color',[]],
- ])browser('image',name,fields,mode==='color'?'Estimate the dominant color from a sampled, quantized pixel histogram; transparent pixels are ignored.':mode==='inspect'?'Inspect dimensions, ratio, byte size and browser-reported MIME type.':mode==='base64'?'Read an image as a Base64 data URL without uploading.':'Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.','image',{mode,accept:'image/jpeg,image/png,image/webp'});
+ ])browser('image',name,fields,name==='Image Compressor'?'Compress a still JPG, PNG or WebP locally. Choose a maximum KB size or quality only. Target mode lowers quality without changing dimensions and reports if the cap cannot be reached. JPEG uses a white background; re-encoding removes metadata.':mode==='color'?'Estimate the dominant color from a sampled, quantized pixel histogram; transparent pixels are ignored.':mode==='inspect'?'Inspect dimensions, ratio, byte size and browser-reported MIME type.':mode==='base64'?'Read an image as a Base64 data URL without uploading.':'Process images locally with browser canvas. JPEG outputs use a white background. Re-encoding removes original metadata; output may be larger than the input.','image',{mode,accept:'image/jpeg,image/png,image/webp'});
  browser('image','Base64 to Image',[text('data:image/png;base64,')],'Decode a PNG/JPEG/WebP Base64 data URL into a downloadable file.','base64-image');
  for(const[name,mode,fields,multiple]of[
   ['PDF Merge','merge',[],true],['PDF Split','extract',[f('pages','Pages to extract (e.g. 1,3-5)','1','text')],false],

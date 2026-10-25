@@ -1,0 +1,74 @@
+[
+  {
+    "id": "math",
+    "name": "Math & numbers"
+  },
+  {
+    "id": "student",
+    "name": "Student"
+  },
+  {
+    "id": "office",
+    "name": "Office & salary"
+  },
+  {
+    "id": "finance",
+    "name": "Finance & business"
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing & SaaS"
+  },
+  {
+    "id": "date-time",
+    "name": "Date & time"
+  },
+  {
+    "id": "converters",
+    "name": "Unit converters"
+  },
+  {
+    "id": "text",
+    "name": "Text & writing"
+  },
+  {
+    "id": "developer",
+    "name": "Developer"
+  },
+  {
+    "id": "design",
+    "name": "Design & CSS"
+  },
+  {
+    "id": "image",
+    "name": "Image tools"
+  },
+  {
+    "id": "pdf",
+    "name": "PDF tools"
+  },
+  {
+    "id": "qr",
+    "name": "QR & barcodes"
+  },
+  {
+    "id": "india",
+    "name": "India utilities"
+  },
+  {
+    "id": "home",
+    "name": "Home & everyday"
+  },
+  {
+    "id": "random",
+    "name": "Random & security"
+  },
+  {
+    "id": "seo",
+    "name": "SEO & social"
+  },
+  {
+    "id": "templates",
+    "name": "Documents & templates"
+  }
+]

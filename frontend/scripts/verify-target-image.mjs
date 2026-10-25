@@ -1,0 +1,32 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+const origin=process.env.AUDIT_ORIGIN||'http://127.0.0.1:3100';
+const dir=new URL('../runtime-results/target-image/',import.meta.url);await mkdir(dir,{recursive:true});
+const browser=await chromium.launch({executablePath:'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',headless:true});
+try{
+ const page=await browser.newPage({viewport:{width:1280,height:900}});
+ await page.goto(origin+'/tools/image-compressor',{waitUntil:'domcontentloaded',timeout:180000});
+ const png=Buffer.from(await page.evaluate(async()=>{const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d'),p=x.createImageData(256,256);let seed=12345;for(let i=0;i<p.data.length;i+=4){for(let j=0;j<3;j++){seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;p.data[i+j]=seed&255;}p.data[i+3]=255;}x.putImageData(p,0,0);return Array.from(new Uint8Array(await (await new Promise(r=>c.toBlob(r,'image/png'))).arrayBuffer()));}));
+ const network=[];page.on('request',r=>{if(['POST','PUT','PATCH'].includes(r.method()))network.push({method:r.method(),url:r.url(),bytes:r.postDataBuffer()?.length||0});});
+ await page.locator('#tool-files').setInputFiles({name:'synthetic-noise.png',mimeType:'image/png',buffer:png});
+ await page.getByRole('button',{name:'20 KB',exact:true}).waitFor({timeout:90000});
+ await page.getByRole('button',{name:'20 KB',exact:true}).click();
+ await page.locator('#field-format').selectOption('image/jpeg');
+ await page.getByRole('button',{name:/^Image Compressor/}).click();
+ const link=page.getByRole('link',{name:/Download/}).filter({hasText:'Download ↓'});await link.waitFor({timeout:90000});
+ assert.match(await page.locator('.result-content').innerText(),/Target met: at most 20,000 bytes/);
+ const data=await page.evaluate(async()=>{const a=document.querySelector('.result-actions a[download]');const b=await (await fetch(a.href)).blob();const img=await createImageBitmap(b);const v={size:b.size,type:b.type,width:img.width,height:img.height};img.close();return v;});
+ assert.ok(data.size<=20000);assert.equal(data.type,'image/jpeg');assert.equal(data.width,256);assert.equal(data.height,256);
+ const event=page.waitForEvent('download');await link.click();const download=await event;await download.saveAs(fileURLToPath(new URL('compressed.jpg',dir)));
+ await page.screenshot({path:fileURLToPath(new URL('desktop.png',dir)),fullPage:true});
+ await page.setViewportSize({width:375,height:812});await page.screenshot({path:fileURLToPath(new URL('mobile.png',dir)),fullPage:true});
+ const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);
+ await page.locator('#field-targetKB').fill('0.001');await page.getByRole('button',{name:/^Image Compressor/}).click();
+ await page.getByRole('alert').filter({hasText:/Cannot reach/}).waitFor();
+ assert.ok(await link.isVisible());assert.match(await page.locator('.result-content').innerText(),/Previous result/);
+ assert.equal(network.length,0,'No file-processing mutation request should be sent');
+ await writeFile(new URL('result.json',dir),JSON.stringify({origin,fixture:'deterministic synthetic 256x256 noise PNG',output:data,download:download.suggestedFilename(),mobileOverflow:overflow,mutationRequests:network,unreachableTarget:'error; previous result retained'},null,2));
+ console.log(JSON.stringify({passed:true,...data,mobileOverflow:overflow,mutationRequests:network.length}));
+}finally{await browser.close();}

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {tools,categories} from '../shared/catalog.mjs';
+const baseUrl='http://127.0.0.1:3000';
+const categoryNames=new Map(categories.map(c=>[c.id,c.name]));
+const entries=tools.map(t=>({id:t.id,name:t.name,category:t.category,categoryName:categoryNames.get(t.category)||t.category,url:`${baseUrl}/tools/${t.id}`}));
+entries.push(...[{id:'draftword',name:'DraftWord'},{id:'draftsheet',name:'DraftSheet'}].map(t=>({...t,category:'pk-office',categoryName:'Draft Office workspaces',url:`${baseUrl}/${t.id}`})));
+const result={siteName:'AllToolNexa',baseUrl,generatedDate:'2026-10-25',catalogToolCount:tools.length,officeWorkspaceCount:2,totalLinks:entries.length,tools:entries};
+const target=new URL('../../AllToolNexa-All-Tool-Links.json',import.meta.url);
+fs.writeFileSync(target,JSON.stringify(result,null,2)+'\n');
+const parsed=JSON.parse(fs.readFileSync(target,'utf8'));
+if(parsed.tools.length!==parsed.totalLinks||new Set(parsed.tools.map(t=>t.url)).size!==parsed.totalLinks)throw Error('Tool link validation failed');
+console.log(`JSON saved and validated: ${parsed.totalLinks} unique tool links.`);

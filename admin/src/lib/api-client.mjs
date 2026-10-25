@@ -5,4 +5,4 @@ export async function apiRequest(path, options={}){
  if(!response.ok){const error=new Error(data.message||'The request failed.');error.status=response.status;throw error;}
  return data;
 }
-export async function getSession(){try{return await apiRequest('/api/auth/session');}catch(error){if(error.status===401)return null;throw error;}}
+export async function getSession(){try{return await apiRequest('/api/admin/session');}catch(error){if(error.status===401)return null;throw error;}}

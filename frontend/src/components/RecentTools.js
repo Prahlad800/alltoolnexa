@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
-import Link from 'next/link';
+import Link from '@/components/ManagedLink';
 const storageKey='alltoolnexa-recent';
 export default function RecentTools({tools,categories}){
  const [ids,setIds]=useState([]);

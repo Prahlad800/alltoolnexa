@@ -11,3 +11,6 @@
 # Generated local audit artifacts
 /frontend/logs/
 /frontend/runtime-results/
+
+# Local service output
+**/local-dev.*.log
