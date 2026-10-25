@@ -1,0 +1,128 @@
+name: AllToolNexa Flask Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - ".github/workflows/deploy-backend.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: alltoolnexa-backend-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy Flask to PythonAnywhere
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Deploy Dependencies
+        run: python -m pip install requests
+
+      - name: Upload Backend and Reload
+        env:
+          PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          import time
+          from pathlib import Path
+          from urllib.parse import quote
+
+          import requests
+
+          USERNAME = "prahlad800"
+          DOMAIN = "prahlad800.pythonanywhere.com"
+          API_BASE = f"https://www.pythonanywhere.com/api/v0/user/{USERNAME}"
+          REMOTE_DIR = f"/home/{USERNAME}/alltoolnexa/backend"
+          token = os.environ.get("PA_API_TOKEN", "").strip()
+          if not token:
+              raise RuntimeError("Missing PA_API_TOKEN GitHub Actions repository secret")
+          headers = {"Authorization": f"Token {token}"}
+          source = Path("backend")
+          if not source.is_dir():
+              raise RuntimeError("Backend directory not found")
+
+          excluded_dirs = {".git", ".venv", "venv", "__pycache__", ".pytest_cache", "tests", "scripts"}
+          excluded_extensions = {".pyc", ".pyo", ".db", ".sqlite", ".sqlite3", ".log", ".bak", ".tmp"}
+
+          def api_post(url, **kwargs):
+              for attempt in range(5):
+                  # Rewind multipart bodies before retrying an upload.
+                  for handle in kwargs.get("files", {}).values():
+                      handle.seek(0)
+                  try:
+                      response = requests.post(url, headers=headers, **kwargs)
+                  except requests.RequestException:
+                      if attempt == 4:
+                          raise
+                      time.sleep(5 * (attempt + 1))
+                      continue
+                  if response.status_code == 429 or response.status_code >= 500:
+                      if attempt < 4:
+                          try:
+                              delay = float(response.headers.get("Retry-After", 5 * (attempt + 1)))
+                          except ValueError:
+                              delay = 5 * (attempt + 1)
+                          time.sleep(min(60, max(1, delay)))
+                          continue
+                  response.raise_for_status()
+                  return response
+
+          uploaded = 0
+          print("Starting AllToolNexa backend deployment", flush=True)
+          for file in sorted(source.rglob("*")):
+              if not file.is_file() or file.is_symlink():
+                  continue
+              relative = file.relative_to(source)
+              if any(part in excluded_dirs for part in relative.parts):
+                  continue
+              if file.name == ".env" or file.name.startswith(".env.") or file.suffix.lower() in excluded_extensions:
+                  continue
+              remote = f"{REMOTE_DIR}/{relative.as_posix()}"
+              url = f"{API_BASE}/files/path{quote(remote, safe='/')}"
+              with file.open("rb") as handle:
+                  api_post(url, files={"content": handle}, timeout=60)
+              uploaded += 1
+              print(f"Uploaded: {relative}", flush=True)
+              time.sleep(1.6)
+          if not uploaded:
+              raise RuntimeError("No backend files uploaded")
+          print(f"Uploaded {uploaded} backend files", flush=True)
+          api_post(f"{API_BASE}/webapps/{DOMAIN}/reload/", timeout=120)
+          print("Reload requested successfully", flush=True)
+
+          # Check both the application and database; a generic 200 page is not enough.
+          for attempt in range(6):
+              try:
+                  ready = True
+                  for path in ("/api/health", "/api/health/database", "/api/public/availability"):
+                      response = requests.get(f"https://{DOMAIN}{path}", timeout=15,
+                                              headers={"Cache-Control": "no-cache"})
+                      if response.status_code != 200 or response.json().get("success") is not True:
+                          print(f"Health check {path}: HTTP {response.status_code}", flush=True)
+                          ready = False
+                          break
+                  if ready:
+                      print("Backend is LIVE and database checks passed!", flush=True)
+                      break
+              except (requests.RequestException, ValueError):
+                  print(f"Health check retry {attempt + 1}/6", flush=True)
+              time.sleep(10)
+          else:
+              raise RuntimeError("Files uploaded and reload requested, but backend/database health checks failed")
+          PY
