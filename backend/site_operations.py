@@ -237,7 +237,7 @@ def init_site_operations(app):
         db.session.commit()
         response = jsonify(success=True, visitId=str(visit.id))
         response.set_cookie(VISITOR_COOKIE, cookie, max_age=RETENTION_DAYS*86400, path='/api/analytics',
-                            httponly=True, secure=app.config['AUTH_COOKIE_SECURE'], samesite='Lax')
+                            httponly=True, secure=app.config['AUTH_COOKIE_SECURE'], samesite='None' if app.config['AUTH_COOKIE_SECURE'] else 'Lax')
         return response, 201
 
     @routes.post('/api/analytics/heartbeat')

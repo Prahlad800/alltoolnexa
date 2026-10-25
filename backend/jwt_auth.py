@@ -125,7 +125,7 @@ def init_auth(app):
             db.session.commit()
         response = jsonify(success=True, user=user_data, csrfToken=csrf_for(jti), expiresIn=TTL)
         response.status_code = status
-        response.set_cookie(COOKIES[scope], raw, max_age=TTL, httponly=True, secure=secure, samesite='Lax', path='/')
+        response.set_cookie(COOKIES[scope], raw, max_age=TTL, httponly=True, secure=secure, samesite='None' if secure else 'Lax', path='/')
         # Invalidate the superseded opaque demo cookie in the browser.
         response.delete_cookie('alltoolnexa_demo_session', path='/')
         return response
@@ -274,7 +274,7 @@ def init_auth(app):
             db.session.query(AuthSession).filter_by(token_hash=record['digest']).delete()
             db.session.commit()
         response = jsonify(success=True)
-        response.delete_cookie(COOKIES[scope], path='/', secure=secure, httponly=True, samesite='Lax')
+        response.delete_cookie(COOKIES[scope], path='/', secure=secure, httponly=True, samesite='None' if secure else 'Lax')
         return response
 
     for scope, prefix in [('user', '/api/auth'), ('admin', '/api/admin')]:

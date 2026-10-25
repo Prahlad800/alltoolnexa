@@ -1,3 +1,3 @@
-import AuthPanel from '@/components/AuthPanel';
+import {redirect} from 'next/navigation';
 export const metadata={title:'Your account',robots:{index:false,follow:false}};
-export default function Account(){return <div className="container page-space auth-page"><AuthPanel/></div>;}
+export default function Account(){redirect('/dashboard');}

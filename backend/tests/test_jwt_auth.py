@@ -63,6 +63,14 @@ class JWTAuthTests(unittest.TestCase):
         self.assertEqual(self.client.post('/api/auth/login', json={'email': 'MEMBER@example.com', 'password': PASSWORD}, headers=ORIGIN).status_code, 200)
         self.assertEqual(self.client.post('/api/auth/login', json={'email': 'admin@alltoolnexa.local', 'password': PASSWORD}, headers=ORIGIN).status_code, 401)
 
+    def test_secure_cookie_supports_separate_frontend_site(self):
+        app=create_app({'TESTING':True,'AUTH_MODE':'demo','JWT_SECRET_KEY':SECRET,'DEMO_ADMIN_PASSWORD':PASSWORD,'AUTH_COOKIE_SECURE':True})
+        client=app.test_client()
+        result=client.post('/api/auth/signup',json={'email':'secure@example.com','password':'Abc123!x'},headers=ORIGIN)
+        self.assertEqual(result.status_code,201)
+        self.assertIn('SameSite=None',result.headers['Set-Cookie'])
+        self.assertIn('Secure;',result.headers['Set-Cookie'])
+
     def test_eight_character_password_boundary(self):
         self.assertEqual(self.signup(email='short@example.com', password='Abc123!').status_code, 400)
         self.assertEqual(self.signup(email='eight@example.com', password='Abc123!x').status_code, 201)

@@ -1,4 +1,5 @@
 import uuid
+from sqlalchemy.orm import deferred
 from sqlalchemy import CheckConstraint, UniqueConstraint, func
 from werkzeug.security import check_password_hash, generate_password_hash
 from database import SCHEMA, db
@@ -76,3 +77,14 @@ class PageVisit(db.Model):
 
     deleted_at = db.Column(db.DateTime(timezone=True), nullable=True, index=True)
     restored_at = db.Column(db.DateTime(timezone=True), nullable=True)
+
+
+class UserFile(db.Model):
+    __tablename__ = 'user_files'
+    __table_args__ = (CheckConstraint('size_bytes > 0 AND size_bytes <= 2000000', name='ck_file_size'), {'schema': SCHEMA})
+    id = db.Column(db.Uuid, primary_key=True, default=uuid.uuid4)
+    user_id = db.Column(db.Uuid, db.ForeignKey(f'{SCHEMA}.users.id', ondelete='CASCADE'), nullable=False, index=True)
+    name = db.Column(db.String(255), nullable=False)
+    size_bytes = db.Column(db.Integer, nullable=False)
+    content = deferred(db.Column(db.LargeBinary, nullable=False))
+    created_at = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())

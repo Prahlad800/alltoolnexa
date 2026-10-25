@@ -43,6 +43,8 @@ def create_app(config=None):
     init_auth(app)
     from site_operations import init_site_operations
     init_site_operations(app)
+    from user_storage import init_user_storage
+    init_user_storage(app)
 
     @app.get('/')
     def home():

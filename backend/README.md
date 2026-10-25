@@ -30,3 +30,6 @@ Email verification, password reset email and cloud document sync are not impleme
 The API reads data/published-tools.json, data/inventory.json and data/implementation-status.json. Refresh these from the project root with npm --prefix frontend run inventory. The API never imports frontend source code.
 
 With all services running, execute scripts/verify-local.py using this virtual environment.
+
+
+User cloud storage: Free accounts receive 50 MB total with 2 MB per file. Apply migration `0005_user_storage` before enabling the dashboard; see `../frontend/docs/USER-STORAGE.md` for API limits and rollout. Production secure cookies use SameSite=None to support a frontend on another site, with trusted Origin and CSRF checks on mutations.
