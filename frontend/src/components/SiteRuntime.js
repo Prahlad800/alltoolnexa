@@ -1,16 +1,17 @@
 'use client';
-import {createContext,useCallback,useContext,useEffect,useMemo,useState} from 'react';
+import {createContext,useContext,useEffect,useMemo,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import Link from 'next/link';
 import {apiRequest} from '../../shared/api-client.mjs';
 import VisitorTracking from './VisitorTracking';
+import {createAvailabilityRefresh} from '../../shared/availability-refresh.mjs';
 
 const Availability=createContext({state:null,catalog:[],refresh:()=>{}});
 export default function SiteRuntime({initialState,catalog,children}){
  const [state,setState]=useState(initialState);
- const refresh=useCallback(()=>apiRequest('/api/public/availability').then(setState).catch(()=>{}),[]);
- useEffect(()=>{refresh();const timer=setInterval(refresh,5000);window.addEventListener('focus',refresh);return()=>{clearInterval(timer);window.removeEventListener('focus',refresh);};},[refresh]);
- const value=useMemo(()=>({state,catalog,refresh}),[state,catalog,refresh]);
+ const refresh=useMemo(()=>createAvailabilityRefresh({request:()=>apiRequest('/api/public/availability',{signal:AbortSignal.timeout(8000)}),apply:setState}),[]);
+ useEffect(()=>{const update=()=>{if(document.visibilityState==='visible')refresh();};update();const timer=setInterval(update,5000);window.addEventListener('focus',update);document.addEventListener('visibilitychange',update);return()=>{clearInterval(timer);window.removeEventListener('focus',update);document.removeEventListener('visibilitychange',update);};},[refresh]);
+ const value=useMemo(()=>({state,catalog,refresh:()=>refresh(true)}),[state,catalog,refresh]);
  return <Availability.Provider value={value}>{children}<VisitorTracking/></Availability.Provider>;
 }
 export function useAvailability(href){
