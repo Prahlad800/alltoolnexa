@@ -1,4 +1,4 @@
-export const apiBase = () => process.env.NEXT_PUBLIC_API_URL || `http://${typeof window === 'undefined' ? 'localhost' : window.location.hostname}:5000`;
+export const apiBase = () => (process.env.NEXT_PUBLIC_API_URL || 'https://prahlad800.pythonanywhere.com').replace(/\/+$/, '');
 export async function apiRequest(path, options={}){
  const response=await fetch(apiBase()+path,{credentials:'include',cache:'no-store',...options,headers:{Accept:'application/json',...(options.body?{'Content-Type':'application/json'}:{}),...options.headers}});
  const data=await response.json().catch(()=>({message:'The backend returned an invalid response.'}));

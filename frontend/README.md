@@ -15,3 +15,6 @@ Production: set NEXT_PUBLIC_SITE_URL to the real public HTTPS origin, then run n
 The inventory source is shared/inventory.json. npm run inventory refreshes generated metadata here and backend/data snapshots when the sibling backend is present. Browser runtime imports stay inside this folder. The admin UI has its own client/config helpers.
 
 See ../README.md for the three-service startup commands. Historical audit evidence is in docs; file paths inside old reports may describe the pre-restructure layout.
+
+
+The default API is `https://prahlad800.pythonanywhere.com` for browser requests and server-rendered availability. Set `NEXT_PUBLIC_API_URL` to override it, then rebuild. For local backend development use `http://127.0.0.1:5000`. Backend deployment and configuration are managed separately.
