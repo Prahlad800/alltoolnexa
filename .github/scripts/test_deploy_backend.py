@@ -65,6 +65,19 @@ class DeployTests(unittest.TestCase):
         deploy.upload.assert_not_called()
         deploy.api.assert_not_called()
 
+    @patch('deploy_backend.requests.get')
+    def test_healthy_old_revision_or_wrong_transport_cannot_pass_deployment(self,get):
+        deploy = Deployment.__new__(Deployment)
+        deploy.domain = 'app.example'
+        deploy.revision = 'a'*40
+        deploy.expected_transport = 'supabase-https'
+        for revision,transport,count in [('b'*40,'supabase-https',1),('a'*40,'postgres',1),('a'*40,'supabase-https',0)]:
+            with self.subTest(revision=revision,transport=transport):
+                get.side_effect = [Mock(status_code=200,json=lambda:{'success':True,'authMode':'database','revision':revision}),
+                                   Mock(status_code=200,json=lambda:{'success':True,'database':'connected','transport':transport}),
+                                   Mock(status_code=200,json=lambda:{'success':True})]
+                self.assertEqual(len(deploy.health()),count)
+
 
 if __name__ == '__main__':
     unittest.main()

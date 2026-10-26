@@ -86,6 +86,9 @@ class Deployment:
         self.domain = os.getenv('PA_DOMAIN', 'prahlad800.pythonanywhere.com')
         self.api_base = f'https://www.pythonanywhere.com/api/v0/user/{self.username}'
         self.remote = f'/home/{self.username}/alltoolnexa/backend'
+        self.revision = os.getenv('GITHUB_SHA', '')
+        if self.revision and not re.fullmatch('[0-9a-f]{40}', self.revision):
+            raise RuntimeError('GITHUB_SHA must be a complete Git commit hash.')
         token = os.getenv('PA_API_TOKEN', '').strip()
         if not token:
             raise RuntimeError('Set the PA_API_TOKEN GitHub Actions repository secret.')
@@ -136,11 +139,16 @@ class Deployment:
                 raise RuntimeError('Supabase HTTPS preflight failed. Check the backend secret key, project URL and applied RPC migration.') from None
             if not good:
                 raise RuntimeError('Supabase HTTPS database readiness failed.')
+            self.expected_transport = 'supabase-https'
             values = {'DATABASE_TRANSPORT':'supabase','SUPABASE_URL':url,'SUPABASE_SECRET_KEY':key}
+            if self.revision:
+                values['DEPLOYMENT_REVISION'] = self.revision
             self.pending_environment = update_environment(response.text,values).encode()
             print('Database preflight: Supabase HTTPS RPC connected.',flush=True)
             return True,'Supabase HTTPS connected'
         good, detail = check_database_from_runner(settings.get('DATABASE_URL', ''))
+        if good and self.revision:
+            self.pending_environment = update_environment(response.text,{'DEPLOYMENT_REVISION':self.revision}).encode()
         print('Database preflight: ' + detail, flush=True)
         return good, detail
 
@@ -168,10 +176,14 @@ class Deployment:
                 good = response.status_code == 200 and payload.get('success') is True
                 if path == '/api/health':
                     good = good and payload.get('authMode') == 'database'
+                    if getattr(self,'revision',''):
+                        good = good and payload.get('revision') == self.revision
                 if path == '/api/health/database':
                     good = good and payload.get('database') == 'connected'
+                    if getattr(self,'expected_transport',None):
+                        good = good and payload.get('transport') == self.expected_transport
                 if not good:
-                    failures.append(f'{path}: HTTP {response.status_code}')
+                    failures.append(f'{path}: HTTP {response.status_code}; readiness, revision or transport did not match')
             except (requests.RequestException, ValueError, AttributeError):
                 failures.append(f'{path}: unavailable or invalid JSON')
         return failures
@@ -189,11 +201,15 @@ class Deployment:
         for attempt in range(6):
             failures = self.health()
             if not failures:
-                summary('Backend deployed. Application, PostgreSQL and availability checks passed.')
+                summary('Backend deployed. Application revision, database and availability checks passed.')
                 return
             print(f'Health check {attempt + 1}/6: ' + '; '.join(failures), flush=True)
             if attempt < 5:
                 time.sleep(10)
+        if getattr(self,'expected_transport',None) == 'supabase-https':
+            raise RuntimeError('Files uploaded and reload succeeded, but production health failed. '
+                               'Supabase HTTPS preflight passed. Check the PythonAnywhere WSGI source, '
+                               'runtime requirements, environment and error log. ' + '; '.join(failures))
         raise RuntimeError('Files uploaded and reload succeeded, but production health failed. '
                            'The same PostgreSQL configuration works from GitHub Actions. '
                            'PythonAnywhere FREE accounts cannot connect to external PostgreSQL/Supabase over TCP. '

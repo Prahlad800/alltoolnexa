@@ -4,7 +4,7 @@ Pushes to `main` that change backend code, this workflow or deployment scripts r
 
 Deployment requires an existing configured PythonAnywhere web app and virtualenv with backend requirements installed. The API reloads that app after uploads. The workflow does not install packages in the remote virtualenv or automatically apply database migrations; handle requirement/schema changes before deploying application code that needs them.
 
-Successful deployment requires all three endpoints to respond correctly: `/api/health` in database mode, `/api/health/database` with a connected database, and `/api/public/availability`. Generic HTML, demo mode and unhealthy storage cannot produce a green deployment.
+Successful deployment requires all three endpoints to respond correctly: `/api/health` in database mode with `revision` matching the pushed Git commit, `/api/health/database` with a connected database and the configured transport, and `/api/public/availability`. The workflow records `GITHUB_SHA` as the server's `DEPLOYMENT_REVISION` before reload. Generic HTML, an older application revision, demo mode and unhealthy storage cannot produce a green deployment.
 
 ## Supabase on a PythonAnywhere free account
 

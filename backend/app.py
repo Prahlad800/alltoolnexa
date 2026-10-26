@@ -18,6 +18,7 @@ def create_app(config=None):
     mode = (config or {}).get('AUTH_MODE', os.getenv('AUTH_MODE', 'database'))
     app.config.update(
         AUTH_MODE=mode,
+        DEPLOYMENT_REVISION=os.getenv('DEPLOYMENT_REVISION', ''),
         DEMO_ADMIN_USERNAME=os.getenv('DEMO_ADMIN_USERNAME', 'admin'),
         DEMO_ADMIN_EMAIL=os.getenv('DEMO_ADMIN_EMAIL', 'admin@alltoolnexa.local'),
         DEMO_ADMIN_PASSWORD=os.getenv('DEMO_ADMIN_PASSWORD', ''),
@@ -59,7 +60,7 @@ def create_app(config=None):
 
     @app.get('/api/health')
     def health():
-        return jsonify(success=True, message='Backend is working', authMode=app.config['AUTH_MODE'], databaseRequired=app.config['AUTH_MODE'] != 'demo')
+        return jsonify(success=True, message='Backend is working', authMode=app.config['AUTH_MODE'], databaseRequired=app.config['AUTH_MODE'] != 'demo', revision=app.config['DEPLOYMENT_REVISION'])
 
     @app.get('/api/health/database')
     def database_health():
