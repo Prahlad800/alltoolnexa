@@ -42,6 +42,7 @@ def deletion_start(end, window):
 
 def init_site_operations(app):
     routes = Blueprint('site_operations', __name__)
+    store = app.extensions.get('supabase_store')
     auth = app.extensions['site_auth']
     secret = app.config.get('JWT_SECRET_KEY') or secrets.token_hex(32)
     signer = URLSafeSerializer(secret, salt='site-visitor-v1')
@@ -50,6 +51,8 @@ def init_site_operations(app):
     lock = threading.Lock()
     buckets, geo_cache = {}, {}
     def cleanup():
+        if store:
+            return store.call('cleanup')['purged']
         now = datetime.now(timezone.utc)
         count = db.session.query(PageVisit).filter(PageVisit.deleted_at <= now-timedelta(days=30)).delete(synchronize_session=False)
         db.session.query(PageVisit).filter(PageVisit.deleted_at.is_(None), func.coalesce(PageVisit.restored_at, PageVisit.started_at) < now-timedelta(days=30)).update({PageVisit.deleted_at:now}, synchronize_session=False)
@@ -67,15 +70,17 @@ def init_site_operations(app):
                 try:
                     cleanup()
                 except Exception:
-                    db.session.rollback()
+                    if 'sqlalchemy' in app.extensions:
+                        db.session.rollback()
                     app.logger.warning('Analytics cleanup failed; retrying in one hour.')
                 finally:
-                    db.session.remove()
+                    if 'sqlalchemy' in app.extensions:
+                        db.session.remove()
             time.sleep(3600)
 
     @app.before_request
     def start_maintenance():
-        if not app.testing and 'sqlalchemy' in app.extensions:
+        if not app.testing and ('sqlalchemy' in app.extensions or store):
             with lock:
                 if not worker_started[0]:
                     worker_started[0] = True
@@ -94,8 +99,6 @@ def init_site_operations(app):
 
     @routes.before_request
     def boundary():
-        if 'sqlalchemy' not in app.extensions:
-            return fail('Site operations require configured database storage.', 503)
         origin = request.headers.get('Origin')
         if origin and origin not in origins:
             return fail('Origin is not allowed.', 403)
@@ -103,6 +106,8 @@ def init_site_operations(app):
             return '', 204
         if request.method == 'POST' and origin not in origins:
             return fail('A trusted application origin is required.', 403)
+        if 'sqlalchemy' not in app.extensions and not store:
+            return fail('Site operations require configured database storage.', 503)
 
     @routes.after_request
     def headers(response):
@@ -118,7 +123,8 @@ def init_site_operations(app):
 
     @routes.errorhandler(SQLAlchemyError)
     def database_error(error):
-        db.session.rollback()
+        if 'sqlalchemy' in app.extensions:
+            db.session.rollback()
         return fail('Site data is temporarily unavailable.', 503)
 
     def limited(scope, limit):
@@ -178,6 +184,8 @@ def init_site_operations(app):
         return digest, value
 
     def public_state():
+        if store:
+            return store.call('controls')
         rows = db.session.query(SiteControl).filter_by(enabled=False).all()
         return {'disabledTools': [r.key[5:] for r in rows if r.key.startswith('tool:')],
                 'disabledCategories': [r.key[9:] for r in rows if r.key.startswith('category:')]}
@@ -203,6 +211,9 @@ def init_site_operations(app):
         if not isinstance(item, str) or item not in source or not isinstance(enabled, bool):
             return fail('Unknown tool/category or invalid enabled state.', 400)
         key = kind + ':' + item
+        if store:
+            store.call('control_update', key=key, enabled=enabled, admin=record['user']['id'])
+            return jsonify(success=True, **public_state())
         row = db.session.get(SiteControl, key)
         if not row:
             row = SiteControl(key=key)
@@ -233,8 +244,12 @@ def init_site_operations(app):
         visit = PageVisit(visitor_hash=digest, user_id=uuid.UUID(user_session['user']['id']) if user_session else None,
                           path=path, ip_address=ip, device='tablet' if 'ipad' in agent or 'tablet' in agent else 'mobile' if 'mobile' in agent else 'desktop',
                           referrer_host=host or None, active_seconds=0, started_at=now, last_seen_at=now, **geo(ip))
-        db.session.add(visit)
-        db.session.commit()
+        if store:
+            value = store.call('visit_start', **{k:getattr(visit,k) for k in ('visitor_hash','user_id','path','ip_address','device','referrer_host','country','region','city','location_status')})
+            visit.id = uuid.UUID(value['id'])
+        else:
+            db.session.add(visit)
+            db.session.commit()
         response = jsonify(success=True, visitId=str(visit.id))
         response.set_cookie(VISITOR_COOKIE, cookie, max_age=RETENTION_DAYS*86400, path='/api/analytics',
                             httponly=True, secure=app.config['AUTH_COOKIE_SECURE'], samesite='None' if app.config['AUTH_COOKIE_SECURE'] else 'Lax')
@@ -251,8 +266,11 @@ def init_site_operations(app):
             visit_id = uuid.UUID(payload.get('visitId', ''))
         except (ValueError, TypeError, AttributeError):
             return fail('Invalid visit identifier.', 400)
-        visit = db.session.query(PageVisit).filter_by(id=visit_id, deleted_at=None).with_for_update().first()
         digest, _ = visitor()
+        if store:
+            value = store.call('heartbeat', id=visit_id, digest=digest, seconds=payload['activeSeconds'])
+            return fail(value['error'],value['status']) if value.get('error') else jsonify(success=True)
+        visit = db.session.query(PageVisit).filter_by(id=visit_id, deleted_at=None).with_for_update().first()
         if not visit or not hmac.compare_digest(visit.visitor_hash, digest):
             return fail('Visit not found.', 404)
         now = datetime.now(timezone.utc)
@@ -272,8 +290,12 @@ def init_site_operations(app):
                 raise ValueError()
         except ValueError:
             return fail('Choose 1, 7 or 30 days and a valid page.', 400)
-        base = db.session.query(PageVisit).filter(PageVisit.deleted_at.is_(None), PageVisit.started_at >= datetime.now(timezone.utc)-timedelta(days=days))
         selected = request.args.get('visitor', '')
+        if selected and not re.fullmatch('[a-f0-9]{64}', selected):
+            return fail('Invalid visitor identifier.', 400)
+        if store:
+            return jsonify(success=True, **store.call('analytics', days=days, page=page, visitor=selected))
+        base = db.session.query(PageVisit).filter(PageVisit.deleted_at.is_(None), PageVisit.started_at >= datetime.now(timezone.utc)-timedelta(days=days))
         if selected:
             if not re.fullmatch('[a-f0-9]{64}', selected):
                 return fail('Invalid visitor identifier.', 400)
@@ -308,7 +330,7 @@ def init_site_operations(app):
             return fail('Choose 6 hours, 1 day, 1 month, 6 months or 1 year.', 400)
         end = datetime.now(timezone.utc)
         begin = deletion_start(end, window)
-        count = deletion_query(begin, end, selected).count()
+        count = store.call('delete_preview', begin=begin, end=end, visitor=selected)['count'] if store else deletion_query(begin, end, selected).count()
         token = delete_signer.dumps({'admin': record['user']['id'], 'range': window, 'visitor': selected, 'from': begin.isoformat(), 'to': end.isoformat()})
         return jsonify(success=True, count=count, range=window, label=DELETE_WINDOWS[window],
                        visitor=selected, start=begin.isoformat(), end=end.isoformat(), confirmationToken=token)
@@ -329,8 +351,11 @@ def init_site_operations(app):
                 raise ValueError()
         except (BadSignature, ValueError, KeyError, TypeError):
             return fail('Deletion preview expired or is invalid. Close it and preview again.', 400)
-        count = deletion_query(begin, end, selected).update({PageVisit.deleted_at: datetime.now(timezone.utc)}, synchronize_session=False)
-        db.session.commit()
+        if store:
+            count = store.call('visits_delete', begin=begin, end=end, visitor=selected)['count']
+        else:
+            count = deletion_query(begin, end, selected).update({PageVisit.deleted_at: datetime.now(timezone.utc)}, synchronize_session=False)
+            db.session.commit()
         app.logger.info('Analytics deletion: rows=%s range=%s admin=%s', count, value['range'], record['user']['id'])
         return jsonify(success=True, deleted=count, movedToTrash=count, trashDays=30)
 
@@ -341,6 +366,8 @@ def init_site_operations(app):
             page = max(1, int(request.args.get('page', '1')))
         except ValueError:
             return fail('Invalid page.', 400)
+        if store:
+            return jsonify(success=True, **store.call('trash', page=page))
         now = datetime.now(timezone.utc)
         base = db.session.query(PageVisit).filter(PageVisit.deleted_at > now-timedelta(days=30))
         count = base.count()
@@ -357,6 +384,9 @@ def init_site_operations(app):
             visit_id = uuid.UUID(payload.get('id', ''))
         except (ValueError, TypeError, AttributeError):
             return fail('Invalid visit identifier.', 400)
+        if store:
+            count = store.call('restore', id=visit_id)['count']
+            return jsonify(success=True, restored=count) if count else fail('Trash record expired or was already restored.',404)
         now = datetime.now(timezone.utc)
         count = db.session.query(PageVisit).filter(PageVisit.id == visit_id, PageVisit.deleted_at > now-timedelta(days=30)).update({PageVisit.deleted_at:None, PageVisit.restored_at:now}, synchronize_session=False)
         if not count:

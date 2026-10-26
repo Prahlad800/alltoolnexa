@@ -1,6 +1,8 @@
 """Deploy tracked backend code without copying secrets or masking unhealthy storage."""
 import io
 import os
+import re
+import sys
 import subprocess
 import time
 from pathlib import Path
@@ -14,6 +16,19 @@ from sqlalchemy.engine import make_url
 EXCLUDED_DIRS = {'.git', '.venv', 'venv', '__pycache__', '.pytest_cache', 'tests', 'scripts'}
 EXCLUDED_SUFFIXES = {'.pyc', '.pyo', '.db', '.sqlite', '.sqlite3', '.log', '.bak', '.tmp'}
 HEALTH_PATHS = ('/api/health', '/api/health/database', '/api/public/availability')
+
+
+def update_environment(content, values):
+    for key, value in values.items():
+        if '\n' in value or '\r' in value:
+            raise RuntimeError('Environment settings must be single-line values.')
+        replacement = key + "='" + value.replace('\\','\\\\').replace("'","\\'") + "'"
+        pattern = r'(?m)^(?:export\s+)?'+re.escape(key)+r'\s*=.*$'
+        if re.search(pattern,content):
+            content = re.sub(pattern,lambda match:replacement,content)
+        else:
+            content = content.rstrip()+'\n'+replacement+'\n'
+    return content
 
 
 def deployable(path):
@@ -109,6 +124,22 @@ class Deployment:
         settings = dotenv_values(stream=io.StringIO(response.text), interpolate=False)
         if settings.get('AUTH_MODE', 'database') != 'database':
             raise RuntimeError('Production must use AUTH_MODE=database; demo accounts are loopback-only.')
+        key = os.getenv('PA_SUPABASE_SECRET_KEY') or settings.get('SUPABASE_SECRET_KEY')
+        if os.getenv('PA_SUPABASE_SECRET_KEY') or settings.get('DATABASE_TRANSPORT') == 'supabase':
+            url = os.getenv('PA_SUPABASE_URL') or settings.get('SUPABASE_URL') or settings.get('NEXT_PUBLIC_SUPABASE_URL','')
+            sys.path.insert(0,str(Path('backend').resolve()))
+            from supabase_store import SupabaseStore
+            try:
+                client = SupabaseStore(url,key)
+                good = client.call('ping').get('connected') is True
+            except Exception:
+                raise RuntimeError('Supabase HTTPS preflight failed. Check the backend secret key, project URL and applied RPC migration.') from None
+            if not good:
+                raise RuntimeError('Supabase HTTPS database readiness failed.')
+            values = {'DATABASE_TRANSPORT':'supabase','SUPABASE_URL':url,'SUPABASE_SECRET_KEY':key}
+            self.pending_environment = update_environment(response.text,values).encode()
+            print('Database preflight: Supabase HTTPS RPC connected.',flush=True)
+            return True,'Supabase HTTPS connected'
         good, detail = check_database_from_runner(settings.get('DATABASE_URL', ''))
         print('Database preflight: ' + detail, flush=True)
         return good, detail
@@ -150,6 +181,9 @@ class Deployment:
         if not database_ok:
             raise RuntimeError('Production database preflight failed: ' + database_detail + '. No files were deployed.')
         self.upload()
+        if getattr(self,'pending_environment',None):
+            self.api('POST','/files/path'+quote(self.remote+'/.env',safe='/'),files={'content':io.BytesIO(self.pending_environment)})
+            print('Backend HTTPS transport configured; existing environment settings preserved.',flush=True)
         self.api('POST', f'/webapps/{self.domain}/reload/')
         print('Reload requested successfully.', flush=True)
         for attempt in range(6):

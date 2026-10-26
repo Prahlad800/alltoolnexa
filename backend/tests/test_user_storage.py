@@ -55,7 +55,7 @@ class UserStorageTests(unittest.TestCase):
     def test_quota_boundary_and_reclaimed_space(self):
         headers=self.signup()
         # A smaller quota exercises exact boundary behavior without a 50 MB fixture.
-        with patch('user_storage.QUOTA_BYTES',20):
+        with patch('user_storage.entitlement', return_value={'name':'Free','quotaBytes':20,'maxFileBytes':MAX_FILE_BYTES}):
             first=self.upload(headers,content=b'x'*12).json['id']
             self.assertEqual(self.upload(headers,content=b'y'*8).status_code,201)
             self.assertEqual(self.upload(headers,content=b'z').status_code,409)

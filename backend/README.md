@@ -33,3 +33,5 @@ With all services running, execute scripts/verify-local.py using this virtual en
 
 
 User cloud storage: Free accounts receive 50 MB total with 2 MB per file. Apply migration `0005_user_storage` before enabling the dashboard; see `../frontend/docs/USER-STORAGE.md` for API limits and rollout. Production secure cookies use SameSite=None to support a frontend on another site, with trusted Origin and CSRF checks on mutations.
+
+For PythonAnywhere **free** hosting, set `DATABASE_TRANSPORT=supabase`, `SUPABASE_URL` and a private `SUPABASE_SECRET_KEY` after applying migration `0007_supabase_https` from a machine that can connect to PostgreSQL. This uses Supabase's allowlisted HTTPS API rather than blocked external PostgreSQL TCP. The RPC is restricted to backend service-role access; private tables are not exposed to public clients. See [deployment setup](../.github/DEPLOYMENT.md). Keep `DATABASE_TRANSPORT=postgres` for direct PostgreSQL access and migration commands. Paid storage plan details are in [BILLING.md](BILLING.md).

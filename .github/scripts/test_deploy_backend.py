@@ -4,10 +4,18 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 import requests
-from deploy_backend import Deployment, check_database_from_runner, classify_database_error, deployable
+from deploy_backend import Deployment, check_database_from_runner, classify_database_error, deployable, update_environment
+from dotenv import dotenv_values
 
 
 class DeployTests(unittest.TestCase):
+    def test_transport_configuration_preserves_other_environment_settings(self):
+        existing="JWT_SECRET_KEY='unchanged'\nDATABASE_TRANSPORT=postgres\n"
+        result=update_environment(existing,{'DATABASE_TRANSPORT':'supabase','SUPABASE_SECRET_KEY':"secret\\value'quote"})
+        parsed=dotenv_values(stream=io.StringIO(result),interpolate=False)
+        self.assertEqual(parsed['JWT_SECRET_KEY'],'unchanged')
+        self.assertEqual(parsed['DATABASE_TRANSPORT'],'supabase')
+        self.assertEqual(parsed['SUPABASE_SECRET_KEY'],"secret\\value'quote")
     def test_secret_and_runtime_files_are_never_uploaded(self):
         for name in ['backend/.env', 'backend/.env.production', 'backend/.env.example',
                      'backend/.venv/lib.py', 'backend/logs/server.log', 'backend/site.sqlite',

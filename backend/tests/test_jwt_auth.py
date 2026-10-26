@@ -98,6 +98,16 @@ class JWTAuthTests(unittest.TestCase):
             self.client.post('/api/auth/login', json={'email': 'nobody@example.com', 'password': 'wrong'}, headers=ORIGIN)
         self.assertEqual(self.client.post('/api/auth/login', json={'email': 'nobody@example.com', 'password': 'wrong'}, headers=ORIGIN).status_code, 429)
 
+    def test_site_operations_preflight_succeeds_without_demo_database(self):
+        result = self.client.options('/api/analytics/start', headers={
+            **ORIGIN,
+            'Access-Control-Request-Method': 'POST',
+            'Access-Control-Request-Headers': 'content-type',
+        })
+        self.assertEqual(result.status_code, 204)
+        self.assertEqual(result.headers['Access-Control-Allow-Origin'], ORIGIN['Origin'])
+        self.assertIn('POST', result.headers['Access-Control-Allow-Methods'])
+
 
 class JWTDatabaseTests(unittest.TestCase):
     def setUp(self):

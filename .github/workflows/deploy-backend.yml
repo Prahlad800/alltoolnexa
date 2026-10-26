@@ -21,6 +21,18 @@ jobs:
     name: Test backend and deployment
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v6
         with:
@@ -36,6 +48,7 @@ jobs:
         env:
           AUTH_MODE: database
           DATABASE_URL: ""
+          TEST_SUPABASE_RPC_DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/postgres
         run: python -m unittest discover -s tests -v
       - name: Deployment tests
         run: python -m unittest discover -s .github/scripts -p 'test_*.py' -v
@@ -61,4 +74,6 @@ jobs:
           PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
           PA_USERNAME: prahlad800
           PA_DOMAIN: prahlad800.pythonanywhere.com
+          PA_SUPABASE_URL: ${{ secrets.PA_SUPABASE_URL }}
+          PA_SUPABASE_SECRET_KEY: ${{ secrets.PA_SUPABASE_SECRET_KEY }}
         run: python .github/scripts/deploy_backend.py

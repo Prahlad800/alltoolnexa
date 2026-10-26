@@ -27,12 +27,13 @@ TTL = 8 * 60 * 60
 
 def init_auth(app):
     demo = app.config['AUTH_MODE'] == 'demo'
+    store = app.extensions.get('supabase_store')
     secret = app.config.get('JWT_SECRET_KEY', '')
     if not secret and demo:
         secret = secrets.token_hex(32)
     if secret and len(secret.encode()) < 32:
         raise ValueError('JWT_SECRET_KEY must contain at least 32 bytes.')
-    ready = bool(secret) and (demo or 'sqlalchemy' in app.extensions)
+    ready = bool(secret) and (demo or store or 'sqlalchemy' in app.extensions)
     admin_email = app.config['DEMO_ADMIN_EMAIL'].strip().lower()
     admin_name = app.config['DEMO_ADMIN_USERNAME']
     admin_password = app.config['DEMO_ADMIN_PASSWORD']
@@ -43,6 +44,9 @@ def init_auth(app):
     users, sessions, attempts = {}, {}, {}
     lock = threading.RLock()
     started = time.monotonic()
+    def rollback():
+        if 'sqlalchemy' in app.extensions:
+            db.session.rollback()
     origins = set(app.config.get('AUTH_ALLOWED_ORIGINS', app.config.get('DEMO_ALLOWED_ORIGINS', [])))
     secure = app.config.get('AUTH_COOKIE_SECURE', not demo)
 
@@ -99,7 +103,7 @@ def init_auth(app):
 
     def public_user(user):
         if isinstance(user, dict):
-            return {k: user[k] for k in ('id', 'username', 'email', 'role')} | {'mode': 'demo' if demo else 'database'}
+            return {k: user[k] for k in ('id', 'username', 'email', 'role')} | {'username': user.get('username') or user['email'].split('@')[0], 'mode': 'demo' if demo else 'database'}
         return {'id': str(user.id), 'username': user.username or user.email.split('@')[0], 'email': user.email, 'role': user.role, 'mode': 'database'}
 
     def issue(user, scope, status=200):
@@ -118,6 +122,9 @@ def init_auth(app):
                 old = request.cookies.get(COOKIES[scope], '')
                 sessions.pop(hashlib.sha256(old.encode()).hexdigest(), None)
                 sessions[digest] = {'user': user_data, 'expires': time.time() + TTL, 'jti': jti}
+        elif store:
+            old = request.cookies.get(COOKIES[scope], '')
+            store.call('session_issue', user_id=user_data['id'], digest=digest, old_digest=hashlib.sha256(old.encode()).hexdigest(), created_at=now, expires_at=now+timedelta(seconds=TTL))
         else:
             old = request.cookies.get(COOKIES[scope], '')
             db.session.query(AuthSession).filter_by(token_hash=hashlib.sha256(old.encode()).hexdigest()).delete()
@@ -147,6 +154,11 @@ def init_auth(app):
                 if not record or record['expires'] <= time.time() or record['user']['id'] != claims['sub'] or record['user']['role'] != scope:
                     return None
                 user_data = record['user']
+            elif store:
+                user = store.call('session_current', digest=digest)
+                if not user or user['id'] != claims['sub'] or user['role'] != scope:
+                    return None
+                user_data = public_user(user)
             else:
                 session_record = db.session.query(AuthSession).filter_by(token_hash=digest).first()
                 if not session_record or str(session_record.user_id) != claims['sub']:
@@ -176,7 +188,7 @@ def init_auth(app):
                         return failure('Invalid CSRF token. Reload and try again.', 403)
                     return fn(record, *args, **kwargs)
                 except SQLAlchemyError:
-                    db.session.rollback()
+                    rollback()
                     return failure('Account service is unavailable. Please try again later.', 503)
             return wrapped
         return decorate
@@ -220,6 +232,8 @@ def init_auth(app):
                     user = {'id': str(uuid.uuid4()), 'username': email.split('@')[0], 'email': email,
                             'role': 'user', 'password_hash': generate_password_hash(password)}
                     users[email] = user
+            elif store:
+                user = store.call('user_create', id=str(uuid.uuid4()), email=email, password_hash=generate_password_hash(password))
             else:
                 user = User(email=email, role='user')
                 user.set_password(password)
@@ -227,10 +241,10 @@ def init_auth(app):
                 db.session.flush()
             return issue(user, 'user', 201)
         except IntegrityError:
-            db.session.rollback()
+            rollback()
             return failure('This email is already registered. Please sign in.', 409)
         except SQLAlchemyError:
-            db.session.rollback()
+            rollback()
             return failure('Account service is unavailable. Please try again later.', 503)
 
     def sign_in(scope):
@@ -249,6 +263,9 @@ def init_auth(app):
                     with lock:
                         user = users.get(identifier)
                     valid = check_password_hash(user['password_hash'] if user else dummy_hash, password) and bool(user)
+            elif store:
+                user = store.call('user_find', field='username' if scope == 'admin' and '@' not in identifier else 'email', value=identifier)
+                valid = check_password_hash(user['password_hash'] if user else dummy_hash, password) and bool(user and user['is_active'] and user['role'] == scope)
             else:
                 query = db.session.query(User)
                 user = query.filter_by(username=identifier).first() if scope == 'admin' and '@' not in identifier else query.filter_by(email=identifier).first()
@@ -257,7 +274,7 @@ def init_auth(app):
                 return failure('Incorrect email or password.', 401)
             return issue(user, scope)
         except SQLAlchemyError:
-            db.session.rollback()
+            rollback()
             return failure('Account service is unavailable. Please try again later.', 503)
 
     app.add_url_rule('/api/auth/login', 'user_login', lambda: sign_in('user'), methods=['POST'])
@@ -270,6 +287,8 @@ def init_auth(app):
         if demo:
             with lock:
                 sessions.pop(record['digest'], None)
+        elif store:
+            store.call('session_revoke', digest=record['digest'])
         else:
             db.session.query(AuthSession).filter_by(token_hash=record['digest']).delete()
             db.session.commit()

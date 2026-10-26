@@ -38,6 +38,11 @@ def create_app(config=None):
         app.wsgi_app = ProxyFix(app.wsgi_app, x_for=hops, x_proto=hops, x_host=0, x_port=0, x_prefix=0)
     if app.config.get('SQLALCHEMY_DATABASE_URI'):
         db.init_app(app)
+    if (config or {}).get('DATABASE_TRANSPORT', os.getenv('DATABASE_TRANSPORT', 'postgres')) == 'supabase':
+        from supabase_store import SupabaseStore
+        app.extensions['supabase_store'] = SupabaseStore(
+            os.getenv('SUPABASE_URL') or os.getenv('NEXT_PUBLIC_SUPABASE_URL', ''),
+            os.getenv('SUPABASE_SECRET_KEY', ''))
     import models  # Register metadata without creating tables at startup.
     from jwt_auth import init_auth
     init_auth(app)
@@ -45,6 +50,8 @@ def create_app(config=None):
     init_site_operations(app)
     from user_storage import init_user_storage
     init_user_storage(app)
+    from billing import init_billing
+    init_billing(app)
 
     @app.get('/')
     def home():
@@ -58,6 +65,12 @@ def create_app(config=None):
     def database_health():
         if app.config['AUTH_MODE'] == 'demo':
             return jsonify(success=True, database='disabled_demo', required=False)
+        if 'supabase_store' in app.extensions:
+            try:
+                app.extensions['supabase_store'].call('ping')
+                return jsonify(success=True, database='connected', transport='supabase-https')
+            except SQLAlchemyError:
+                return jsonify(success=False, database='unavailable'), 503
         if not app.config.get('SQLALCHEMY_DATABASE_URI'):
             return jsonify(success=False, database='not_configured'), 503
         try:

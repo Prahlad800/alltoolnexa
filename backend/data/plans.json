@@ -1,0 +1,84 @@
+[
+  {
+    "id": "free",
+    "name": "Free",
+    "price": 0,
+    "storage": "50 MB",
+    "file": "2 MB",
+    "quotaBytes": 50000000,
+    "maxFileBytes": 2000000,
+    "popular": false,
+    "plus": false,
+    "features": [
+      "All tools free",
+      "Website + app sync",
+      "With ads"
+    ]
+  },
+  {
+    "id": "basic",
+    "name": "Basic",
+    "price": 39,
+    "storage": "200 MB",
+    "file": "20 MB",
+    "quotaBytes": 200000000,
+    "maxFileBytes": 20000000,
+    "popular": false,
+    "plus": false,
+    "features": [
+      "All tools free",
+      "Ad-free experience",
+      "Website + app sync"
+    ]
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "price": 89,
+    "storage": "1 GB",
+    "file": "100 MB",
+    "quotaBytes": 1000000000,
+    "maxFileBytes": 100000000,
+    "popular": false,
+    "plus": false,
+    "features": [
+      "All tools free",
+      "Ad-free experience",
+      "Saved file history"
+    ]
+  },
+  {
+    "id": "premium",
+    "name": "Premium",
+    "price": 149,
+    "storage": "5 GB",
+    "file": "500 MB",
+    "quotaBytes": 5000000000,
+    "maxFileBytes": 500000000,
+    "popular": true,
+    "plus": false,
+    "features": [
+      "All tools free",
+      "Ad-free experience",
+      "Priority processing",
+      "30-day file recovery"
+    ]
+  },
+  {
+    "id": "premium-plus",
+    "name": "Premium Plus",
+    "price": 199,
+    "storage": "10 GB",
+    "file": "1 GB",
+    "quotaBytes": 10000000000,
+    "maxFileBytes": 1000000000,
+    "popular": false,
+    "plus": true,
+    "features": [
+      "All tools free",
+      "Ad-free experience",
+      "Priority processing",
+      "30-day file recovery"
+    ]
+  }
+]

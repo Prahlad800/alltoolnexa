@@ -81,10 +81,22 @@ class PageVisit(db.Model):
 
 class UserFile(db.Model):
     __tablename__ = 'user_files'
-    __table_args__ = (CheckConstraint('size_bytes > 0 AND size_bytes <= 2000000', name='ck_file_size'), {'schema': SCHEMA})
+    __table_args__ = (CheckConstraint('size_bytes > 0 AND size_bytes <= 1000000000', name='ck_file_size'), {'schema': SCHEMA})
     id = db.Column(db.Uuid, primary_key=True, default=uuid.uuid4)
     user_id = db.Column(db.Uuid, db.ForeignKey(f'{SCHEMA}.users.id', ondelete='CASCADE'), nullable=False, index=True)
     name = db.Column(db.String(255), nullable=False)
     size_bytes = db.Column(db.Integer, nullable=False)
     content = deferred(db.Column(db.LargeBinary, nullable=False))
     created_at = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class BillingOrder(db.Model):
+    __tablename__ = 'billing_orders'
+    __table_args__ = ({'schema': SCHEMA},)
+    id = db.Column(db.String(80), primary_key=True)
+    user_id = db.Column(db.Uuid, db.ForeignKey(f'{SCHEMA}.users.id'), nullable=False, index=True)
+    plan_id = db.Column(db.String(30), nullable=False)
+    amount = db.Column(db.Integer, nullable=False)
+    payment_id = db.Column(db.String(80), unique=True)
+    paid_until = db.Column(db.DateTime(timezone=True))
+    created_at = db.Column(db.DateTime(timezone=True), server_default=func.now(), nullable=False)
