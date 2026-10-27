@@ -74,7 +74,7 @@ jobs:
           PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
           PA_USERNAME: prahlad800
           PA_DOMAIN: prahlad800.pythonanywhere.com
-          PA_ALLOWED_ORIGINS: https://alltoolnexa.pages.dev
+          PA_ALLOWED_ORIGINS: https://alltoolnexa.pages.dev,https://adminalltoolnexa.pages.dev
           PA_SUPABASE_URL: ${{ secrets.PA_SUPABASE_URL }}
           PA_SUPABASE_SECRET_KEY: ${{ secrets.PA_SUPABASE_SECRET_KEY }}
         run: python .github/scripts/deploy_backend.py
