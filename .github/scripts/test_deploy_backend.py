@@ -4,11 +4,23 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 import requests
-from deploy_backend import Deployment, check_database_from_runner, classify_database_error, deployable, update_environment
+from deploy_backend import Deployment, check_database_from_runner, classify_database_error, deployable, update_environment, production_origin_settings
 from dotenv import dotenv_values
 
 
 class DeployTests(unittest.TestCase):
+    def test_production_origins_preserve_existing_and_enable_secure_cookies(self):
+        settings={'AUTH_ALLOWED_ORIGINS':'https://admin.example.com,https://alltoolnexa.pages.dev'}
+        result=production_origin_settings(settings,'https://alltoolnexa.pages.dev/')
+        self.assertEqual(result['AUTH_ALLOWED_ORIGINS'],settings['AUTH_ALLOWED_ORIGINS'])
+        self.assertEqual(result['AUTH_COOKIE_SECURE'],'true')
+        self.assertEqual(production_origin_settings(settings,''),{})
+
+    def test_invalid_production_origins_are_rejected(self):
+        for origin in ['http://example.com','https://localhost','https://127.0.0.1','https://example.com/path','https://user:pass@example.com','https://example.com?query=1']:
+            with self.subTest(origin=origin), self.assertRaises(RuntimeError):
+                production_origin_settings({},origin)
+
     def test_transport_configuration_preserves_other_environment_settings(self):
         existing="JWT_SECRET_KEY='unchanged'\nDATABASE_TRANSPORT=postgres\n"
         result=update_environment(existing,{'DATABASE_TRANSPORT':'supabase','SUPABASE_SECRET_KEY':"secret\\value'quote"})

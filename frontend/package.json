@@ -11,7 +11,8 @@
     "lint": "eslint",
     "test": "node --test shared/*.test.mjs tests/*.test.mjs",
     "inventory": "node scripts/update-inventory.mjs",
-    "test:http": "node scripts/verify-http.mjs"
+    "test:http": "node scripts/verify-http.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "dependencies": {
     "@cantoo/pdf-lib": "^2.11.1",

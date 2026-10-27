@@ -6,7 +6,7 @@ import sys
 import subprocess
 import time
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 import requests
 from dotenv import dotenv_values
@@ -16,6 +16,22 @@ from sqlalchemy.engine import make_url
 EXCLUDED_DIRS = {'.git', '.venv', 'venv', '__pycache__', '.pytest_cache', 'tests', 'scripts'}
 EXCLUDED_SUFFIXES = {'.pyc', '.pyo', '.db', '.sqlite', '.sqlite3', '.log', '.bak', '.tmp'}
 HEALTH_PATHS = ('/api/health', '/api/health/database', '/api/public/availability')
+
+
+def production_origin_settings(settings, raw_origins):
+    """Add explicitly configured application origins without discarding existing ones."""
+    additions = [value.strip().rstrip('/') for value in raw_origins.split(',') if value.strip()]
+    if not additions:
+        return {}
+    for origin in additions:
+        url = urlsplit(origin)
+        if (url.scheme != 'https' or not url.hostname or url.username or url.password
+                or url.path or url.query or url.fragment
+                or url.hostname in {'localhost', '0.0.0.0', '::1'}
+                or url.hostname.startswith('127.')):
+            raise RuntimeError('PA_ALLOWED_ORIGINS must contain public HTTPS origins only.')
+    existing = [value.strip().rstrip('/') for value in settings.get('AUTH_ALLOWED_ORIGINS', '').split(',') if value.strip()]
+    return {'AUTH_ALLOWED_ORIGINS': ','.join(dict.fromkeys(existing + additions)), 'AUTH_COOKIE_SECURE': 'true'}
 
 
 def update_environment(content, values):
@@ -127,6 +143,7 @@ class Deployment:
         settings = dotenv_values(stream=io.StringIO(response.text), interpolate=False)
         if settings.get('AUTH_MODE', 'database') != 'database':
             raise RuntimeError('Production must use AUTH_MODE=database; demo accounts are loopback-only.')
+        origin_values = production_origin_settings(settings, os.getenv('PA_ALLOWED_ORIGINS', ''))
         key = os.getenv('PA_SUPABASE_SECRET_KEY') or settings.get('SUPABASE_SECRET_KEY')
         if os.getenv('PA_SUPABASE_SECRET_KEY') or settings.get('DATABASE_TRANSPORT') == 'supabase':
             url = os.getenv('PA_SUPABASE_URL') or settings.get('SUPABASE_URL') or settings.get('NEXT_PUBLIC_SUPABASE_URL','')
@@ -140,15 +157,19 @@ class Deployment:
             if not good:
                 raise RuntimeError('Supabase HTTPS database readiness failed.')
             self.expected_transport = 'supabase-https'
-            values = {'DATABASE_TRANSPORT':'supabase','SUPABASE_URL':url,'SUPABASE_SECRET_KEY':key}
+            values = {**origin_values, 'DATABASE_TRANSPORT':'supabase','SUPABASE_URL':url,'SUPABASE_SECRET_KEY':key}
             if self.revision:
                 values['DEPLOYMENT_REVISION'] = self.revision
             self.pending_environment = update_environment(response.text,values).encode()
             print('Database preflight: Supabase HTTPS RPC connected.',flush=True)
             return True,'Supabase HTTPS connected'
         good, detail = check_database_from_runner(settings.get('DATABASE_URL', ''))
-        if good and self.revision:
-            self.pending_environment = update_environment(response.text,{'DEPLOYMENT_REVISION':self.revision}).encode()
+        if good:
+            values = dict(origin_values)
+            if self.revision:
+                values['DEPLOYMENT_REVISION'] = self.revision
+            if values:
+                self.pending_environment = update_environment(response.text,values).encode()
         print('Database preflight: ' + detail, flush=True)
         return good, detail
 
