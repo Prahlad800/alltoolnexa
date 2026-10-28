@@ -1,0 +1,6 @@
+/* A single desktop layout on every device, as requested. Browsers retain pinch zoom. */
+html,body{min-width:1280px}
+html{overflow-x:auto}
+body{overflow-x:visible}
+.mobile-navigation,.mobile-category,.mobile-only{display:none!important}
+html[lang=hi] body{font-family:Arial,'Nirmala UI','Mangal',sans-serif}

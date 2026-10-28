@@ -26,7 +26,7 @@ try{
  await page.evaluate(()=>window.dispatchEvent(new Event('alltoolnexa-session-expired')));await page.waitForFunction(()=>document.documentElement.lang==='en');
  await page.getByRole('heading',{name:'Crop PDF',exact:true}).waitFor();
  await page.setViewportSize({width:375,height:812});await page.getByRole('button',{name:'Choose language',exact:true}).click();await page.screenshot({path:'runtime-results/i18n/mobile-dialog.png'});
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
- const result={firstVisitPopup:true,hindiHomepage:true,hindiToolControls:true,persistence:true,premiumDenied:true,frenchCatalogLoaded:true,expiredSessionFallsBackToEnglish:true,mobileOverflow:false,pageErrors:errors};
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth>=1280));assert.deepEqual(errors,[]);
+ const result={firstVisitPopup:true,hindiHomepage:true,hindiToolControls:true,persistence:true,premiumDenied:true,frenchCatalogLoaded:true,expiredSessionFallsBackToEnglish:true,desktopLayoutOnNarrowWindow:true,pageErrors:errors};
  await writeFile('runtime-results/i18n/results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
 }finally{await browser.close();}

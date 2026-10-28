@@ -13,6 +13,8 @@ The root package.json contains convenience commands only; .git and .gitignore ar
 
 ## Run locally
 
+Public website layout: [desktop layout on every device](frontend/docs/DESKTOP-LAYOUT.md). Phones intentionally show the desktop interface with zoom enabled.
+
 Use three terminals from the project root:
 
 ```powershell
