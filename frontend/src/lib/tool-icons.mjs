@@ -1,0 +1,140 @@
+// Local SVG symbols: no icon font, network request or platform-dependent emoji.
+export const iconPaths={
+ document:'M14 3H5v18h14V8l-5-5Zm0 0v5h5M8 12h8M8 16h6',
+ image:'M3 4h18v16H3V4Zm0 12 6-6 5 5 3-3 4 4M16 8h.01',
+ merge:'M5 3v4c0 3 7 3 7 6m7-10v4c0 3-7 3-7 6m0 0v8m-4-4 4 4 4-4',
+ split:'M12 21v-8c0-3-7-3-7-6V3m7 10c0-3 7-3 7-6V3M2 6l3-3 3 3m8 0 3-3 3 3',
+ crop:'M7 2v15h15M2 7h15v15M10 7h7v7',
+ resize:'M3 9V3h6M3 3l6 6m6 12h6v-6m0 6-6-6M14 3h7v7M3 14v7h7',
+ rotate:'M20 8a8 8 0 1 0 0 8M20 2v6h-6',
+ flip:'M12 2v3m0 3v3m0 3v3m0 3v2M8 5 2 19h6V5Zm8 0 6 14h-6V5Z',
+ compress:'M3 3l6 6M4 9h5V4m12 17-6-6m0 5v-5h5M21 3l-6 6m0-5v5h5M3 21l6-6m-5 0h5v5',
+ expand:'M8 3H3v5m0-5 6 6m7 12h5v-5m0 5-6-6M16 3h5v5m0-5-6 6M8 21H3v-5m0 5 6-6',
+ convert:'M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4',
+ pages:'M7 3h14v14H7V3ZM3 7v14h14M10 7h8m-8 4h8',
+ reorder:'M8 3v18m-4-4 4 4 4-4M16 21V3m-4 4 4-4 4 4',
+ remove:'M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7',
+ lock:'M6 10h12v11H6V10Zm2 0V7a4 4 0 0 1 8 0v3M12 14v3',
+ unlock:'M6 10h12v11H6V10Zm2 0V7a4 4 0 0 1 8-1M12 14v3',
+ shield:'M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4ZM8 12l3 3 5-6',
+ edit:'m15 3 6 6L9 21H3v-6L15 3Zm-3 3 6 6M3 21l6-1',
+ watermark:'M8 4a4 4 0 1 1 8 0c0 5-2 5-2 8h4l2 5H4l2-5h4c0-3-2-3-2-8ZM4 21h16',
+ info:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-10v6m0-10h.01',
+ search:'M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5-2 6 6',
+ scan:'M3 8V3h5m8 0h5v5m0 8v5h-5M8 21H3v-5M3 12h18M8 7h8m-8 10h8',
+ table:'M3 3h18v18H3V3Zm0 6h18M9 3v18m6-12v12M3 15h18',
+ presentation:'M3 3h18v13H3V3Zm9 13v6m-5 0 5-4 5 4M7 11V8m5 3V6m5 5V8',
+ code:'m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18',
+ braces:'M8 3H6v6l-3 3 3 3v6h2M16 3h2v6l3 3-3 3v6h-2',
+ terminal:'m4 6 6 6-6 6m9 0h7',
+ database:'M21 6c0 2-4 3-9 3S3 8 3 6s4-3 9-3 9 1 9 3Zm0 0v12c0 2-4 3-9 3s-9-1-9-3V6m0 6c0 2 4 3 9 3s9-1 9-3',
+ git:'M6 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM6 7v10m12-10v2c0 5-12 1-12 6',
+ globe:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-18c-5 5-5 13 0 18m0-18c5 5 5 13 0 18M3 12h18',
+ link:'m10 8 3-3a5 5 0 0 1 7 7l-3 3M14 16l-3 3a5 5 0 0 1-7-7l3-3m1 7 8-8',
+ text:'M4 4h16M12 4v16m-4 0h8',
+ lines:'M3 4h18M3 9h14M3 14h18M3 19h10',
+ count:'M8 3 6 21M17 3l-2 18M3 9h18M2 15h18',
+ sort:'M4 4v16m-3-3 3 3 3-3M11 5h4m-4 7h7m-7 7h10',
+ align:'M3 4h18M6 9h12M3 14h18M6 19h12',
+ compare:'M9 3H3v18h6m6-18h6v18h-6M9 9l3 3-3 3m6-6-3 3 3 3',
+ eraser:'m14 3 7 7L10 21H6l-5-5L14 3Zm-8 8 9 9m-5 1h12',
+ palette:'M12 3a9 9 0 1 0 0 18h2c2 0 3-2 1-4s1-3 3-3h1c4-3 0-11-7-11ZM7 8h.01M12 6h.01M17 8h.01M6 13h.01',
+ dropper:'m15 3 6 6m-8-2 4 4L7 21H3v-4L13 7Zm4-4 4 4',
+ blur:'M12 3v18M7 5v14M3 9v6M17 5v14m4-10v6',
+ grid:'M3 3h7v7H3V3Zm11 0h7v7h-7V3ZM3 14h7v7H3v-7Zm11 0h7v7h-7v-7Z',
+ circle:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3 12h18',
+ square:'M3 3h18v18H3V3ZM3 21 21 3',
+ triangle:'m12 3 10 18H2L12 3Zm0 8v10',
+ cube:'m12 2 10 5v10l-10 5-10-5V7l10-5Zm0 10 10-5M12 12 2 7m10 5v10',
+ chart:'M3 3v18h18M7 16l5-6 4 3 5-8',
+ bars:'M3 21h18M5 17V9h3v8m3 0V3h3v14m3 0v-6h3v6',
+ calculator:'M5 2h14v20H5V2Zm3 3h8v4H8V5Zm0 8h1m6 0h1m-8 4h1m6 0h1',
+ target:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-4h.01',
+ calendar:'M3 5h18v16H3V5Zm4-3v6m10-6v6M3 10h18M7 14h2m4 0h2m-8 3h2',
+ clock:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-14v5l4 3',
+ timer:'M9 2h6m-3 0v3m6 1 2-2M12 21a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0-12v4l3 2',
+ ruler:'M3 8h18v9H3V8Zm4 0v4m4-4v3m4-3v4m4-4v3',
+ weight:'M9 6a3 3 0 1 1 6 0H9ZM6 7h12l3 14H3L6 7Z',
+ thermometer:'M10 14V5a2 2 0 0 1 4 0v9a5 5 0 1 1-4 0Zm2-6v10',
+ droplet:'M12 2s-8 9-8 14a8 8 0 0 0 16 0c0-5-8-14-8-14Zm-4 13c0 3 1 4 4 4',
+ speed:'M3 18a10 10 0 1 1 18 0M12 14l5-7M5 12h2m10 0h2M12 4v2',
+ money:'M2 5h20v14H2V5Zm10 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM5 9h.01M19 15h.01',
+ wallet:'M20 7H4a2 2 0 0 1 0-4h15v4M3 5v16h18V7m0 5h-6v5h6m-3-2h.01',
+ bank:'m12 2 10 5H2l10-5ZM4 10v8m5-8v8m6-8v8m5-8v8M2 22h20M2 18h20',
+ receipt:'M5 2 8 4l4-2 4 2 3-2v20l-3-2-4 2-4-2-3 2V2Zm3 6h8m-8 4h8m-8 4h5',
+ mail:'M2 5h20v14H2V5Zm0 0 10 8L22 5',
+ message:'M3 3h18v14H9l-6 4V3Zm4 5h10M7 12h7',
+ users:'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM2 21v-3a7 7 0 0 1 14 0v3M17 3a4 4 0 0 1 0 8m2 3a7 7 0 0 1 3 7',
+ person:'M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21v-3a8 8 0 0 1 16 0v3',
+ graduation:'m12 3 11 5-11 5L1 8l11-5Zm-7 7v7c4 4 10 4 14 0v-7m4-2v9',
+ checklist:'M3 5l2 2 4-4M12 5h9M3 13l2 2 4-4m3 2h9M3 21l2 2 4-4m3 2h9',
+ briefcase:'M3 7h18v14H3V7Zm5 0V3h8v4M3 12l9 3 9-3m-9 2v3',
+ phone:'M8 2h8v20H8V2Zm3 17h2',
+ pin:'M12 22s8-9 8-14a8 8 0 0 0-16 0c0 5 8 14 8 14Zm0-11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
+ car:'m3 10 3-7h12l3 7v10h-3v-3H6v3H3V10Zm0 0h18M6 13h2m8 0h2',
+ bolt:'M13 2 3 14h8l-1 8 11-13h-8l1-7Z',
+ battery:'M2 6h18v12H2V6Zm18 4h3v4h-3M6 10v4m4-4v4m4-4v4',
+ utensils:'M3 2v6a3 3 0 0 0 6 0V2M6 2v20M18 2c-5 5-5 10 0 10h2V2h-2Zm2 10v10',
+ paint:'M3 3h15v7H3V3Zm15 3h3v8h-9v8H9v-8',
+ server:'M3 3h18v7H3V3Zm0 11h18v7H3v-7ZM6 6h.01M6 17h.01M11 6h7m-7 11h7',
+ dice:'M3 3h18v18H3V3Zm4 4h.01m10 0h.01M12 12h.01M7 17h.01m10 0h.01',
+ coin:'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-14v10m-3-8h5m-5 6h5',
+ barcode:'M2 3v18M6 3v18M9 3v18M14 3v18M18 3v18M22 3v18',
+ qr:'M3 3h6v6H3V3Zm12 0h6v6h-6V3ZM3 15h6v6H3v-6Zm12 0h3v3h3v3h-6v-6Zm6-3h-9V3M3 12h6m3 3v6',
+ hash:'M8 3 6 21M17 3l-2 18M3 9h18M2 15h18',
+ robot:'M5 6h14v14H5V6Zm7-4v4M2 10v6m20-6v6M8 10h.01m8 0h.01M8 16h8',
+ sitemap:'M9 2h6v5H9V2Zm-7 15h6v5H2v-5Zm14 0h6v5h-6v-5ZM12 7v5M5 17v-5h14v5',
+ tag:'M3 3h9l10 10-9 9L3 12V3Zm5 5h.01',
+ eye:'M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12Zm11 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z',
+ download:'M12 2v13m-5-5 5 5 5-5M3 16v6h18v-6',
+ upload:'M12 16V3M7 8l5-5 5 5M3 16v6h18v-6',
+ translate:'M2 5h12M8 2v3m4 0c0 7-8 12-8 12m0-9c1 4 4 6 8 8m2 5 4-12 4 12m-6-4h4',
+ check:'M3 12l6 6L21 6',
+ layout:'M3 3h18v18H3V3Zm0 5h18M9 8v13',
+ rounded:'M10 3h6a5 5 0 0 1 5 5v6M3 10v11h11M3 3h2m16 16v2h-2',
+ shadow:'M3 3h14v14H3V3Zm5 14v4h13V8h-4',
+ bug:'M8 8h8v8a4 4 0 0 1-8 0V8Zm2 0V5h4v3M3 9h5m8 0h5M3 15h5m8 0h5M5 21l4-3m6 0 4 3',
+ star:'m12 2 3 6 7 2-5 5 1 7-6-3-6 3 1-7-5-5 7-2 3-6Z',
+ book:'M12 5C8 2 4 2 2 3v17c3-1 6-1 10 2m0-17c4-3 8-3 10-2v17c-3-1-6-1-10 2V5Z',
+ percent:'M5 19 19 5M7 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm10 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
+ fraction:'M5 19 19 5M5 4h3v5M16 16h4l-4 5h4',
+ function:'M19 3h-5c-3 0-3 3-3 5l-2 9c0 3-1 4-4 4H3M5 10h12',
+ infinity:'M12 12C4-1-3 15 5 17c3 1 5-3 7-5Zm0 0c8-13 15 3 7 5-3 1-5-3-7-5Z',
+ flag:'M5 22V3c5-4 9 4 15 0v12c-6 4-10-4-15 0',
+ microphone:'M9 4a3 3 0 0 1 6 0v8a3 3 0 0 1-6 0V4Zm-4 6v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8',
+ wifi:'M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8 16a6 6 0 0 1 8 0m-4 4h.01',
+};
+
+const categoryGlyphs={math:'calculator',student:'graduation',office:'briefcase',finance:'money',marketing:'chart','date-time':'calendar',converters:'convert',text:'text',developer:'code',design:'palette',image:'image',pdf:'document',qr:'qr',india:'bank',home:'car',random:'dice',seo:'search',templates:'document'};
+export function categoryIcon(category){return {glyph:categoryGlyphs[category]||'document'};}
+
+export function toolIcon(tool){
+ const id=tool.id||'',category=tool.category;
+ let badge=category==='pdf'?'PDF':category==='image'?'IMG':'';
+ const choose=(glyph,label=badge)=>({glyph,badge:label});
+ if(category==='qr')return choose(/barcode|ean|upc|isbn/.test(id)?'barcode':'qr',/barcode|ean|upc|isbn/.test(id)?'':'QR');
+ if(category==='random')return choose(/password-strength/.test(id)?'shield':/password|token/.test(id)?'lock':/uuid|sha\d|hash/.test(id)?'hash':/coin/.test(id)?'coin':/team/.test(id)?'users':/name/.test(id)?'person':/date/.test(id)?'calendar':'dice');
+ if(category==='home')return choose(/ev-charging|electricity|watt/.test(id)?'bolt':/battery|ev-range/.test(id)?'battery':/recipe|serving|bill-splitter|tip-/.test(id)?'utensils':/seating/.test(id)?'users':/hosting|bandwidth/.test(id)?'server':/compression/.test(id)?'compress':/paint/.test(id)?'paint':/flooring|tile/.test(id)?'square':/concrete|water-tank/.test(id)?'cube':/travel-time|pace/.test(id)?'timer':'car');
+ if(category==='templates')return choose(/invoice|payment/.test(id)?'receipt':/bug|github-issue/.test(id)?'bug':/pull-request/.test(id)?'git':/meeting/.test(id)?'calendar':/message|ticket|user-story/.test(id)?'message':/leave/.test(id)?'calendar':/resume|application|internship|resignation|proposal/.test(id)?'briefcase':/salary/.test(id)?'wallet':/coding/.test(id)?'code':/website-design/.test(id)?'layout':/image-generation/.test(id)?'image':/research|seo-article/.test(id)?'search':/report|standup|prd|brief/.test(id)?'checklist':'document');
+ if(category==='converters'){
+  const glyph=/celsius|fahrenheit|kelvin/.test(id)?'thermometer':/kg|pounds|gram|ounce/.test(id)?'weight':/liter|gallon|cup|spoon|ml/.test(id)?'droplet':/mph|km-h/.test(id)?'speed':/bytes|kb|mb|gb|tb/.test(id)?'server':/crore|lakh|million/.test(id)?'money':'ruler';return choose(glyph,'↔');
+ }
+ if(category==='pdf'||category==='image'){
+  if(/^(?:pdf|images?|text|word|html|jpg|png|webp|base64)-to-/.test(id)){const target=id.split('-to-')[1];return choose('convert',({docx:'DOC',excel:'XLS',pptx:'PPT',base64:'B64',images:'IMG'})[target]||target.toUpperCase().slice(0,4));}
+  for(const [pattern,glyph] of [[/merge/,'merge'],[/split|extract/,'split'],[/crop/,'crop'],[/resize/,'resize'],[/rotate/,'rotate'],[/flip/,'flip'],[/compress/,'compress'],[/unlock/,'unlock'],[/protect/,'lock'],[/reorder/,'reorder'],[/remove-selected/,'remove'],[/watermark/,'watermark'],[/editor/,'edit'],[/metadata-remover|exif-remover/,'eraser'],[/metadata|exif/,'info'],[/counter|numbers/,'count'],[/size|dimensions/,'ruler'],[/color-picker/,'dropper'],[/color/,'palette'],[/blur/,'blur'],[/pixelate/,'grid'],[/placeholder/,'image']])if(pattern.test(id))return choose(glyph);
+ }
+ const rules=[
+  [/spreadsheet/,'table'],[/invoice|receipt/,'receipt'],[/markdown/,'code'],[/json|yaml|xml/,'braces'],[/sql|mongodb/,'database'],[/git-|commit|pull-request/,'git'],[/regex/,'search'],[/hash|sha\d|md5|token|jwt/,'hash'],[/password-strength/,'shield'],[/password/,'lock'],[/barcode/,'barcode'],[/qr/,'qr'],
+  [/sitemap|schema-markup/,'sitemap'],[/robots/,'robot'],[/meta-tag|open-graph|twitter-card|hreflang/,'tag'],[/seo|keyword|serp/,'search'],[/translate|hinglish/,'translate'],[/download/,'download'],[/upload/,'upload'],[/browser|screen|resolution|media-query/,'layout'],[/url|domain|link|mailto|utm|fetch|axios|curl|requests-request/,'link'],
+  [/gradient|color|rgb|hex-to-hsl|hsl-to/,'palette'],[/border-radius/,'rounded'],[/shadow/,'shadow'],[/flexbox|grid/,'grid'],[/clamp/,'resize'],[/aspect-ratio|golden-ratio/,'ruler'],[/html|javascript|css|coding-prompt/,'code'],[/binary|ascii|unicode|hex|octal|base64/,'convert'],[/environment/,'terminal'],[/file-extension/,'document'],[/file-name/,'edit'],[/semantic-version|release-note/,'tag'],
+  [/percentage|percentile|cgpa-to-percentage|profit-percentage/,'percent'],[/fraction|ratio-simplifier|ratio-calculator/,'fraction'],[/square-root|cube-root|factorial|power-calculator|quadratic/,'function'],[/prime|hcf|gcd|lcm|permutation|combination|sequence/,'calculator'],[/probability/,'dice'],[/circle|sphere/,'circle'],[/triangle|pythagorean|trapezoid|polygon/,'triangle'],[/cylinder|cube-volume|cone-volume|tank-volume|concrete-volume/,'cube'],[/rectangle|square-area|flooring|tile/,'square'],[/average|median|variance|deviation|slope|mode-calculator/,'bars'],
+  [/pomodoro|countdown|study-break/,'timer'],[/time|hours|minutes|overtime|duration|pace/,'clock'],[/date|age-calculator|day-of-week|week-number|financial-year|months-between|years-between|holiday|business-days|leave/,'calendar'],
+  [/mail|email-open|email-ctr/,'mail'],[/whatsapp|sms|message|support-ticket|follow-up|user-story/,'message'],[/phone|mobile/,'phone'],[/pincode|location/,'pin'],[/pan-format|aadhaar/,'person'],[/ifsc|gst-number/,'bank'],[/gst|tax|discount|commission|markup|margin|selling-price|cost-price|restaurant-bill|tip-calculator/,'receipt'],[/loan|emi|interest|prepayment|debt|down-payment/,'bank'],[/salary|bonus|billable|hourly-rate|project-rate|meeting-cost|payment-reminder/,'wallet'],[/profit|loss|roi|cagr|inflation|revenue|arr-calculator|burn-rate|runway|retention|turnover|conversion-rate/,'chart'],[/savings|fund|sip-|value-calculator|currency|rupees|budget|cost|arpu|order-value/,'money'],
+  [/attendance|bunk|task-completion|chapter-completion/,'checklist'],[/gpa|grade|marks|answer-score|study|roll-number|job-application|internship/,'graduation'],[/target|goal|accuracy|attempt-rate|rank|csat|nps|rice-score|ice-score/,'target'],[/customer|employee|team|seating|contact/,'users'],[/resume|recruiter|resignation|proposal|client-brief/,'briefcase'],[/meeting|agenda|invitation/,'calendar'],[/report|prd|brief|letter|request|generator/,'document'],
+  [/fuel|mileage|travel|trip/,'car'],[/charging|electricity|watt/,'bolt'],[/battery|ev-range/,'battery'],[/recipe|serving/,'utensils'],[/paint/,'paint'],[/hosting|bandwidth|window-usage/,'server'],[/water/,'droplet'],
+  [/dice|random-number|random-yes-no|random-name/,'dice'],[/coin-flip/,'coin'],[/uuid/,'hash'],[/random-date/,'calendar'],[/random-team/,'users'],
+  [/diff/,'compare'],[/find-and-replace|finder/,'search'],[/duplicate.*remov|remove/,'eraser'],[/alphabetical-sort/,'sort'],[/reading/,'book'],[/speaking/,'microphone'],[/counter|line-numbers|frequency/,'count'],[/text-reverser|word-reverser/,'convert'],[/case-converter|bold|italic|strikethrough|initial/,'text'],[/slug/,'link'],[/morse/,'wifi'],[/formatter|formatter|preview/,'lines'],[/validator|checker/,'check'],
+ ];
+ for(const [pattern,glyph] of rules)if(pattern.test(id))return choose(glyph);
+ return {...categoryIcon(category),badge};
+}
