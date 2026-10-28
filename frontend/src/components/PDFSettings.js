@@ -1,4 +1,6 @@
 'use client';
+
+import {T} from '@/components/LanguageProvider';
 import {useEffect,useRef,useState} from 'react';
 import {closePDF} from '../lib/pdf-lifecycle.mjs';
 import {loadPDF,renderPage} from '../lib/reference-files.mjs';
@@ -16,7 +18,7 @@ export default function PDFSettings({file,password='',mode,values,onChange,disab
  function toggle(n){const next=selected.includes(n)?selected.filter(p=>p!==n):[...selected,n].sort((a,b)=>a-b);onChange({pages:next.join(',')});}
  function reorder(index,direction){const next=[...selected];[next[index],next[index+direction]]=[next[index+direction],next[index]];onChange({pages:next.join(',')});}
  return <section className="pdf-settings" aria-label="PDF page preview"><p role="status">{state.error|| (count?`${count} pages in ${file.name}`:'Loading PDF preview…')}</p><div ref={container} className="pdf-thumbnails"/>{count>6&&<div className="preview-pagination"><button type="button" disabled={offset===0} onClick={()=>setOffset(Math.max(0,offset-6))}>Previous pages</button><span>{offset+1}–{Math.min(offset+6,count)} of {count}</span><button type="button" disabled={offset+6>=count} onClick={()=>setOffset(offset+6)}>Next pages</button></div>}
- {['extract','remove'].includes(mode)&&count>0&&<><p>{mode==='remove'?'Choose pages to remove':'Choose pages to extract into one PDF'}</p><div className="page-choices">{Array.from({length:Math.min(6,count-offset)},(_,i)=>offset+i+1).map(n=><label key={n}><input type="checkbox" checked={selected.includes(n)} disabled={disabled} onChange={()=>toggle(n)}/>Page {n}</label>)}</div><p aria-live="polite">{selected.length} selected{mode==='remove'?` · ${count-selected.length} remaining`:''}</p></>}
+ {['extract','remove'].includes(mode)&&count>0&&<><p>{mode==='remove'?'Choose pages to remove':'Choose pages to extract into one PDF'}</p><div className="page-choices">{Array.from({length:Math.min(6,count-offset)},(_,i)=>offset+i+1).map(n=><label key={n}><input type="checkbox" checked={selected.includes(n)} disabled={disabled} onChange={()=>toggle(n)}/>Page {n}</label>)}</div><p aria-live="polite">{selected.length} <T>selected</T>{mode==='remove'?` · ${count-selected.length} remaining`:''}</p></>}
  {mode==='reorder'&&count>0&&<><p>Page order (numeric range input below also supports every page).</p><ol className="ordered-files">{selected.slice(offset,offset+6).map((n,i)=><li key={n}><span>Page {n}</span><button type="button" aria-label={`Move page ${n} up`} disabled={disabled||offset+i===0} onClick={()=>reorder(offset+i,-1)}>↑</button><button type="button" aria-label={`Move page ${n} down`} disabled={disabled||offset+i===selected.length-1} onClick={()=>reorder(offset+i,1)}>↓</button></li>)}</ol></>}
  {rangeError&&<p className="hint">{rangeError}</p>}
  </section>;

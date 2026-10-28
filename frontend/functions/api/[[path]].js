@@ -10,7 +10,7 @@ export async function onRequest({request}) {
   target.pathname=url.pathname;
   target.search=url.search;
   const headers=new Headers();
-  for(const name of ['Accept','Content-Type','Cookie','X-CSRF-Token','Origin']) {
+  for(const name of ['Accept','Accept-Language','Content-Type','Cookie','X-CSRF-Token','Origin']) {
     const value=request.headers.get(name);
     if(value)headers.set(name,value);
   }

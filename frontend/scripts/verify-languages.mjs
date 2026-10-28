@@ -1,0 +1,32 @@
+import {chromium} from '@playwright/test';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const origin=process.env.AUDIT_ORIGIN||'http://127.0.0.1:3101';
+await mkdir(new URL('../runtime-results/i18n/',import.meta.url),{recursive:true});
+const browser=await chromium.launch({executablePath:'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',headless:true});
+try{
+ const page=await browser.newPage({viewport:{width:1280,height:900}});page.setDefaultTimeout(90000);
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(origin+'/',{waitUntil:'domcontentloaded',timeout:180000});
+ await page.locator('dialog[open]').waitFor();await page.screenshot({path:'runtime-results/i18n/first-visit.png'});
+ await page.locator('dialog[open] button[lang=hi]').click();await page.waitForFunction(()=>document.documentElement.lang==='hi');
+ await page.getByRole('heading',{level:1}).filter({hasText:'आपकी ज़रूरत'}).waitFor();
+ await page.evaluate(async()=>{window.dispatchEvent(new Event('alltoolnexa-session-expired'));await new Promise(resolve=>setTimeout(resolve,50));});assert.equal(await page.evaluate(()=>document.documentElement.lang),'hi','Free Hindi must survive account expiry');
+ await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.documentElement.lang==='hi');assert.equal(await page.locator('dialog[open]').count(),0);
+ await page.goto(origin+'/tools/crop-pdf',{waitUntil:'domcontentloaded'});
+ await page.getByRole('heading',{name:'क्रॉप PDF',exact:true}).waitFor();await page.getByRole('heading',{name:'जानकारी भरें',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Choose language',exact:true}).click();
+ let granted=false;
+ const french=JSON.parse(await readFile(new URL('../../backend/data/locales/fr.json',import.meta.url),'utf8'));
+ await page.route('**/api/i18n/messages/fr',route=>route.fulfill({status:granted?200:403,contentType:'application/json',body:JSON.stringify(granted?{locale:'fr',messages:french}:{code:'PREMIUM_REQUIRED',message:'Additional languages require Premium.'})}));
+ await page.locator('dialog[open] button[lang=fr]').click();await page.locator('dialog[open] [role=alert]').waitFor();assert.equal(await page.evaluate(()=>document.documentElement.lang),'hi');
+ granted=true;await page.locator('dialog[open] button[lang=fr]').click();await page.waitForFunction(()=>document.documentElement.lang==='fr');
+ await page.locator('.site-header nav').getByRole('link',{name:'Accueil',exact:true}).waitFor();
+ await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.documentElement.lang==='fr');
+ await page.evaluate(()=>window.dispatchEvent(new Event('alltoolnexa-session-expired')));await page.waitForFunction(()=>document.documentElement.lang==='en');
+ await page.getByRole('heading',{name:'Crop PDF',exact:true}).waitFor();
+ await page.setViewportSize({width:375,height:812});await page.getByRole('button',{name:'Choose language',exact:true}).click();await page.screenshot({path:'runtime-results/i18n/mobile-dialog.png'});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
+ const result={firstVisitPopup:true,hindiHomepage:true,hindiToolControls:true,persistence:true,premiumDenied:true,frenchCatalogLoaded:true,expiredSessionFallsBackToEnglish:true,mobileOverflow:false,pageErrors:errors};
+ await writeFile('runtime-results/i18n/results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+}finally{await browser.close();}

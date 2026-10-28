@@ -53,6 +53,8 @@ def create_app(config=None):
     init_user_storage(app)
     from billing import init_billing
     init_billing(app)
+    from localization import init_localization
+    init_localization(app)
 
     @app.get('/')
     def home():

@@ -8,8 +8,11 @@ const origin=process.env.AUDIT_ORIGIN||'http://127.0.0.1:3101';
 const output=new URL('../runtime-results/upgrade/',import.meta.url);await mkdir(output,{recursive:true});
 const browser=await chromium.launch({executablePath:'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',headless:true});
 try{
- const page=await browser.newPage({viewport:{width:1280,height:900}});page.setDefaultTimeout(180000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await browser.newPage({viewport:{width:1280,height:900}});await page.addInitScript(()=>localStorage.setItem('alltoolnexa-language','en'));page.setDefaultTimeout(180000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(origin+'/tools/crop-pdf',{timeout:180000,waitUntil:'domcontentloaded'});
+ // Finish the real language interaction before testing file inputs on a cold client bundle.
+ await page.getByRole('button',{name:'Choose language',exact:true}).click();
+ await page.locator('dialog[open] button[lang=en]').click();
  const doc=await PDFDocument.create();doc.addPage([200,400]).drawText('Original document');doc.addPage([300,500]);
  await page.locator('#tool-files').setInputFiles({name:'sample.pdf',mimeType:'application/pdf',buffer:Buffer.from(await doc.save())});
  await page.getByRole('button',{name:'Apply to this page',exact:true}).waitFor({timeout:90000});

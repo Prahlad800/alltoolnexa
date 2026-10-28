@@ -1,5 +1,7 @@
 'use client';
 
+import {T} from '@/components/LanguageProvider';
+
 import {useState} from 'react';
 import {useRouter} from 'next/navigation';
 
@@ -42,7 +44,7 @@ export default function PlanButton({plan}){
 
  }catch(e){setError(e.message);setBusy(false);}}
 
- if(plan.price===0)return <Link className={styles.planButton} href="/signup">Get Started</Link>;
+ if(plan.price===0)return <Link className={styles.planButton} href="/signup"><T>Get Started</T></Link>;
 
  return <><button type="button" disabled={busy} className={`${styles.planButton} ${plan.popular?styles.featuredButton:''}`} onClick={pay}>{busy?'Connecting…':`Choose ${plan.name}`}</button>{error&&<p role="alert">{error}</p>}</>;
 

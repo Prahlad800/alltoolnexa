@@ -12,7 +12,8 @@
     "test": "node --test shared/*.test.mjs tests/*.test.mjs",
     "inventory": "node scripts/update-inventory.mjs",
     "test:http": "node scripts/verify-http.mjs",
-    "build:pages": "node scripts/build-pages.mjs"
+    "build:pages": "node scripts/build-pages.mjs",
+    "locales": "node scripts/prepare-locales.mjs"
   },
   "dependencies": {
     "@cantoo/pdf-lib": "^2.11.1",
@@ -21,6 +22,7 @@
     "dompurify": "^3.4.17",
     "exifr": "^7.1.3",
     "html-minifier-terser": "^7.2.0",
+    "i18next": "^26.5.11",
     "jsbarcode": "^3.12.3",
     "jszip": "^3.10.2",
     "mammoth": "^1.13.0",
@@ -33,6 +35,7 @@
     "qrcode": "^1.5.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "react-i18next": "^17.1.9",
     "sql-formatter": "^15.9.0",
     "terser": "^5.51.2",
     "tesseract.js": "^7.0.0",
