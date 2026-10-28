@@ -7,7 +7,7 @@ import {processBrowserTool} from '../src/lib/browser-tools.js';
 import {processPDF} from '../src/lib/pdf-tools.mjs';
 import {matchesTool} from '../src/lib/search.mjs';
 test('reference routes and public dispatch are integrated',async()=>{
- assert.equal(tools.length,505);
+ assert.equal(tools.length,507);
  for(const id of ['pdf-to-jpg','pdf-compressor','invoice-generator','text-diff-checker','html-minifier'])assert.ok(resolveTool(id));
  assert.equal(needsFile(resolveTool('pdf-to-jpg')),true);assert.equal(needsFile(resolveTool('html-to-pdf')),false);
  assert.equal((await processBrowserTool(resolveTool('md5-generator'),{text:'abc'},[])).text,'900150983cd24fb0d6963f7d28e17f72');

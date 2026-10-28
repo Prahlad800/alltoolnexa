@@ -37,6 +37,13 @@ export async function processPDF(mode,values,files){
  const load=async file=>{try{return await PDFDocument.load(await file.arrayBuffer(),{updateMetadata:false});}catch{throw Error('Could not open this PDF. Choose a valid unlocked PDF or replace the file.');}};
  if(mode==='merge'){if(files.length<2)throw Error('Choose at least two PDFs to merge.');const out=await PDFDocument.create();for(const file of files){const doc=await load(file);for(const page of await out.copyPages(doc,doc.getPageIndices()))out.addPage(page);}return result(out,{fileOrder:files.map(f=>f.name)});}
  const doc=await load(files[0]),count=doc.getPageCount();
+ if(mode==='crop'){
+  const selected=values.scope==='selected'?parsePages(values.pages,count):doc.getPageIndices();
+  const margins=['left','top','right','bottom'].map(key=>{const n=Number(values[key]??0);if(!Number.isFinite(n)||n<0)throw Error('Crop margins must be non-negative numbers.');return n;});
+  const boxes=selected.map(index=>{const page=doc.getPage(index),box=page.getCropBox();const percent=values.unit!=='pt';const [left,top,right,bottom]=margins.map((n,i)=>percent?n*(i%2?box.height:box.width)/100:n);if(left+right>=box.width||top+bottom>=box.height)throw Error(`Crop margins must leave a visible area on page ${index+1}.`);return {page,x:box.x+left,y:box.y+bottom,width:box.width-left-right,height:box.height-top-bottom};});
+  for(const {page,x,y,width,height} of boxes)page.setCropBox(x,y,width,height);
+  return result(doc,{warning:'Page boundaries cropped. Content outside the visible area remains in the PDF. This is not secure redaction.'});
+ }
  if(mode==='inspect')return {text:`${files[0].name}\nPages: ${count}\nFile size: ${formatBytes(files[0].size)}`};
  if(mode==='metadata'){const validDate=d=>d instanceof Date&&Number.isFinite(d.getTime())?d.toISOString():'';return {text:JSON.stringify({title:doc.getTitle()||'',author:doc.getAuthor()||'',subject:doc.getSubject()||'',keywords:doc.getKeywords()||'',creator:doc.getCreator()||'',producer:doc.getProducer()||'',created:validDate(doc.getCreationDate()),modified:validDate(doc.getModificationDate())},null,2)};}
  if(mode==='sizes')return {text:doc.getPages().map((page,i)=>{const{width,height}=page.getSize();return `Page ${i+1}: ${width.toFixed(2)} × ${height.toFixed(2)} pt (${(width*25.4/72).toFixed(1)} × ${(height*25.4/72).toFixed(1)} mm)`;}).join('\n')};

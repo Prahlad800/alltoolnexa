@@ -1,6 +1,6 @@
 {
-  "canonicalTools": 505,
-  "aliases": 145,
+  "canonicalTools": 507,
+  "aliases": 146,
   "inventoryIdeas": 1286,
   "coveredInventoryIdeas": 557,
   "planned": 706,
@@ -20,8 +20,8 @@
     "home": 22,
     "design": 17,
     "random": 16,
-    "image": 23,
-    "pdf": 26,
+    "image": 24,
+    "pdf": 27,
     "qr": 13,
     "templates": 41
   }

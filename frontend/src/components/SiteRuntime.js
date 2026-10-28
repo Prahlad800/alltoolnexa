@@ -22,7 +22,8 @@ export function useAvailability(href){
  const category=path.startsWith('/categories/')?path.split('/')[2]:tool?.category;
  const managed=Boolean(tool||path.startsWith('/categories/'));
  const pending=managed&&!state;
- const disabled=managed&&(pending||state.disabledTools.includes(toolId)||state.disabledCategories.includes(category));
+ // Local processing does not depend on API availability. Retain explicit admin controls once fetched.
+ const disabled=managed&&Boolean(state&&(state.disabledTools.includes(toolId)||state.disabledCategories.includes(category)));
  return {disabled,pending,refresh};
 }
 export function ToolRouteGate({children}){

@@ -2735,6 +2735,17 @@ import {extendCatalog, aliases} from './extended.mjs';
 import {extendTemplates} from './templates.mjs';
 extendCatalog({register, field});
 extendTemplates({register, field});
+register('pdf','Crop PDF',[
+ field('unit','Margin units','percent','select',['percent','pt']),
+ ...['left','top','right','bottom'].map(key=>field(key,`${key[0].toUpperCase()+key.slice(1)} margin`, '5')),
+ field('scope','Apply crop to','all','select',['all','selected']),
+ field('pages','Selected pages (e.g. 1,3-5)','1','text'),
+],'Change PDF page boundaries locally. Hidden content remains in the file; cropping is not secure redaction.',null,{id:'crop-pdf',kind:'pdf',mode:'crop',accept:'.pdf,application/pdf',multiple:false,description:'Crop all or selected PDF pages with percentage or point margins. Preview and download locally.'});
+aliases['pdf-crop']='crop-pdf';
+register('image','Batch Image Resize',[
+ field('a','Width (px)','800'),field('b','Height (px; 0 maintains each image aspect ratio)','0'),
+ field('format','Output format','image/webp','select',['image/webp','image/jpeg','image/png']),field('quality','Quality','0.9'),
+],'Resize up to 100 images locally in automatic batches of 50, then download a ZIP. Free without an account.',null,{id:'batch-image-resize',kind:'image',mode:'resize',multiple:true,accept:'image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp',description:'Resize 50–100 images for free. Add more files, process automatic batches of 50 and download a ZIP.'});
 export {aliases};
 export function resolveTool(id) { return getTool(id) || getTool(aliases[id]); }
 

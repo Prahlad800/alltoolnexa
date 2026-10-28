@@ -1,0 +1,936 @@
+{
+  "date": "2026-10-24 (Asia/Calcutta)",
+  "sites_total": 32,
+  "summary": {
+    "homepages_attempted": 32,
+    "homepage_content_observed": 30,
+    "restricted_or_unavailable": 2,
+    "additional_rea_tool_attempts": 20,
+    "complete_tool_interface_captures": 8,
+    "partial_tool_interface_captures": 5,
+    "competitor_upload_download_workflows_tested": 0,
+    "official_pricing_pages_reviewed": 12
+  },
+  "ledger": [
+    {
+      "index": 1,
+      "competitor": "https://www.ilovepdf.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/01-ilovepdf.json",
+        "tool-evidence/01.json"
+      ],
+      "evidence_ids": [
+        "ev_a97a1487c4a5cecf30f5a46e5dded15ae4075dd1522249bb25e63f6053405037",
+        "ev_e0a6106ac06e012f80401dea079ec9340c5e268c8174ab609e251257e3ba952a"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Group PDF actions by organize, optimize, convert and security; preserve a clear next action after download.",
+      "pricing_evidence": {
+        "source": "https://www.ilovepdf.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Basic, Premium and Business are advertised; exact localized amounts not established."
+      }
+    },
+    {
+      "index": 2,
+      "competitor": "https://www.calculator.net/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/02.json",
+        "tool-evidence/02.json"
+      ],
+      "evidence_ids": [
+        "ev_27f33e37821c2af50048a14249010f8e69b17dc80b73f352239b8cd40ca2516a",
+        "ev_31c4fd2e489691b963664fce8b4bbcaf5d6b0e29be56ec15e98c23c3200e9820"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Keep formulas, units, worked examples and calculator assumptions beside results."
+    },
+    {
+      "index": 3,
+      "competitor": "https://smallpdf.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/03.json",
+        "tool-evidence/03.json"
+      ],
+      "evidence_ids": [
+        "ev_492153ec3a51b3d8c22bb6ea1e7b8196d284c462b7017c98f51e1d114e7687e8",
+        "ev_7d1653bbc99977ff30f12525385b0e58af0175a1e4c035be2b30138bc48e87b9"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Use a short choose-settings-result flow; disclose free limits before processing.",
+      "pricing_evidence": {
+        "source": "https://smallpdf.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Free has limited downloads; Pro adds unrestricted downloads and advanced features. Localized amounts were unresolved placeholders."
+      }
+    },
+    {
+      "index": 4,
+      "competitor": "https://www.freeconvert.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "official-contract-documented; runtime-not-tested",
+      "evidence_files": [
+        "evidence/04.json",
+        "tool-evidence/04.json"
+      ],
+      "evidence_ids": [
+        "ev_41c15220d62c6787531bf36cd4ff0b2f25e7b422256a79807dc9c62bfdae65e2",
+        "ev_f175bfabedf0f86d1e8c2c24716e668c1da445561dad11d36ba913598f00640e"
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Show output format and advanced settings before starting a conversion.",
+      "pricing_evidence": {
+        "source": "https://www.freeconvert.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Monthly Basic $12.99, Standard $24.99, Pro $29.99; respective allowances 1,500/2,000/4,000 minutes and 1.5/2/5 GB. Paid plans advertise no ads."
+      }
+    },
+    {
+      "index": 5,
+      "competitor": "https://www.iloveimg.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/05.json",
+        "tool-evidence/05.json"
+      ],
+      "evidence_ids": [
+        "ev_2abb4c693e481f2f54c3d2f0586d9ea34dafa6de8166360c87c025b5cf90c024",
+        "ev_95106d04854c13c76ed30acca4c5c2b77c458a59f6f606321154b07481dbfecc"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Make image operations consistent and keep original downloads within reach.",
+      "pricing_evidence": {
+        "source": "https://www.iloveimg.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Basic free access is limited; Premium and Business are advertised. Exact amount not verified."
+      }
+    },
+    {
+      "index": 6,
+      "competitor": "https://cloudconvert.com/",
+      "homepage": "observed",
+      "tool_interface": "homepage-tool-surface",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/06.json"
+      ],
+      "evidence_ids": [
+        "ev_026ce098fb533cb54303b41814361eda14208bfe5d89b3028a72bba7d1facdef"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Separate API job accounting from interactive local tools; show processing location explicitly.",
+      "pricing_evidence": {
+        "source": "https://cloudconvert.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Free: 10 credits/day, 1 GB maximum, five-minute processing and five concurrent tasks. Packages, subscriptions and enterprise advertised; dynamic paid amount unresolved."
+      }
+    },
+    {
+      "index": 7,
+      "competitor": "https://www.photopea.com/",
+      "homepage": "observed",
+      "tool_interface": "homepage-only-editor-not-opened",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/07.json"
+      ],
+      "evidence_ids": [
+        "ev_ddd726a211c4f9c5589a6e0fd8af23b0b753ba98e30345fe5505e53abc6cb6ef"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Preserve local editing and keyboard controls; progressively load complex editor features."
+    },
+    {
+      "index": 8,
+      "competitor": "https://www.sejda.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/08.json",
+        "tool-evidence/08.json"
+      ],
+      "evidence_ids": [
+        "ev_8cd9f927ba8c97d5e78749a1f8ebc891a93ede315fdaef01819b932c6a8fa7a6",
+        "ev_e41ae599f02131dc95a2d242a0a17c540af21f963215f279875ddb0bfa5a082e"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Offer task-specific PDF controls with explicit feature-loss disclosures.",
+      "pricing_evidence": {
+        "source": "https://www.sejda.com/upgrade",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Official upgrade page reviewed; paid amounts and tool-specific free limits remain unverified."
+      }
+    },
+    {
+      "index": 9,
+      "competitor": "https://convertio.co/",
+      "homepage": "observed",
+      "tool_interface": "homepage-tool-surface",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/09.json"
+      ],
+      "evidence_ids": [
+        "ev_f144111bb62f994b08f225d4b85f11a4533bdf8ced1f81b5610afcecd4940ed0"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Choose output format early and expose file caps at selection time.",
+      "pricing_evidence": {
+        "source": "https://convertio.co/pricing/",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Lite/Basic/Pro monthly USD 11.99/22.99/44.99; annual-billed equivalents 6.99/13.99/25.99 per month. Caps 1/3/10 GB and 1,000/3,000/10,000 monthly credits."
+      }
+    },
+    {
+      "index": 10,
+      "competitor": "https://tools.pdf24.org/en",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/10.json",
+        "tool-evidence/10.json"
+      ],
+      "evidence_ids": [
+        "ev_e03362b0fbc414896eda5f8ea748e9b3aa71529e1f4d997973d6848dcf6a73bf",
+        "ev_91da90888e03d78c801f4c2621f34386597ccc5b389c9c0e8db6325fedb8c870"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Keep free-first discovery and searchable PDF tasks prominent."
+    },
+    {
+      "index": 11,
+      "competitor": "https://ezgif.com/",
+      "homepage": "observed",
+      "tool_interface": "interface-captured",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/11.json",
+        "tool-evidence/11.json"
+      ],
+      "evidence_ids": [
+        "ev_bc51311dab0bf6b9770c8b3020cf1d261df3b592ec77a7425bc996f539c14f83",
+        "ev_11c82927cba0073e2e3a55a911d4955bf718ca7320470e7aa3e3e0be6357c9ec"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Treat animation as a separate capability; never silently flatten animated images."
+    },
+    {
+      "index": 12,
+      "competitor": "https://www.omnicalculator.com/",
+      "homepage": "observed",
+      "tool_interface": "partial-interface-cleanup-error",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/12.json",
+        "tool-evidence/12.json"
+      ],
+      "evidence_ids": [
+        "ev_4e71629b5f6644fa1671a6c0134ed87c5dd11afd5c5b78489bc8519e0e8d7451",
+        null
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Pair calculators with readable explanations and examples rather than inventory counts alone."
+    },
+    {
+      "index": 13,
+      "competitor": "https://smallseotools.com/",
+      "homepage": "blocked-security-check",
+      "tool_interface": "not-accessible",
+      "pricing": "not-verified",
+      "upload_processing_download": "blocked",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/13.json"
+      ],
+      "evidence_ids": [
+        "ev_a89da888f9a8a2c3b1c7ace59c8330aebff48737d71ffbcc8a956d2f8f6c9933"
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Do not infer features behind the observed security challenge. Revisit through normal access only."
+    },
+    {
+      "index": 14,
+      "competitor": "https://www.online-convert.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/14.json",
+        "tool-evidence/14.json"
+      ],
+      "evidence_ids": [
+        "ev_bc9dbe81046b5dacc27c0e9f5f263ef7ed187723d0bcf6d2c6370f7f821d6885",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Organize converters by input/output family and explain optional parameters.",
+      "pricing_evidence": {
+        "source": "https://www.online-convert.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Free trial, subscription and credit-based purchase options; exact dynamically rendered amount not verified."
+      }
+    },
+    {
+      "index": 15,
+      "competitor": "https://tinypng.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "official-contract-documented; runtime-not-tested",
+      "evidence_files": [
+        "evidence/15.json",
+        "tool-evidence/15.json"
+      ],
+      "evidence_ids": [
+        "ev_37f36a55c716747e510ca9c9f5734e1ddf1647be180353b3037f8f5f3efd2137",
+        null
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Show exact original/output sizes and handle larger outputs honestly.",
+      "pricing_evidence": {
+        "source": "https://tinypng.com/pricing/web",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Web Free advertises 20 compressions/session, 5 MB/image and three conversions/session. Pro and Ultra raise limits; monetary amounts unresolved."
+      }
+    },
+    {
+      "index": 16,
+      "competitor": "https://imageresizer.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/16.json",
+        "tool-evidence/16.json"
+      ],
+      "evidence_ids": [
+        "ev_0e8a3841493cefc7fc7f42f9e78170cd81ef40be2416729de88448e83cdf7c43",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Keep resize dimensions, crop and compression distinct; show batch and size limits.",
+      "pricing_evidence": {
+        "source": "https://imageresizer.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Free: five images/batch, 10 MB/image; Pro $6.99/month, 20/batch and 50 MB; Ultra $9.99/month, 100/batch and 1 GB. Recheck currency/tax at purchase."
+      }
+    },
+    {
+      "index": 17,
+      "competitor": "https://www.pdf2go.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/17.json",
+        "tool-evidence/17.json"
+      ],
+      "evidence_ids": [
+        "ev_077cf2f36ea03f166843f7fd06418bd8fa8eb2a74fd06b9b03b00fbb7a8ed575",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Group edit, improve and convert tasks with clear capability descriptions.",
+      "pricing_evidence": {
+        "source": "https://www.pdf2go.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Official plans page reviewed. Exact paid amount and allowances remain unverified."
+      }
+    },
+    {
+      "index": 18,
+      "competitor": "https://codebeautify.org/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/18.json",
+        "tool-evidence/18.json"
+      ],
+      "evidence_ids": [
+        "ev_bae1f5c64cbd1de67462d087c25952396d4cd6447d402efad9eb879f0413b998",
+        null
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Keep developer inputs editable and outputs copyable; make sample inputs explicit."
+    },
+    {
+      "index": 19,
+      "competitor": "https://www.zamzar.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/19.json",
+        "tool-evidence/19.json"
+      ],
+      "evidence_ids": [
+        "ev_703f3929541c4aded66e8b85d1f4f202a540a6736b8e4aeb3cec24677bb2ab5f",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Use a visible conversion sequence and show format support before file selection."
+    },
+    {
+      "index": 20,
+      "competitor": "https://tinywow.com/",
+      "homepage": "observed",
+      "tool_interface": "capture-failed",
+      "pricing": "official-page-reviewed",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/20.json",
+        "tool-evidence/20.json"
+      ],
+      "evidence_ids": [
+        "ev_c5be4dc5a58356fb1ae709ceb501f2db7b897f86a39aed2dcce7dc41ff0380db",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Prioritize useful categories and popular tasks over an undifferentiated wall of tools.",
+      "pricing_evidence": {
+        "source": "https://tinywow.com/pricing",
+        "review_date": "2026-10-24 (Asia/Calcutta)",
+        "finding": "Pricing URL reviewed; definitive paid-plan amounts/allowances not established from the returned content."
+      }
+    },
+    {
+      "index": 21,
+      "competitor": "https://online2pdf.com/",
+      "homepage": "observed",
+      "tool_interface": "homepage-tool-surface",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/21.json"
+      ],
+      "evidence_ids": [
+        "ev_2fc24bcffc3a2b7c3f950f485f59d2767f0e22bf2b0fa57c528320b944cf93fe"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Expose advanced PDF options progressively; avoid crowding the initial selection step."
+    },
+    {
+      "index": 22,
+      "competitor": "https://11zon.com/",
+      "homepage": "observed",
+      "tool_interface": "partial-interface-cleanup-error",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/22.json",
+        "tool-evidence/22.json"
+      ],
+      "evidence_ids": [
+        "ev_9f7eb81027f201112b8ba0079db34f524c07958f70733f96468f3bb95c653112",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Offer target-size shortcuts without promising every target can be achieved."
+    },
+    {
+      "index": 23,
+      "competitor": "https://imresizer.com/",
+      "homepage": "observed",
+      "tool_interface": "partial-interface-cleanup-error",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/23.json",
+        "tool-evidence/23.json"
+      ],
+      "evidence_ids": [
+        "ev_d18d830434caaa1ce5e5e71a33f56328cf4d16dadf3864e23fcc630bd4ce141e",
+        null
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Use target bytes and unit labels; keep photo dimensions independent of compression."
+    },
+    {
+      "index": 24,
+      "competitor": "https://imageonline.co/",
+      "homepage": "observed",
+      "tool_interface": "partial-interface-cleanup-error",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/24.json",
+        "tool-evidence/24.json"
+      ],
+      "evidence_ids": [
+        "ev_09d5bf922c72e3aaa63922c16da05b26972e36bb9f41f243c272dc30be4df482",
+        null
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Offer task-oriented discovery but consolidate overlapping canonical implementations."
+    },
+    {
+      "index": 25,
+      "competitor": "https://utilitytools.in/",
+      "homepage": "unavailable-suspended",
+      "tool_interface": "not-accessible",
+      "pricing": "not-verified",
+      "upload_processing_download": "blocked",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/25.json"
+      ],
+      "evidence_ids": [
+        "ev_40d7ecdb5c50c90a5a50edf017a97d5419621184946c74fd1f91a9682e3f1ef5"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Treat the suspended service as unavailable; do not make claims about its previous tools."
+    },
+    {
+      "index": 26,
+      "competitor": "https://codemyindia.com/",
+      "homepage": "observed",
+      "tool_interface": "partial-interface-cleanup-error",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/26.json",
+        "tool-evidence/26.json"
+      ],
+      "evidence_ids": [
+        "ev_14ac4dd5404dbd6397c22a8a7727f871eadc26a8eaaa6213218d7db1b60168a2",
+        null
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Make India tasks discoverable while distinguishing implemented tools from idea counts."
+    },
+    {
+      "index": 27,
+      "competitor": "https://yotools.in/",
+      "homepage": "observed",
+      "tool_interface": "public-page-reviewed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/27.json"
+      ],
+      "evidence_ids": [
+        "ev_ade5592750e9c9a82d320db3924120ff182af178b9a8b25d7e6436fd36d966aa"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "State local-processing behavior per tool and verify it with network tests.",
+      "web_supplement": {
+        "index": 27,
+        "url": "https://yotools.in/image-tools/image-compressor/",
+        "status": "public-page-reviewed",
+        "finding": "Official page exposes output-format, quality and scaling controls, original/compressed areas and download. Canvas/local processing is a publisher claim; no upload job was tested."
+      }
+    },
+    {
+      "index": 28,
+      "competitor": "https://freedigitaltools.in/",
+      "homepage": "observed",
+      "tool_interface": "public-page-reviewed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/28.json"
+      ],
+      "evidence_ids": [
+        "ev_f2a356a2b27f87ad547c81edd654a57c63605754faf2b4b008a3e750b65c72e0"
+      ],
+      "network_completeness": {
+        "status": "incomplete",
+        "equality_eligible": false,
+        "missing_sections": [
+          "events"
+        ],
+        "truncated_sections": []
+      },
+      "opportunity": "Link form/exam tasks together; require authoritative dated specifications before exam presets.",
+      "web_supplement": {
+        "index": 28,
+        "url": "https://freedigitaltools.in/tools/compress-image",
+        "status": "public-page-reviewed",
+        "finding": "Official page advertises target-KB compression, accepts several image formats and states that output is JPEG. Local processing remains an untested publisher claim."
+      }
+    },
+    {
+      "index": 29,
+      "competitor": "https://insidebackoffice.in/",
+      "homepage": "observed",
+      "tool_interface": "public-page-reviewed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/29.json"
+      ],
+      "evidence_ids": [
+        "ev_dcc453d199fb80c2ad5d9407d29bfbbf798c0e356ae5342a2fa0119833fe00fd"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Keep India finance and document tasks together without fabricating live bank/tax data.",
+      "web_supplement": {
+        "index": 29,
+        "url": "https://insidebackoffice.in/compress-file.html",
+        "status": "public-page-reviewed",
+        "finding": "Redirects to /compress-file. Page exposes a target-size field and compression actions. It explicitly warns that PDF compression rasterizes pages and removes selectable text."
+      }
+    },
+    {
+      "index": 30,
+      "competitor": "https://indiadigital.org/",
+      "homepage": "observed",
+      "tool_interface": "public-page-reviewed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/30.json"
+      ],
+      "evidence_ids": [
+        "ev_b57174902783fbedf7e5d79e272a3f8d7cecf3ec18d173240c4af6c00dd7e1d3"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Provide photo/signature workflows with explicit dimensions, format and byte limits.",
+      "web_supplement": {
+        "index": 30,
+        "url": "https://indiadigital.org/image/compress-images/",
+        "status": "public-page-reviewed",
+        "finding": "Official batch-compression page and its linked image/photo/signature task directory were read. Actual batch processing, output quality and networking remain untested."
+      }
+    },
+    {
+      "index": 31,
+      "competitor": "https://www.sortmypdf.com/",
+      "homepage": "observed",
+      "tool_interface": "web-read-failed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/31.json"
+      ],
+      "evidence_ids": [
+        "ev_df6ee32877c0a7f99c6b7db7f651f27f42b5927781c246b2c57491a5e571dd8b"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Avoid universal no-limit claims; disclose browser memory limits and encryption caveats.",
+      "web_supplement": {
+        "index": 31,
+        "url": "https://www.sortmypdf.com/resize-pdf-to-kb",
+        "status": "web-read-failed",
+        "finding": "Web reader could not access the selected tool page. Homepage capture is retained; tool behavior remains unknown."
+      }
+    },
+    {
+      "index": 32,
+      "competitor": "https://tools.raahupsc.com/",
+      "homepage": "observed",
+      "tool_interface": "public-page-reviewed",
+      "pricing": "not-verified",
+      "upload_processing_download": "pending",
+      "mobile_keyboard_accessibility": "pending",
+      "private_backend": "unknown",
+      "api_contract": "not-runtime-verified",
+      "evidence_files": [
+        "evidence/32.json"
+      ],
+      "evidence_ids": [
+        "ev_0aa669147173710c43904908928554cf868ee2937475a1136bd6f15df7c2abd8"
+      ],
+      "network_completeness": {
+        "status": "complete",
+        "equality_eligible": true,
+        "missing_sections": [],
+        "truncated_sections": []
+      },
+      "opportunity": "Group student tasks and explain scoring/planning assumptions alongside outputs.",
+      "web_supplement": {
+        "index": 32,
+        "url": "https://tools.raahupsc.com/image-compressor",
+        "status": "public-page-reviewed",
+        "finding": "Official page exposes quality, target-size and output-format controls; it declares a 25 MB input limit and decimal-KB accounting. It describes optional dimension reduction. These are documented claims, not measured processing behavior; exam limits were not independently validated."
+      }
+    }
+  ]
+}

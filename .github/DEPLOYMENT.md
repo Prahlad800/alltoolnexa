@@ -1,5 +1,13 @@
 # PythonAnywhere backend deployment
 
+## Web app and admin configuration
+
+The deployed API origin is `https://prahlad800.pythonanywhere.com`. In the PythonAnywhere WSGI configuration, add `/home/prahlad800/alltoolnexa/backend` to `sys.path`, then use `from wsgi import application`. Select the virtualenv containing `backend/requirements.txt` and reload the web app.
+
+For the admin host, use `admin` as the project root, `npm ci` as the install command, `npm run build` to build, and `npm run start` for a Node server. Configure `NEXT_PUBLIC_API_URL=https://prahlad800.pythonanywhere.com` and `NEXT_PUBLIC_SITE_URL` as the actual public website HTTPS origin before building. Set `NEXT_PUBLIC_ADMIN_URL` to the deployed admin HTTPS origin if needed. Browser variables are embedded at build time: changing them requires rebuilding. Do not upload local `.env.local` files containing loopback URLs to production.
+
+In the backend server `.env`, set `AUTH_ALLOWED_ORIGINS` to the exact public website and admin HTTPS origins, separated by a comma, and `AUTH_COOKIE_SECURE=true`. Keep `AUTH_MODE=database` and the existing private database/JWT settings. Reload the backend after changing its environment. A working database health endpoint alone does not verify admin login: test login from the deployed admin origin as well.
+
 Pushes to `main` that change backend code, this workflow or deployment scripts run backend/deployment tests before uploading tracked backend files. PostgreSQL integration tests exercise the restricted RPC on an isolated CI database. The repository secret `PA_API_TOKEN` authenticates the PythonAnywhere API. Checkout `.env` files, virtualenvs, logs, temporary files and local databases are excluded. GitHub Actions reads the existing server `.env` into memory for preflight; credentials are never logged or saved to artifacts.
 
 Deployment requires an existing configured PythonAnywhere web app and virtualenv with backend requirements installed. The API reloads that app after uploads. The workflow does not install packages in the remote virtualenv or automatically apply database migrations; handle requirement/schema changes before deploying application code that needs them.

@@ -1,0 +1,33 @@
+index,competitor,homepage,tool_interface,pricing,upload_processing_download,mobile_keyboard_accessibility,private_backend,api_contract
+1,https://www.ilovepdf.com/,observed,interface-captured,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+2,https://www.calculator.net/,observed,interface-captured,not-verified,pending,pending,unknown,not-runtime-verified
+3,https://smallpdf.com/,observed,interface-captured,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+4,https://www.freeconvert.com/,observed,interface-captured,official-page-reviewed,pending,pending,unknown,official-contract-documented; runtime-not-tested
+5,https://www.iloveimg.com/,observed,interface-captured,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+6,https://cloudconvert.com/,observed,homepage-tool-surface,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+7,https://www.photopea.com/,observed,homepage-only-editor-not-opened,not-verified,pending,pending,unknown,not-runtime-verified
+8,https://www.sejda.com/,observed,interface-captured,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+9,https://convertio.co/,observed,homepage-tool-surface,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+10,https://tools.pdf24.org/en,observed,interface-captured,not-verified,pending,pending,unknown,not-runtime-verified
+11,https://ezgif.com/,observed,interface-captured,not-verified,pending,pending,unknown,not-runtime-verified
+12,https://www.omnicalculator.com/,observed,partial-interface-cleanup-error,not-verified,pending,pending,unknown,not-runtime-verified
+13,https://smallseotools.com/,blocked-security-check,not-accessible,not-verified,blocked,pending,unknown,not-runtime-verified
+14,https://www.online-convert.com/,observed,capture-failed,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+15,https://tinypng.com/,observed,capture-failed,official-page-reviewed,pending,pending,unknown,official-contract-documented; runtime-not-tested
+16,https://imageresizer.com/,observed,capture-failed,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+17,https://www.pdf2go.com/,observed,capture-failed,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+18,https://codebeautify.org/,observed,capture-failed,not-verified,pending,pending,unknown,not-runtime-verified
+19,https://www.zamzar.com/,observed,capture-failed,not-verified,pending,pending,unknown,not-runtime-verified
+20,https://tinywow.com/,observed,capture-failed,official-page-reviewed,pending,pending,unknown,not-runtime-verified
+21,https://online2pdf.com/,observed,homepage-tool-surface,not-verified,pending,pending,unknown,not-runtime-verified
+22,https://11zon.com/,observed,partial-interface-cleanup-error,not-verified,pending,pending,unknown,not-runtime-verified
+23,https://imresizer.com/,observed,partial-interface-cleanup-error,not-verified,pending,pending,unknown,not-runtime-verified
+24,https://imageonline.co/,observed,partial-interface-cleanup-error,not-verified,pending,pending,unknown,not-runtime-verified
+25,https://utilitytools.in/,unavailable-suspended,not-accessible,not-verified,blocked,pending,unknown,not-runtime-verified
+26,https://codemyindia.com/,observed,partial-interface-cleanup-error,not-verified,pending,pending,unknown,not-runtime-verified
+27,https://yotools.in/,observed,public-page-reviewed,not-verified,pending,pending,unknown,not-runtime-verified
+28,https://freedigitaltools.in/,observed,public-page-reviewed,not-verified,pending,pending,unknown,not-runtime-verified
+29,https://insidebackoffice.in/,observed,public-page-reviewed,not-verified,pending,pending,unknown,not-runtime-verified
+30,https://indiadigital.org/,observed,public-page-reviewed,not-verified,pending,pending,unknown,not-runtime-verified
+31,https://www.sortmypdf.com/,observed,web-read-failed,not-verified,pending,pending,unknown,not-runtime-verified
+32,https://tools.raahupsc.com/,observed,public-page-reviewed,not-verified,pending,pending,unknown,not-runtime-verified

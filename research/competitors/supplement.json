@@ -1,0 +1,8 @@
+[
+ {"index":27,"url":"https://yotools.in/image-tools/image-compressor/","status":"public-page-reviewed","finding":"Official page exposes output-format, quality and scaling controls, original/compressed areas and download. Canvas/local processing is a publisher claim; no upload job was tested."},
+ {"index":28,"url":"https://freedigitaltools.in/tools/compress-image","status":"public-page-reviewed","finding":"Official page advertises target-KB compression, accepts several image formats and states that output is JPEG. Local processing remains an untested publisher claim."},
+ {"index":29,"url":"https://insidebackoffice.in/compress-file.html","status":"public-page-reviewed","finding":"Redirects to /compress-file. Page exposes a target-size field and compression actions. It explicitly warns that PDF compression rasterizes pages and removes selectable text."},
+ {"index":30,"url":"https://indiadigital.org/image/compress-images/","status":"public-page-reviewed","finding":"Official batch-compression page and its linked image/photo/signature task directory were read. Actual batch processing, output quality and networking remain untested."},
+ {"index":31,"url":"https://www.sortmypdf.com/resize-pdf-to-kb","status":"web-read-failed","finding":"Web reader could not access the selected tool page. Homepage capture is retained; tool behavior remains unknown."},
+ {"index":32,"url":"https://tools.raahupsc.com/image-compressor","status":"public-page-reviewed","finding":"Official page exposes quality, target-size and output-format controls; it declares a 25 MB input limit and decimal-KB accounting. It describes optional dimension reduction. These are documented claims, not measured processing behavior; exam limits were not independently validated."}
+]

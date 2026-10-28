@@ -66,6 +66,7 @@ export async function processBrowserTool(tool,values,files,options={}){
   const url=URL.createObjectURL(new Blob([source],{type:'text/javascript'})),worker=new Worker(url);
   let timer,abort;try{return await new Promise((resolve,reject)=>{abort=()=>{worker.terminate();reject(new DOMException('Processing cancelled.','AbortError'));};options.signal?.addEventListener('abort',abort,{once:true});timer=setTimeout(()=>reject(Error('Regex timed out. Simplify the pattern and try again.')),1000);worker.onmessage=e=>{if(e.data.error)reject(Error(e.data.error));else resolve({text:JSON.stringify(e.data,null,2)});};worker.onerror=()=>reject(Error('Regex worker failed.'));worker.postMessage(values);});}finally{clearTimeout(timer);options.signal?.removeEventListener('abort',abort);worker.terminate();URL.revokeObjectURL(url);}
  }
+ if(tool.kind==='image'&&tool.multiple){const {processImageBatch}=await import('./image-batch.mjs');return processImageBatch(files,file=>processImage(tool,values,file),options);}
  if(tool.kind==='image')return processImage(tool,values,files[0]);
  if(tool.kind==='base64-image'){const blob=imageDataBlob(values.text);if(blob.size>50*1024*1024)throw Error('Use an image below 50 MB.');const test=await createImageBitmap(blob);test.close();return {blob,preview:true,filename:`decoded.${blob.type.split('/')[1]}`};}
  if(tool.kind==='pdf'||tool.kind==='text-pdf'){const{processPDF}=await import('./pdf-tools.mjs');return processPDF(tool.kind==='text-pdf'?'text':tool.mode,values,files);}

@@ -14,3 +14,8 @@
 
 # Local service output
 **/local-dev.*.log
+**/.next/
+**/build-check.log
+**/lint-check.log
+**/test-check.log
+/research/competitors/generation.log
