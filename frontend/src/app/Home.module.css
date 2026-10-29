@@ -90,3 +90,5 @@
  :global([data-theme=dark]) .hero h1 .mobileTitle{color:#f3f3f7}
  :global([data-theme=dark]) .categoryStrip .allCategories{background:#231a35;color:#c5adff}
 }
+
+.markdownCard{grid-column:1 / -1}

@@ -39,6 +39,8 @@ Website languages use i18next + react-i18next. Optional backend automatic transl
 
 Free code workspace: `/code-editor` runs HTML/CSS/JavaScript previews and JavaScript, C, C++ and Python locally in the browser, including on mobile. See [Code Studio setup and limits](frontend/docs/CODE-EDITOR.md).
 
+Markdown workspace: `/markdown-editor` edits/views Markdown, imports MD/TXT/HTML/DOCX and exports MD, Word, PDF, HTML, TXT or RTF locally. See [formats and conversion limits](frontend/docs/MARKDOWN-STUDIO.md).
+
 ## Checks and data
 
 ```powershell

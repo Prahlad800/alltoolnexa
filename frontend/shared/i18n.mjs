@@ -53,3 +53,21 @@ Object.assign(hindi,{
 });
 
 Object.assign(hindi,{'JavaScript console uses QuickJS. Choose HTML / CSS / JS for DOM and browser APIs.':'JavaScript कंसोल QuickJS पर चलता है। DOM और ब्राउज़र API के लिए HTML / CSS / JS चुनें।'});
+
+Object.assign(hindi,{
+ 'YOUR MARKDOWN WORKSPACE':'आपका Markdown वर्कस्पेस','Write once. Share anywhere.':'एक बार लिखें। कहीं भी साझा करें।',
+ 'Edit, preview and convert Markdown to Word, PDF, HTML, TXT and RTF. Free, without signing up.':'Markdown लिखें, देखें और Word, PDF, HTML, TXT या RTF में बदलें। मुफ़्त, बिना साइनअप।',
+ 'Markdown editor & converter':'Markdown एडिटर और कन्वर्टर','Write, preview and export Markdown to Word, PDF, HTML and more.':'Markdown लिखें, प्रीव्यू देखें और Word, PDF, HTML जैसे फ़ॉर्मेट में डाउनलोड करें।',
+ 'Document name':'दस्तावेज़ का नाम','Open file':'फ़ाइल खोलें','New document':'नया दस्तावेज़','Load sample':'नमूना लोड करें',
+ 'Document preview':'दस्तावेज़ का प्रीव्यू','Updating preview…':'प्रीव्यू अपडेट हो रहा है…','Live preview':'लाइव प्रीव्यू',
+ 'Your document preview will appear here.':'दस्तावेज़ का प्रीव्यू यहाँ दिखेगा।','words':'शब्द','min read':'मिनट पढ़ने में','headings':'शीर्षक',
+ 'Undo replacement':'पिछला दस्तावेज़ वापस लाएँ','Document outline':'दस्तावेज़ की रूपरेखा','Convert to':'इसमें बदलें',
+ 'Convert & download':'बदलें और डाउनलोड करें','Working…':'काम हो रहा है…','Cancel export':'एक्सपोर्ट रद्द करें','Print / Save PDF':'प्रिंट / PDF सहेजें',
+ 'Direct PDF preserves the visual layout as images. For selectable text, use Print / Save PDF.':'सीधा PDF विज़ुअल लेआउट को इमेज के रूप में रखता है। चुनने योग्य टेक्स्ट के लिए प्रिंट / PDF सहेजें चुनें।',
+ 'Files stay on your device. No signup required.':'फ़ाइलें आपके डिवाइस पर रहती हैं। साइनअप नहीं चाहिए।',
+ 'Headings, lists, tables, links and code are supported. Images appear as descriptions; raw HTML stays inactive. Open files up to 5 MB.':'शीर्षक, सूचियाँ, टेबल, लिंक और कोड समर्थित हैं। इमेज का विवरण दिखता है; कच्चा HTML निष्क्रिय रहता है। 5 MB तक फ़ाइल खोलें।',
+ 'Ready to write.':'लिखने के लिए तैयार।','Opening your document…':'दस्तावेज़ खुल रहा है…','Document opened.':'दस्तावेज़ खुल गया।',
+ 'New document ready.':'नया दस्तावेज़ तैयार है।','Sample loaded.':'नमूना लोड हो गया।','Previous document restored.':'पिछला दस्तावेज़ वापस आ गया।',
+ 'Preparing your download…':'डाउनलोड तैयार हो रहा है…','Download ready.':'डाउनलोड तैयार है।','Export cancelled.':'एक्सपोर्ट रद्द हुआ।',
+ 'Saved on this device':'इस डिवाइस पर सहेजा गया','Unsaved draft':'अभी सहेजा नहीं गया'
+});
