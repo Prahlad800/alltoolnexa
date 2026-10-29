@@ -13,7 +13,7 @@ The root package.json contains convenience commands only; .git and .gitignore ar
 
 ## Run locally
 
-Public website layout: [desktop layout on every device](frontend/docs/DESKTOP-LAYOUT.md). Phones intentionally show the desktop interface with zoom enabled.
+Public website layout: [responsive desktop and mobile website](frontend/docs/DESKTOP-LAYOUT.md). Phones use a compact toolkit layout and bottom navigation; pinch zoom remains enabled.
 
 Use three terminals from the project root:
 
@@ -34,6 +34,8 @@ Website: http://127.0.0.1:3000. Admin: http://127.0.0.1:3001. API: http://127.0.
 Document workspaces: `/tools/pdf-editor`, `/tools/spreadsheet-editor`, `/tools/invoice-generator` and `/tools/invoice-converter`. See [features, supported file formats and limits](frontend/docs/DOCUMENT-WORKSPACES.md). Existing invoices can be extracted/reviewed separately from creating a new structured invoice.
 
 Install Node dependencies separately in frontend and admin with npm install. Backend Python dependencies are in backend/requirements.txt. Existing local environment files remain within their service folders.
+
+Website languages use i18next + react-i18next. Optional backend automatic translation uses Argos Translate: see [language access and model installation](backend/TRANSLATION.md). The admin app stays English; no mobile app is included.
 
 ## Checks and data
 

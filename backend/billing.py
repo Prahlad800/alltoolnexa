@@ -21,7 +21,7 @@ def entitlement(user_id):
     store = current_app.extensions.get('supabase_store')
     if store:
         return BY_ID[store.call('entitlement',user_id=user_id)['plan']]
-    order = db.session.query(BillingOrder).filter(BillingOrder.user_id == user_id, BillingOrder.paid_until > datetime.now(timezone.utc)).order_by(BillingOrder.created_at.desc()).first()
+    order = db.session.query(BillingOrder).filter(BillingOrder.user_id == uuid.UUID(str(user_id)), BillingOrder.paid_until > datetime.now(timezone.utc)).order_by(BillingOrder.created_at.desc()).first()
     return BY_ID[order.plan_id] if order else BY_ID['free']
 
 def gateway(path, payload=None):

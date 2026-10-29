@@ -1,0 +1,3 @@
+# Optional worker dependencies. Keep out of the PythonAnywhere web deploy install.
+-r requirements.txt
+argostranslate==1.11.0

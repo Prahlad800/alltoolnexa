@@ -1,13 +1,7 @@
-# Desktop layout on every device
+# Responsive website layout
 
-The user explicitly requested removing the mobile layout and showing the desktop layout on phones.
+Desktop keeps the full website navigation, multi-column cards and tool sidebars. Below 768px the website uses the mobile design reference: a compact header, purple PDF feature card, category shortcuts, stacked tool cards, and a fixed bottom navigation with working Home, Tools, Categories, Translate and Profile destinations.
 
-- Public frontend viewport is `width=1280, user-scalable=yes`, without a forced initial scale. Phone browsers initially fit the desktop page to the screen; pinch zoom remains available.
-- The document has a 1280px minimum width. Narrow desktop windows can scroll horizontally.
-- Mobile navigation component was removed. Desktop navigation, sidebar, multi-column cards and editor panels remain in their desktop arrangement.
-- 57 maximum-width media-query blocks were removed from 14 frontend stylesheets. Print, theme and reduced-motion rules are retained. The separate admin application was not changed.
-- Language selection, file processing and account behavior remain available in the desktop interface.
+The viewport uses `device-width`, starts at scale 1, and allows pinch zoom. Safe-area insets keep bottom navigation clear of device controls. Tool inputs/results stack on phones; document and spreadsheet workspaces retain their own internal scrolling. The admin app remains English and is unaffected by public-site language/layout changes.
 
-Verification: `node scripts/verify-desktop-layout.mjs` checks homepage, directory and crop-tool pages at desktop size and in an actual mobile-emulation browser context. It checks desktop navigation, a minimum of three tool-grid columns, sidebar beside the workspace, 1280px viewport, phone initial fit and enabled zoom. Screenshots/results are written to `runtime-results/desktop-layout/`.
-
-Old responsive-width audits and historical screenshots describe the former mobile layout; they are not the acceptance baseline for this intentionally desktop-only interface. Current language and download scripts accept the desktop minimum width when run in a narrow desktop window.
+Run `AUDIT_ORIGIN=http://127.0.0.1:3000 node scripts/verify-desktop-layout.mjs` from `frontend` with the website running. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to a local Chromium executable when using a system browser. The script checks desktop and phone geometry, navigation, search/category filtering, language switching, translator submission and representative tool pages. Screenshots/results go to ignored `runtime-results/responsive-layout`.
