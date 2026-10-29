@@ -96,6 +96,43 @@ def check_database_from_runner(raw_url):
             engine.dispose()
 
 
+def enable_annual_rpc(client, project_url, raw_url):
+    """Use only an existing, identity-matched Supabase DB binding; never log it."""
+    try:
+        import json
+        expected = {plan['id']:plan['annualPrice'] for plan in json.loads(Path('backend/data/plans.json').read_text()) if plan['price']}
+        def compatible(capability):
+            return 'yearly' in capability.get('billingCycles', []) and capability.get('annualPrices') == expected
+        if compatible(client.call('ping')):
+            return True
+        if not raw_url:
+            return False
+        project = urlsplit(project_url).hostname.split('.')[0]
+        url = make_url(raw_url)
+        matched = (url.host == 'db.' + project + '.supabase.co' or
+                   (url.host and url.host.endswith('.pooler.supabase.com') and url.username == 'postgres.' + project))
+        if not matched or url.drivername not in {'postgres', 'postgresql', 'postgresql+psycopg'} or url.port == 6543:
+            return False
+        if url.query.get('sslmode') not in {None, 'require', 'verify-ca', 'verify-full'}:
+            return False
+        url = url.set(drivername='postgresql+psycopg')
+        if not url.query.get('sslmode'):
+            url = url.update_query_dict({'sslmode':'require'})
+        engine = None
+        try:
+            engine = create_engine(url, connect_args={'connect_timeout':10}, hide_parameters=True)
+            with engine.begin() as connection:
+                connection.execute(text(Path('backend/migrations/supabase_backend.sql').read_text(encoding='utf-8')))
+        finally:
+            if engine is not None:
+                engine.dispose()
+        return compatible(client.call('ping'))
+    except Exception:
+        # Keep monthly deployment operational; annual orders are capability-gated.
+        # Provider exception messages can contain credentials and must not be printed.
+        return False
+
+
 class Deployment:
     def __init__(self):
         self.username = os.getenv('PA_USERNAME', 'prahlad800')
@@ -156,6 +193,9 @@ class Deployment:
                 raise RuntimeError('Supabase HTTPS preflight failed. Check the backend secret key, project URL and applied RPC migration.') from None
             if not good:
                 raise RuntimeError('Supabase HTTPS database readiness failed.')
+            annual_ready = enable_annual_rpc(client,url,settings.get('DATABASE_URL',''))
+            self.expected_annual = annual_ready
+            summary('Annual billing: '+('RPC ready for monthly/yearly payments.' if annual_ready else 'Database update pending; annual checkout is disabled, monthly checkout is preserved.'))
             self.expected_transport = 'supabase-https'
             values = {**origin_values, 'DATABASE_TRANSPORT':'supabase','SUPABASE_URL':url,'SUPABASE_SECRET_KEY':key}
             if self.revision:
@@ -207,6 +247,15 @@ class Deployment:
                     failures.append(f'{path}: HTTP {response.status_code}; readiness, revision or transport did not match')
             except (requests.RequestException, ValueError, AttributeError):
                 failures.append(f'{path}: unavailable or invalid JSON')
+        if getattr(self,'expected_annual',False):
+            try:
+                response = requests.get(f'https://{self.domain}/api/billing/plans',headers={'Cache-Control':'no-cache'},timeout=15)
+                payload = response.json()
+                prices = {plan['id']:plan.get('annualPrice') for plan in payload.get('plans',[])}
+                if response.status_code != 200 or 'yearly' not in payload.get('billingCycles',[]) or any(prices.get(key)!=value for key,value in {'basic':349,'pro':949,'premium':1599,'premium-plus':2000}.items()):
+                    failures.append('/api/billing/plans: annual readiness or prices did not match')
+            except (requests.RequestException,ValueError,AttributeError,KeyError,TypeError):
+                failures.append('/api/billing/plans: unavailable or invalid JSON')
         return failures
 
     def run(self):

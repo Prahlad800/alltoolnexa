@@ -5,6 +5,7 @@ DECLARE
  u users%ROWTYPE; s auth_sessions%ROWTYPE; v page_visits%ROWTYPE; f user_files%ROWTYPE; o billing_orders%ROWTYPE;
  result jsonb; n bigint; uid uuid; begin_at timestamptz; end_at timestamptz;
  quota bigint; max_file bigint; plan text; until_at timestamptz; payload bytea;
+ monthly_amount integer; annual_amount integer; term_months integer;
 BEGIN
  IF (current_setting('request.jwt.claims',true)::jsonb->>'role') IS DISTINCT FROM 'service_role' THEN
   RAISE EXCEPTION 'Backend access only' USING ERRCODE='42501';
@@ -15,7 +16,7 @@ BEGIN
   PERFORM key FROM site_controls LIMIT 1;
   PERFORM id FROM user_files LIMIT 1;
   PERFORM id FROM billing_orders LIMIT 1;
-  RETURN jsonb_build_object('connected',true);
+  RETURN jsonb_build_object('connected',true,'billingCycles',jsonb_build_array('monthly','yearly'),'annualPrices',jsonb_build_object('basic',349,'pro',949,'premium',1599,'premium-plus',2000));
  WHEN 'user_find' THEN
   SELECT * INTO u FROM users WHERE CASE WHEN arguments->>'field'='username' THEN username=arguments->>'value' ELSE email=arguments->>'value' END;
   RETURN CASE WHEN u.id IS NULL THEN NULL ELSE to_jsonb(u) END;
@@ -120,8 +121,13 @@ BEGIN
    IF o.payment_id<>arguments->>'payment_id' THEN RETURN jsonb_build_object('error','Order already settled.','status',409); END IF;
    RETURN jsonb_build_object('plan',o.plan_id,'paidUntil',o.paid_until);
   END IF;
+  monthly_amount=CASE o.plan_id WHEN 'basic' THEN 3900 WHEN 'pro' THEN 8900 WHEN 'premium' THEN 14900 WHEN 'premium-plus' THEN 19900 ELSE 0 END;
+  annual_amount=CASE o.plan_id WHEN 'basic' THEN 34900 WHEN 'pro' THEN 94900 WHEN 'premium' THEN 159900 WHEN 'premium-plus' THEN 200000 ELSE 0 END;
+  IF o.amount=annual_amount AND annual_amount>0 THEN term_months=12;
+  ELSIF o.amount=monthly_amount AND monthly_amount>0 THEN term_months=1;
+  ELSE RETURN jsonb_build_object('error','Order price is not supported. Contact support.','status',409); END IF;
   SELECT greatest(now(),coalesce(max(paid_until),now())) INTO until_at FROM billing_orders WHERE user_id=o.user_id AND plan_id=o.plan_id;
-  UPDATE billing_orders SET payment_id=arguments->>'payment_id',paid_until=until_at+interval '1 month' WHERE id=o.id RETURNING * INTO o;
+  UPDATE billing_orders SET payment_id=arguments->>'payment_id',paid_until=until_at+make_interval(months=>term_months) WHERE id=o.id RETURNING * INTO o;
   RETURN jsonb_build_object('plan',o.plan_id,'paidUntil',o.paid_until);
  ELSE RAISE EXCEPTION 'Unknown backend operation' USING ERRCODE='22023';
  END CASE;

@@ -14,7 +14,8 @@
       "Website + app sync",
       "With ads",
       "Hindi and English interface"
-    ]
+    ],
+    "annualPrice": 0
   },
   {
     "id": "basic",
@@ -31,7 +32,8 @@
       "Ad-free experience",
       "Website + app sync",
       "Hindi and English interface"
-    ]
+    ],
+    "annualPrice": 349
   },
   {
     "id": "pro",
@@ -48,7 +50,8 @@
       "Ad-free experience",
       "Saved file history",
       "Hindi and English interface"
-    ]
+    ],
+    "annualPrice": 949
   },
   {
     "id": "premium",
@@ -66,7 +69,8 @@
       "Priority processing",
       "30-day file recovery",
       "24 additional interface languages"
-    ]
+    ],
+    "annualPrice": 1599
   },
   {
     "id": "premium-plus",
@@ -84,6 +88,7 @@
       "Priority processing",
       "30-day file recovery",
       "24 additional interface languages"
-    ]
+    ],
+    "annualPrice": 2000
   }
 ]

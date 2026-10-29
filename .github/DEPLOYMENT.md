@@ -27,3 +27,9 @@ Use Supabase's IPv4 session pooler connection string on port 5432 with SSL; the 
 The API and its security boundaries are shared across both transports: signed HttpOnly user/admin cookies, server-side revocation, role checks, Origin/CSRF checks, account file isolation, quota locks, verified captured-payment activation and idempotency. Existing large paid-plan file limits still require adequate host/API request and memory limits; the free PythonAnywhere instance cannot be assumed to support 1 GB requests.
 
 References: [PythonAnywhere database support](https://help.pythonanywhere.com/pages/KindsOfDatabases/), [PythonAnywhere's Supabase/free-account explanation](https://www.pythonanywhere.com/forums/topic/33595/), [deployment API](https://help.pythonanywhere.com/pages/API/).
+
+## Annual billing RPC compatibility update
+
+Annual prices are ₹349 / ₹949 / ₹1,599 / ₹2,000 for Basic / Pro / Premium / Premium Plus. General table/schema migrations still require the trusted migration workflow. For this backwards-compatible annual feature only, deployment may update `alltoolnexa_backend` transactionally using an existing server DATABASE_URL whose direct hostname or session-pooler username matches the configured Supabase project. It preserves SSL and never prints credentials. An already-updated RPC requires no database connection.
+
+If that binding is absent, mismatched or inaccessible, deployment continues with monthly billing and the new backend refuses annual order creation before contacting Razorpay. Apply `backend/migrations/supabase_backend.sql` in the correct Supabase SQL Editor (or `flask --app app:create_app db-upgrade` using trusted PostgreSQL access), then check `/api/billing/plans` advertises `yearly`. The Actions summary records annual readiness separately. When enabled, post-deploy health verifies both annual capability and the exact public price catalog.

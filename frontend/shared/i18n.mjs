@@ -71,3 +71,13 @@ Object.assign(hindi,{
  'Preparing your download…':'डाउनलोड तैयार हो रहा है…','Download ready.':'डाउनलोड तैयार है।','Export cancelled.':'एक्सपोर्ट रद्द हुआ।',
  'Saved on this device':'इस डिवाइस पर सहेजा गया','Unsaved draft':'अभी सहेजा नहीं गया'
 });
+
+Object.assign(hindi,{
+ 'Monthly':'मासिक','Annual':'सालाना','Save':'बचत','Save up to':'इतनी बचत','/year':'/साल','/month':'/महीना','/month equivalent':'/महीना के बराबर',
+ 'Free forever':'हमेशा मुफ़्त','Billed annually':'साल में एक बार भुगतान','with annual billing':'सालाना भुगतान पर','Choose':'चुनें','Connecting…':'जोड़ रहे हैं…','max file size':'अधिकतम फ़ाइल आकार',
+ 'Annual billing: pay once for 12 calendar months.':'सालाना भुगतान: एक बार भुगतान पर 12 कैलेंडर महीने।',
+ 'Monthly billing: pay for one calendar month at a time.':'मासिक भुगतान: हर भुगतान पर एक कैलेंडर महीना।',
+ 'The Free plan includes 50 MB of private storage after signup, with a 2 MB limit per file. Monthly payments provide one calendar month; annual payments provide 12 calendar months. Renewal is manual; no automatic recurring charge.':'साइनअप पर Free प्लान में 50 MB निजी स्टोरेज और हर फ़ाइल की 2 MB सीमा है। मासिक भुगतान पर एक कैलेंडर महीना और सालाना भुगतान पर 12 महीने मिलते हैं। नवीनीकरण स्वयं करें; अपने-आप दोबारा शुल्क नहीं कटेगा।',
+ 'Annual savings compare the yearly total with 12 monthly payments. Per-month equivalents are rounded to two decimals; the displayed yearly total is charged once.':'सालाना बचत की तुलना 12 मासिक भुगतानों से है। प्रति-महीना बराबर राशि दो दशमलव में है; सालाना कुल राशि एक बार ली जाती है।',
+ 'App sync, saved file history, priority processing and recovery are planned features. Browser tools remain free.':'ऐप सिंक, फ़ाइल हिस्ट्री, प्राथमिकता और रिकवरी नियोजित सुविधाएँ हैं। ब्राउज़र टूल मुफ़्त रहते हैं।'
+});

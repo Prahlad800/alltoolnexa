@@ -121,6 +121,22 @@ class SupabaseRPCTests(unittest.TestCase):
             self.admin()
             self.assertEqual(self.client.get('/api/admin/billing').status_code,200)
 
+    def test_annual_activation_prices_duration_and_duplicate_capture(self):
+        headers=self.signup()
+        self.assertIn('yearly',self.client.get('/api/billing/plans').json['billingCycles'])
+        with patch.dict(os.environ,{'RAZORPAY_KEY_ID':'rzp_test_rpc','RAZORPAY_KEY_SECRET':'test-secret'}):
+            for plan,price in [('basic',349),('pro',949),('premium',1599),('premium-plus',2000)]:
+                order_id='order_'+uuid.uuid4().hex;payment_id='pay_'+uuid.uuid4().hex
+                with patch('billing.gateway',return_value={'id':order_id}):
+                    created=self.client.post('/api/billing/orders',json={'planId':plan,'billingCycle':'yearly','amount':1},headers=headers)
+                    self.assertEqual(created.status_code,200,created.json);self.assertEqual(created.json['amount'],price*100)
+                payload={'razorpay_order_id':order_id,'razorpay_payment_id':payment_id,'razorpay_signature':hmac.new(b'test-secret',(order_id+'|'+payment_id).encode(),hashlib.sha256).hexdigest()}
+                with patch('billing.gateway',return_value={'order_id':order_id,'amount':price*100,'currency':'INR','status':'captured'}):
+                    first=self.client.post('/api/billing/verify',json=payload,headers=headers);self.assertEqual(first.status_code,200,first.json)
+                    row=self.store.call('order_get',id=order_id)
+                    duration=self.connection.execute(text("SELECT paid_until-created_at FROM alltoolnexa_private.billing_orders WHERE id=:id"),{'id':order_id}).scalar();self.assertGreater(duration.days,363)
+                    self.assertEqual(self.client.post('/api/billing/verify',json=payload,headers=headers).status_code,200);self.assertEqual(self.store.call('order_get',id=order_id)['paid_until'],row['paid_until'])
+
     def test_public_database_roles_cannot_execute_rpc(self):
         for role in ('anon','authenticated'):
             allowed=self.connection.execute(text("SELECT has_function_privilege(:role,'public.alltoolnexa_backend(text,jsonb)','EXECUTE')"),{'role':role}).scalar()

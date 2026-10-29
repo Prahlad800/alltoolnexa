@@ -91,5 +91,52 @@ class DeployTests(unittest.TestCase):
                 self.assertEqual(len(deploy.health()),count)
 
 
+class AnnualRPCDeploymentTests(unittest.TestCase):
+    def test_ready_rpc_needs_no_database_credentials_or_writes(self):
+        from deploy_backend import enable_annual_rpc
+        client=Mock();client.call.return_value={'connected':True,'billingCycles':['monthly','yearly'],'annualPrices':{'basic':349,'pro':949,'premium':1599,'premium-plus':2000}}
+        with patch('deploy_backend.create_engine') as engine:
+            self.assertTrue(enable_annual_rpc(client,'https://project.supabase.co',''));engine.assert_not_called()
+
+    def test_missing_or_mismatched_database_identity_never_executes_sql(self):
+        from deploy_backend import enable_annual_rpc
+        client=Mock();client.call.return_value={'connected':True}
+        with patch('deploy_backend.create_engine') as engine:
+            for url in ['', 'postgresql://postgres:fake@db.other.supabase.co/postgres','postgresql://postgres.other:fake@aws-0-test.pooler.supabase.com/postgres','postgresql://postgres.project:fake@aws-0-test.pooler.supabase.com:6543/postgres']:
+                self.assertFalse(enable_annual_rpc(client,'https://project.supabase.co',url))
+            engine.assert_not_called()
+
+    def test_stale_price_contract_does_not_claim_annual_ready(self):
+        from deploy_backend import enable_annual_rpc
+        client=Mock();client.call.return_value={'connected':True,'billingCycles':['monthly','yearly'],'annualPrices':{'basic':300}}
+        with patch('deploy_backend.create_engine') as engine:
+            self.assertFalse(enable_annual_rpc(client,'https://project.supabase.co',''));engine.assert_not_called()
+
+    def test_matched_binding_runs_transaction_then_checks_capability(self):
+        from deploy_backend import enable_annual_rpc
+        from unittest.mock import MagicMock
+        client=Mock();client.call.side_effect=[{'connected':True},{'connected':True,'billingCycles':['monthly','yearly'],'annualPrices':{'basic':349,'pro':949,'premium':1599,'premium-plus':2000}}]
+        engine=MagicMock()
+        with patch('deploy_backend.create_engine',return_value=engine):
+            self.assertTrue(enable_annual_rpc(client,'https://project.supabase.co','postgresql://postgres.project:fake@aws-0-test.pooler.supabase.com:5432/postgres'))
+            sql=str(engine.begin.return_value.__enter__.return_value.execute.call_args.args[0])
+            self.assertIn('make_interval(months=>term_months)',sql);engine.dispose.assert_called_once()
+
+    def test_database_failure_is_safe_and_does_not_claim_annual_ready(self):
+        from deploy_backend import enable_annual_rpc
+        client=Mock();client.call.return_value={'connected':True}
+        with patch('deploy_backend.create_engine',side_effect=RuntimeError('do-not-echo-secret')):
+            self.assertFalse(enable_annual_rpc(client,'https://project.supabase.co','postgresql://postgres:fake@db.project.supabase.co:5432/postgres'))
+
+
+class AnnualHealthTests(unittest.TestCase):
+    @patch('deploy_backend.requests.get')
+    def test_annual_enabled_deployment_checks_catalog_and_capability(self,get):
+        deploy=Deployment.__new__(Deployment);deploy.domain='app.example';deploy.expected_annual=True
+        for cycles,count in [(['monthly'],1),(['monthly','yearly'],0)]:
+            get.side_effect=[Mock(status_code=200,json=lambda:{'success':True,'authMode':'database'}),Mock(status_code=200,json=lambda:{'success':True,'database':'connected'}),Mock(status_code=200,json=lambda:{'success':True}),Mock(status_code=200,json=lambda:{'billingCycles':cycles,'plans':[{'id':key,'annualPrice':value} for key,value in {'basic':349,'pro':949,'premium':1599,'premium-plus':2000}.items()]})]
+            self.assertEqual(len(deploy.health()),count)
+
+
 if __name__ == '__main__':
     unittest.main()

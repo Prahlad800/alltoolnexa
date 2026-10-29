@@ -1,4 +1,4 @@
-"""Server-owned prices and captured-payment entitlements (manual monthly renewal)."""
+"""Server-owned prices and captured-payment entitlements (manual monthly/yearly renewal)."""
 import base64
 import calendar
 import hashlib
@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 from flask import Blueprint, jsonify, request, current_app
+from sqlalchemy.exc import SQLAlchemyError
 from database import db
 from models import BillingOrder, User
 
@@ -23,6 +24,17 @@ def entitlement(user_id):
         return BY_ID[store.call('entitlement',user_id=user_id)['plan']]
     order = db.session.query(BillingOrder).filter(BillingOrder.user_id == uuid.UUID(str(user_id)), BillingOrder.paid_until > datetime.now(timezone.utc)).order_by(BillingOrder.created_at.desc()).first()
     return BY_ID[order.plan_id] if order else BY_ID['free']
+
+def order_cycle(plan_id, amount):
+    plan = BY_ID.get(plan_id, {})
+    return 'yearly' if plan.get('annualPrice') and amount == plan['annualPrice'] * 100 else 'monthly'
+
+
+def add_calendar_months(start, months):
+    year, month_index = divmod(start.year * 12 + start.month - 1 + months, 12)
+    month = month_index + 1
+    return start.replace(year=year, month=month, day=min(start.day, calendar.monthrange(year, month)[1]))
+
 
 def gateway(path, payload=None):
     token = base64.b64encode((os.environ['RAZORPAY_KEY_ID']+':'+os.environ['RAZORPAY_KEY_SECRET']).encode()).decode()
@@ -37,6 +49,16 @@ def init_billing(app):
     origins = app.config['AUTH_ALLOWED_ORIGINS']
     def ready():
         return bool(os.getenv('RAZORPAY_KEY_ID') and os.getenv('RAZORPAY_KEY_SECRET') and ('sqlalchemy' in app.extensions or store) and app.config['AUTH_MODE'] != 'demo')
+
+    def billing_cycles():
+        if not store:
+            return ['monthly', 'yearly']
+        try:
+            capability = store.call('ping')
+            expected = {plan['id']:plan['annualPrice'] for plan in PLANS if plan['price']}
+            return ['monthly', 'yearly'] if 'yearly' in capability.get('billingCycles', []) and capability.get('annualPrices') == expected else ['monthly']
+        except SQLAlchemyError:
+            return ['monthly']
 
     @routes.before_request
     def boundary():
@@ -61,16 +83,16 @@ def init_billing(app):
 
     @routes.get('/api/billing/plans')
     def plans():
-        return jsonify(plans=PLANS, checkoutEnabled=ready(), renewal='manual-monthly')
+        return jsonify(plans=PLANS, checkoutEnabled=ready(), renewal='manual', billingCycles=billing_cycles())
 
     @routes.get('/api/admin/billing')
     @auth['authenticated']('admin')
     def admin(record):
         if store:
             rows = store.call('orders')
-            return jsonify(plans=PLANS,checkoutEnabled=ready(),orders=[{'id':o['id'],'plan':o['plan_id'],'amount':o['amount'],'status':'paid' if o['payment_id'] else 'pending','paidUntil':o['paid_until']} for o in rows])
+            return jsonify(plans=PLANS,checkoutEnabled=ready(),orders=[{'id':o['id'],'plan':o['plan_id'],'amount':o['amount'],'status':'paid' if o['payment_id'] else 'pending','paidUntil':o['paid_until'],'billingCycle':order_cycle(o['plan_id'],o['amount'])} for o in rows])
         rows = db.session.query(BillingOrder).order_by(BillingOrder.created_at.desc()).limit(100).all() if 'sqlalchemy' in app.extensions else []
-        return jsonify(plans=PLANS, checkoutEnabled=ready(), orders=[{'id':o.id,'plan':o.plan_id,'amount':o.amount,'status':'paid' if o.payment_id else 'pending','paidUntil':o.paid_until.isoformat() if o.paid_until else None} for o in rows])
+        return jsonify(plans=PLANS, checkoutEnabled=ready(), orders=[{'id':o.id,'plan':o.plan_id,'amount':o.amount,'status':'paid' if o.payment_id else 'pending','paidUntil':o.paid_until.isoformat() if o.paid_until else None,'billingCycle':order_cycle(o.plan_id,o.amount)} for o in rows])
 
     @routes.post('/api/billing/orders')
     @auth['authenticated']('user')
@@ -81,16 +103,24 @@ def init_billing(app):
         plan = BY_ID.get(payload.get('planId')) if isinstance(payload, dict) and isinstance(payload.get('planId'), str) else None
         if not plan or not plan['price']:
             return jsonify(message='Choose a paid plan.'), 400
+        cycle = payload.get('billingCycle', 'monthly')
+        if not isinstance(cycle, str) or cycle not in {'monthly', 'yearly'}:
+            return jsonify(message='Choose monthly or yearly billing.'), 400
+        if cycle == 'yearly' and 'yearly' not in billing_cycles():
+            return jsonify(message='Annual checkout is not available yet. Choose monthly billing; no payment was taken.'), 503
+        amount = (plan['annualPrice'] if cycle == 'yearly' else plan['price']) * 100
         try:
-            order = gateway('orders', {'amount':plan['price']*100,'currency':'INR','receipt':uuid.uuid4().hex})
+            order = gateway('orders', {'amount':amount,'currency':'INR','receipt':uuid.uuid4().hex,'notes':{'plan_id':plan['id'],'billing_cycle':cycle}})
         except (OSError, ValueError):
             return jsonify(message='Payment gateway is unavailable. Please retry.'), 502
         if store:
-            store.call('order_create',id=order['id'],user_id=record['user']['id'],plan_id=plan['id'],amount=plan['price']*100)
+            created = store.call('order_create',id=order['id'],user_id=record['user']['id'],plan_id=plan['id'],amount=amount)
+            if created.get('error'):
+                return jsonify(message=created['error']), created['status']
         else:
-            db.session.add(BillingOrder(id=order['id'],user_id=uuid.UUID(record['user']['id']),plan_id=plan['id'],amount=plan['price']*100))
+            db.session.add(BillingOrder(id=order['id'],user_id=uuid.UUID(record['user']['id']),plan_id=plan['id'],amount=amount))
             db.session.commit()
-        return jsonify(orderId=order['id'],amount=plan['price']*100,currency='INR',keyId=os.environ['RAZORPAY_KEY_ID'])
+        return jsonify(orderId=order['id'],amount=amount,currency='INR',keyId=os.environ['RAZORPAY_KEY_ID'],billingCycle=cycle)
 
     def activate(order_id, payment_id, user_id=None):
         if store:
@@ -105,6 +135,8 @@ def init_billing(app):
                 return jsonify(message='Payment verification unavailable. Retry verification.'),502
             if payment.get('order_id') != order['id'] or payment.get('amount') != order['amount'] or payment.get('currency') != 'INR' or payment.get('status') != 'captured':
                 return jsonify(message='Payment is not captured. Your plan has not changed.'),409
+            if order_cycle(order['plan_id'],order['amount']) == 'yearly' and 'yearly' not in billing_cycles():
+                return jsonify(message='Annual activation is temporarily unavailable. Retry verification or contact support.'), 503
             value = store.call('order_activate',id=order_id,payment_id=payment_id)
             return (jsonify(message=value['error']),value['status']) if value.get('error') else jsonify(success=True,**value)
         order = db.session.get(BillingOrder, order_id)
@@ -125,8 +157,8 @@ def init_billing(app):
         now = datetime.now(timezone.utc)
         previous = db.session.query(BillingOrder).filter_by(user_id=order.user_id, plan_id=order.plan_id).filter(BillingOrder.paid_until > now).order_by(BillingOrder.paid_until.desc()).first()
         start = previous.paid_until.replace(tzinfo=timezone.utc) if previous else now
-        year, month = (start.year+1, 1) if start.month == 12 else (start.year, start.month+1)
-        order.paid_until = start.replace(year=year, month=month, day=min(start.day, calendar.monthrange(year, month)[1]))
+        months = 12 if order_cycle(order.plan_id, order.amount) == 'yearly' else 1
+        order.paid_until = add_calendar_months(start, months)
         order.payment_id = payment_id
         db.session.commit()
         return jsonify(success=True, plan=order.plan_id, paidUntil=order.paid_until.isoformat())
