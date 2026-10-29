@@ -1,7 +1,7 @@
 import {T} from '@/components/LanguageProvider';
-import ToolIcon from '@/components/ToolIcon';
 import Link from '@/components/ManagedLink';
-import {tools,categories} from '../../../shared/catalog.mjs';
-import {pageMetadata,collectionSchema,jsonLD} from '@/lib/site';
-export const metadata=pageMetadata('Tool categories','Find tools organized by task: math, writing, developer, image, PDF, finance and more.','/categories');
-export default function Categories(){return <div className="container page-space"><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLD(collectionSchema('Tool categories','/categories',categories.map(c=>({name:c.name,path:`/categories/${c.id}`}))))}}/><p className="eyebrow">A PLACE FOR EVERY TASK</p><h1 className="page-title">Explore the toolkit.</h1><p className="page-subtitle">Pick a category. Find a simpler way to get it done.</p><div className="category-grid">{categories.map(c=><Link className="category-card" href={`/categories/${c.id}`} key={c.id}><ToolIcon category={c.id}/><div><h2>{<T>{c.name}</T>} <span>↗</span></h2><p>{c.description}</p><small>{tools.filter(t=>t.category===c.id).length} free tools</small></div></Link>)}</div></div>;}
+import ToolIcon from '@/components/ToolIcon';
+import {tools,categories,mainCategories} from '../../../shared/catalog.mjs';
+import {pageMetadata} from '@/lib/site';
+export const metadata=pageMetadata('Tool categories','507 tools in five main categories and eighteen subcategories.','/categories');
+export default function Categories(){return <div className="container page-space"><p className="eyebrow">5 MAIN CATEGORIES / 18 SUBCATEGORIES / {tools.length} TOOLS</p><h1 className="page-title">Explore the toolkit.</h1><p className="page-subtitle">Choose a main category, then a subcategory to find your tool.</p><div className="taxonomy-grid">{mainCategories.map(g=><section className="taxonomy-group" key={g.id}><Link className="taxonomy-heading" href={`/categories/${g.id}`}><ToolIcon category={g.icon}/><div><h2><T>{g.name}</T></h2><small>{g.children.length} subcategories / {tools.filter(t=>g.children.includes(t.category)).length} tools</small></div><span aria-hidden="true">&rarr;</span></Link><div className="taxonomy-children">{g.children.map(id=>categories.find(c=>c.id===id)).map(c=><Link key={c.id} href={`/categories/${c.id}`}><ToolIcon category={c.id} compact/><span><T>{c.name}</T></span><small>{tools.filter(t=>t.category===c.id).length}</small></Link>)}</div></section>)}</div></div>;}

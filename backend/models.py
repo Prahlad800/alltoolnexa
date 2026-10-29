@@ -23,6 +23,8 @@ class User(db.Model):
     is_active = db.Column(db.Boolean, nullable=False, server_default=db.true())
     created_at = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())
 
+    last_login_at = db.Column(db.DateTime(timezone=True), nullable=True)
+
     def set_password(self, password):
         minimum = 8
         if not isinstance(password, str) or not minimum <= len(password) <= 256:

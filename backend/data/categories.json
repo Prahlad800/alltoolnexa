@@ -1,74 +1,128 @@
 [
   {
     "id": "math",
-    "name": "Math & numbers"
+    "name": "Math & Numbers",
+    "icon": "∑",
+    "description": "Everyday arithmetic, statistics and number theory.",
+    "parentId": "calculators-utilities"
   },
   {
     "id": "student",
-    "name": "Student"
+    "name": "Student Tools",
+    "icon": "✎",
+    "description": "Marks, attendance and study planning.",
+    "parentId": "documents-education"
   },
   {
     "id": "office",
-    "name": "Office & salary"
+    "name": "Office & Salary",
+    "icon": "▤",
+    "description": "Work hours, salary and employee calculations.",
+    "parentId": "business-seo"
   },
   {
     "id": "finance",
-    "name": "Finance & business"
+    "name": "Finance & Business",
+    "icon": "↗",
+    "description": "Transparent calculations with your own assumptions.",
+    "parentId": "business-seo"
   },
   {
     "id": "marketing",
-    "name": "Marketing & SaaS"
+    "name": "Marketing & SaaS",
+    "icon": "◎",
+    "description": "Measure campaigns and understand your business.",
+    "parentId": "business-seo"
   },
   {
     "id": "date-time",
-    "name": "Date & time"
+    "name": "Date & Time",
+    "icon": "◷",
+    "description": "Calendar arithmetic and time conversions.",
+    "parentId": "calculators-utilities"
   },
   {
     "id": "converters",
-    "name": "Unit converters"
+    "name": "Unit Converters",
+    "icon": "⇄",
+    "description": "Convert lengths, temperatures, sizes and more.",
+    "parentId": "calculators-utilities"
   },
   {
     "id": "text",
-    "name": "Text & writing"
+    "name": "Text & Writing",
+    "icon": "Aa",
+    "description": "Clean, count, format and transform text.",
+    "parentId": "documents-education"
   },
   {
     "id": "developer",
-    "name": "Developer"
+    "name": "Developer Tools",
+    "icon": "</>",
+    "description": "Format data, encode strings and inspect URLs.",
+    "parentId": "developer-qr"
   },
   {
     "id": "design",
-    "name": "Design & CSS"
+    "name": "Design & CSS",
+    "icon": "◈",
+    "description": "Colors, contrast and CSS you can copy.",
+    "parentId": "pdf-image"
   },
   {
     "id": "image",
-    "name": "Image tools"
+    "name": "Image Tools",
+    "icon": "▧",
+    "description": "Resize, crop and convert images on your device.",
+    "parentId": "pdf-image"
   },
   {
     "id": "pdf",
-    "name": "PDF tools"
+    "name": "PDF Tools",
+    "icon": "▥",
+    "description": "Work with PDF documents privately in your browser.",
+    "parentId": "pdf-image"
   },
   {
     "id": "qr",
-    "name": "QR & barcodes"
+    "name": "QR & Barcodes",
+    "icon": "▦",
+    "description": "Create downloadable QR codes and barcodes.",
+    "parentId": "developer-qr"
   },
   {
     "id": "india",
-    "name": "India utilities"
+    "name": "India Utilities",
+    "icon": "₹",
+    "description": "Indian numbers and format checks.",
+    "parentId": "calculators-utilities"
   },
   {
     "id": "home",
-    "name": "Home & everyday"
+    "name": "Home & Everyday",
+    "icon": "⌂",
+    "description": "Plan materials, recipes, travel and power costs.",
+    "parentId": "calculators-utilities"
   },
   {
     "id": "random",
-    "name": "Random & security"
+    "name": "Random & Security",
+    "icon": "⚄",
+    "description": "Secure randomness, passwords and hashes.",
+    "parentId": "developer-qr"
   },
   {
     "id": "seo",
-    "name": "SEO & social"
+    "name": "SEO & Social",
+    "icon": "⌕",
+    "description": "Metadata, social links and content helpers.",
+    "parentId": "business-seo"
   },
   {
     "id": "templates",
-    "name": "Documents & templates"
+    "name": "Documents & Templates",
+    "icon": "☷",
+    "description": "Editable, rule-based drafts from your details.",
+    "parentId": "documents-education"
   }
 ]

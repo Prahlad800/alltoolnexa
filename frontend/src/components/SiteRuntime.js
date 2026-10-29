@@ -4,6 +4,7 @@ import {usePathname} from 'next/navigation';
 import Link from 'next/link';
 import {apiRequest} from '../../shared/api-client.mjs';
 import VisitorTracking from './VisitorTracking';
+import {parentCategory} from '../../shared/taxonomy.mjs';
 import {createAvailabilityRefresh} from '../../shared/availability-refresh.mjs';
 
 const Availability=createContext({state:null,catalog:[],refresh:()=>{}});
@@ -23,7 +24,7 @@ export function useAvailability(href){
  const managed=Boolean(tool||path.startsWith('/categories/'));
  const pending=managed&&!state;
  // Local processing does not depend on API availability. Retain explicit admin controls once fetched.
- const disabled=managed&&Boolean(state&&(state.disabledTools.includes(toolId)||state.disabledCategories.includes(category)));
+ const disabled=managed&&Boolean(state&&(state.disabledTools.includes(toolId)||(state.disabledCategories.includes(category)||state.disabledCategories.includes(parentCategory(category)?.id))));
  return {disabled,pending,refresh};
 }
 export function ToolRouteGate({children}){

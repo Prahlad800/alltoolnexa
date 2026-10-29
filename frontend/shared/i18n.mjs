@@ -1,6 +1,12 @@
 export const FREE_LANGUAGES=['en','hi'];
 export const LANGUAGES=[['en','English'],['hi','हिन्दी'],['es','Español'],['fr','Français'],['de','Deutsch'],['it','Italiano'],['pt','Português'],['ja','日本語'],['ru','Русский'],['ko','한국어'],['zh-CN','中文 (简体)'],['zh-TW','中文 (繁體)'],['ar','العربية'],['bg','Български'],['ca','Català'],['nl','Nederlands'],['el','Ελληνικά'],['id','Bahasa Indonesia'],['ms','Bahasa Melayu'],['pl','Polski'],['sv','Svenska'],['th','ภาษาไทย'],['tr','Türkçe'],['uk','Українська'],['vi','Tiếng Việt'],['sw','Kiswahili']].map(([code,name])=>({code,name,free:FREE_LANGUAGES.includes(code),dir:code==='ar'?'rtl':'ltr'}));
 export const hindi={
+ 'PDF & Image Tools':'PDF और इमेज टूल',
+ 'Documents & Education':'दस्तावेज़ और शिक्षा',
+ 'Developer & QR Tools':'डेवलपर और QR टूल',
+ 'Business & SEO Tools':'व्यवसाय और SEO टूल',
+ 'Calculators & Utilities':'कैलकुलेटर और उपयोगी टूल',
+ 'Student Tools':'छात्र टूल','Developer Tools':'डेवलपर टूल',
  'Additional languages translate navigation and shared tool controls. Some detailed content remains in English.':'अन्य भाषाएँ नेविगेशन और सामान्य टूल कंट्रोल का अनुवाद करती हैं। कुछ विस्तृत जानकारी अभी अंग्रेज़ी में है।',
  'Hindi and English interface':'हिन्दी और अंग्रेज़ी इंटरफ़ेस','24 additional interface languages':'इंटरफ़ेस की 24 अतिरिक्त भाषाएँ',
  'Step':'चरण','Free tools for PDFs, images, documents, text, coding and more. No signup required.':'PDF, इमेज, दस्तावेज़, टेक्स्ट, कोडिंग और अन्य कामों के लिए मुफ़्त टूल। साइन अप की ज़रूरत नहीं।','Premium languages require an active Premium or Premium Plus plan and an available translation catalog.':'अन्य भाषाओं के लिए सक्रिय Premium या Premium Plus प्लान और उपलब्ध अनुवाद कैटलॉग ज़रूरी है।',
@@ -81,3 +87,6 @@ Object.assign(hindi,{
  'Annual savings compare the yearly total with 12 monthly payments. Per-month equivalents are rounded to two decimals; the displayed yearly total is charged once.':'सालाना बचत की तुलना 12 मासिक भुगतानों से है। प्रति-महीना बराबर राशि दो दशमलव में है; सालाना कुल राशि एक बार ली जाती है।',
  'App sync, saved file history, priority processing and recovery are planned features. Browser tools remain free.':'ऐप सिंक, फ़ाइल हिस्ट्री, प्राथमिकता और रिकवरी नियोजित सुविधाएँ हैं। ब्राउज़र टूल मुफ़्त रहते हैं।'
 });
+
+// Preserve existing local translations when category display capitalization changes.
+for(const name of ["PDF Tools","Image Tools","Documents & Templates","Text & Writing","Random & Security","QR & Barcodes","SEO & Social","Finance & Business","Office & Salary","Math & Numbers","Unit Converters","Date & Time","India Utilities","Home & Everyday"]){const original=Object.keys(hindi).find(key=>key.toLowerCase()===name.toLowerCase());if(original)hindi[name]=hindi[original];}

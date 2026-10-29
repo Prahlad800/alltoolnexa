@@ -5,6 +5,67 @@
   "coveredInventoryIdeas": 557,
   "planned": 706,
   "needsServiceOrVerifiedData": 23,
+  "mainCategories": [
+    {
+      "id": "pdf-image",
+      "name": "PDF & Image Tools",
+      "icon": "pdf",
+      "children": [
+        "pdf",
+        "image",
+        "design"
+      ],
+      "toolCount": 68
+    },
+    {
+      "id": "documents-education",
+      "name": "Documents & Education",
+      "icon": "templates",
+      "children": [
+        "templates",
+        "text",
+        "student"
+      ],
+      "toolCount": 97
+    },
+    {
+      "id": "developer-qr",
+      "name": "Developer & QR Tools",
+      "icon": "developer",
+      "children": [
+        "developer",
+        "random",
+        "qr"
+      ],
+      "toolCount": 86
+    },
+    {
+      "id": "business-seo",
+      "name": "Business & SEO Tools",
+      "icon": "finance",
+      "children": [
+        "seo",
+        "marketing",
+        "finance",
+        "office"
+      ],
+      "toolCount": 120
+    },
+    {
+      "id": "calculators-utilities",
+      "name": "Calculators & Utilities",
+      "icon": "math",
+      "children": [
+        "math",
+        "converters",
+        "date-time",
+        "india",
+        "home"
+      ],
+      "toolCount": 136
+    }
+  ],
+  "subcategories": 18,
   "categories": {
     "math": 44,
     "student": 19,

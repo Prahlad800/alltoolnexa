@@ -128,6 +128,7 @@ def init_auth(app):
         else:
             old = request.cookies.get(COOKIES[scope], '')
             db.session.query(AuthSession).filter_by(token_hash=hashlib.sha256(old.encode()).hexdigest()).delete()
+            user.last_login_at = now
             db.session.add(AuthSession(user_id=user.id, token_hash=digest, created_at=now, expires_at=now + timedelta(seconds=TTL)))
             db.session.commit()
         response = jsonify(success=True, user=user_data, csrfToken=csrf_for(jti), expiresIn=TTL)
@@ -309,7 +310,7 @@ def init_auth(app):
         try:
             def read(name):
                 return json.loads((root / name).read_text(encoding='utf-8-sig'))
-            return jsonify(success=True, tools=read('published-tools.json'), inventory=read('inventory.json'), stats=read('implementation-status.json'))
+            return jsonify(success=True, tools=read('published-tools.json'), inventory=read('inventory.json'), stats=read('implementation-status.json'), mainCategories=read('main-categories.json'), categories=read('categories.json'))
         except (OSError, ValueError):
             return failure('Refresh the local tool inventory first.', 503)
 

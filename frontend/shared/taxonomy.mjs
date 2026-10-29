@@ -1,0 +1,9 @@
+export const mainCategories = [
+ {id:'pdf-image',name:'PDF & Image Tools',icon:'pdf',children:['pdf','image','design']},
+ {id:'documents-education',name:'Documents & Education',icon:'templates',children:['templates','text','student']},
+ {id:'developer-qr',name:'Developer & QR Tools',icon:'developer',children:['developer','random','qr']},
+ {id:'business-seo',name:'Business & SEO Tools',icon:'finance',children:['seo','marketing','finance','office']},
+ {id:'calculators-utilities',name:'Calculators & Utilities',icon:'math',children:['math','converters','date-time','india','home']},
+];
+export const parentCategory = id => mainCategories.find(group=>group.children.includes(id));
+export const categoryMatches = (selected,category) => selected===category||Boolean(mainCategories.find(g=>g.id===selected)?.children.includes(category));

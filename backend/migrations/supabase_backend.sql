@@ -23,7 +23,11 @@ BEGIN
  WHEN 'user_create' THEN
   INSERT INTO users(id,email,password_hash,role) VALUES ((arguments->>'id')::uuid,arguments->>'email',arguments->>'password_hash','user') RETURNING * INTO u;
   RETURN to_jsonb(u);
+ WHEN 'users_list' THEN
+  SELECT jsonb_build_object('total',(SELECT count(*) FROM users WHERE role='user'),'users',coalesce(jsonb_agg(row_data),'[]'::jsonb),'pagination',jsonb_build_object('page',(arguments->>'page')::integer,'hasMore',(arguments->>'page')::integer*50<(SELECT count(*) FROM users WHERE role='user'))) INTO result FROM (SELECT jsonb_build_object('id',id,'email',email,'active',is_active,'registeredAt',created_at,'lastLoginAt',last_login_at) row_data FROM users WHERE role='user' ORDER BY CASE WHEN arguments->>'sort'='login' THEN coalesce(last_login_at,created_at) ELSE created_at END DESC,id OFFSET (((arguments->>'page')::integer-1)*50) LIMIT 50) listing;
+  RETURN result;
  WHEN 'session_issue' THEN
+  UPDATE users SET last_login_at=(arguments->>'created_at')::timestamptz WHERE id=(arguments->>'user_id')::uuid;
   DELETE FROM auth_sessions WHERE token_hash=arguments->>'old_digest';
   INSERT INTO auth_sessions(id,user_id,token_hash,created_at,expires_at) VALUES
    (gen_random_uuid(),(arguments->>'user_id')::uuid,arguments->>'digest',(arguments->>'created_at')::timestamptz,(arguments->>'expires_at')::timestamptz);

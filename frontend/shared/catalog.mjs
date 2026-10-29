@@ -17,6 +17,8 @@ import {
   httpURL,
 } from "./core.mjs";
 
+import {parentCategory} from './taxonomy.mjs';
+export {mainCategories} from './taxonomy.mjs';
 export const tools = [];
 const runners = new Map();
 export const categories = [
@@ -98,7 +100,7 @@ export const categories = [
     "☷",
     "Editable, rule-based drafts from your details.",
   ],
-].map(([id, name, icon, description]) => ({ id, name, icon, description }));
+].map(([id, name, icon, description]) => ({ id, name: ({student:"Student Tools",developer:"Developer Tools",pdf:"PDF Tools",image:"Image Tools",templates:"Documents & Templates",text:"Text & Writing",random:"Random & Security",qr:"QR & Barcodes",seo:"SEO & Social",finance:"Finance & Business",office:"Office & Salary",math:"Math & Numbers",converters:"Unit Converters","date-time":"Date & Time",india:"India Utilities",home:"Home & Everyday"})[id] || name, icon, description, parentId:parentCategory(id).id }));
 
 export const field = (key, label, value = "", type = "number", options) => ({
   key,

@@ -38,6 +38,36 @@ class SiteOperationsTests(unittest.TestCase):
         self.assertNotIn('percentage-calculator', self.client.get('/api/public/availability').json['disabledTools'])
         self.assertIn('math', self.client.get('/api/public/availability').json['disabledCategories'])
 
+    def test_hierarchy_counts_parent_controls_and_child_preservation(self):
+        tree = self.client.get('/api/public/categories').json['mainCategories']
+        self.assertEqual([g['toolCount'] for g in tree], [68, 97, 86, 120, 136])
+        self.assertEqual(sum(len(g['subcategories']) for g in tree), 18)
+        headers = self.admin()
+        controls = self.client.get('/api/admin/controls').json
+        self.assertEqual(len(controls['mainCategories']), 5)
+        self.assertEqual(len(controls['categories']), 18)
+        for id in ['pdf-image', 'pdf']:
+            result = self.client.post('/api/admin/controls', json={'kind':'category','id':id,'enabled':False}, headers=headers)
+            self.assertEqual(result.status_code, 200)
+        self.client.post('/api/admin/controls', json={'kind':'category','id':'pdf-image','enabled':True}, headers=headers)
+        state = self.client.get('/api/public/availability').json
+        self.assertIn('pdf', state['disabledCategories'])
+        self.assertNotIn('pdf-image', state['disabledCategories'])
+
+    def test_recent_users_private_login_persists_after_logout(self):
+        self.assertEqual(self.client.get('/api/admin/users').status_code, 401)
+        signup = self.client.post('/api/auth/signup', json={'email':'recent@example.com','password':PASSWORD}, headers=ORIGIN)
+        user = db.session.query(User).filter_by(email='recent@example.com').one()
+        self.assertIsNotNone(user.last_login_at)
+        self.client.post('/api/auth/logout', json={}, headers={**ORIGIN,'X-CSRF-Token':signup.json['csrfToken']})
+        self.admin()
+        report = self.client.get('/api/admin/users?sort=login').json
+        self.assertEqual(report['total'], 1)
+        self.assertEqual(report['users'][0]['email'], 'recent@example.com')
+        self.assertIsNotNone(report['users'][0]['lastLoginAt'])
+        self.assertNotIn('password', json.dumps(report))
+        self.assertEqual(self.client.get('/api/admin/users?sort=bad').status_code, 400)
+
     def test_guest_page_time_idempotence_cookie_ownership_and_private_ip(self):
         self.assertEqual(self.client.post('/api/analytics/start', json={'path': '/login?password=secret'}, headers=ORIGIN).status_code, 400)
         self.assertEqual(self.client.post('/api/analytics/start', json={'path': '/'}, headers={'Origin': 'https://evil.example'}).status_code, 403)

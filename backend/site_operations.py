@@ -92,7 +92,9 @@ def init_site_operations(app):
     tools = {t['id']: {'id': t['id'], 'name': t['name'], 'category': t['category']} for t in catalog}
     tools['spreadsheet-editor']['name'] = 'DraftSheet / Spreadsheet Editor'
     tools['draftword'] = {'id': 'draftword', 'name': 'DraftWord', 'category': 'office'}
-    categories = {c['id']: {'id': c['id'], 'name': c['name']} for c in category_list}
+    main_list = json.loads((data / 'main-categories.json').read_text(encoding='utf-8-sig'))
+    categories = {c['id']: c for c in category_list}
+    main_categories = {c['id']: c for c in main_list}
 
     def fail(message, status):
         return jsonify(success=False, message=message), status
@@ -194,11 +196,35 @@ def init_site_operations(app):
     def availability():
         return jsonify(success=True, **public_state())
 
+    @routes.get('/api/public/categories')
+    def category_tree():
+        return jsonify(success=True, mainCategories=[{**g, 'toolCount': sum(t['category'] in g['children'] for t in catalog), 'subcategories': [{**categories[c], 'toolCount': sum(t['category'] == c for t in catalog)} for c in g['children']]} for g in main_list], **public_state())
+
+    @routes.get('/api/admin/users')
+    @auth['authenticated']('admin')
+    def recent_users(record):
+        try:
+            page = max(1, int(request.args.get('page', '1')))
+        except ValueError:
+            return fail('Invalid page.', 400)
+        sort = request.args.get('sort', 'registered')
+        if sort not in ('registered', 'login'):
+            return fail('Choose registered or login.', 400)
+        if store:
+            return jsonify(success=True, **store.call('users_list', page=page, sort=sort))
+        query = db.session.query(User).filter_by(role='user')
+        count = query.count()
+        order = User.created_at if sort == 'registered' else func.coalesce(User.last_login_at, User.created_at)
+        rows = query.order_by(order.desc(), User.id).offset((page-1)*50).limit(50).all()
+        def iso(value):
+            return value.replace(tzinfo=timezone.utc).isoformat() if value and value.tzinfo is None else value.isoformat() if value else None
+        return jsonify(success=True, users=[{'id': str(u.id), 'email': u.email, 'active': u.is_active, 'registeredAt': iso(u.created_at), 'lastLoginAt': iso(u.last_login_at)} for u in rows], total=count, pagination={'page': page, 'hasMore': page*50 < count})
+
     @routes.get('/api/admin/controls')
     @auth['authenticated']('admin')
     def controls(record):
         state = public_state()
-        return jsonify(success=True, **state, tools=list(tools.values()), categories=list(categories.values()))
+        return jsonify(success=True, **state, tools=list(tools.values()), categories=list(categories.values()), mainCategories=list(main_categories.values()))
 
     @routes.post('/api/admin/controls')
     @auth['authenticated']('admin')
@@ -207,7 +233,7 @@ def init_site_operations(app):
         if not isinstance(payload, dict):
             return fail('Send a control and its enabled state.', 400)
         kind, item, enabled = payload.get('kind'), payload.get('id'), payload.get('enabled')
-        source = tools if kind == 'tool' else categories if kind == 'category' else {}
+        source = tools if kind == 'tool' else {**categories, **main_categories} if kind == 'category' else {}
         if not isinstance(item, str) or item not in source or not isinstance(enabled, bool):
             return fail('Unknown tool/category or invalid enabled state.', 400)
         key = kind + ':' + item
