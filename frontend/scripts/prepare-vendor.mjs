@@ -16,3 +16,5 @@ self.onmessage=async({data})=>{try{const text=await HTMLMinifier.minify(data.tex
 await writeFile(path.join(out,'versions.json'),JSON.stringify({pdfjs:require('pdfjs-dist/package.json').version,htmlMinifier:require('html-minifier-terser/package.json').version})+'\n');
 for(const file of ['pdf.worker.min.mjs','cmaps','standard_fonts','pdf-wasm','htmlminifier.min.js','html-minifier.worker.js'])await access(path.join(out,file));
 console.log('Local PDF and HTML workers prepared from installed package versions.');
+
+await import('./prepare-code-runtime.mjs');

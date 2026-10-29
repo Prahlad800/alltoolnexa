@@ -37,6 +37,8 @@ Install Node dependencies separately in frontend and admin with npm install. Bac
 
 Website languages use i18next + react-i18next. Optional backend automatic translation uses Argos Translate: see [language access and model installation](backend/TRANSLATION.md). The admin app stays English; no mobile app is included.
 
+Free code workspace: `/code-editor` runs HTML/CSS/JavaScript previews and JavaScript, C, C++ and Python locally in the browser, including on mobile. See [Code Studio setup and limits](frontend/docs/CODE-EDITOR.md).
+
 ## Checks and data
 
 ```powershell

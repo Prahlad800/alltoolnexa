@@ -35,3 +35,21 @@ Object.assign(hindi,{
  'Translation timed out. Please try again.':'अनुवाद में अधिक समय लगा। दोबारा कोशिश करें।',
  'English and Hindi are free. Other languages require Premium and an installed translation model.':'अंग्रेज़ी और हिन्दी मुफ़्त हैं। अन्य भाषाओं के लिए Premium और उपलब्ध अनुवाद मॉडल चाहिए।'
 });
+
+Object.assign(hindi,{
+ 'Code editor':'कोड एडिटर','Free code editor':'मुफ़्त कोड एडिटर','Open code editor':'कोड एडिटर खोलें',
+ 'BUILD SOMETHING NEW':'कुछ नया बनाएँ','Your ideas. Your code.':'आपके विचार। आपका कोड।',
+ 'A free workspace for HTML, CSS, JavaScript, C, C++ and Python. Write, run and keep creating.':'HTML, CSS, JavaScript, C, C++ और Python के लिए मुफ़्त वर्कस्पेस। कोड लिखें, चलाएँ और कुछ नया बनाएँ।',
+ 'Run':'चलाएँ','Stop':'रोकें','Download project':'प्रोजेक्ट डाउनलोड','Download source':'कोड डाउनलोड',
+ 'Editor':'एडिटर','Preview & console':'प्रीव्यू और कंसोल','Output':'आउटपुट','Reset file':'फ़ाइल रीसेट',
+ 'Standard input':'मानक इनपुट','Console output':'कंसोल आउटपुट','Console':'कंसोल','Clear':'साफ़ करें','lines':'पंक्तियाँ',
+ 'Your next idea starts here.':'आपका अगला विचार यहीं से शुरू होता है।','Press Run to preview your website.':'वेबसाइट देखने के लिए चलाएँ चुनें।',
+ 'Ready when you are.':'शुरू करने के लिए तैयार।','Preview ready.':'प्रीव्यू तैयार है।','Starting preview…':'प्रीव्यू शुरू हो रहा है…',
+ 'Loading browser runtime…':'ब्राउज़र रनटाइम लोड हो रहा है…','Compiling…':'कम्पाइल हो रहा है…','Linking…':'लिंक हो रहा है…','Running…':'चल रहा है…',
+ 'Stopped.':'रोक दिया गया।','Run failed.':'कोड नहीं चल सका।','Edited since last run':'पिछली बार के बाद कोड बदला गया',
+ 'Free · No signup · Runs on your device':'मुफ़्त · साइनअप नहीं · आपके डिवाइस पर चलता है',
+ 'HTML, CSS and JavaScript preview in an isolated frame. Your code stays in your browser.':'अलग प्रीव्यू में HTML, CSS और JavaScript चलाएँ। कोड आपके ब्राउज़र में रहता है।',
+ 'Standard libraries only. The runtime downloads on your first run; C/C++ needs about 19 MB, Python about 14 MB. Programs stop after 60 seconds.':'केवल मानक लाइब्रेरी उपलब्ध हैं। पहली बार रनटाइम डाउनलोड होता है; C/C++ लगभग 19 MB और Python लगभग 14 MB। प्रोग्राम 60 सेकंड बाद रुकते हैं।'
+});
+
+Object.assign(hindi,{'JavaScript console uses QuickJS. Choose HTML / CSS / JS for DOM and browser APIs.':'JavaScript कंसोल QuickJS पर चलता है। DOM और ब्राउज़र API के लिए HTML / CSS / JS चुनें।'});
