@@ -28,6 +28,7 @@ export function buildPreview(files,runId){
  // Insert user JS as script text, never as HTML. Closing-script payloads stay inert.
  const payload=JSON.stringify({html:files.html,css:files.css,js:files.webjs,runId}).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026');
  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'"></head><body><script>
+(()=>{
 const data=${payload};
 const send=(kind,text)=>parent.postMessage({source:'alltoolnexa-preview',runId:data.runId,kind,text:String(text).slice(0,10000)},'*');
 let count=0;
@@ -38,6 +39,7 @@ const style=document.createElement('style');style.textContent=data.css;document.
 const content=document.createElement('div');content.innerHTML=data.html;document.body.append(content);
 const script=document.createElement('script');script.textContent=data.js;document.body.append(script);
 send('ready','Preview ready');
+})();
 </script></body></html>`;
 }
 

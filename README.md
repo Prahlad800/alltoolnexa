@@ -37,7 +37,7 @@ Install Node dependencies separately in frontend and admin with npm install. Bac
 
 Website languages use i18next + react-i18next. Optional backend automatic translation uses Argos Translate: see [language access and model installation](backend/TRANSLATION.md). The admin app stays English; no mobile app is included.
 
-Free code workspace: `/code-editor` runs HTML/CSS/JavaScript previews and JavaScript, C, C++ and Python locally in the browser, including on mobile. See [Code Studio setup and limits](frontend/docs/CODE-EDITOR.md).
+Code Studio: `/code-editor` provides a desktop/mobile explorer, file tabs, previews, local runners and ZIP projects. The 13 Phase 1 languages/formats are free; extended source presets require Premium or Premium Plus. Java and other types without a browser runner support editing/export. See [Code Studio setup and limits](frontend/docs/CODE-EDITOR.md).
 
 Markdown workspace: `/markdown-editor` edits/views Markdown, imports MD/TXT/HTML/DOCX and exports MD, Word, PDF, HTML, TXT or RTF locally. See [formats and conversion limits](frontend/docs/MARKDOWN-STUDIO.md).
 

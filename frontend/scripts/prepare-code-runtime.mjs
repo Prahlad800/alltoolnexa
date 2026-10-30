@@ -26,4 +26,5 @@ for(const asset of RUNTIME_ASSETS){
 // Remove only this generator's obsolete chunk outputs from the earlier format.
 for(const name of await readdir(out))if(RUNTIME_ASSETS.some(asset=>new RegExp('^'+asset.name.replaceAll('.','\\.')+'\\.part[0-9]+$').test(name)))await unlink(path.join(out,name));
 await build({entryPoints:[path.join(root,'src/lib/code-runner.worker.js')],outfile:path.join(out,'runner.js'),bundle:true,format:'esm',platform:'browser',target:'es2022',minify:true,legalComments:'eof'});
+await build({entryPoints:[path.join(root,'src/lib/code-preview-runtime.js')],outfile:path.join(root,'public/vendor/code-preview-react.js'),bundle:true,format:'iife',platform:'browser',target:'es2022',minify:true,define:{'process.env.NODE_ENV':'"production"'},legalComments:'eof'});
 console.log('Browser code runtimes verified, compressed and bundled for static hosting.');

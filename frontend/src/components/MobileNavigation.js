@@ -14,6 +14,7 @@ const destinations=[
 
 export default function MobileNavigation(){
  const pathname=usePathname();
+ if(pathname?.replace(/\/+$/,'')==='/code-editor')return null;
  return <nav className="mobile-navigation" aria-label="Mobile navigation">{destinations.map(([href,label,path])=>{
   const active=href==='/'?pathname==='/':pathname===href||pathname.startsWith(href+'/');
   return <Link key={href} href={href} aria-current={active?'page':undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" strokeLinecap="round" aria-hidden="true"><path d={path}/></svg><span><T>{label}</T></span></Link>;
