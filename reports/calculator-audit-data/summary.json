@@ -1,0 +1,73 @@
+{
+  "auditDateUTC": "2026-11-01",
+  "auditComplete": false,
+  "status": "BLOCKED_NETWORK",
+  "codeRevision": "d6fa476dee6e03b591ac4c79b2a85effdfd6e41f",
+  "existingCounts": {
+    "registeredTools": 507,
+    "aliases": 146,
+    "mainCategories": 5,
+    "subcategories": 18,
+    "standaloneCalculators": 248,
+    "embeddedCalculationWorkspaces": 2,
+    "defaultExecutionsPassed": 248,
+    "defaultExecutionsFailed": 0
+  },
+  "historicalSnapshotDate": "2026-10-24",
+  "historicalObservedLinkCounts": {
+    "Calculator.net": 44,
+    "Omni": 26
+  },
+  "historicalCanonicalNameGroups": 68,
+  "nameGroupsWithBothSources": 2,
+  "competitorTotalCalculators": {
+    "Calculator.net": null,
+    "Omni": null
+  },
+  "confirmedMissingExportRows": 0,
+  "completeUniqueMissingTotal": null,
+  "missingTotalWarning": "Zero confirmed export rows does not mean no missing calculators. The full census and missing total are NOT ESTABLISHED.",
+  "candidatesReviewedAgainstProject": 143,
+  "candidateProjectCoverageCounts": {
+    "PARTIAL MATCH": 33,
+    "NO EQUIVALENT FOUND": 102,
+    "FUNCTIONAL EQUIVALENT": 8
+  },
+  "candidateStatusesAreNotFinalCompetitorClassifications": true,
+  "implementationBatch": {
+    "requestedSize": 20,
+    "selected": [],
+    "implemented": [],
+    "blockedReason": "Neither a full current competitor census nor 20 confirmed missing tools/specifications is established. Honor the research-first implementation gate."
+  },
+  "network": {
+    "state": "blocked",
+    "policy": "restricted; enforced",
+    "probes": [
+      {
+        "url": "https://www.calculator.net/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      },
+      {
+        "url": "https://www.omnicalculator.com/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      },
+      {
+        "url": "https://alltoolnexa.pages.dev/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      }
+    ],
+    "robotsRulesVerified": false,
+    "liveCrawlPerformed": false,
+    "configurationDraftSaved": false,
+    "draftFailure": "INVALID_ARGUMENT: onboarding draft or configuration unavailable",
+    "requiredAllowedDomains": [
+      "calculator.net",
+      "www.calculator.net",
+      "omnicalculator.com",
+      "www.omnicalculator.com",
+      "alltoolnexa.pages.dev"
+    ],
+    "restrictionRespected": "No proxy bypass, mirrors, alternate routes or further competitor crawl after robots access was denied."
+  }
+}

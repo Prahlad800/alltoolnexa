@@ -1,0 +1,4023 @@
+{
+  "auditComplete": false,
+  "scope": "Only links retained in four historical snapshots; NOT a full competitor inventory.",
+  "records": [
+    {
+      "id": "CALC-a5355b9d6e87",
+      "toolName": "401K",
+      "normalizedName": "401k",
+      "sources": [
+        {
+          "toolName": "401K",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/401k-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/tool-evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0001"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-013f54400c82",
+      "toolName": "Age Calculator",
+      "normalizedName": "age",
+      "sources": [
+        {
+          "toolName": "Age Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/age-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0002"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-15d63f0f1be2",
+      "toolName": "Amortization Calculator",
+      "normalizedName": "amortization",
+      "sources": [
+        {
+          "toolName": "Amortization Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/amortization-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0003"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-7b256136198f",
+      "toolName": "Auto Loan Calculator",
+      "normalizedName": "auto loan",
+      "sources": [
+        {
+          "toolName": "Auto Loan Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/auto-loan-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0004"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-8a865efd6c90",
+      "toolName": "BMI Calculator",
+      "normalizedName": "bmi",
+      "sources": [
+        {
+          "toolName": "BMI Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/bmi-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0005"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-5d14dcdd3b53",
+      "toolName": "BMR Calculator",
+      "normalizedName": "bmr",
+      "sources": [
+        {
+          "toolName": "BMR Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/bmr-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0006"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-885e5520ffa9",
+      "toolName": "Body Fat Calculator",
+      "normalizedName": "body fat",
+      "sources": [
+        {
+          "toolName": "Body Fat Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/body-fat-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0007"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-492bd6197b16",
+      "toolName": "Calorie Calculator",
+      "normalizedName": "calorie",
+      "sources": [
+        {
+          "toolName": "Calorie Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/calorie-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0008"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-62ca5125ebd2",
+      "toolName": "Compound Interest Calculator",
+      "normalizedName": "compound interest",
+      "sources": [
+        {
+          "toolName": "Compound Interest Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/compound-interest-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0009"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-ff298e4c4f97",
+      "toolName": "Concrete Calculator",
+      "normalizedName": "concrete",
+      "sources": [
+        {
+          "toolName": "Concrete Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/concrete-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0010"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-0b236a746870",
+      "toolName": "Conversion Calculator",
+      "normalizedName": "conversion",
+      "sources": [
+        {
+          "toolName": "Conversion Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/conversion-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0011"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-466e5b9cd57f",
+      "toolName": "Currency",
+      "normalizedName": "currency",
+      "sources": [
+        {
+          "toolName": "Currency",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/currency-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/tool-evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0012"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-0e87632cd46b",
+      "toolName": "Date Calculator",
+      "normalizedName": "date",
+      "sources": [
+        {
+          "toolName": "Date Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/date-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0013"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-71bdd372fc93",
+      "toolName": "Due Date Calculator",
+      "normalizedName": "due date",
+      "sources": [
+        {
+          "toolName": "Due Date Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/due-date-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0014"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-eab762a03fd9",
+      "toolName": "Finance Calculator",
+      "normalizedName": "finance",
+      "sources": [
+        {
+          "toolName": "Finance Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/finance-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0015"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-2c0f0f4581aa",
+      "toolName": "Fraction Calculator",
+      "normalizedName": "fraction",
+      "sources": [
+        {
+          "toolName": "Fraction Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/fraction-calculator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0016"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-9c4555cecf3c",
+      "toolName": "GPA Calculator",
+      "normalizedName": "gpa",
+      "sources": [
+        {
+          "toolName": "GPA Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/gpa-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0017"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-ffe97bba510b",
+      "toolName": "Grade Calculator",
+      "normalizedName": "grade",
+      "sources": [
+        {
+          "toolName": "Grade Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/grade-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0018"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-404314b1f4bd",
+      "toolName": "Hours Calculator",
+      "normalizedName": "hours",
+      "sources": [
+        {
+          "toolName": "Hours Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/hours-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0019"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-9fc119694522",
+      "toolName": "House Affordability Calculator",
+      "normalizedName": "house affordability",
+      "sources": [
+        {
+          "toolName": "House Affordability Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/house-affordability-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/tool-evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0020"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-20c578b4f9d3",
+      "toolName": "Ideal Weight Calculator",
+      "normalizedName": "ideal weight",
+      "sources": [
+        {
+          "toolName": "Ideal Weight Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/ideal-weight-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0021"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-6d731a5ed145",
+      "toolName": "Inflation Calculator",
+      "normalizedName": "inflation",
+      "sources": [
+        {
+          "toolName": "Inflation Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/inflation-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0022"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-828408e40d4f",
+      "toolName": "Interest Calculator",
+      "normalizedName": "interest",
+      "sources": [
+        {
+          "toolName": "Interest Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/interest-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0023"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-cf8322b96839",
+      "toolName": "Interest Rate Calculator",
+      "normalizedName": "interest rate",
+      "sources": [
+        {
+          "toolName": "Interest Rate Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/interest-rate-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0024"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-f9b21c4bda58",
+      "toolName": "Investment Calculator",
+      "normalizedName": "investment",
+      "sources": [
+        {
+          "toolName": "Investment Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/investment-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0025"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-18507519c552",
+      "toolName": "Subnet Calculator",
+      "normalizedName": "subnet",
+      "sources": [
+        {
+          "toolName": "Subnet Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/ip-subnet-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0026"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-472bbf14923e",
+      "toolName": "Loan Calculator",
+      "normalizedName": "loan",
+      "sources": [
+        {
+          "toolName": "Loan Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/loan-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0027"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-adf27cc54e26",
+      "toolName": "Mortgage Calculator",
+      "normalizedName": "mortgage",
+      "sources": [
+        {
+          "toolName": "Mortgage Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/mortgage-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "pageObservation": {
+            "file": "research/competitors/tool-evidence/02.json",
+            "website": "Calculator.net",
+            "url": "https://www.calculator.net/mortgage-calculator.html",
+            "scope": "calculator",
+            "evidenceId": "ev_31c4fd2e489691b963664fce8b4bbcaf5d6b0e29be56ec15e98c23c3200e9820",
+            "sha256": "bc2012e8abe3754cde23b2a3536e42b4a49a111ce9543e1b398bce5fbd957f71",
+            "historicalCaptureDate": "2026-10-24",
+            "captureStatus": "incomplete",
+            "title": "Mortgage Calculator",
+            "inputs": [
+              {
+                "id": "chouseprice",
+                "name": "chouseprice",
+                "type": "text",
+                "value": "400000",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cdownpayment",
+                "name": "cdownpayment",
+                "type": "text",
+                "value": "20",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cdownpaymentunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "cloanterm",
+                "name": "cloanterm",
+                "type": "text",
+                "value": "30",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cinterestrate",
+                "name": "cinterestrate",
+                "type": "text",
+                "value": "7.237",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cstartmonth",
+                "name": "cstartmonth",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "id": "cstartyear",
+                "name": "cstartyear",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "caddoptional",
+                "name": "caddoptional",
+                "type": "checkbox",
+                "value": "1",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "Include Taxes & Costs Below"
+              },
+              {
+                "id": "cpropertytaxes",
+                "name": "cpropertytaxes",
+                "type": "text",
+                "value": "1.2",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cpropertytaxesunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "chomeins",
+                "name": "chomeins",
+                "type": "text",
+                "value": "1500",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "chomeinsunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "cpmi",
+                "name": "cpmi",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cpmiunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "choa",
+                "name": "choa",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "choaunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "cothercost",
+                "name": "cothercost",
+                "type": "text",
+                "value": "4000",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cothercostunit",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "p",
+                    "label": "%"
+                  },
+                  {
+                    "value": "d",
+                    "label": "$"
+                  }
+                ]
+              },
+              {
+                "id": "cmoreoption",
+                "name": "cmop",
+                "type": "hidden",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cptinc",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "chiinc",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "choainc",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cocinc",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cexma",
+                "name": "cexma",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cexmsm",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "cexmsy",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cexya",
+                "name": "cexya",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cexysm",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "cexysy",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cexoa",
+                "name": "cexoa",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "cexosm",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "cexosy",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "cadditionalonetime",
+                "name": "caot",
+                "type": "hidden",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa1",
+                "name": "xa1",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm1",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy1",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa2",
+                "name": "xa2",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm2",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy2",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa3",
+                "name": "xa3",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm3",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy3",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa4",
+                "name": "xa4",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm4",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy4",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa5",
+                "name": "xa5",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm5",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy5",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa6",
+                "name": "xa6",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm6",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy6",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa7",
+                "name": "xa7",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm7",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy7",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa8",
+                "name": "xa8",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm8",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy8",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa9",
+                "name": "xa9",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm9",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy9",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "xa10",
+                "name": "xa10",
+                "type": "text",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "xm10",
+                "tag": "select",
+                "required_attribute": false,
+                "label": null,
+                "options": [
+                  {
+                    "value": "1",
+                    "label": "Jan"
+                  },
+                  {
+                    "value": "2",
+                    "label": "Feb"
+                  },
+                  {
+                    "value": "3",
+                    "label": "Mar"
+                  },
+                  {
+                    "value": "4",
+                    "label": "Apr"
+                  },
+                  {
+                    "value": "5",
+                    "label": "May"
+                  },
+                  {
+                    "value": "6",
+                    "label": "Jun"
+                  },
+                  {
+                    "value": "7",
+                    "label": "Jul"
+                  },
+                  {
+                    "value": "8",
+                    "label": "Aug"
+                  },
+                  {
+                    "value": "9",
+                    "label": "Sep"
+                  },
+                  {
+                    "value": "10",
+                    "label": "Oct"
+                  },
+                  {
+                    "value": "11",
+                    "label": "Nov"
+                  },
+                  {
+                    "value": "12",
+                    "label": "Dec"
+                  }
+                ]
+              },
+              {
+                "name": "xy10",
+                "type": "text",
+                "value": "2026",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "csbw",
+                "name": "csbw",
+                "type": "checkbox",
+                "value": "1",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "Show Biweekly Payback Results"
+              },
+              {
+                "name": "printit",
+                "type": "hidden",
+                "value": "0",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "name": "x",
+                "type": "submit",
+                "value": "Calculate",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "type": "button",
+                "value": "Clear",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "id": "calcSearchTerm",
+                "name": "calcSearchTerm",
+                "type": "text",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              }
+            ],
+            "inputCountIncludesHiddenControls": true,
+            "runtimeCalculationTested": false
+          },
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": "Explore a financed house purchase with ownership expenses and additional payments.",
+          "inputFields": {
+            "observedCoreControls": [
+              "house price",
+              "down payment and amount/percentage selector",
+              "loan term in years",
+              "annual interest rate",
+              "start month/year"
+            ],
+            "observedOptionalControls": [
+              "property tax",
+              "home insurance",
+              "mortgage insurance",
+              "association fees",
+              "other costs",
+              "expense growth assumptions",
+              "monthly/annual/one-time extra payments"
+            ]
+          },
+          "outputFields": [
+            "monthly principal/interest payment",
+            "ownership-cost components",
+            "amortization schedule"
+          ],
+          "formula": null,
+          "units": [
+            "years",
+            "months",
+            "%",
+            "money amounts"
+          ],
+          "complexity": "Intermediate",
+          "indiaRelevance": "Medium",
+          "purpose": "Monthly mortgage cost and repayment schedule.",
+          "formulaVerification": "The full competitor calculation model was not verified. Existing P&I is independently verified in the project: M=P*r/(1-(1+r)^(-n)); M=P/n at zero rate.",
+          "supportedCurrency": null,
+          "observedCurrency": "$; US mortgage context; no currency switch verified",
+          "historicalComparisonStatus": "PARTIAL MATCH",
+          "existingToolIds": [
+            "emi-calculator",
+            "loan-repayment-schedule",
+            "prepayment-calculator",
+            "down-payment-calculator"
+          ],
+          "historicalFinding": "The core financed-payment calculation and schedule exist. Integrated ownership expenses and recurring extra-payment combinations are not exposed in these tools. Extend existing loan tools rather than add another basic EMI implementation.",
+          "sourceVerificationScope": "Historical retained interface; incomplete capture and no runtime calculation test.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0028"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-98181b3bd38f",
+      "toolName": "Mortgage Payoff",
+      "normalizedName": "mortgage payoff",
+      "sources": [
+        {
+          "toolName": "Mortgage Payoff",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/mortgage-payoff-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/tool-evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0029"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-19b87ac5ecb1",
+      "toolName": "Pace Calculator",
+      "normalizedName": "pace",
+      "sources": [
+        {
+          "toolName": "Pace Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/pace-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0030"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-5e884898da28",
+      "toolName": "Password Generator",
+      "normalizedName": "password",
+      "sources": [
+        {
+          "toolName": "Password Generator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/password-generator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0031"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-040ffd5925d4",
+      "toolName": "Payment Calculator",
+      "normalizedName": "payment",
+      "sources": [
+        {
+          "toolName": "Payment Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/payment-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0032"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-8975c9b4ea06",
+      "toolName": "Percentage Calculator",
+      "normalizedName": "percentage",
+      "sources": [
+        {
+          "toolName": "Percentage Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/percent-calculator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0033"
+        },
+        {
+          "toolName": "Percentage Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json",
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "pageObservation": {
+            "file": "research/competitors/tool-evidence/12.json",
+            "website": "Omni",
+            "url": "https://www.omnicalculator.com/math/percentage",
+            "scope": "calculator",
+            "evidenceId": null,
+            "sha256": "f9907f3994312a17b1473075d91f5dc0b997d3c72534e6becdb49ec282bf3b7e",
+            "historicalCaptureDate": "2026-10-24",
+            "captureStatus": "partial_tooling_error",
+            "title": "Percentage Calculator",
+            "inputs": [
+              {
+                "id": "blockGroups.0.matrices.0.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "What is"
+              },
+              {
+                "id": "blockGroups.0.matrices.0.columns.1.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "of"
+              },
+              {
+                "id": "blockGroups.0.matrices.1.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "y ="
+              },
+              {
+                "id": "blockGroups.1.matrices.0.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "x is what percent"
+              },
+              {
+                "id": "blockGroups.1.matrices.0.columns.1.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "of"
+              },
+              {
+                "id": "blockGroups.1.matrices.1.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "p ="
+              },
+              {
+                "id": "blockGroups.2.matrices.0.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "x is"
+              },
+              {
+                "id": "blockGroups.2.matrices.0.columns.1.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "p% of what?"
+              },
+              {
+                "id": "blockGroups.2.matrices.1.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "y ="
+              },
+              {
+                "id": "blockGroups.3.matrices.0.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "What is"
+              },
+              {
+                "name": "«rf»",
+                "type": "radio",
+                "value": "ZvL88nkdYFIJXXZXaPKDz",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "increased"
+              },
+              {
+                "name": "«rf»",
+                "type": "radio",
+                "value": "WcJJI1UForNwuK6iCLHA5",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "decreased"
+              },
+              {
+                "id": "blockGroups.3.matrices.1.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "by"
+              },
+              {
+                "id": "blockGroups.3.matrices.2.columns.0.0-input",
+                "value": "",
+                "tag": "input",
+                "required_attribute": false,
+                "label": "y ="
+              },
+              {
+                "value": "en",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              },
+              {
+                "type": "checkbox",
+                "tag": "input",
+                "required_attribute": false,
+                "label": null
+              }
+            ],
+            "inputCountIncludesHiddenControls": true,
+            "runtimeCalculationTested": false
+          },
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": "Solve a percentage amount, a part-to-total rate, an inverse base, or an adjusted amount.",
+          "inputFields": {
+            "observedModes": [
+              "rate and base amount",
+              "part and total",
+              "part and percentage rate",
+              "starting amount, percentage and increase/decrease selector"
+            ]
+          },
+          "outputFields": [
+            "percentage amount",
+            "percentage rate",
+            "inferred total",
+            "increased/decreased amount"
+          ],
+          "formula": [
+            "amount = base * rate / 100",
+            "rate = part / total * 100",
+            "base = part * 100 / rate",
+            "adjusted = start * (1 + rate/100) or start * (1 - rate/100)"
+          ],
+          "units": [
+            "%",
+            "unitless numbers"
+          ],
+          "complexity": "Basic",
+          "indiaRelevance": "High",
+          "purpose": "Four percentage calculation modes visible in retained controls and mathematical notation.",
+          "formulaVerification": "Arithmetic relationships are visible in the retained rendered mathematical notation; runtime validation and current page behavior are unverified.",
+          "supportedCurrency": "not applicable",
+          "historicalComparisonStatus": "PARTIAL MATCH",
+          "existingToolIds": [
+            "percentage-calculator",
+            "percentage-change",
+            "probability-calculator",
+            "ratio-calculator"
+          ],
+          "historicalFinding": "Percentage-of and related ratio/change operations exist on separate pages. The percentage page itself does not expose all four observed modes. Prefer extending it and retaining existing canonical slugs.",
+          "sourceVerificationScope": "Historical retained interface; incomplete capture and no runtime calculation test.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0056"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-f1d6a553546a",
+      "toolName": "Pregnancy Calculator",
+      "normalizedName": "pregnancy",
+      "sources": [
+        {
+          "toolName": "Pregnancy Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/pregnancy-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0034"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-f01208b8db7b",
+      "toolName": "Pregnancy Conception Calculator",
+      "normalizedName": "pregnancy conception",
+      "sources": [
+        {
+          "toolName": "Pregnancy Conception Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/pregnancy-conception-calculator.html",
+          "category": "Fitness & Health Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": true,
+          "id": "SRC-0035"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-49e09aea44bc",
+      "toolName": "Random Number Generator",
+      "normalizedName": "random number",
+      "sources": [
+        {
+          "toolName": "Random Number Generator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/random-number-generator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0036"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-0b80c840b321",
+      "toolName": "Retirement Calculator",
+      "normalizedName": "retirement",
+      "sources": [
+        {
+          "toolName": "Retirement Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/retirement-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0037"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-6384e43c02b1",
+      "toolName": "Salary Calculator",
+      "normalizedName": "salary",
+      "sources": [
+        {
+          "toolName": "Salary Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/salary-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0038"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-35ce64b616e4",
+      "toolName": "Sales Tax Calculator",
+      "normalizedName": "sales tax",
+      "sources": [
+        {
+          "toolName": "Sales Tax Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/sales-tax-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0039"
+        },
+        {
+          "toolName": "Sales Tax Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/finance/sales-tax",
+          "category": "Finance",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0049"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-8592edc04aed",
+      "toolName": "Scientific Calculator",
+      "normalizedName": "scientific",
+      "sources": [
+        {
+          "toolName": "Scientific Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/scientific-calculator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0040"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-366b910bc6d0",
+      "toolName": "Standard Deviation Calculator",
+      "normalizedName": "standard deviation",
+      "sources": [
+        {
+          "toolName": "Standard Deviation Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/standard-deviation-calculator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0041"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-78f9ccfa3a8e",
+      "toolName": "Income Tax Calculator",
+      "normalizedName": "income tax",
+      "sources": [
+        {
+          "toolName": "Income Tax Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/tax-calculator.html",
+          "category": "Financial Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json",
+            "research/competitors/tool-evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0042"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-336074805fc8",
+      "toolName": "Time Calculator",
+      "normalizedName": "time",
+      "sources": [
+        {
+          "toolName": "Time Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/time-calculator.html",
+          "category": "Other Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0043"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-0a3f13c673af",
+      "toolName": "Triangle Calculator",
+      "normalizedName": "triangle",
+      "sources": [
+        {
+          "toolName": "Triangle Calculator",
+          "sourceWebsite": "Calculator.net",
+          "sourceUrl": "https://www.calculator.net/triangle-calculator.html",
+          "category": "Math Calculators",
+          "evidenceFile": "research/competitors/evidence/02.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/02.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0044"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-06f0885560aa",
+      "toolName": "Square Footage Calculator",
+      "normalizedName": "square footage",
+      "sources": [
+        {
+          "toolName": "Square Footage Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/construction/square-footage",
+          "category": "Construction",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0045"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-221617318bcf",
+      "toolName": "Discount",
+      "normalizedName": "discount",
+      "sources": [
+        {
+          "toolName": "Discount",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/finance/discount",
+          "category": "Finance",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0046"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-0ad5ca9d08ec",
+      "toolName": "Percent off",
+      "normalizedName": "percent off",
+      "sources": [
+        {
+          "toolName": "Percent off",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/finance/percent-off",
+          "category": "Finance",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0047"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-ff730e671c30",
+      "toolName": "Salary to Hourly Calculator",
+      "normalizedName": "salary to hourly",
+      "sources": [
+        {
+          "toolName": "Salary to Hourly Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/finance/salary-to-hourly",
+          "category": "Finance",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0048"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-2d40d47be0f6",
+      "toolName": "Circumference Calculator",
+      "normalizedName": "circumference",
+      "sources": [
+        {
+          "toolName": "Circumference Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/circumference",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0050"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-f83d13059e94",
+      "toolName": "percentages and fractions",
+      "normalizedName": "percentages and fractions",
+      "sources": [
+        {
+          "toolName": "percentages and fractions",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/convert-fraction-to-percentage",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0051"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-9bed04f6a766",
+      "toolName": "percent to decimal",
+      "normalizedName": "percent to decimal",
+      "sources": [
+        {
+          "toolName": "percent to decimal",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/decimal-to-percent",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0052"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-27189634949e",
+      "toolName": "Exponent Calculator",
+      "normalizedName": "exponent",
+      "sources": [
+        {
+          "toolName": "Exponent Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/exponent",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0053"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-b838079656db",
+      "toolName": "Log Calculator (Logarithm)",
+      "normalizedName": "logarithm",
+      "sources": [
+        {
+          "toolName": "Log Calculator (Logarithm)",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/log",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0054"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-8b05f6cc6c4a",
+      "toolName": "percent error calculator",
+      "normalizedName": "percent error",
+      "sources": [
+        {
+          "toolName": "percent error calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percent-error",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0055"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-1c38805b2a0b",
+      "toolName": "Percentage change",
+      "normalizedName": "percentage change",
+      "sources": [
+        {
+          "toolName": "Percentage change",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-change",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0057"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-878e89a6b191",
+      "toolName": "Percentage decrease",
+      "normalizedName": "percentage decrease",
+      "sources": [
+        {
+          "toolName": "Percentage decrease",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-decrease",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0058"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-bc576a328744",
+      "toolName": "percentage difference calculator",
+      "normalizedName": "percentage difference",
+      "sources": [
+        {
+          "toolName": "percentage difference calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-difference",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0059"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-94bfaf2acdb0",
+      "toolName": "Percentage Increase Calculator",
+      "normalizedName": "percentage increase",
+      "sources": [
+        {
+          "toolName": "Percentage Increase Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-increase",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json",
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0060"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-e9bbc350a8fc",
+      "toolName": "Percentage of a percentage",
+      "normalizedName": "percentage of a percentage",
+      "sources": [
+        {
+          "toolName": "Percentage of a percentage",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-of-percentage",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0061"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-ed196ffd33f2",
+      "toolName": "percent points",
+      "normalizedName": "percent points",
+      "sources": [
+        {
+          "toolName": "percent points",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/percentage-point",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/tool-evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/tool-evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0062"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-cc12dc969ac1",
+      "toolName": "Pythagorean Theorem Calculator",
+      "normalizedName": "pythagorean theorem",
+      "sources": [
+        {
+          "toolName": "Pythagorean Theorem Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/pythagorean-theorem",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0063"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-e460b7268e9d",
+      "toolName": "Scientific Notation Calculator",
+      "normalizedName": "scientific notation",
+      "sources": [
+        {
+          "toolName": "Scientific Notation Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/scientific-notation",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0064"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-c9472cad920e",
+      "toolName": "Significant Figures Calculator – Sig Fig",
+      "normalizedName": "significant figures",
+      "sources": [
+        {
+          "toolName": "Significant Figures Calculator – Sig Fig",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/sig-fig",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0065"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-fb1acd449622",
+      "toolName": "Slope Calculator",
+      "normalizedName": "slope",
+      "sources": [
+        {
+          "toolName": "Slope Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/slope",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0066"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-a2edb69be30c",
+      "toolName": "Square Root Calculator",
+      "normalizedName": "square root",
+      "sources": [
+        {
+          "toolName": "Square Root Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/math/square-root",
+          "category": "Mathematics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0067"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-19a81208da6b",
+      "toolName": "Test Grade Calculator",
+      "normalizedName": "test grade",
+      "sources": [
+        {
+          "toolName": "Test Grade Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/other/test-grade",
+          "category": "Other",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0068"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-f3279006c3e0",
+      "toolName": "Confidence Interval Calculator",
+      "normalizedName": "confidence interval",
+      "sources": [
+        {
+          "toolName": "Confidence Interval Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/statistics/confidence-interval",
+          "category": "Statistics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0069"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    },
+    {
+      "id": "CALC-7963856c6b9e",
+      "toolName": "p-value Calculator",
+      "normalizedName": "p value",
+      "sources": [
+        {
+          "toolName": "p-value Calculator",
+          "sourceWebsite": "Omni",
+          "sourceUrl": "https://www.omnicalculator.com/statistics/p-value",
+          "category": "Statistics",
+          "evidenceFile": "research/competitors/evidence/12.json",
+          "urlVerification": "archived_official_link",
+          "pageDetailsVerified": false,
+          "evidenceFiles": [
+            "research/competitors/evidence/12.json"
+          ],
+          "auditStatus": "Unverified",
+          "comparisonStatus": "UNVERIFIED",
+          "livePageVerified": false,
+          "description": null,
+          "inputFields": null,
+          "outputFields": null,
+          "formula": null,
+          "units": null,
+          "complexity": null,
+          "indiaRelevance": null,
+          "sourceVerificationScope": "Historical official-page hyperlink only; destination interface, inputs, formulas and behavior are unverified.",
+          "clinicalReviewRequired": false,
+          "id": "SRC-0070"
+        }
+      ],
+      "auditStatus": "Unverified",
+      "comparisonStatus": "UNVERIFIED",
+      "implementationEligible": false,
+      "duplicateReview": "Name grouping only; full formula/input/output equivalence remains unverified."
+    }
+  ]
+}

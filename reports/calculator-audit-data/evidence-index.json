@@ -1,0 +1,1538 @@
+{
+  "auditDateUTC": "2026-11-01",
+  "network": {
+    "state": "blocked",
+    "policy": "restricted; enforced",
+    "probes": [
+      {
+        "url": "https://www.calculator.net/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      },
+      {
+        "url": "https://www.omnicalculator.com/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      },
+      {
+        "url": "https://alltoolnexa.pages.dev/robots.txt",
+        "result": "Tunnel connection failed: 403 Forbidden"
+      }
+    ],
+    "robotsRulesVerified": false,
+    "liveCrawlPerformed": false,
+    "configurationDraftSaved": false,
+    "draftFailure": "INVALID_ARGUMENT: onboarding draft or configuration unavailable",
+    "requiredAllowedDomains": [
+      "calculator.net",
+      "www.calculator.net",
+      "omnicalculator.com",
+      "www.omnicalculator.com",
+      "alltoolnexa.pages.dev"
+    ],
+    "restrictionRespected": "No proxy bypass, mirrors, alternate routes or further competitor crawl after robots access was denied."
+  },
+  "snapshots": [
+    {
+      "file": "research/competitors/evidence/02.json",
+      "website": "Calculator.net",
+      "url": "https://www.calculator.net/",
+      "scope": "homepage",
+      "evidenceId": "ev_27f33e37821c2af50048a14249010f8e69b17dc80b73f352239b8cd40ca2516a",
+      "sha256": "70b01f7127595e715f0f8249ed5d01fcb8d518638ca7fb1580155e065ed8cc4f",
+      "historicalCaptureDate": "2026-10-24",
+      "captureStatus": "complete",
+      "title": "Calculator.net: Free Online Calculators - Math, Fitness, Finance, Science",
+      "inputs": [
+        {
+          "id": "scirdsettingd",
+          "name": "scirdsetting",
+          "type": "radio",
+          "value": "deg",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "Deg"
+        },
+        {
+          "id": "scirdsettingr",
+          "name": "scirdsetting",
+          "type": "radio",
+          "value": "rad",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "Rad"
+        },
+        {
+          "id": "calcSearchTerm",
+          "name": "calcSearchTerm",
+          "type": "text",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        }
+      ],
+      "inputCountIncludesHiddenControls": true,
+      "runtimeCalculationTested": false
+    },
+    {
+      "file": "research/competitors/tool-evidence/02.json",
+      "website": "Calculator.net",
+      "url": "https://www.calculator.net/mortgage-calculator.html",
+      "scope": "calculator",
+      "evidenceId": "ev_31c4fd2e489691b963664fce8b4bbcaf5d6b0e29be56ec15e98c23c3200e9820",
+      "sha256": "bc2012e8abe3754cde23b2a3536e42b4a49a111ce9543e1b398bce5fbd957f71",
+      "historicalCaptureDate": "2026-10-24",
+      "captureStatus": "incomplete",
+      "title": "Mortgage Calculator",
+      "inputs": [
+        {
+          "id": "chouseprice",
+          "name": "chouseprice",
+          "type": "text",
+          "value": "400000",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cdownpayment",
+          "name": "cdownpayment",
+          "type": "text",
+          "value": "20",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cdownpaymentunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "cloanterm",
+          "name": "cloanterm",
+          "type": "text",
+          "value": "30",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cinterestrate",
+          "name": "cinterestrate",
+          "type": "text",
+          "value": "7.237",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cstartmonth",
+          "name": "cstartmonth",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "id": "cstartyear",
+          "name": "cstartyear",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "caddoptional",
+          "name": "caddoptional",
+          "type": "checkbox",
+          "value": "1",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "Include Taxes & Costs Below"
+        },
+        {
+          "id": "cpropertytaxes",
+          "name": "cpropertytaxes",
+          "type": "text",
+          "value": "1.2",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cpropertytaxesunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "chomeins",
+          "name": "chomeins",
+          "type": "text",
+          "value": "1500",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "chomeinsunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "cpmi",
+          "name": "cpmi",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cpmiunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "choa",
+          "name": "choa",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "choaunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "cothercost",
+          "name": "cothercost",
+          "type": "text",
+          "value": "4000",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cothercostunit",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "p",
+              "label": "%"
+            },
+            {
+              "value": "d",
+              "label": "$"
+            }
+          ]
+        },
+        {
+          "id": "cmoreoption",
+          "name": "cmop",
+          "type": "hidden",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cptinc",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "chiinc",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "choainc",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cocinc",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cexma",
+          "name": "cexma",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cexmsm",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "cexmsy",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cexya",
+          "name": "cexya",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cexysm",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "cexysy",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cexoa",
+          "name": "cexoa",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "cexosm",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "cexosy",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "cadditionalonetime",
+          "name": "caot",
+          "type": "hidden",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa1",
+          "name": "xa1",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm1",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy1",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa2",
+          "name": "xa2",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm2",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy2",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa3",
+          "name": "xa3",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm3",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy3",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa4",
+          "name": "xa4",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm4",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy4",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa5",
+          "name": "xa5",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm5",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy5",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa6",
+          "name": "xa6",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm6",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy6",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa7",
+          "name": "xa7",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm7",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy7",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa8",
+          "name": "xa8",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm8",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy8",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa9",
+          "name": "xa9",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm9",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy9",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "xa10",
+          "name": "xa10",
+          "type": "text",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "xm10",
+          "tag": "select",
+          "required_attribute": false,
+          "label": null,
+          "options": [
+            {
+              "value": "1",
+              "label": "Jan"
+            },
+            {
+              "value": "2",
+              "label": "Feb"
+            },
+            {
+              "value": "3",
+              "label": "Mar"
+            },
+            {
+              "value": "4",
+              "label": "Apr"
+            },
+            {
+              "value": "5",
+              "label": "May"
+            },
+            {
+              "value": "6",
+              "label": "Jun"
+            },
+            {
+              "value": "7",
+              "label": "Jul"
+            },
+            {
+              "value": "8",
+              "label": "Aug"
+            },
+            {
+              "value": "9",
+              "label": "Sep"
+            },
+            {
+              "value": "10",
+              "label": "Oct"
+            },
+            {
+              "value": "11",
+              "label": "Nov"
+            },
+            {
+              "value": "12",
+              "label": "Dec"
+            }
+          ]
+        },
+        {
+          "name": "xy10",
+          "type": "text",
+          "value": "2026",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "csbw",
+          "name": "csbw",
+          "type": "checkbox",
+          "value": "1",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "Show Biweekly Payback Results"
+        },
+        {
+          "name": "printit",
+          "type": "hidden",
+          "value": "0",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "name": "x",
+          "type": "submit",
+          "value": "Calculate",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "type": "button",
+          "value": "Clear",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "id": "calcSearchTerm",
+          "name": "calcSearchTerm",
+          "type": "text",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        }
+      ],
+      "inputCountIncludesHiddenControls": true,
+      "runtimeCalculationTested": false
+    },
+    {
+      "file": "research/competitors/evidence/12.json",
+      "website": "Omni",
+      "url": "https://www.omnicalculator.com/",
+      "scope": "homepage",
+      "evidenceId": "ev_4e71629b5f6644fa1671a6c0134ed87c5dd11afd5c5b78489bc8519e0e8d7451",
+      "sha256": "b82149c102cb8c13ad3bd674e71bc4ca27fffc489a46111a5d9980ee6a259562",
+      "historicalCaptureDate": "2026-10-24",
+      "captureStatus": "incomplete",
+      "title": "Omni Calculator",
+      "inputs": [
+        {
+          "type": "text",
+          "value": "",
+          "placeholder": "Search calculator...",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "value": "en",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        }
+      ],
+      "inputCountIncludesHiddenControls": true,
+      "runtimeCalculationTested": false
+    },
+    {
+      "file": "research/competitors/tool-evidence/12.json",
+      "website": "Omni",
+      "url": "https://www.omnicalculator.com/math/percentage",
+      "scope": "calculator",
+      "evidenceId": null,
+      "sha256": "f9907f3994312a17b1473075d91f5dc0b997d3c72534e6becdb49ec282bf3b7e",
+      "historicalCaptureDate": "2026-10-24",
+      "captureStatus": "partial_tooling_error",
+      "title": "Percentage Calculator",
+      "inputs": [
+        {
+          "id": "blockGroups.0.matrices.0.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "What is"
+        },
+        {
+          "id": "blockGroups.0.matrices.0.columns.1.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "of"
+        },
+        {
+          "id": "blockGroups.0.matrices.1.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "y ="
+        },
+        {
+          "id": "blockGroups.1.matrices.0.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "x is what percent"
+        },
+        {
+          "id": "blockGroups.1.matrices.0.columns.1.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "of"
+        },
+        {
+          "id": "blockGroups.1.matrices.1.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "p ="
+        },
+        {
+          "id": "blockGroups.2.matrices.0.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "x is"
+        },
+        {
+          "id": "blockGroups.2.matrices.0.columns.1.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "p% of what?"
+        },
+        {
+          "id": "blockGroups.2.matrices.1.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "y ="
+        },
+        {
+          "id": "blockGroups.3.matrices.0.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "What is"
+        },
+        {
+          "name": "«rf»",
+          "type": "radio",
+          "value": "ZvL88nkdYFIJXXZXaPKDz",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "increased"
+        },
+        {
+          "name": "«rf»",
+          "type": "radio",
+          "value": "WcJJI1UForNwuK6iCLHA5",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "decreased"
+        },
+        {
+          "id": "blockGroups.3.matrices.1.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "by"
+        },
+        {
+          "id": "blockGroups.3.matrices.2.columns.0.0-input",
+          "value": "",
+          "tag": "input",
+          "required_attribute": false,
+          "label": "y ="
+        },
+        {
+          "value": "en",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        },
+        {
+          "type": "checkbox",
+          "tag": "input",
+          "required_attribute": false,
+          "label": null
+        }
+      ],
+      "inputCountIncludesHiddenControls": true,
+      "runtimeCalculationTested": false
+    }
+  ]
+}
