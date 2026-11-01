@@ -55,7 +55,9 @@ Run Python unit tests from backend with `.venv/Scripts/python.exe -m unittest di
 
 Tool implementations and inventory source live in frontend/shared. The inventory command generates frontend metadata and copies the three API catalog snapshots into backend/data when that sibling service is present. The Flask API reads only its own data directory. Admin does not import source files from frontend.
 
-Frontend build requires NEXT_PUBLIC_SITE_URL set to the real HTTPS origin. Configure public API/admin origins separately for each service when deploying. No database credentials belong in browser environment variables.
+Production builds use `https://alltoolnexa.pages.dev` as the public website origin for canonical URLs and the sitemap. Set `NEXT_PUBLIC_SITE_URL` to override it for a different deployment; overrides must be public HTTPS origins. Local development defaults to `http://localhost:3000`. Configure public API/admin origins separately for each service when deploying. No database credentials belong in browser environment variables.
+
+For Cloudflare Pages, use `frontend` as the project root, `npm run build:pages` as the build command and `out` as the output directory. The `frontend/functions` directory provides the existing API proxy. The root `npm run build` checks the standard Next.js production build.
 
 Audit reports and screenshots: frontend/docs. Runtime audit artifacts: frontend/runtime-results. Previous run logs: frontend/logs. Historical project notes: frontend/docs/PROJECT-NOTES.md.
 

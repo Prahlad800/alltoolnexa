@@ -6,5 +6,5 @@
  return url.origin;
 }
 const production=process.env.NODE_ENV==='production';
-export const publicSiteURL=configuredOrigin(process.env.NEXT_PUBLIC_SITE_URL||(!production?'http://localhost:3000':''),'NEXT_PUBLIC_SITE_URL',{required:production});
+export const publicSiteURL=configuredOrigin(process.env.NEXT_PUBLIC_SITE_URL||(production?'https://alltoolnexa.pages.dev':'http://localhost:3000'),'NEXT_PUBLIC_SITE_URL',{required:production});
 export const adminURL=configuredOrigin(process.env.NEXT_PUBLIC_ADMIN_URL||(!production?'http://localhost:3001':''),'NEXT_PUBLIC_ADMIN_URL',{required:production&&Boolean(process.env.NEXT_PUBLIC_ADMIN_URL)});
