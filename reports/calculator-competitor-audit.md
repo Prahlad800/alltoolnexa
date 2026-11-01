@@ -4,8 +4,8 @@
 
 ## Verified work and boundaries
 
-- Inspected the actual Next.js repository, all 507 tool registrations, aliases, fields, mathematical methods and source anchors.
-- Identified 248 primary numerical/calendar calculators or numeric converters under the explicit classification policy. Executed all 248 default examples successfully.
+- Inspected the actual Next.js repository, all 527 tool registrations, aliases, fields, mathematical methods and source anchors.
+- Identified 268 primary numerical/calendar calculators or numeric converters under the explicit classification policy. Executed all 268 default examples successfully.
 - Preserved two embedded calculation workspaces separately. A general spreadsheet or code editor is not an equivalent implementation of every imaginable calculator.
 - Reviewed all 143 user candidates against implementations rather than treating candidate names as confirmed missing tools.
 - Extracted 70 distinct official calculator-link destinations from four existing repository snapshots; no competitor source code, design or explanatory prose was imported into the application.
@@ -93,7 +93,7 @@ The “project coverage” column concerns only the user-provided purpose, with 
 | 34 | Logarithm Calculator | PARTIAL MATCH | scientific-calculator | https://www.omnicalculator.com/math/log | UNVERIFIED |
 | 35 | Half-Life Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 36 | Sample Size Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 37 | Z-Score Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 37 | Z-Score Calculator | FUNCTIONAL EQUIVALENT | z-score-calculator | — | UNVERIFIED |
 | 38 | Confidence Interval Calculator | NO EQUIVALENT FOUND | — | https://www.omnicalculator.com/statistics/confidence-interval | UNVERIFIED |
 | 39 | P-Value Calculator | NO EQUIVALENT FOUND | — | https://www.omnicalculator.com/statistics/p-value | UNVERIFIED |
 | 40 | Long Division Calculator | PARTIAL MATCH | basic-calculator | — | UNVERIFIED |
@@ -108,8 +108,8 @@ The “project coverage” column concerns only the user-provided purpose, with 
 | 49 | Complex Number Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 50 | Interval Notation Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 51 | Significant Figures Calculator | NO EQUIVALENT FOUND | — | https://www.omnicalculator.com/math/sig-fig | UNVERIFIED |
-| 52 | Geometric Mean Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 53 | Harmonic Mean Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 52 | Geometric Mean Calculator | FUNCTIONAL EQUIVALENT | geometric-mean-calculator | — | UNVERIFIED |
+| 53 | Harmonic Mean Calculator | FUNCTIONAL EQUIVALENT | harmonic-mean-calculator | — | UNVERIFIED |
 | 54 | Exponential Growth Calculator | PARTIAL MATCH | compound-interest-calculator, future-value-calculator, cagr-calculator | — | UNVERIFIED |
 | 55 | Scientific Notation Calculator | NO EQUIVALENT FOUND | — | https://www.omnicalculator.com/math/scientific-notation | UNVERIFIED |
 | 56 | Inverse Modulo Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
@@ -122,36 +122,36 @@ The “project coverage” column concerns only the user-provided purpose, with 
 | 63 | Expected Value Calculator | PARTIAL MATCH | weighted-marks-calculator | — | UNVERIFIED |
 | 64 | Confusion Matrix Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 65 | Coin Flip Probability Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 66 | Linear Regression Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 67 | Correlation Coefficient Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 66 | Linear Regression Calculator | FUNCTIONAL EQUIVALENT | linear-regression-calculator | — | UNVERIFIED |
+| 67 | Correlation Coefficient Calculator | FUNCTIONAL EQUIVALENT | correlation-coefficient-calculator | — | UNVERIFIED |
 | 68 | Chi-Square Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 69 | Hypothesis Testing Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 70 | T-Test Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 71 | Z-Test Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 72 | Covariance Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 72 | Covariance Calculator | FUNCTIONAL EQUIVALENT | covariance-calculator | — | UNVERIFIED |
 | 73 | Frequency Distribution Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 74 | Binomial Distribution Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 75 | Normal Distribution Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 76 | Margin of Error Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 77 | Ohm's Law Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 77 | Ohm's Law Calculator | PARTIAL MATCH | ohms-law-calculator | — | UNVERIFIED |
 | 78 | Voltage Drop Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 79 | Resistor Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 80 | BTU Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 81 | Horsepower Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 82 | Kinetic Energy Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 83 | Potential Energy Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 84 | Force Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 85 | Pressure Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 86 | Density Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 87 | Acceleration Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 88 | Momentum Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 82 | Kinetic Energy Calculator | FUNCTIONAL EQUIVALENT | kinetic-energy-calculator | — | UNVERIFIED |
+| 83 | Potential Energy Calculator | FUNCTIONAL EQUIVALENT | potential-energy-calculator | — | UNVERIFIED |
+| 84 | Force Calculator | FUNCTIONAL EQUIVALENT | force-calculator | — | UNVERIFIED |
+| 85 | Pressure Calculator | FUNCTIONAL EQUIVALENT | pressure-calculator | — | UNVERIFIED |
+| 86 | Density Calculator | FUNCTIONAL EQUIVALENT | density-calculator | — | UNVERIFIED |
+| 87 | Acceleration Calculator | FUNCTIONAL EQUIVALENT | acceleration-calculator | — | UNVERIFIED |
+| 88 | Momentum Calculator | FUNCTIONAL EQUIVALENT | momentum-calculator | — | UNVERIFIED |
 | 89 | Projectile Motion Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 90 | Wavelength Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 90 | Wavelength Calculator | FUNCTIONAL EQUIVALENT | wavelength-calculator | — | UNVERIFIED |
 | 91 | Frequency Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 92 | Torque Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 93 | Electrical Power Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 92 | Torque Calculator | FUNCTIONAL EQUIVALENT | torque-calculator | — | UNVERIFIED |
+| 93 | Electrical Power Calculator | FUNCTIONAL EQUIVALENT | electrical-power-calculator | — | UNVERIFIED |
 | 94 | Electrical Energy Calculator | FUNCTIONAL EQUIVALENT | watt-to-unit-calculator, appliance-electricity-cost, ev-charging-cost | — | UNVERIFIED |
-| 95 | Transformer Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 95 | Transformer Calculator | FUNCTIONAL EQUIVALENT | transformer-calculator | — | UNVERIFIED |
 | 96 | Coulomb's Law Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 97 | Brick Calculator | PARTIAL MATCH | tile-calculator, concrete-volume-calculator | — | UNVERIFIED |
 | 98 | Drywall Calculator | PARTIAL MATCH | tile-calculator | — | UNVERIFIED |
@@ -169,10 +169,10 @@ The “project coverage” column concerns only the user-provided purpose, with 
 | 110 | Gravel Calculator | PARTIAL MATCH | concrete-volume-calculator | — | UNVERIFIED |
 | 111 | Mulch Calculator | PARTIAL MATCH | concrete-volume-calculator | — | UNVERIFIED |
 | 112 | Molar Mass Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 113 | Molarity Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 113 | Molarity Calculator | FUNCTIONAL EQUIVALENT | molarity-calculator | — | UNVERIFIED |
 | 114 | Atomic Mass Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 115 | Grams to Moles Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
-| 116 | Mole Fraction Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
+| 116 | Mole Fraction Calculator | FUNCTIONAL EQUIVALENT | mole-fraction-calculator | — | UNVERIFIED |
 | 117 | Empirical Formula Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 118 | Percent Composition Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |
 | 119 | Buffer pH Calculator | NO EQUIVALENT FOUND | — | — | UNVERIFIED |

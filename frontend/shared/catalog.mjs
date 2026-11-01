@@ -2758,6 +2758,9 @@ getTool('ascii-to-text').fields[0].value='72 101 108 108 111';
 import {extendBatchTwo} from './batch-two.mjs';
 extendBatchTwo({register,field,aliases});
 
+import {extendScienceCalculators} from './science-calculators.mjs';
+extendScienceCalculators({register});
+
 import {extendReferenceTools} from './reference-tools.mjs';
 import {extendReferenceFiles} from './reference-files.mjs';
 import {extendReferenceBrowser} from './reference-browser.mjs';

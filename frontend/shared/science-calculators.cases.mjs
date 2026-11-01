@@ -1,0 +1,23 @@
+// Independent expected-result vectors, also used in the published specifications.
+export const vectors={
+ 'geometric-mean-calculator':[[{text:'1 4 16'},4],[{text:'2 8'},4],[{text:'5 5 5'},5],[{text:'.25 1'},.5],[{text:'1e100 1e100'},1e100]],
+ 'harmonic-mean-calculator':[[{text:'1 2 4'},12/7],[{text:'2 6'},3],[{text:'5 5'},5],[{text:'.5 1'},2/3],[{text:'1e100 1e100'},1e100]],
+ 'z-score-calculator':[[{value:85,mean:70,sd:10},1.5],[{value:0,mean:0,sd:1},0],[{value:2,mean:4,sd:2},-1],[{value:-3,mean:-5,sd:.5},4],[{value:10,mean:0,sd:4},2.5]],
+ 'covariance-calculator':[[{x:'1 2 3',y:'2 4 6',mode:'sample'},2],[{x:'1 2 3',y:'2 4 6',mode:'population'},4/3],[{x:'1 2',y:'4 2',mode:'sample'},-1],[{x:'1 1',y:'2 3',mode:'population'},0],[{x:'-1 1',y:'-2 2',mode:'population'},2]],
+ 'correlation-coefficient-calculator':[[{x:'1 2 3',y:'2 4 6'},1],[{x:'1 2 3',y:'6 4 2'},-1],[{x:'-1 0 1',y:'1 0 1'},0],[{x:'0 1',y:'5 9'},1],[{x:'-2 -1',y:'3 2'},-1]],
+ 'linear-regression-calculator':[[{x:'1 2 3',y:'2 4 6'},{slope:2,intercept:0,observations:3}],[{x:'0 1',y:'3 5'},{slope:2,intercept:3,observations:2}],[{x:'1 2',y:'5 3'},{slope:-2,intercept:7,observations:2}],[{x:'1 2 3',y:'5 5 5'},{slope:0,intercept:5,observations:3}],[{x:'-1 0 1',y:'1 0 1'},{slope:0,intercept:2/3,observations:3}]],
+ 'kinetic-energy-calculator':[[{mass:2,velocity:3},9],[{mass:0,velocity:4},0],[{mass:5,velocity:0},0],[{mass:2,velocity:-3},9],[{mass:.5,velocity:2},1]],
+ 'potential-energy-calculator':[[{mass:2,height:5,gravity:10},100],[{mass:0,height:5,gravity:10},0],[{mass:2,height:0,gravity:10},0],[{mass:2,height:-5,gravity:10},-100],[{mass:1,height:1,gravity:9.80665},9.80665]],
+ 'force-calculator':[[{mass:2,acceleration:3},6],[{mass:0,acceleration:5},0],[{mass:5,acceleration:0},0],[{mass:2,acceleration:-3},-6],[{mass:.5,acceleration:.2},.1]],
+ 'pressure-calculator':[[{force:100,area:2},50],[{force:0,area:2},0],[{force:1,area:1},1],[{force:10,area:.5},20],[{force:1,area:1000},.001]],
+ 'density-calculator':[[{mass:2,volume:.001},2000],[{mass:0,volume:1},0],[{mass:1,volume:1},1],[{mass:.5,volume:2},.25],[{mass:1000,volume:2},500]],
+ 'acceleration-calculator':[[{initial:0,final:20,time:5},4],[{initial:10,final:0,time:2},-5],[{initial:5,final:5,time:2},0],[{initial:-5,final:5,time:2},5],[{initial:0,final:.5,time:2},.25]],
+ 'momentum-calculator':[[{mass:2,velocity:3},6],[{mass:0,velocity:5},0],[{mass:5,velocity:0},0],[{mass:2,velocity:-3},-6],[{mass:.5,velocity:.2},.1]],
+ 'wavelength-calculator':[[{speed:343,frequency:1000},.343],[{speed:300000000,frequency:100000000},3],[{speed:1,frequency:2},.5],[{speed:2,frequency:1},2],[{speed:.5,frequency:10},.05]],
+ 'torque-calculator':[[{force:10,radius:2,angle:90},20],[{force:10,radius:2,angle:0},0],[{force:10,radius:2,angle:180},0],[{force:10,radius:2,angle:30},10],[{force:0,radius:2,angle:90},0]],
+ 'ohms-law-calculator':[[{current:2,resistance:10},20],[{current:0,resistance:10},0],[{current:2,resistance:0},0],[{current:.5,resistance:3},1.5],[{current:1,resistance:1},1]],
+ 'electrical-power-calculator':[[{voltage:12,current:2},24],[{voltage:0,current:2},0],[{voltage:12,current:0},0],[{voltage:.5,current:3},1.5],[{voltage:230,current:10},2300]],
+ 'transformer-calculator':[[{primary:230,primaryTurns:1000,secondaryTurns:100},23],[{primary:10,primaryTurns:10,secondaryTurns:20},20],[{primary:0,primaryTurns:10,secondaryTurns:10},0],[{primary:5,primaryTurns:10,secondaryTurns:10},5],[{primary:12,primaryTurns:3,secondaryTurns:1},4]],
+ 'molarity-calculator':[[{moles:.5,litres:2},.25],[{moles:0,litres:2},0],[{moles:1,litres:1},1],[{moles:2,litres:.5},4],[{moles:.001,litres:1},.001]],
+ 'mole-fraction-calculator':[[{component:1,other:3},.25],[{component:0,other:1},0],[{component:1,other:0},1],[{component:2,other:2},.5],[{component:.5,other:1.5},.25]],
+};

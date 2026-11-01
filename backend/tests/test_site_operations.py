@@ -40,7 +40,7 @@ class SiteOperationsTests(unittest.TestCase):
 
     def test_hierarchy_counts_parent_controls_and_child_preservation(self):
         tree = self.client.get('/api/public/categories').json['mainCategories']
-        self.assertEqual([g['toolCount'] for g in tree], [68, 97, 86, 120, 136])
+        self.assertEqual([g['toolCount'] for g in tree], [68, 97, 86, 120, 156])
         self.assertEqual(sum(len(g['subcategories']) for g in tree), 18)
         headers = self.admin()
         controls = self.client.get('/api/admin/controls').json

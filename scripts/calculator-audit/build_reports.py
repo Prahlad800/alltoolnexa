@@ -150,12 +150,17 @@ def build():
             category = 'office'
         parent = next(row for row in inventory['mainCategories'] if category in row['children'])
         candidates.append({'id': f'CAND-{number:03d}', 'number': number, 'toolName': name, 'candidateGroup': group, 'candidatePurpose': purpose, 'purposeSource': 'User-provided starting list; not a competitor claim.', **coverage, 'existingSourceLocations': [loc for tool_id in coverage['existingToolIds'] for loc in existing[tool_id]['sourceLocations']], 'existingMethods': [{'toolId': tool_id, 'method': existing[tool_id]['mathematicalMethod'], 'inputFields': existing[tool_id]['inputFields']} for tool_id in coverage['existingToolIds']], 'competitorReferences': [{'sourceWebsite': source['sourceWebsite'], 'sourceUrl': source['sourceUrl'], 'verification': source['sourceVerificationScope']} for source in refs], 'comparisonStatus': 'UNVERIFIED', 'auditStatus': 'Unverified', 'implementationEligible': False, 'implementationStatus': 'BLOCKED: competitor research/verification prerequisite', 'suggestedSlug': coverage['existingToolIds'][0] if coverage['existingToolIds'] else slugify(name), 'proposedMainCategory': parent['name'], 'proposedSubcategory': next(row['name'] for row in inventory['categories'] if row['id'] == category), 'priority': 'High' if group in ['Finance & Banking', 'Mathematics', 'Statistics', 'Construction', 'Business & Marketing'] else 'Medium', 'priorityScope': 'Candidate triage only; not the first-20 implementation ranking.', 'potentialDuplicateCluster': CLUSTERS.get(number), 'requiredNextEvidence': 'Verify official listing and calculator page; document inputs/outputs, units, assumptions, formula, validation and compare full functionality. A name or generic arithmetic is insufficient.'})
+    added = [row['id'] for row in inventory['records'] if any(loc['file'] == 'frontend/shared/science-calculators.mjs' for loc in row['sourceLocations'])]
+    for row in candidates:
+        if any(tool_id in added for tool_id in row['existingToolIds']):
+            row['implementationStatus'] = 'IMPLEMENTED: user-authorized original batch; competitor equivalence unverified'
     if len(candidates) != 143:
         raise ValueError('The input list must preserve all 143 user candidates.')
     counts = Counter(source['sourceWebsite'] for source in sources)
     coverage_counts = Counter(row['projectCoverageStatus'] for row in candidates)
     now = datetime.now(timezone.utc).strftime('%Y-%m-%d')
     summary = {'auditDateUTC': now, 'auditComplete': False, 'status': 'BLOCKED_NETWORK', 'codeRevision': inventory['codeRevision'], 'existingCounts': inventory['counts'], 'historicalSnapshotDate': '2026-10-24', 'historicalObservedLinkCounts': dict(counts), 'historicalCanonicalNameGroups': len(master), 'nameGroupsWithBothSources': sum(len({source['sourceWebsite'] for source in row['sources']}) > 1 for row in master), 'competitorTotalCalculators': {'Calculator.net': None, 'Omni': None}, 'confirmedMissingExportRows': 0, 'completeUniqueMissingTotal': None, 'missingTotalWarning': 'Zero confirmed export rows does not mean no missing calculators. The full census and missing total are NOT ESTABLISHED.', 'candidatesReviewedAgainstProject': len(candidates), 'candidateProjectCoverageCounts': dict(coverage_counts), 'candidateStatusesAreNotFinalCompetitorClassifications': True, 'implementationBatch': {'requestedSize': 20, 'selected': [], 'implemented': [], 'blockedReason': 'Neither a full current competitor census nor 20 confirmed missing tools/specifications is established. Honor the research-first implementation gate.'}, 'network': NETWORK}
+    summary['userAuthorizedOriginalBatch'] = {'implemented': added, 'count': len(added), 'competitorVerification': 'UNVERIFIED', 'report': 'calculator-batch-one.md'}
     dump(DATA / 'evidence-index.json', {'auditDateUTC': now, 'network': NETWORK, 'snapshots': [facts for facts, _ in snapshots]})
     dump(DATA / 'summary.json', summary)
     dump(REPORTS / 'competitor-calculator-master.json', {'auditComplete': False, 'scope': 'Only links retained in four historical snapshots; NOT a full competitor inventory.', 'records': master})
@@ -173,22 +178,22 @@ def build():
         '# Calculator comparison summary', '', '**INCOMPLETE — live source access is blocked. No full competitor census or missing total is established.**', '',
         f'Audit date: {now} UTC. Source-code revision: `{inventory["codeRevision"]}`. Retained competitor snapshots: 24 October 2026, with incomplete captures.', '',
         '| Metric | Calculator.net | Omni Calculator | AllToolNexa |', '| --- | --- | --- | --- |',
-        '| Total calculators, complete verified census | Not established | Not established | 248 standalone calculators in source |',
-        f'| Historical distinct tool-link destinations observed | {net} | {omni} | 507 registered tools; 2 embedded calculation workspaces |',
+        f'| Total calculators, complete verified census | Not established | Not established | {inventory["counts"]["standaloneCalculators"]} standalone calculators in source |',
+        f'| Historical distinct tool-link destinations observed | {net} | {omni} | {inventory["counts"]["registeredTools"]} registered tools; 2 embedded calculation workspaces |',
         f'| Category links observed / source categories | {len(category_links["Calculator.net"])} historical category links | {len(category_links["Omni"])} historical category links | 5 main / 18 subcategories |',
         '| Current verified exact matches | 0 established | 0 established | — |',
         '| Current verified functional equivalents | 0 established | 0 established | — |',
         '| Current verified partial matches | 0 established | 0 established | — |',
         '| Missing calculators | Not established | Not established | — |',
         '| Complete unique missing total | Not established | Not established | — |',
-        f'| Unverified current source entries in this bounded inventory | {net} | {omni} | 248 public-page deployments not live-verified; 248 source defaults executed |', '',
+        f'| Unverified current source entries in this bounded inventory | {net} | {omni} | {inventory["counts"]["standaloneCalculators"]} public-page deployments not live-verified; {inventory["counts"]["defaultExecutionsPassed"]} source defaults executed |', '',
         f'There are {len(master)} provisional canonical name groups across {len(sources)} source URLs. {summary["nameGroupsWithBothSources"]} groups have both source websites. This is name grouping, not a claim of identical full functionality.', '',
         '## Candidate project coverage', '', 'These counts come from the 143 user candidates and reviewed project implementations, NOT from a completed competitor comparison.', '',
         '| Source-code coverage of the stated candidate purpose | Count |', '| --- | ---: |',
         *[f'| {status} | {coverage_counts[status]} |' for status in ['FUNCTIONAL EQUIVALENT', 'PARTIAL MATCH', 'NO EQUIVALENT FOUND']], '',
         'All 143 final competitor comparison statuses remain UNVERIFIED pending current source research. “No equivalent found” here must not be promoted to “confirmed missing competitor tool.”', '',
         'The missing-only CSV has headers and no confirmed rows; the JSON includes `auditComplete: false` and a null full missing total. Their empty record sets are NOT evidence that the project has no gaps.', '',
-        'The requested first 20 implementations are deferred until the research and specification gates are met. No placeholder tools, guessed competitor URLs, fabricated input schemas, unsupported formulas or speculative clinical calculators were published.', '',
+        'A later user instruction authorized adding 20 original calculators while live research remains blocked. That batch is implemented and documented in calculator-batch-one.md; it is not a verified competitor-gap batch. The full competitor audit remains incomplete.', '',
         'See [full audit](calculator-competitor-audit.md), [candidate comparison](calculator-candidate-comparison.csv), [existing calculators](existing-calculators.csv), [implementation readiness](calculator-implementation-readiness.md) and [architecture](calculator-project-architecture.md).',
     ]
     (REPORTS / 'calculator-comparison-summary.md').write_text('\n'.join(metrics) + '\n')
@@ -227,7 +232,7 @@ def build():
     (REPORTS / 'calculator-competitor-audit.md').write_text('\n'.join(detail) + '\n')
     readiness = [
         '# Calculator implementation readiness', '', '**Requested batch: 20. Approved-by-evidence selection: none yet. Status: blocked on competitor verification.**', '',
-        'No calculator application code has been changed. This follows the explicit research-before-implementation requirement. Candidates with no dedicated project workflow remain candidates, not certified competitor gaps.', '',
+        'After the initial audit, the user explicitly requested 20 tools. An original batch is now implemented; see calculator-batch-one.md and calculator-specifications/. The separate competitor census remains blocked and no confirmed competitor-gap selection is asserted.', '',
         '## Admission gate for each implementation', '',
         '1. Verify an actual official listing and destination page under permitted access; record date, URL and evidence scope.',
         '2. Inspect existing runner code and its fields/outputs, including aliases and embedded workbook functions. Record one of the six required statuses.',

@@ -15,14 +15,14 @@ def report(name):
 class AuditIntegrityTests(unittest.TestCase):
     def test_registry_counts_and_execution(self):
         data = report('calculator-audit-data/existing-tool-inventory.json')
-        self.assertEqual(len(data['records']), 507)
-        self.assertEqual(len({r['id'] for r in data['records']}), 507)
+        self.assertEqual(len(data['records']), 527)
+        self.assertEqual(len({r['id'] for r in data['records']}), 527)
         counts = data['counts']
-        self.assertEqual(counts['standaloneCalculators'], 248)
+        self.assertEqual(counts['standaloneCalculators'], 268)
         self.assertEqual(counts['embeddedCalculationWorkspaces'], 2)
-        self.assertEqual(counts['defaultExecutionsPassed'], 248)
+        self.assertEqual(counts['defaultExecutionsPassed'], 268)
         self.assertEqual(counts['defaultExecutionsFailed'], 0)
-        self.assertEqual(len(report('existing-calculators.json')['records']), 248)
+        self.assertEqual(len(report('existing-calculators.json')['records']), 268)
 
     def test_source_hashes_anchor_actual_code(self):
         for source in report('calculator-audit-data/existing-tool-inventory.json')['sourceFiles']:
@@ -75,6 +75,10 @@ class AuditIntegrityTests(unittest.TestCase):
         batch = report('calculator-audit-data/summary.json')['implementationBatch']
         self.assertEqual(batch['selected'], [])
         self.assertEqual(batch['implemented'], [])
+        original = report('calculator-audit-data/summary.json')['userAuthorizedOriginalBatch']
+        self.assertEqual(original['count'], 20)
+        self.assertEqual(len(set(original['implemented'])), 20)
+        self.assertEqual(original['competitorVerification'], 'UNVERIFIED')
 
     def test_url_normalization_rejects_external_and_non_https(self):
         base = 'https://www.calculator.net/'

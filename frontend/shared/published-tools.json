@@ -10689,6 +10689,910 @@
     "extension": "css"
   },
   {
+    "id": "geometric-mean-calculator",
+    "name": "Geometric Mean Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Positive values (comma or space separated)",
+        "value": "1, 4, 16",
+        "type": "textarea"
+      }
+    ],
+    "formula": "G = exp(Σ ln(xᵢ) / n), where every xᵢ > 0.",
+    "description": "Geometric Mean: geometric mean (same unit as the data). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Use the geometric mean for positive multiplicative measurements. Logarithms avoid overflow from multiplying the observations. Zero and negative observations are outside this model.",
+    "outputDescription": "Geometric mean (same unit as the data)",
+    "relatedToolIds": [
+      "harmonic-mean-calculator",
+      "average-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Positive values (comma or space separated). Geometric mean (same unit as the data)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Use the geometric mean for positive multiplicative measurements. Logarithms avoid overflow from multiplying the observations. Zero and negative observations are outside this model."
+      }
+    ]
+  },
+  {
+    "id": "harmonic-mean-calculator",
+    "name": "Harmonic Mean Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "text",
+        "label": "Positive values (comma or space separated)",
+        "value": "1, 4, 16",
+        "type": "textarea"
+      }
+    ],
+    "formula": "H = n / Σ(1/xᵢ), where every xᵢ > 0.",
+    "description": "Harmonic Mean: harmonic mean (same unit as the data). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Use the harmonic mean for positive rates with equal numerator quantities, such as speeds over equal distances. It is not the arithmetic mean of arbitrary speeds.",
+    "outputDescription": "Harmonic mean (same unit as the data)",
+    "relatedToolIds": [
+      "geometric-mean-calculator",
+      "average-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Positive values (comma or space separated). Harmonic mean (same unit as the data)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Use the harmonic mean for positive rates with equal numerator quantities, such as speeds over equal distances. It is not the arithmetic mean of arbitrary speeds."
+      }
+    ]
+  },
+  {
+    "id": "z-score-calculator",
+    "name": "Z-Score Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "value",
+        "label": "Observed value",
+        "value": 85,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "mean",
+        "label": "Population mean",
+        "value": 70,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "sd",
+        "label": "Population standard deviation",
+        "value": 10,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "z = (x − μ) / σ; σ > 0.",
+    "description": "Z-Score: standard score (dimensionless). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "A z-score describes distance from a supplied population mean in standard deviations. This tool does not estimate a p-value or assume a normal distribution.",
+    "outputDescription": "Standard score (dimensionless)",
+    "relatedToolIds": [
+      "standard-deviation"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Observed value; Population mean; Population standard deviation. Standard score (dimensionless)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "A z-score describes distance from a supplied population mean in standard deviations. This tool does not estimate a p-value or assume a normal distribution."
+      }
+    ]
+  },
+  {
+    "id": "covariance-calculator",
+    "name": "Covariance Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "x",
+        "label": "X observations",
+        "value": "1, 2, 3",
+        "type": "textarea"
+      },
+      {
+        "key": "y",
+        "label": "Y observations",
+        "value": "2, 4, 6",
+        "type": "textarea"
+      },
+      {
+        "key": "mode",
+        "label": "Covariance convention",
+        "value": "sample",
+        "type": "select",
+        "options": [
+          "sample",
+          "population"
+        ]
+      }
+    ],
+    "formula": "Covariance = Σ(xᵢ − x̄)(yᵢ − ȳ) / d; d = n−1 for sample or n for population.",
+    "description": "Covariance: covariance (x units × y units). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Each X observation must correspond to the Y observation at the same position. Sample covariance uses n−1; population covariance uses n. Constant series give zero covariance.",
+    "outputDescription": "Covariance (X units × Y units)",
+    "relatedToolIds": [
+      "correlation-coefficient-calculator",
+      "linear-regression-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "X observations; Y observations; Covariance convention. Covariance (X units × Y units)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Each X observation must correspond to the Y observation at the same position. Sample covariance uses n−1; population covariance uses n. Constant series give zero covariance."
+      }
+    ]
+  },
+  {
+    "id": "correlation-coefficient-calculator",
+    "name": "Correlation Coefficient Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "x",
+        "label": "X observations",
+        "value": "1, 2, 3",
+        "type": "textarea"
+      },
+      {
+        "key": "y",
+        "label": "Y observations",
+        "value": "2, 4, 6",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Pearson r = Σ(dx·dy) / √Σ(dx²) / √Σ(dy²). Both series must have nonzero variance.",
+    "description": "Correlation Coefficient: pearson correlation r (dimensionless). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Pearson correlation measures linear association between paired numeric observations. It does not establish causation, and constant series have undefined correlation.",
+    "outputDescription": "Pearson correlation r (dimensionless)",
+    "relatedToolIds": [
+      "covariance-calculator",
+      "linear-regression-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "X observations; Y observations. Pearson correlation r (dimensionless)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Pearson correlation measures linear association between paired numeric observations. It does not establish causation, and constant series have undefined correlation."
+      }
+    ]
+  },
+  {
+    "id": "linear-regression-calculator",
+    "name": "Linear Regression Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "x",
+        "label": "X observations",
+        "value": "1, 2, 3",
+        "type": "textarea"
+      },
+      {
+        "key": "y",
+        "label": "Y observations",
+        "value": "2, 4, 6",
+        "type": "textarea"
+      }
+    ],
+    "formula": "Ordinary least squares: slope b = Σ(dx·dy)/Σ(dx²); intercept a = ȳ−b·x̄; fitted y = a+b·x.",
+    "description": "Linear Regression: slope and intercept (units follow the input data). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Fit one explanatory variable with an intercept by unweighted least squares. The result is a line description, not a causal model or a forecast guarantee. A constant Y series is allowed.",
+    "outputDescription": "Slope and intercept (units follow the input data)",
+    "relatedToolIds": [
+      "correlation-coefficient-calculator",
+      "covariance-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "X observations; Y observations. Slope and intercept (units follow the input data)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Fit one explanatory variable with an intercept by unweighted least squares. The result is a line description, not a causal model or a forecast guarantee. A constant Y series is allowed."
+      }
+    ]
+  },
+  {
+    "id": "kinetic-energy-calculator",
+    "name": "Kinetic Energy Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "mass",
+        "label": "Mass (kg)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "velocity",
+        "label": "Velocity (m/s)",
+        "value": 3,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "Eₖ = ½mv²; m is mass in kg and v is velocity in m/s.",
+    "description": "Kinetic Energy: kinetic energy (j). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Classical translational kinetic energy assumes speeds much smaller than the speed of light. A signed velocity has the same energy as its opposite.",
+    "outputDescription": "Kinetic energy (J)",
+    "relatedToolIds": [
+      "momentum-calculator",
+      "potential-energy-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Mass (kg); Velocity (m/s). Kinetic energy (J)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Classical translational kinetic energy assumes speeds much smaller than the speed of light. A signed velocity has the same energy as its opposite."
+      }
+    ]
+  },
+  {
+    "id": "potential-energy-calculator",
+    "name": "Potential Energy Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "mass",
+        "label": "Mass (kg)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "height",
+        "label": "Height above reference (m)",
+        "value": 5,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "gravity",
+        "label": "Gravitational acceleration (m/s²)",
+        "value": 9.80665,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "U = mgh, relative to a chosen zero-height reference in a uniform gravitational field.",
+    "description": "Potential Energy: gravitational potential energy (j). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Height may be negative relative to your reference. Gravity defaults to standard gravity; change it for the model you need. This is a near-surface uniform-field estimate.",
+    "outputDescription": "Gravitational potential energy (J)",
+    "relatedToolIds": [
+      "kinetic-energy-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Mass (kg); Height above reference (m); Gravitational acceleration (m/s²). Gravitational potential energy (J)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Height may be negative relative to your reference. Gravity defaults to standard gravity; change it for the model you need. This is a near-surface uniform-field estimate."
+      }
+    ]
+  },
+  {
+    "id": "force-calculator",
+    "name": "Force Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "mass",
+        "label": "Mass (kg)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "acceleration",
+        "label": "Signed acceleration (m/s²)",
+        "value": 3,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "F = ma, for constant mass in one dimension.",
+    "description": "Force: net force (n). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "This computes one signed component of net force from mass and acceleration. It does not sum multiple forces or model a changing mass.",
+    "outputDescription": "Net force (N)",
+    "relatedToolIds": [
+      "acceleration-calculator",
+      "momentum-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Mass (kg); Signed acceleration (m/s²). Net force (N)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "This computes one signed component of net force from mass and acceleration. It does not sum multiple forces or model a changing mass."
+      }
+    ]
+  },
+  {
+    "id": "pressure-calculator",
+    "name": "Pressure Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "force",
+        "label": "Perpendicular force (N)",
+        "value": 100,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "area",
+        "label": "Contact area (m²)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "p = F/A, with perpendicular force F and area A > 0.",
+    "description": "Pressure: average pressure (pa). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Pressure is average normal force per area, in pascals. Enter the area in square metres. This is not a gas equation-of-state or a pressure-vessel design tool.",
+    "outputDescription": "Average pressure (Pa)",
+    "relatedToolIds": [
+      "force-calculator",
+      "density-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Perpendicular force (N); Contact area (m²). Average pressure (Pa)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Pressure is average normal force per area, in pascals. Enter the area in square metres. This is not a gas equation-of-state or a pressure-vessel design tool."
+      }
+    ]
+  },
+  {
+    "id": "density-calculator",
+    "name": "Density Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "mass",
+        "label": "Mass (kg)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "volume",
+        "label": "Volume (m³)",
+        "value": 0.001,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "ρ = m/V, with mass m in kg and volume V > 0 in m³.",
+    "description": "Density: density (kg/m³). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Bulk density is mass divided by measured volume. Temperature, porosity and material composition can affect actual measurements; no material density is assumed.",
+    "outputDescription": "Density (kg/m³)",
+    "relatedToolIds": [
+      "pressure-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Mass (kg); Volume (m³). Density (kg/m³)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Bulk density is mass divided by measured volume. Temperature, porosity and material composition can affect actual measurements; no material density is assumed."
+      }
+    ]
+  },
+  {
+    "id": "acceleration-calculator",
+    "name": "Acceleration Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "initial",
+        "label": "Initial velocity (m/s)",
+        "value": 0,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "final",
+        "label": "Final velocity (m/s)",
+        "value": 20,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "time",
+        "label": "Elapsed time (s)",
+        "value": 5,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "Average acceleration a = (v_final − v_initial)/Δt; Δt > 0.",
+    "description": "Acceleration: average acceleration (m/s²). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "This gives average signed acceleration over an interval. Positive and negative values depend on the direction chosen; it is not instantaneous acceleration.",
+    "outputDescription": "Average acceleration (m/s²)",
+    "relatedToolIds": [
+      "force-calculator",
+      "momentum-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Initial velocity (m/s); Final velocity (m/s); Elapsed time (s). Average acceleration (m/s²)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "This gives average signed acceleration over an interval. Positive and negative values depend on the direction chosen; it is not instantaneous acceleration."
+      }
+    ]
+  },
+  {
+    "id": "momentum-calculator",
+    "name": "Momentum Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "mass",
+        "label": "Mass (kg)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "velocity",
+        "label": "Velocity (m/s)",
+        "value": 3,
+        "type": "number",
+        "min": -1e+100,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "p = mv, for classical linear momentum along one axis.",
+    "description": "Momentum: linear momentum (kg·m/s). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Velocity and momentum carry a sign along your selected axis. This classical model does not include relativistic corrections.",
+    "outputDescription": "Linear momentum (kg·m/s)",
+    "relatedToolIds": [
+      "kinetic-energy-calculator",
+      "force-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Mass (kg); Velocity (m/s). Linear momentum (kg·m/s)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Velocity and momentum carry a sign along your selected axis. This classical model does not include relativistic corrections."
+      }
+    ]
+  },
+  {
+    "id": "wavelength-calculator",
+    "name": "Wavelength Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "speed",
+        "label": "Wave speed in the medium (m/s)",
+        "value": 343,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      },
+      {
+        "key": "frequency",
+        "label": "Frequency (Hz)",
+        "value": 1000,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "λ = v/f, with wave speed v > 0 and frequency f > 0.",
+    "description": "Wavelength: wavelength (m). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Use the propagation speed in the actual medium. The example uses a sound-speed assumption of 343 m/s; this is not a universal constant.",
+    "outputDescription": "Wavelength (m)",
+    "relatedToolIds": [
+      "acceleration-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Wave speed in the medium (m/s); Frequency (Hz). Wavelength (m)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Use the propagation speed in the actual medium. The example uses a sound-speed assumption of 343 m/s; this is not a universal constant."
+      }
+    ]
+  },
+  {
+    "id": "torque-calculator",
+    "name": "Torque Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "force",
+        "label": "Force magnitude (N)",
+        "value": 10,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "radius",
+        "label": "Lever-arm length (m)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "angle",
+        "label": "Angle between arm and force (degrees)",
+        "value": 90,
+        "type": "number",
+        "min": 0,
+        "max": 180,
+        "strict": false
+      }
+    ],
+    "formula": "Torque magnitude τ = rF sin(θ), with 0° ≤ θ ≤ 180°.",
+    "description": "Torque: torque magnitude (n·m). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "The angle is between the pivot-to-force arm and the applied force. Output is magnitude only; choose a rotation convention separately for signed torque.",
+    "outputDescription": "Torque magnitude (N·m)",
+    "relatedToolIds": [
+      "force-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Force magnitude (N); Lever-arm length (m); Angle between arm and force (degrees). Torque magnitude (N·m)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "The angle is between the pivot-to-force arm and the applied force. Output is magnitude only; choose a rotation convention separately for signed torque."
+      }
+    ]
+  },
+  {
+    "id": "ohms-law-calculator",
+    "name": "Ohm's Law Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "current",
+        "label": "Current magnitude (A)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "resistance",
+        "label": "Resistance (Ω)",
+        "value": 10,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "V = IR for an ideal ohmic resistor.",
+    "description": "Ohm's Law: voltage magnitude (v). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Calculate voltage from current and resistance for an ideal resistor. This mode does not solve AC impedance or model non-ohmic components.",
+    "outputDescription": "Voltage magnitude (V)",
+    "relatedToolIds": [
+      "electrical-power-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Current magnitude (A); Resistance (Ω). Voltage magnitude (V)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Calculate voltage from current and resistance for an ideal resistor. This mode does not solve AC impedance or model non-ohmic components."
+      }
+    ]
+  },
+  {
+    "id": "electrical-power-calculator",
+    "name": "Electrical Power Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "voltage",
+        "label": "Voltage magnitude (V)",
+        "value": 12,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "current",
+        "label": "Current magnitude (A)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "P = VI for DC electrical power.",
+    "description": "Electrical Power: dc power (w). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "This is a DC model using voltage and current magnitudes. AC real power additionally requires power factor and phase information and is not calculated here.",
+    "outputDescription": "DC power (W)",
+    "relatedToolIds": [
+      "ohms-law-calculator",
+      "watt-to-unit-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Voltage magnitude (V); Current magnitude (A). DC power (W)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "This is a DC model using voltage and current magnitudes. AC real power additionally requires power factor and phase information and is not calculated here."
+      }
+    ]
+  },
+  {
+    "id": "transformer-calculator",
+    "name": "Transformer Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "primary",
+        "label": "Primary voltage (V)",
+        "value": 230,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "primaryTurns",
+        "label": "Primary turns",
+        "value": 1000,
+        "type": "number",
+        "min": 1,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "secondaryTurns",
+        "label": "Secondary turns",
+        "value": 100,
+        "type": "number",
+        "min": 1,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "Ideal transformer: Vₛ = Vₚ × Nₛ/Nₚ, where Nₚ and Nₛ are positive whole turns.",
+    "description": "Transformer: ideal secondary voltage (v). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "This is an ideal AC transformer turns-ratio estimate, with no winding losses, saturation, load regulation or current limit. It is not a wiring or equipment-rating recommendation.",
+    "outputDescription": "Ideal secondary voltage (V)",
+    "relatedToolIds": [
+      "electrical-power-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Primary voltage (V); Primary turns; Secondary turns. Ideal secondary voltage (V)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "This is an ideal AC transformer turns-ratio estimate, with no winding losses, saturation, load regulation or current limit. It is not a wiring or equipment-rating recommendation."
+      }
+    ]
+  },
+  {
+    "id": "molarity-calculator",
+    "name": "Molarity Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "moles",
+        "label": "Amount of solute (mol)",
+        "value": 0.5,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "litres",
+        "label": "Final solution volume (L)",
+        "value": 2,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": true
+      }
+    ],
+    "formula": "c = n/V, using solute amount n in mol and final solution volume V in L.",
+    "description": "Molarity: molarity (mol/l). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Use final solution volume, not the starting solvent volume. The calculation assumes the supplied amount and final volume are already known.",
+    "outputDescription": "Molarity (mol/L)",
+    "relatedToolIds": [
+      "mole-fraction-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Amount of solute (mol); Final solution volume (L). Molarity (mol/L)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Use final solution volume, not the starting solvent volume. The calculation assumes the supplied amount and final volume are already known."
+      }
+    ]
+  },
+  {
+    "id": "mole-fraction-calculator",
+    "name": "Mole Fraction Calculator",
+    "category": "math",
+    "fields": [
+      {
+        "key": "component",
+        "label": "Component amount (mol)",
+        "value": 1,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      },
+      {
+        "key": "other",
+        "label": "All other components combined (mol)",
+        "value": 3,
+        "type": "number",
+        "min": 0,
+        "max": 1e+100,
+        "strict": false
+      }
+    ],
+    "formula": "xᵢ = nᵢ / (nᵢ + n_other); total amount must be greater than zero.",
+    "description": "Mole Fraction: component mole fraction (dimensionless). Calculate locally with explicit inputs and assumptions.",
+    "kind": "standard",
+    "retainInputs": true,
+    "explanation": "Enter one component and the sum of all remaining components in moles. Do not use masses unless you first convert each material using its own molar mass.",
+    "outputDescription": "Component mole fraction (dimensionless)",
+    "relatedToolIds": [
+      "molarity-calculator"
+    ],
+    "faqs": [
+      {
+        "q": "What units should I enter?",
+        "a": "Component amount (mol); All other components combined (mol). Component mole fraction (dimensionless)."
+      },
+      {
+        "q": "What assumptions apply?",
+        "a": "Enter one component and the sum of all remaining components in moles. Do not use masses unless you first convert each material using its own molar mass."
+      }
+    ]
+  },
+  {
     "id": "text-diff-checker",
     "name": "Text Diff Checker",
     "category": "text",

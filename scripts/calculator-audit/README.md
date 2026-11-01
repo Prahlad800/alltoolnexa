@@ -14,7 +14,7 @@ Requires the project's Node environment, installed `frontend/node_modules/acorn`
 
 Do not rerun the scripts and describe the output as a completed competitor census. Resume official listing/page research only after access is permitted and robots/terms are checked. See `reports/calculator-implementation-readiness.md` for the implementation admission gate.
 
-Validation on 2026-11-01:
+Initial baseline validation on 2026-11-01 (before the subsequent 20-tool batch; see `reports/calculator-batch-one.md` for the current inventory):
 
 - Audit integrity suite: 9 passed (counts, candidate preservation, source hashes, URL provenance, partial-capture handling, missing-export uncertainty, parser filtering and report links).
 - `node --test shared/tools.test.mjs shared/reference-tools.test.mjs` from `frontend`: 439 passed.

@@ -1,5 +1,5 @@
 {
-  "canonicalTools": 507,
+  "canonicalTools": 527,
   "aliases": 146,
   "inventoryIdeas": 1286,
   "coveredInventoryIdeas": 557,
@@ -62,12 +62,12 @@
         "india",
         "home"
       ],
-      "toolCount": 136
+      "toolCount": 156
     }
   ],
   "subcategories": 18,
   "categories": {
-    "math": 44,
+    "math": 64,
     "student": 19,
     "office": 26,
     "finance": 33,

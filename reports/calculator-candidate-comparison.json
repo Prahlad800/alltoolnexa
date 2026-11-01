@@ -2407,16 +2407,57 @@
       "candidateGroup": "Mathematics",
       "candidatePurpose": "Standard scores",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "z-score-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 28
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "z-score-calculator",
+          "method": "z = (x − μ) / σ; σ > 0.",
+          "inputFields": [
+            {
+              "key": "value",
+              "label": "Observed value",
+              "value": 85,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "mean",
+              "label": "Population mean",
+              "value": 70,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "sd",
+              "label": "Population standard deviation",
+              "value": 10,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "z-score-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -2978,16 +3019,36 @@
       "candidateGroup": "Mathematics",
       "candidatePurpose": "Geometric average",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "geometric-mean-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 26
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "geometric-mean-calculator",
+          "method": "G = exp(Σ ln(xᵢ) / n), where every xᵢ > 0.",
+          "inputFields": [
+            {
+              "key": "text",
+              "label": "Positive values (comma or space separated)",
+              "value": "1, 4, 16",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "geometric-mean-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3003,16 +3064,36 @@
       "candidateGroup": "Mathematics",
       "candidatePurpose": "Harmonic average",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "harmonic-mean-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 27
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "harmonic-mean-calculator",
+          "method": "H = n / Σ(1/xᵢ), where every xᵢ > 0.",
+          "inputFields": [
+            {
+              "key": "text",
+              "label": "Positive values (comma or space separated)",
+              "value": "1, 4, 16",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "harmonic-mean-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3456,16 +3537,42 @@
       "candidateGroup": "Statistics",
       "candidatePurpose": "Regression analysis",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "linear-regression-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 31
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "linear-regression-calculator",
+          "method": "Ordinary least squares: slope b = Σ(dx·dy)/Σ(dx²); intercept a = ȳ−b·x̄; fitted y = a+b·x.",
+          "inputFields": [
+            {
+              "key": "x",
+              "label": "X observations",
+              "value": "1, 2, 3",
+              "type": "textarea"
+            },
+            {
+              "key": "y",
+              "label": "Y observations",
+              "value": "2, 4, 6",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "linear-regression-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3481,16 +3588,42 @@
       "candidateGroup": "Statistics",
       "candidatePurpose": "Statistical correlation",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "correlation-coefficient-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 30
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "correlation-coefficient-calculator",
+          "method": "Pearson r = Σ(dx·dy) / √Σ(dx²) / √Σ(dy²). Both series must have nonzero variance.",
+          "inputFields": [
+            {
+              "key": "x",
+              "label": "X observations",
+              "value": "1, 2, 3",
+              "type": "textarea"
+            },
+            {
+              "key": "y",
+              "label": "Y observations",
+              "value": "2, 4, 6",
+              "type": "textarea"
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "correlation-coefficient-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3606,16 +3739,52 @@
       "candidateGroup": "Statistics",
       "candidatePurpose": "Covariance calculation",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "covariance-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 29
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "covariance-calculator",
+          "method": "Covariance = Σ(xᵢ − x̄)(yᵢ − ȳ) / d; d = n−1 for sample or n for population.",
+          "inputFields": [
+            {
+              "key": "x",
+              "label": "X observations",
+              "value": "1, 2, 3",
+              "type": "textarea"
+            },
+            {
+              "key": "y",
+              "label": "Y observations",
+              "value": "2, 4, 6",
+              "type": "textarea"
+            },
+            {
+              "key": "mode",
+              "label": "Covariance convention",
+              "value": "sample",
+              "type": "select",
+              "options": [
+                "sample",
+                "population"
+              ]
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "covariance-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3731,17 +3900,49 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Voltage, current, resistance",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "ohms-law-calculator"
+      ],
+      "projectCoverageStatus": "PARTIAL MATCH",
+      "projectCoverageReason": "The new ideal-resistor mode calculates voltage from current and resistance. Solving current/resistance and AC impedance are not implemented; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 41
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "ohms-law-calculator",
+          "method": "V = IR for an ideal ohmic resistor.",
+          "inputFields": [
+            {
+              "key": "current",
+              "label": "Current magnitude (A)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "resistance",
+              "label": "Resistance (Ω)",
+              "value": 10,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
-      "suggestedSlug": "ohm-s-law-calculator",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
+      "suggestedSlug": "ohms-law-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
       "priority": "Medium",
@@ -3856,16 +4057,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Motion energy",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "kinetic-energy-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 32
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "kinetic-energy-calculator",
+          "method": "Eₖ = ½mv²; m is mass in kg and v is velocity in m/s.",
+          "inputFields": [
+            {
+              "key": "mass",
+              "label": "Mass (kg)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "velocity",
+              "label": "Velocity (m/s)",
+              "value": 3,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "kinetic-energy-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3881,16 +4114,57 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Stored mechanical energy",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "potential-energy-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 33
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "potential-energy-calculator",
+          "method": "U = mgh, relative to a chosen zero-height reference in a uniform gravitational field.",
+          "inputFields": [
+            {
+              "key": "mass",
+              "label": "Mass (kg)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "height",
+              "label": "Height above reference (m)",
+              "value": 5,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "gravity",
+              "label": "Gravitational acceleration (m/s²)",
+              "value": 9.80665,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "potential-energy-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3906,16 +4180,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Force from mass and acceleration",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "force-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 34
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "force-calculator",
+          "method": "F = ma, for constant mass in one dimension.",
+          "inputFields": [
+            {
+              "key": "mass",
+              "label": "Mass (kg)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "acceleration",
+              "label": "Signed acceleration (m/s²)",
+              "value": 3,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "force-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3931,16 +4237,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Pressure calculations",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "pressure-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 35
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "pressure-calculator",
+          "method": "p = F/A, with perpendicular force F and area A > 0.",
+          "inputFields": [
+            {
+              "key": "force",
+              "label": "Perpendicular force (N)",
+              "value": 100,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "area",
+              "label": "Contact area (m²)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "pressure-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3956,16 +4294,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Mass per unit volume",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "density-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 36
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "density-calculator",
+          "method": "ρ = m/V, with mass m in kg and volume V > 0 in m³.",
+          "inputFields": [
+            {
+              "key": "mass",
+              "label": "Mass (kg)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "volume",
+              "label": "Volume (m³)",
+              "value": 0.001,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "density-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -3981,16 +4351,57 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Change in velocity",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "acceleration-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 37
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "acceleration-calculator",
+          "method": "Average acceleration a = (v_final − v_initial)/Δt; Δt > 0.",
+          "inputFields": [
+            {
+              "key": "initial",
+              "label": "Initial velocity (m/s)",
+              "value": 0,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "final",
+              "label": "Final velocity (m/s)",
+              "value": 20,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "time",
+              "label": "Elapsed time (s)",
+              "value": 5,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "acceleration-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -4006,16 +4417,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Linear momentum",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "momentum-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 38
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "momentum-calculator",
+          "method": "p = mv, for classical linear momentum along one axis.",
+          "inputFields": [
+            {
+              "key": "mass",
+              "label": "Mass (kg)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "velocity",
+              "label": "Velocity (m/s)",
+              "value": 3,
+              "type": "number",
+              "min": -1e+100,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "momentum-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -4056,16 +4499,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Wave characteristics",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "wavelength-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 39
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "wavelength-calculator",
+          "method": "λ = v/f, with wave speed v > 0 and frequency f > 0.",
+          "inputFields": [
+            {
+              "key": "speed",
+              "label": "Wave speed in the medium (m/s)",
+              "value": 343,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            },
+            {
+              "key": "frequency",
+              "label": "Frequency (Hz)",
+              "value": 1000,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "wavelength-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -4106,16 +4581,57 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Rotational force",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "torque-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 40
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "torque-calculator",
+          "method": "Torque magnitude τ = rF sin(θ), with 0° ≤ θ ≤ 180°.",
+          "inputFields": [
+            {
+              "key": "force",
+              "label": "Force magnitude (N)",
+              "value": 10,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "radius",
+              "label": "Lever-arm length (m)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "angle",
+              "label": "Angle between arm and force (degrees)",
+              "value": 90,
+              "type": "number",
+              "min": 0,
+              "max": 180,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "torque-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -4131,16 +4647,48 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Electrical power",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "electrical-power-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 42
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "electrical-power-calculator",
+          "method": "P = VI for DC electrical power.",
+          "inputFields": [
+            {
+              "key": "voltage",
+              "label": "Voltage magnitude (V)",
+              "value": 12,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "current",
+              "label": "Current magnitude (A)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "electrical-power-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -4277,16 +4825,57 @@
       "candidateGroup": "Physics & Engineering",
       "candidatePurpose": "Transformer ratios",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "transformer-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 43
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "transformer-calculator",
+          "method": "Ideal transformer: Vₛ = Vₚ × Nₛ/Nₚ, where Nₚ and Nₛ are positive whole turns.",
+          "inputFields": [
+            {
+              "key": "primary",
+              "label": "Primary voltage (V)",
+              "value": 230,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "primaryTurns",
+              "label": "Primary turns",
+              "value": 1000,
+              "type": "number",
+              "min": 1,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "secondaryTurns",
+              "label": "Secondary turns",
+              "value": 100,
+              "type": "number",
+              "min": 1,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "transformer-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -5038,16 +5627,48 @@
       "candidateGroup": "Chemistry",
       "candidatePurpose": "Solution concentration",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "molarity-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 44
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "molarity-calculator",
+          "method": "c = n/V, using solute amount n in mol and final solution volume V in L.",
+          "inputFields": [
+            {
+              "key": "moles",
+              "label": "Amount of solute (mol)",
+              "value": 0.5,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "litres",
+              "label": "Final solution volume (L)",
+              "value": 2,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": true
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "molarity-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",
@@ -5113,16 +5734,48 @@
       "candidateGroup": "Chemistry",
       "candidatePurpose": "Mole fraction",
       "purposeSource": "User-provided starting list; not a competitor claim.",
-      "existingToolIds": [],
-      "projectCoverageStatus": "NO EQUIVALENT FOUND",
-      "projectCoverageReason": "No dedicated input/output workflow for the candidate purpose was found in the reviewed registry, aliases, registrations or spreadsheet supported-function list. Generic arithmetic is not treated as an equivalent calculator. This is not a verified competitor missing-tool classification.",
-      "existingSourceLocations": [],
-      "existingMethods": [],
+      "existingToolIds": [
+        "mole-fraction-calculator"
+      ],
+      "projectCoverageStatus": "FUNCTIONAL EQUIVALENT",
+      "projectCoverageReason": "Implemented as an original browser calculator in the user-authorized first batch. Covers the stated candidate purpose with explicit model limits; full competitor feature equivalence remains unverified.",
+      "existingSourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 45
+        }
+      ],
+      "existingMethods": [
+        {
+          "toolId": "mole-fraction-calculator",
+          "method": "xᵢ = nᵢ / (nᵢ + n_other); total amount must be greater than zero.",
+          "inputFields": [
+            {
+              "key": "component",
+              "label": "Component amount (mol)",
+              "value": 1,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            },
+            {
+              "key": "other",
+              "label": "All other components combined (mol)",
+              "value": 3,
+              "type": "number",
+              "min": 0,
+              "max": 1e+100,
+              "strict": false
+            }
+          ]
+        }
+      ],
       "competitorReferences": [],
       "comparisonStatus": "UNVERIFIED",
       "auditStatus": "Unverified",
       "implementationEligible": false,
-      "implementationStatus": "BLOCKED: competitor research/verification prerequisite",
+      "implementationStatus": "IMPLEMENTED: user-authorized original batch; competitor equivalence unverified",
       "suggestedSlug": "mole-fraction-calculator",
       "proposedMainCategory": "Calculators & Utilities",
       "proposedSubcategory": "Math & Numbers",

@@ -2,7 +2,7 @@
 
 **Requested batch: 20. Approved-by-evidence selection: none yet. Status: blocked on competitor verification.**
 
-No calculator application code has been changed. This follows the explicit research-before-implementation requirement. Candidates with no dedicated project workflow remain candidates, not certified competitor gaps.
+After the initial audit, the user explicitly requested 20 tools. An original batch is now implemented; see calculator-batch-one.md and calculator-specifications/. The separate competitor census remains blocked and no confirmed competitor-gap selection is asserted.
 
 ## Admission gate for each implementation
 

@@ -2,15 +2,15 @@
   "auditDateUTC": "2026-11-01",
   "auditComplete": false,
   "status": "BLOCKED_NETWORK",
-  "codeRevision": "d6fa476dee6e03b591ac4c79b2a85effdfd6e41f",
+  "codeRevision": "51b10caf2e8ccbc74f74632837545c6b2d422f54",
   "existingCounts": {
-    "registeredTools": 507,
+    "registeredTools": 527,
     "aliases": 146,
     "mainCategories": 5,
     "subcategories": 18,
-    "standaloneCalculators": 248,
+    "standaloneCalculators": 268,
     "embeddedCalculationWorkspaces": 2,
-    "defaultExecutionsPassed": 248,
+    "defaultExecutionsPassed": 268,
     "defaultExecutionsFailed": 0
   },
   "historicalSnapshotDate": "2026-10-24",
@@ -29,9 +29,9 @@
   "missingTotalWarning": "Zero confirmed export rows does not mean no missing calculators. The full census and missing total are NOT ESTABLISHED.",
   "candidatesReviewedAgainstProject": 143,
   "candidateProjectCoverageCounts": {
-    "PARTIAL MATCH": 33,
-    "NO EQUIVALENT FOUND": 102,
-    "FUNCTIONAL EQUIVALENT": 8
+    "PARTIAL MATCH": 34,
+    "NO EQUIVALENT FOUND": 82,
+    "FUNCTIONAL EQUIVALENT": 27
   },
   "candidateStatusesAreNotFinalCompetitorClassifications": true,
   "implementationBatch": {
@@ -69,5 +69,32 @@
       "alltoolnexa.pages.dev"
     ],
     "restrictionRespected": "No proxy bypass, mirrors, alternate routes or further competitor crawl after robots access was denied."
+  },
+  "userAuthorizedOriginalBatch": {
+    "implemented": [
+      "geometric-mean-calculator",
+      "harmonic-mean-calculator",
+      "z-score-calculator",
+      "covariance-calculator",
+      "correlation-coefficient-calculator",
+      "linear-regression-calculator",
+      "kinetic-energy-calculator",
+      "potential-energy-calculator",
+      "force-calculator",
+      "pressure-calculator",
+      "density-calculator",
+      "acceleration-calculator",
+      "momentum-calculator",
+      "wavelength-calculator",
+      "torque-calculator",
+      "ohms-law-calculator",
+      "electrical-power-calculator",
+      "transformer-calculator",
+      "molarity-calculator",
+      "mole-fraction-calculator"
+    ],
+    "count": 20,
+    "competitorVerification": "UNVERIFIED",
+    "report": "calculator-batch-one.md"
   }
 }

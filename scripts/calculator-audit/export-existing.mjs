@@ -14,7 +14,7 @@ const wholeCategories=new Set(['math','finance','marketing','office','converters
 const excluded=new Set(['roll-number-generator','study-timetable-generator','iso-date-converter']);
 const extras=new Set(['financial-year-calculator','color-contrast-calculator','aspect-ratio-calculator','golden-ratio-calculator','reading-time-calculator','speaking-time-calculator','binary-to-decimal','decimal-to-binary','hex-to-decimal','decimal-to-hex','octal-to-decimal','decimal-to-octal','keyword-density-checker']);
 const embedded=new Set(['spreadsheet-editor','invoice-generator']);
-const sources=['catalog.mjs','extended.mjs','batch-two.mjs','reference-tools.mjs','reference-files.mjs','reference-browser.mjs','reference-extras.mjs','templates.mjs'];
+const sources=['catalog.mjs','extended.mjs','batch-two.mjs','reference-tools.mjs','reference-files.mjs','reference-browser.mjs','reference-extras.mjs','templates.mjs','science-calculators.mjs'];
 const anchors=new Map(),sourceFiles=[];
 for(const filename of sources){
  const file='frontend/shared/'+filename,source=await readFile(path.join(root,file),'utf8');

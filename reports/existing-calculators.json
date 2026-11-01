@@ -1,13 +1,13 @@
 {
   "definition": "Reviewed primary numerical/calendar calculators and numeric converters; other tools and embedded document/workbook calculations are retained separately in the complete source inventory.",
   "counts": {
-    "registeredTools": 507,
+    "registeredTools": 527,
     "aliases": 146,
     "mainCategories": 5,
     "subcategories": 18,
-    "standaloneCalculators": 248,
+    "standaloneCalculators": 268,
     "embeddedCalculationWorkspaces": 2,
-    "defaultExecutionsPassed": 248,
+    "defaultExecutionsPassed": 268,
     "defaultExecutionsFailed": 0
   },
   "records": [
@@ -10636,6 +10636,1007 @@
           "newTotalInterest": 86034.3802234,
           "interestSaved": 36716.2765673
         }
+      }
+    },
+    {
+      "id": "geometric-mean-calculator",
+      "name": "Geometric Mean Calculator",
+      "slug": "geometric-mean-calculator",
+      "path": "/tools/geometric-mean-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Geometric Mean: geometric mean (same unit as the data). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "text",
+          "label": "Positive values (comma or space separated)",
+          "value": "1, 4, 16",
+          "type": "textarea"
+        }
+      ],
+      "mathematicalMethod": "G = exp(Σ ln(xᵢ) / n), where every xᵢ > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 26
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "text": "1, 4, 16"
+        },
+        "output": 4
+      }
+    },
+    {
+      "id": "harmonic-mean-calculator",
+      "name": "Harmonic Mean Calculator",
+      "slug": "harmonic-mean-calculator",
+      "path": "/tools/harmonic-mean-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Harmonic Mean: harmonic mean (same unit as the data). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "text",
+          "label": "Positive values (comma or space separated)",
+          "value": "1, 4, 16",
+          "type": "textarea"
+        }
+      ],
+      "mathematicalMethod": "H = n / Σ(1/xᵢ), where every xᵢ > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 27
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "text": "1, 4, 16"
+        },
+        "output": 2.28571428571
+      }
+    },
+    {
+      "id": "z-score-calculator",
+      "name": "Z-Score Calculator",
+      "slug": "z-score-calculator",
+      "path": "/tools/z-score-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Z-Score: standard score (dimensionless). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "value",
+          "label": "Observed value",
+          "value": 85,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "mean",
+          "label": "Population mean",
+          "value": 70,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "sd",
+          "label": "Population standard deviation",
+          "value": 10,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "z = (x − μ) / σ; σ > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 28
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "value": "85",
+          "mean": "70",
+          "sd": "10"
+        },
+        "output": 1.5
+      }
+    },
+    {
+      "id": "covariance-calculator",
+      "name": "Covariance Calculator",
+      "slug": "covariance-calculator",
+      "path": "/tools/covariance-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Covariance: covariance (x units × y units). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "x",
+          "label": "X observations",
+          "value": "1, 2, 3",
+          "type": "textarea"
+        },
+        {
+          "key": "y",
+          "label": "Y observations",
+          "value": "2, 4, 6",
+          "type": "textarea"
+        },
+        {
+          "key": "mode",
+          "label": "Covariance convention",
+          "value": "sample",
+          "type": "select",
+          "options": [
+            "sample",
+            "population"
+          ]
+        }
+      ],
+      "mathematicalMethod": "Covariance = Σ(xᵢ − x̄)(yᵢ − ȳ) / d; d = n−1 for sample or n for population.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 29
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "x": "1, 2, 3",
+          "y": "2, 4, 6",
+          "mode": "sample"
+        },
+        "output": 2
+      }
+    },
+    {
+      "id": "correlation-coefficient-calculator",
+      "name": "Correlation Coefficient Calculator",
+      "slug": "correlation-coefficient-calculator",
+      "path": "/tools/correlation-coefficient-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Correlation Coefficient: pearson correlation r (dimensionless). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "x",
+          "label": "X observations",
+          "value": "1, 2, 3",
+          "type": "textarea"
+        },
+        {
+          "key": "y",
+          "label": "Y observations",
+          "value": "2, 4, 6",
+          "type": "textarea"
+        }
+      ],
+      "mathematicalMethod": "Pearson r = Σ(dx·dy) / √Σ(dx²) / √Σ(dy²). Both series must have nonzero variance.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 30
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "x": "1, 2, 3",
+          "y": "2, 4, 6"
+        },
+        "output": 1
+      }
+    },
+    {
+      "id": "linear-regression-calculator",
+      "name": "Linear Regression Calculator",
+      "slug": "linear-regression-calculator",
+      "path": "/tools/linear-regression-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Linear Regression: slope and intercept (units follow the input data). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "x",
+          "label": "X observations",
+          "value": "1, 2, 3",
+          "type": "textarea"
+        },
+        {
+          "key": "y",
+          "label": "Y observations",
+          "value": "2, 4, 6",
+          "type": "textarea"
+        }
+      ],
+      "mathematicalMethod": "Ordinary least squares: slope b = Σ(dx·dy)/Σ(dx²); intercept a = ȳ−b·x̄; fitted y = a+b·x.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 31
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "x": "1, 2, 3",
+          "y": "2, 4, 6"
+        },
+        "output": {
+          "slope": 2,
+          "intercept": 0,
+          "observations": 3
+        }
+      }
+    },
+    {
+      "id": "kinetic-energy-calculator",
+      "name": "Kinetic Energy Calculator",
+      "slug": "kinetic-energy-calculator",
+      "path": "/tools/kinetic-energy-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Kinetic Energy: kinetic energy (j). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "mass",
+          "label": "Mass (kg)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "velocity",
+          "label": "Velocity (m/s)",
+          "value": 3,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "Eₖ = ½mv²; m is mass in kg and v is velocity in m/s.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 32
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "mass": "2",
+          "velocity": "3"
+        },
+        "output": 9
+      }
+    },
+    {
+      "id": "potential-energy-calculator",
+      "name": "Potential Energy Calculator",
+      "slug": "potential-energy-calculator",
+      "path": "/tools/potential-energy-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Potential Energy: gravitational potential energy (j). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "mass",
+          "label": "Mass (kg)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "height",
+          "label": "Height above reference (m)",
+          "value": 5,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "gravity",
+          "label": "Gravitational acceleration (m/s²)",
+          "value": 9.80665,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "U = mgh, relative to a chosen zero-height reference in a uniform gravitational field.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 33
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "mass": "2",
+          "height": "5",
+          "gravity": "9.80665"
+        },
+        "output": 98.0665
+      }
+    },
+    {
+      "id": "force-calculator",
+      "name": "Force Calculator",
+      "slug": "force-calculator",
+      "path": "/tools/force-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Force: net force (n). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "mass",
+          "label": "Mass (kg)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "acceleration",
+          "label": "Signed acceleration (m/s²)",
+          "value": 3,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "F = ma, for constant mass in one dimension.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 34
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "mass": "2",
+          "acceleration": "3"
+        },
+        "output": 6
+      }
+    },
+    {
+      "id": "pressure-calculator",
+      "name": "Pressure Calculator",
+      "slug": "pressure-calculator",
+      "path": "/tools/pressure-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Pressure: average pressure (pa). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "force",
+          "label": "Perpendicular force (N)",
+          "value": 100,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "area",
+          "label": "Contact area (m²)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "p = F/A, with perpendicular force F and area A > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 35
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "force": "100",
+          "area": "2"
+        },
+        "output": 50
+      }
+    },
+    {
+      "id": "density-calculator",
+      "name": "Density Calculator",
+      "slug": "density-calculator",
+      "path": "/tools/density-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Density: density (kg/m³). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "mass",
+          "label": "Mass (kg)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "volume",
+          "label": "Volume (m³)",
+          "value": 0.001,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "ρ = m/V, with mass m in kg and volume V > 0 in m³.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 36
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "mass": "2",
+          "volume": "0.001"
+        },
+        "output": 2000
+      }
+    },
+    {
+      "id": "acceleration-calculator",
+      "name": "Acceleration Calculator",
+      "slug": "acceleration-calculator",
+      "path": "/tools/acceleration-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Acceleration: average acceleration (m/s²). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "initial",
+          "label": "Initial velocity (m/s)",
+          "value": 0,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "final",
+          "label": "Final velocity (m/s)",
+          "value": 20,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "time",
+          "label": "Elapsed time (s)",
+          "value": 5,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "Average acceleration a = (v_final − v_initial)/Δt; Δt > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 37
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "initial": "0",
+          "final": "20",
+          "time": "5"
+        },
+        "output": 4
+      }
+    },
+    {
+      "id": "momentum-calculator",
+      "name": "Momentum Calculator",
+      "slug": "momentum-calculator",
+      "path": "/tools/momentum-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Momentum: linear momentum (kg·m/s). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "mass",
+          "label": "Mass (kg)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "velocity",
+          "label": "Velocity (m/s)",
+          "value": 3,
+          "type": "number",
+          "min": -1e+100,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "p = mv, for classical linear momentum along one axis.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 38
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "mass": "2",
+          "velocity": "3"
+        },
+        "output": 6
+      }
+    },
+    {
+      "id": "wavelength-calculator",
+      "name": "Wavelength Calculator",
+      "slug": "wavelength-calculator",
+      "path": "/tools/wavelength-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Wavelength: wavelength (m). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "speed",
+          "label": "Wave speed in the medium (m/s)",
+          "value": 343,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        },
+        {
+          "key": "frequency",
+          "label": "Frequency (Hz)",
+          "value": 1000,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "λ = v/f, with wave speed v > 0 and frequency f > 0.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 39
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "speed": "343",
+          "frequency": "1000"
+        },
+        "output": 0.343
+      }
+    },
+    {
+      "id": "torque-calculator",
+      "name": "Torque Calculator",
+      "slug": "torque-calculator",
+      "path": "/tools/torque-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Torque: torque magnitude (n·m). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "force",
+          "label": "Force magnitude (N)",
+          "value": 10,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "radius",
+          "label": "Lever-arm length (m)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "angle",
+          "label": "Angle between arm and force (degrees)",
+          "value": 90,
+          "type": "number",
+          "min": 0,
+          "max": 180,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "Torque magnitude τ = rF sin(θ), with 0° ≤ θ ≤ 180°.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 40
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "force": "10",
+          "radius": "2",
+          "angle": "90"
+        },
+        "output": 20
+      }
+    },
+    {
+      "id": "ohms-law-calculator",
+      "name": "Ohm's Law Calculator",
+      "slug": "ohms-law-calculator",
+      "path": "/tools/ohms-law-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Ohm's Law: voltage magnitude (v). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "current",
+          "label": "Current magnitude (A)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "resistance",
+          "label": "Resistance (Ω)",
+          "value": 10,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "V = IR for an ideal ohmic resistor.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 41
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "current": "2",
+          "resistance": "10"
+        },
+        "output": 20
+      }
+    },
+    {
+      "id": "electrical-power-calculator",
+      "name": "Electrical Power Calculator",
+      "slug": "electrical-power-calculator",
+      "path": "/tools/electrical-power-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Electrical Power: dc power (w). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "voltage",
+          "label": "Voltage magnitude (V)",
+          "value": 12,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "current",
+          "label": "Current magnitude (A)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "P = VI for DC electrical power.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 42
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "voltage": "12",
+          "current": "2"
+        },
+        "output": 24
+      }
+    },
+    {
+      "id": "transformer-calculator",
+      "name": "Transformer Calculator",
+      "slug": "transformer-calculator",
+      "path": "/tools/transformer-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Transformer: ideal secondary voltage (v). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "primary",
+          "label": "Primary voltage (V)",
+          "value": 230,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "primaryTurns",
+          "label": "Primary turns",
+          "value": 1000,
+          "type": "number",
+          "min": 1,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "secondaryTurns",
+          "label": "Secondary turns",
+          "value": 100,
+          "type": "number",
+          "min": 1,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "Ideal transformer: Vₛ = Vₚ × Nₛ/Nₚ, where Nₚ and Nₛ are positive whole turns.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 43
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "primary": "230",
+          "primaryTurns": "1000",
+          "secondaryTurns": "100"
+        },
+        "output": 23
+      }
+    },
+    {
+      "id": "molarity-calculator",
+      "name": "Molarity Calculator",
+      "slug": "molarity-calculator",
+      "path": "/tools/molarity-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Molarity: molarity (mol/l). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "moles",
+          "label": "Amount of solute (mol)",
+          "value": 0.5,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "litres",
+          "label": "Final solution volume (L)",
+          "value": 2,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": true
+        }
+      ],
+      "mathematicalMethod": "c = n/V, using solute amount n in mol and final solution volume V in L.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 44
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "moles": "0.5",
+          "litres": "2"
+        },
+        "output": 0.25
+      }
+    },
+    {
+      "id": "mole-fraction-calculator",
+      "name": "Mole Fraction Calculator",
+      "slug": "mole-fraction-calculator",
+      "path": "/tools/mole-fraction-calculator",
+      "category": "math",
+      "categoryName": "Math & Numbers",
+      "mainCategory": "calculators-utilities",
+      "kind": "standard",
+      "classification": "standalone_calculator",
+      "classificationBasis": "Reviewed primary numerical/calendar calculation or numerical conversion; executable registry runner.",
+      "description": "Mole Fraction: component mole fraction (dimensionless). Calculate locally with explicit inputs and assumptions.",
+      "inputFields": [
+        {
+          "key": "component",
+          "label": "Component amount (mol)",
+          "value": 1,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        },
+        {
+          "key": "other",
+          "label": "All other components combined (mol)",
+          "value": 3,
+          "type": "number",
+          "min": 0,
+          "max": 1e+100,
+          "strict": false
+        }
+      ],
+      "mathematicalMethod": "xᵢ = nᵢ / (nᵢ + n_other); total amount must be greater than zero.",
+      "sourceLocations": [
+        {
+          "file": "frontend/shared/science-calculators.mjs",
+          "line": 45
+        }
+      ],
+      "aliases": [],
+      "defaultExecution": {
+        "status": "executed",
+        "inputs": {
+          "component": "1",
+          "other": "3"
+        },
+        "output": 0.25
       }
     }
   ]
